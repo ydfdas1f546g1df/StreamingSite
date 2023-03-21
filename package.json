@@ -1,0 +1,27 @@
+{
+  "name": "streamingsite",
+  "version": "1.0.0",
+  "description": "```\r <link rel=\"stylesheet/less\" type=\"text/css\" href=\"styles.less\" /> \r <script src=\"https://cdn.jsdelivr.net/npm/less\" ></script>\r ```",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx mix watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ydfdas1f546g1df/StreamingSite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ydfdas1f546g1df/StreamingSite/issues"
+  },
+  "homepage": "https://github.com/ydfdas1f546g1df/StreamingSite#readme",
+  "dependencies": {
+    "laravel-mix": "^6.0.49"
+  },
+  "devDependencies": {
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.59.3",
+    "sass-loader": "^12.1.0"
+  }
+}
