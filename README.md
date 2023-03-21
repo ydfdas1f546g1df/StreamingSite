@@ -1,12 +1,5 @@
 # StreamingSite
-<style>
-body{
-    background-color: #1f1f1f;
-}
-*{
-    color: #fff;
-}
-</style>
+
 ## TODO after clone
 ```
 $ npm install
@@ -29,4 +22,11 @@ $ npm run dev
 ## SQL
 <a href="https://drawsql.app/teams/fdagadsgdsfg/diagrams/copy-of-copy-of-connect-information">Data Modell: drawsql.app</a>
 
-
+<style>
+body{
+    background-color: #1f1f1f;
+}
+*{
+    color: #fff;
+}
+</style>
