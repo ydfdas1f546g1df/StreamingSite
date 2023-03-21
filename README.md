@@ -10,7 +10,7 @@ $ npm install
 
 ## start laravel-mix
 ```
-$ npx mix watch
+$ npm run dev
 ```
 ## Link JQuery
 ```
