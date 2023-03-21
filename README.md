@@ -20,7 +20,13 @@ $ npm run dev
 ```
 
 ## SQL
-<a href="https://drawsql.app/teams/fdagadsgdsfg/diagrams/copy-of-copy-of-connect-information">Data Modell: drawsql.app</a>
+<a href="https://drawsql.app/teams/fdagadsgdsfg/diagrams/copy-of-copy-of-connect-information">Data Model: drawsql.app</a>
+
+## Symbol Country Flags
+<a href="https://github.com/lipis/flag-icons/tree/29edfe0288970b77976024832f1f3cf0a8667357">Link Github</a>
+<br>
+```<span class="fi fi-xx"></span>```
+
 
 <style>
 body{
