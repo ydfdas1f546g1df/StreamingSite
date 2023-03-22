@@ -1,0 +1,22 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+
+RewriteRule ^stream\/[a-z\-]{0,100}\/season\-[0-9]{0,3}\/episode\-[0-9]{0,3}\/?$ stream/episode.php [L]
+
+
+RewriteRule ^stream\/[a-z\-]{0,100}\/season\-[0-9]{0,3}\/?$ stream/season.php [L]
+
+
+RewriteRule ^stream\/[a-z\-]{0,100}\/?$ stream/season.php [L]
+
+
+RewriteRule ^stream\/?$ /index.php [L]
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /error/404.html [L]
+
+</IfModule>
