@@ -1,3 +1,4 @@
 {
-    "/css/main.css": "/css/main.css"
+    "/dist/css/main.css": "/dist/css/main.css",
+    "/dist/css/404.css": "/dist/css/404.css"
 }
