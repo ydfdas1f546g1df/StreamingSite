@@ -1,7 +1,167 @@
-$header-height: 10vh;
+$main-bg: rgb(17, 17, 17);
+$dd-padding: 3vw;
+$dd-width: 100vw - (2 * $dd-padding);
+$dd-el-padding: 0.6em;
+$dd-el-width: $dd-width - (2 * $dd-padding);
+$footer-height: 200px;
+$footer-bg: rgb(28, 28, 28);
+$header-height: 70px;
+$orange: rgb(255, 171, 16);
+$logo-size: 40px;
+$width: 60%;
+$header-bg: rgb(28, 28, 28);
+$hover-orange: #f8cb80;
+$user-pp-size: 40px;
+$dd-more-bg: rgb(24, 24, 24);
 
-header{
+header {
   width: 100%;
-  height: $header-height;
-  background-color: rgba(168, 168, 168, 0.5);
+  max-height: $header-height + 30px;
+  height: 100%;
+  background-color: $header-bg;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  * {
+    cursor: pointer;
+  }
+  .logo {
+    font-weight: bold;
+    display: flex;
+    height: 100%;
+    margin-right: 40px;
+    width: 40%;
+
+    .logo-1 {
+      color: $header-bg;
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+      background-color: $orange;
+      font-size: $logo-size;
+      align-items: center;
+      padding-right: 10px;
+      padding-left: 20%;
+      border-radius: 0 10px 10px 0;
+    }
+
+    .logo-2 {
+      padding-left: 10px;
+      height: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: $logo-size;
+      color: $orange;
+    }
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    margin-left: 30px;
+
+    a {
+      color: white;
+      text-decoration: none;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+
+      i {
+        margin: 3px;
+      }
+
+      &:hover {
+        color: $orange;
+
+      }
+    }
+
+    .nav-more {
+      padding: 5px 10px;
+      border-radius: 30px;
+      background-color: black;
+      color: white;
+      a {
+        width: 160px !important;
+      }
+    }
+  }
+
+  .user {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+
+    #user-pp {
+      height: $user-pp-size;
+      width: $user-pp-size;
+      border-radius: 20px;
+      background-color: red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 5px;
+    }
+
+    #user-name {
+      transition: all .20s ease-in;
+      display: flex;
+      align-items: center;
+      color: white;
+
+      &:hover {
+        color: $orange;
+      }
+
+      .user-dd-el {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+
+        &:hover {
+          color: $orange;
+        }
+
+        .user-dd-icon {
+          color: $orange;
+          height: 45px;
+          width: 45px;
+          background-color: $main-bg;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 5px 0 0;
+        }
+
+        &:first-child {
+          border-radius: 5px 0 0 0;
+        }
+
+        &:last-child {
+          border-radius: 0 0 0 5px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  nav {
+    display: none !important;
+  }
+  .user {
+    display: none !important;
+  }
+  .logo-1, .logo-2 {
+    font-size: $logo-size - 20 !important;
+  }
+  header {
+    height: $header-height;
+  }
 }

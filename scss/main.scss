@@ -1,29 +1,133 @@
-@import "footer";
-@import "header";
+$main-bg: rgb(17, 17, 17);
+$dd-padding: 3vw;
+$dd-width: 100vw - (2 * $dd-padding);
+$dd-el-padding: 0.6em;
+$dd-el-width: $dd-width - (2 * $dd-padding);
+$footer-height: 200px;
+$footer-bg: rgb(28, 28, 28);
+$header-height: 70px;
+$orange: rgb(255, 171, 16);
+$logo-size: 40px;
+$width: 60%;
+$header-bg: rgb(28, 28, 28);
+$hover-orange: #f8cb80;
+$user-pp-size: 40px;
+$dd-more-bg: rgb(24, 24, 24);
 
-$body-height: 100vh - $footer-height - $header-height;
+@import "header";
+@import "footer";
+@import "icons";
+@import "dropdown";
+
+
+
+* {
+  font-family: Arial;
+}
+
+a {
+  text-decoration: none;
+  transition: all .25s ease-in;
+
+  * {
+    cursor: pointer;
+
+  }
+}
 
 html {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+
   body {
-    main{
-      display: flex;
-      flex-direction: column;
-      height: $body-height;
-    }
-
-    flex: 1;
-
+    background-color: $main-bg;
+    flex: 0 1 auto;
     margin: 0;
-
     height: 100%;
-
-
-    background: rgb(37, 25, 242);
-    background: linear-gradient(120deg, rgba(37, 25, 242, 1) 15%, rgba(0, 197, 255, 1) 77%, rgba(0, 212, 255, 1) 100%);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    main {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 80%;
+      background-color: rgba(255, 0, 0, 0.13);
+
+      .quick-search {
+        margin: 5px;
+        display: flex;
+        flex-wrap: wrap;
+
+        .quick-search-el {
+          background-color: $orange;
+          margin: 3px;
+          min-height: 26px;
+          min-width: 27px;
+          border-radius: 3px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          a {
+            color: white;
+            font-weight: bold;
+          }
+        }
+      }
+    }
   }
-  margin: 0;
-  height: 100%;
 }
+
+.tooltip .tooltiptext {
+  top: 100%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%; /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-color: transparent transparent $header-bg transparent;
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: $header-bg;
+  color: #fff;
+  text-align: center;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.tooltiptext {
+  min-width: 200px;
+}
+@media screen and (max-width: 1080px) {
+  .quick-search, .user {
+    display: none !important;
+  }
+}
+
+

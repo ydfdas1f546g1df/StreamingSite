@@ -1,5 +1,132 @@
 header {
   width: 100%;
-  height: 10vh;
-  background-color: rgba(168, 168, 168, 0.5);
+  max-height: 100px;
+  height: 100%;
+  background-color: rgb(28, 28, 28);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header * {
+  cursor: pointer;
+}
+header .logo {
+  font-weight: bold;
+  display: flex;
+  height: 100%;
+  margin-right: 40px;
+  width: 40%;
+}
+header .logo .logo-1 {
+  color: rgb(28, 28, 28);
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgb(255, 171, 16);
+  font-size: 40px;
+  align-items: center;
+  padding-right: 10px;
+  padding-left: 20%;
+  border-radius: 0 10px 10px 0;
+}
+header .logo .logo-2 {
+  padding-left: 10px;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 40px;
+  color: rgb(255, 171, 16);
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  margin-left: 30px;
+}
+header nav a {
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+header nav a i {
+  margin: 3px;
+}
+header nav a:hover {
+  color: rgb(255, 171, 16);
+}
+header nav .nav-more {
+  padding: 5px 10px;
+  border-radius: 30px;
+  background-color: black;
+  color: white;
+}
+header nav .nav-more a {
+  width: 160px !important;
+}
+header .user {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+}
+header .user #user-pp {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+header .user #user-name {
+  transition: all 0.2s ease-in;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+header .user #user-name:hover {
+  color: rgb(255, 171, 16);
+}
+header .user #user-name .user-dd-el {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+header .user #user-name .user-dd-el:hover {
+  color: rgb(255, 171, 16);
+}
+header .user #user-name .user-dd-el .user-dd-icon {
+  color: rgb(255, 171, 16);
+  height: 45px;
+  width: 45px;
+  background-color: rgb(17, 17, 17);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px 0 0;
+}
+header .user #user-name .user-dd-el:first-child {
+  border-radius: 5px 0 0 0;
+}
+header .user #user-name .user-dd-el:last-child {
+  border-radius: 0 0 0 5px;
+}
+
+@media screen and (max-width: 1080px) {
+  nav {
+    display: none !important;
+  }
+  .user {
+    display: none !important;
+  }
+  .logo-1, .logo-2 {
+    font-size: 20px !important;
+  }
+  header {
+    height: 70px;
+  }
 }
