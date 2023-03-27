@@ -110,8 +110,8 @@ $eye-catcher-height-650: 160px;
 
 @media (max-width: 650px) {
   .eye-el-1x1 {
-    height: $eye-catcher-height;
-    width: $eye-catcher-height;
+    height: $eye-catcher-height-650;
+    width: $eye-catcher-height-650;
   }
 
   .eye-el-1x2 {
