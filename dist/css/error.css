@@ -129,6 +129,9 @@ header .user #user-name .user-dd-el:last-child {
   header {
     height: 70px;
   }
+  .logo-1 {
+    padding-left: 60% !important;
+  }
 }
 footer {
   width: 100%;
@@ -144,7 +147,7 @@ footer .wrapper {
   flex-wrap: wrap;
 }
 footer .wrapper .footer-el {
-  margin: 0 30px;
+  margin: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -170,6 +173,16 @@ footer .copyright a {
   color: rgb(255, 171, 16);
 }
 
+@media screen and (max-width: 1080px) {
+  footer {
+    min-height: 450px;
+  }
+  .copyright {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
 .down-arrow {
   box-sizing: border-box;
   position: relative;
