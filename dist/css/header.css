@@ -102,3 +102,15 @@ header .user #user-name .user-dd-el:first-child {
 header .user #user-name .user-dd-el:last-child {
   border-radius: 0 0 0 5px;
 }
+
+@media screen and (max-width: 1080px) {
+  nav {
+    display: none !important;
+  }
+  .user {
+    display: none !important;
+  }
+  .logo-1, .logo-2 {
+    font-size: 20px !important;
+  }
+}

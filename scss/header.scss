@@ -53,7 +53,6 @@ header {
     height: 100%;
     margin-left: 30px;
 
-
     a {
       color: white;
       text-decoration: none;
@@ -69,7 +68,6 @@ header {
         color: $orange;
 
       }
-
     }
 
     .nav-more {
@@ -77,7 +75,6 @@ header {
       border-radius: 30px;
       background-color: black;
     }
-
   }
 
   .user {
@@ -96,7 +93,6 @@ header {
       margin: 5px;
     }
 
-
     #user-name {
       transition: all .20s ease-in;
       display: flex;
@@ -110,6 +106,7 @@ header {
       .user-dd-el {
         display: flex;
         align-items: center;
+
         .user-dd-icon {
           height: 45px;
           width: 45px;
@@ -119,15 +116,27 @@ header {
           justify-content: center;
           margin: 0 5px 0 0;
         }
+
         &:first-child {
           border-radius: 5px 0 0 0;
         }
+
         &:last-child {
           border-radius: 0 0 0 5px;
         }
-
       }
-
     }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  nav {
+    display: none !important;
+  }
+  .user {
+    display: none !important;
+  }
+  .logo-1, .logo-2 {
+    font-size: $logo-size - 20 !important;
   }
 }
