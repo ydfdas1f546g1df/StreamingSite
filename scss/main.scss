@@ -1,5 +1,6 @@
 @import "footer";
 @import "header";
+@import "icons";
 
 $main-bg: rgb(14,14,14);
 
@@ -8,6 +9,7 @@ $main-bg: rgb(14,14,14);
 }
 a {
   text-decoration: none;
+  transition: all .25s ease-in;
 }
 html {
   body {
@@ -27,3 +29,4 @@ html {
   margin: 0;
   height: 100%;
 }
+

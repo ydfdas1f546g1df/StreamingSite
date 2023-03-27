@@ -48,16 +48,22 @@ header nav {
   margin-left: 30px;
 }
 header nav a {
-  color: #ff9900;
+  color: white;
   text-decoration: none;
-  padding: 10px;
+  padding: 20px;
 }
 header nav a:hover {
-  color: #f8cb80;
+  color: #ff9900;
+}
+header nav .nav-more {
+  padding: 5px 10px;
+  border-radius: 30px;
+  background-color: black;
 }
 header .user {
   display: flex;
   align-items: center;
+  margin-right: 40px;
 }
 header .user #user-pp {
   height: 40px;
@@ -69,8 +75,36 @@ header .user #user-pp {
   align-items: center;
   margin: 5px;
 }
+header .user #user-name {
+  color: white;
+}
 header .user #user-name:hover {
   color: #f8cb80;
+}
+
+.gg-chevron-down {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 22px;
+  height: 22px;
+  border: 2px solid transparent;
+  border-radius: 100px;
+}
+
+.gg-chevron-down::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  transform: rotate(45deg);
+  left: 4px;
+  top: 2px;
 }
 
 * {
@@ -79,6 +113,7 @@ header .user #user-name:hover {
 
 a {
   text-decoration: none;
+  transition: all 0.25s ease-in;
 }
 
 html {
