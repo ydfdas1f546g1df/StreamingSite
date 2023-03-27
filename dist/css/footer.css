@@ -1,11 +1,34 @@
 footer {
   width: 100%;
-  height: 200px;
+  min-height: 300px;
   background-color: rgb(28, 28, 28);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
+}
+footer .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+footer .wrapper .footer-el {
+  margin: 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .wrapper .footer-el .footer-el-title {
+  color: rgb(66, 66, 66);
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+footer .wrapper .footer-el .footer-el-item {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+footer .wrapper .footer-el .footer-el-item:hover {
+  color: rgb(255, 171, 16);
 }
 footer .copyright {
   color: rgb(66, 66, 66);

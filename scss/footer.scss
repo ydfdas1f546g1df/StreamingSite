@@ -3,7 +3,7 @@ $dd-padding: 3vw;
 $dd-width: 100vw - (2 * $dd-padding);
 $dd-el-padding: 0.6em;
 $dd-el-width: $dd-width - (2 * $dd-padding);
-$footer-height: 200px;
+$footer-height: 300px;
 $footer-bg: rgb(28, 28, 28);
 $header-height: 70px;
 $orange: rgb(255, 171, 16);
@@ -13,18 +13,48 @@ $header-bg: rgb(28, 28, 28);
 $hover-orange: #f8cb80;
 $user-pp-size: 40px;
 $dd-more-bg: rgb(24, 24, 24);
+$light-gray: rgb(66, 66, 66);
 
 footer {
   width: 100%;
-  height: $footer-height;
+  min-height: $footer-height;
   background-color: $footer-bg;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
 
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    .footer-el {
+      margin: 0 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+
+      .footer-el-title {
+        color: $light-gray;
+        font-weight: bold;
+        font-size: 22px;
+        margin-bottom: 20px;
+      }
+
+      .footer-el-item {
+        color: #ffffff;
+        margin-bottom: 10px;
+
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+  }
+
   .copyright {
-    color: rgb(66, 66, 66);
+    color: $light-gray;
     margin: 20px;
 
     a {

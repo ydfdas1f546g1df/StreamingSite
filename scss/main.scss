@@ -28,6 +28,7 @@ $dd-more-bg: rgb(24, 24, 24);
 a {
   text-decoration: none;
   transition: all .25s ease-in;
+  cursor: pointer;
 
   * {
     cursor: pointer;
