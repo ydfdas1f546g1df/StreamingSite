@@ -17,6 +17,7 @@ $light-gray: rgb(55, 55, 55);
 $trans: all .25s ease-in;
 
 footer {
+  flex-shrink: 0;
   width: 100%;
   min-height: $footer-height;
   background-color: $footer-bg;
