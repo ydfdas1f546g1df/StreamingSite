@@ -14,6 +14,7 @@ $hover-orange: #f8cb80;
 $user-pp-size: 40px;
 $dd-more-bg: rgb(24, 24, 24);
 $light-gray: rgb(55, 55, 55);
+$trans: all .25s ease-in;
 
 @import "header";
 @import "footer";
@@ -27,7 +28,7 @@ $light-gray: rgb(55, 55, 55);
 
 a {
   text-decoration: none;
-  transition: all .25s ease-in;
+  transition: $trans;
   cursor: pointer;
 
   * {
@@ -74,9 +75,10 @@ html {
           display: flex;
           align-items: center;
           justify-content: center;
+          transition: $trans;
 
           &:hover {
-            background: white;
+            background: $dd-more-bg;
 
             a {
               color: $orange;
@@ -86,7 +88,6 @@ html {
           a {
             color: white;
             font-weight: bold;
-
           }
         }
       }
@@ -136,6 +137,7 @@ html {
 
 .tooltiptext {
   min-width: 140px;
+  border-radius: 5px;
 }
 
 @media screen and (max-width: 1080px) {

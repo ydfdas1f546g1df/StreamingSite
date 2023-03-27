@@ -739,7 +739,7 @@ footer .copyright a {
     padding: 0 3vw;
     background-color: rgb(28, 28, 28);
   }
-  .menu more-dd-el-last:last-child {
+  .menu .more-dd-el-last {
     border-radius: 0 0 5px 5px;
   }
   .menu li {
@@ -841,9 +841,10 @@ html body main .quick-search .quick-search-el {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.25s ease-in;
 }
 html body main .quick-search .quick-search-el:hover {
-  background: white;
+  background: rgb(24, 24, 24);
 }
 html body main .quick-search .quick-search-el:hover a {
   color: rgb(255, 171, 16);
@@ -894,6 +895,7 @@ html body main .quick-search .quick-search-el a {
 
 .tooltiptext {
   min-width: 140px;
+  border-radius: 5px;
 }
 
 @media screen and (max-width: 1080px) {
