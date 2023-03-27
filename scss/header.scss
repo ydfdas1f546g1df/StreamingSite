@@ -1,5 +1,5 @@
 $header-height: 100px;
-$orange: #ff9900;
+$orange: rgb(255, 171, 16);
 $logo-size: 40px;
 $width: 60%;
 $header-bg:rgb(28, 28, 28);
@@ -59,6 +59,11 @@ header {
       color: white;
       text-decoration: none;
       padding: 20px;
+      display: flex;
+      align-items: center;
+      i {
+        padding: 3px;
+      }
 
       &:hover {
         color: $orange;
@@ -92,9 +97,12 @@ header {
 
 
     #user-name {
+      transition: all .20s ease-in;
+      display: flex;
+      align-items: center;
       color: white;
       &:hover {
-        color: $hover-orange;
+        color: $orange;
       }
     }
   }

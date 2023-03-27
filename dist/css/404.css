@@ -24,7 +24,7 @@ header .logo .logo-1 {
   height: 100%;
   display: flex;
   justify-content: flex-end;
-  background-color: #ff9900;
+  background-color: rgb(255, 171, 16);
   font-size: 40px;
   align-items: center;
   padding-right: 10px;
@@ -38,7 +38,7 @@ header .logo .logo-2 {
   justify-content: flex-start;
   align-items: center;
   font-size: 40px;
-  color: #ff9900;
+  color: rgb(255, 171, 16);
 }
 header nav {
   display: flex;
@@ -51,9 +51,14 @@ header nav a {
   color: white;
   text-decoration: none;
   padding: 20px;
+  display: flex;
+  align-items: center;
+}
+header nav a i {
+  padding: 3px;
 }
 header nav a:hover {
-  color: #ff9900;
+  color: rgb(255, 171, 16);
 }
 header nav .nav-more {
   padding: 5px 10px;
@@ -76,13 +81,16 @@ header .user #user-pp {
   margin: 5px;
 }
 header .user #user-name {
+  transition: all 0.2s ease-in;
+  display: flex;
+  align-items: center;
   color: white;
 }
 header .user #user-name:hover {
-  color: #f8cb80;
+  color: rgb(255, 171, 16);
 }
 
-.gg-chevron-down {
+.down-arrow {
   box-sizing: border-box;
   position: relative;
   display: block;
@@ -93,7 +101,7 @@ header .user #user-name:hover {
   border-radius: 100px;
 }
 
-.gg-chevron-down::after {
+.down-arrow::after {
   content: "";
   display: block;
   box-sizing: border-box;
@@ -105,6 +113,64 @@ header .user #user-name:hover {
   transform: rotate(45deg);
   left: 4px;
   top: 2px;
+}
+
+.gg-play-button-o {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 22px;
+  height: 22px;
+  border: 2px solid;
+  border-radius: 20px;
+}
+
+.gg-play-button-o::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 0;
+  height: 10px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 6px solid;
+  top: 4px;
+  left: 7px;
+}
+
+.gg-align-bottom {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  height: 12px;
+  width: 12px;
+  border-bottom: 2px solid;
+  transform: scale(var(--ggs, 1));
+  margin-top: 4px;
+}
+
+.gg-align-bottom::after,
+.gg-align-bottom::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 4px;
+  background: currentColor;
+  bottom: 2px;
+}
+
+.gg-align-bottom::before {
+  left: 1px;
+  height: 12px;
+}
+
+.gg-align-bottom::after {
+  height: 6px;
+  right: 1px;
+  opacity: 0.5;
 }
 
 * {
