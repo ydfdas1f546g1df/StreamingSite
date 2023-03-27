@@ -22,18 +22,18 @@
 }
 
 .eye-el-1x1 {
-  height: 140px;
-  width: 140px;
+  height: 156px;
+  width: 156px;
 }
 
 .eye-el-1x2 {
-  height: 140px;
-  width: 290px;
+  height: 156px;
+  width: 322px;
 }
 
 .eye-el-2x2 {
-  width: 290px;
-  height: 290px;
+  width: 322px;
+  height: 322px;
 }
 
 @media (max-width: 1400px) {
