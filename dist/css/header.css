@@ -83,3 +83,22 @@ header .user #user-name {
 header .user #user-name:hover {
   color: rgb(255, 171, 16);
 }
+header .user #user-name .user-dd-el {
+  display: flex;
+  align-items: center;
+}
+header .user #user-name .user-dd-el .user-dd-icon {
+  height: 45px;
+  width: 45px;
+  background-color: rgb(255, 171, 16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px 0 0;
+}
+header .user #user-name .user-dd-el:first-child {
+  border-radius: 5px 0 0 0;
+}
+header .user #user-name .user-dd-el:last-child {
+  border-radius: 0 0 0 5px;
+}

@@ -2,10 +2,9 @@ $header-height: 100px;
 $orange: rgb(255, 171, 16);
 $logo-size: 40px;
 $width: 60%;
-$header-bg:rgb(28, 28, 28);
+$header-bg: rgb(28, 28, 28);
 $hover-orange: #f8cb80;
 $user-pp-size: 40px;
-
 
 
 header {
@@ -61,6 +60,7 @@ header {
       padding: 20px;
       display: flex;
       align-items: center;
+
       i {
         margin: 3px;
       }
@@ -79,6 +79,7 @@ header {
     }
 
   }
+
   .user {
     display: flex;
     align-items: center;
@@ -101,9 +102,32 @@ header {
       display: flex;
       align-items: center;
       color: white;
+
       &:hover {
         color: $orange;
       }
+
+      .user-dd-el {
+        display: flex;
+        align-items: center;
+        .user-dd-icon {
+          height: 45px;
+          width: 45px;
+          background-color: $orange;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 5px 0 0;
+        }
+        &:first-child {
+          border-radius: 5px 0 0 0;
+        }
+        &:last-child {
+          border-radius: 0 0 0 5px;
+        }
+
+      }
+
     }
   }
 }
