@@ -625,17 +625,24 @@ footer {
     background: rgb(17, 17, 17);
     display: flex;
     flex-direction: column;
+    padding: 10px;
   }
-  .menu li.more-dd .more-dd-menu {
+  .menu li.more-dd a {
+    font-weight: normal;
+    padding: 5px;
+  }
+  .menu li.more-dd-menu {
     width: 100%;
     background-color: rgb(28, 28, 28);
     display: flex;
     flex-direction: column;
   }
+  .menu .second-dd-el {
+    padding: 0 !important;
+  }
   .menu .second-dd-el a {
     font-size: 14px;
     font-weight: normal;
-    padding: 0 !important;
   }
 }
 * {

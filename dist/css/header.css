@@ -6,12 +6,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: bold;
 }
 header * {
   cursor: pointer;
 }
 header .logo {
+  font-weight: bold;
   display: flex;
   height: 100%;
   margin-right: 40px;
@@ -90,11 +90,16 @@ header .user #user-name:hover {
 header .user #user-name .user-dd-el {
   display: flex;
   align-items: center;
+  font-size: 14px;
+}
+header .user #user-name .user-dd-el:hover {
+  color: rgb(255, 171, 16);
 }
 header .user #user-name .user-dd-el .user-dd-icon {
+  color: rgb(255, 171, 16);
   height: 45px;
   width: 45px;
-  background-color: rgb(255, 171, 16);
+  background-color: rgb(17, 17, 17);
   display: flex;
   align-items: center;
   justify-content: center;
