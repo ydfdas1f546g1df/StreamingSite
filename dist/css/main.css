@@ -747,6 +747,9 @@ footer a {
   align-items: center;
   justify-content: center;
 }
+.more-dd-icon i {
+  color: rgb(255, 171, 16);
+}
 
 * {
   font-family: Arial;

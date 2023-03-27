@@ -179,10 +179,15 @@ $dd-more-bg: rgb(24, 24, 24);
     }
   }
 }
+
 .more-dd-icon {
   width: 25px !important;
   margin-right: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  i {
+    color: $orange;
+  }
 }
