@@ -1,4 +1,4 @@
-$header-height: 100px;
+$header-height: 70px;
 $orange: rgb(255, 171, 16);
 $logo-size: 40px;
 $width: 60%;
@@ -6,17 +6,21 @@ $header-bg: rgb(28, 28, 28);
 $hover-orange: #f8cb80;
 $user-pp-size: 40px;
 
-
 header {
   width: 100%;
-  height: $header-height;
+  max-height: $header-height + 30px;
+  height: 100%;
   background-color: $header-bg;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: bold;
 
+
+  * {
+    cursor: pointer;
+  }
   .logo {
+    font-weight: bold;
     display: flex;
     height: 100%;
     margin-right: 40px;
@@ -106,11 +110,17 @@ header {
       .user-dd-el {
         display: flex;
         align-items: center;
+        font-size: 14px;
+
+        &:hover {
+          color: $orange;
+        }
 
         .user-dd-icon {
+          color: $orange;
           height: 45px;
           width: 45px;
-          background-color: $orange;
+          background-color: $main-bg;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -138,5 +148,8 @@ header {
   }
   .logo-1, .logo-2 {
     font-size: $logo-size - 20 !important;
+  }
+  header {
+    height: $header-height;
   }
 }

@@ -1,10 +1,11 @@
-@import "footer";
-@import "header";
-@import "icons";
-
 $main-bg: rgb(17, 17, 17);
 
+@import "header";
+@import "footer";
+@import "icons";
 @import "dropdown";
+
+
 
 * {
   font-family: Arial;
@@ -80,7 +81,7 @@ html {
   bottom: 100%; /* At the top of the tooltip */
   left: 50%;
   margin-left: -5px;
-  border-color: transparent transparent $main-bg transparent;
+  border-color: transparent transparent $header-bg transparent;
 }
 
 /* Tooltip container */
@@ -92,7 +93,7 @@ html {
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
-  background-color: $main-bg;
+  background-color: $header-bg;
   color: #fff;
   text-align: center;
 
@@ -104,6 +105,9 @@ html {
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+.tooltiptext {
+  min-width: 200px;
 }
 @media screen and (max-width: 1080px) {
   .quick-search, .user {

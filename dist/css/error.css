@@ -1,19 +1,17 @@
-footer {
-  width: 100%;
-  height: 200px;
-  background-color: rgb(28, 28, 28);
-}
-
 header {
   width: 100%;
-  height: 100px;
+  max-height: 100px;
+  height: 100%;
   background-color: rgb(28, 28, 28);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: bold;
+}
+header * {
+  cursor: pointer;
 }
 header .logo {
+  font-weight: bold;
   display: flex;
   height: 100%;
   margin-right: 40px;
@@ -92,11 +90,16 @@ header .user #user-name:hover {
 header .user #user-name .user-dd-el {
   display: flex;
   align-items: center;
+  font-size: 14px;
+}
+header .user #user-name .user-dd-el:hover {
+  color: rgb(255, 171, 16);
 }
 header .user #user-name .user-dd-el .user-dd-icon {
+  color: rgb(255, 171, 16);
   height: 45px;
   width: 45px;
-  background-color: rgb(255, 171, 16);
+  background-color: rgb(17, 17, 17);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -119,7 +122,16 @@ header .user #user-name .user-dd-el:last-child {
   .logo-1, .logo-2 {
     font-size: 20px !important;
   }
+  header {
+    height: 70px;
+  }
 }
+footer {
+  width: 100%;
+  height: 200px;
+  background-color: rgb(28, 28, 28);
+}
+
 .down-arrow {
   box-sizing: border-box;
   position: relative;
@@ -564,10 +576,10 @@ header .user #user-name .user-dd-el:last-child {
   .menu {
     position: absolute;
     top: 0;
-    margin-top: 100px;
+    margin-top: 70px;
     left: 0;
     flex-direction: column;
-    width: 100%;
+    width: 94vw;
     justify-content: center;
     align-items: center;
   }
@@ -579,21 +591,27 @@ header .user #user-name .user-dd-el:last-child {
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
   #menu-toggle:checked ~ .menu li {
-    height: 2.5em;
-    padding: 0.5em;
+    height: 1.7em;
+    padding: 0.6em;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
   .menu > li {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0.5em 0;
-    width: 100%;
     color: white;
-    background-color: rgb(17, 17, 17);
+    background-color: rgb(28, 28, 28);
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 3vw;
+    background-color: rgb(28, 28, 28);
   }
   .menu li {
+    font-weight: bold;
     display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    width: 88vw;
   }
   .menu li a {
     display: flex;
@@ -602,6 +620,22 @@ header .user #user-name .user-dd-el:last-child {
   }
   .menu li a:hover {
     color: rgb(255, 171, 16);
+  }
+  .menu li.more-dd {
+    background: rgb(17, 17, 17);
+    display: flex;
+    flex-direction: column;
+  }
+  .menu li.more-dd .more-dd-menu {
+    width: 100%;
+    background-color: rgb(28, 28, 28);
+    display: flex;
+    flex-direction: column;
+  }
+  .menu .second-dd-el a {
+    font-size: 14px;
+    font-weight: normal;
+    padding: 0 !important;
   }
 }
 * {
@@ -671,7 +705,7 @@ html body main .quick-search .quick-search-el a {
   bottom: 100%; /* At the top of the tooltip */
   left: 50%;
   margin-left: -5px;
-  border-color: transparent transparent rgb(17, 17, 17) transparent;
+  border-color: transparent transparent rgb(28, 28, 28) transparent;
 }
 
 /* Tooltip container */
@@ -683,7 +717,7 @@ html body main .quick-search .quick-search-el a {
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
-  background-color: rgb(17, 17, 17);
+  background-color: rgb(28, 28, 28);
   color: #fff;
   text-align: center;
   /* Position the tooltip text - see examples below! */
@@ -694,6 +728,10 @@ html body main .quick-search .quick-search-el a {
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+
+.tooltiptext {
+  min-width: 200px;
 }
 
 @media screen and (max-width: 1080px) {
