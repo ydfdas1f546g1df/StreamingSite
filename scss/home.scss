@@ -15,7 +15,7 @@ $user-pp-size: 40px;
 $dd-more-bg: rgb(24, 24, 24);
 $light-gray: rgb(55, 55, 55);
 $trans: all .25s ease-in;
-$cat-title-size: 18px;
+$cat-title-size: 22px;
 
 
 .home-cat-parent {
@@ -27,15 +27,15 @@ $cat-title-size: 18px;
     margin: 30px 10px 0px 10px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 
     .home-el-all {
       color: white;
       padding: 5px;
       border-radius: 5px;
       background: $orange;
-      font-size: $cat-title-size - 6px;
+      font-size: $cat-title-size / 1.8;
       cursor: pointer;
+      margin-left: 10px;
 
       &:hover {
         background: $dd-more-bg;
@@ -47,14 +47,14 @@ $cat-title-size: 18px;
   .home-cat {
     cursor: pointer;
     display: flex;
-    justify-content: space-between;
+    //justify-content: space-between;
     align-content: flex-start;
 
     .home-el {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      margin: 10px;
+      margin: 7px;
 
       .cover-title {
         color: white;
