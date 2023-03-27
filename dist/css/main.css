@@ -791,11 +791,99 @@ footer .copyright a {
   color: rgb(255, 171, 16);
 }
 
+.eye-catcher {
+  display: flex;
+}
+.eye-catcher .eye-wr {
+  display: flex;
+}
+.eye-catcher .eye-wrapper-wrapper {
+  display: flex;
+}
+.eye-catcher .eye-wrapper {
+  width: 100%;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+}
+.eye-catcher .eye-wrapper .eye-catcher-el {
+  border-radius: 15px;
+  margin: 5px;
+  background-position: center;
+  background-size: cover;
+  background-image: url("/dist/img/testcover.jpg");
+}
+
+.eye-el-1x1 {
+  height: 156px;
+  width: 156px;
+}
+
+.eye-el-1x2 {
+  height: 156px;
+  width: 322px;
+}
+
+.eye-el-2x2 {
+  width: 322px;
+  height: 322px;
+}
+
+@media (max-width: 1400px) {
+  .eye-el-1x1 {
+    height: 115px;
+    width: 115px;
+  }
+  .eye-el-1x2 {
+    height: 115px;
+    width: 240px;
+  }
+  .eye-el-2x2 {
+    width: 240px;
+    height: 240px;
+  }
+}
+@media (max-width: 1080px) {
+  .eye-catcher {
+    display: flex;
+    flex-direction: column;
+  }
+  .eye-el-1x1 {
+    height: 140px;
+    width: 140px;
+  }
+  .eye-el-1x2 {
+    height: 140px;
+    width: 290px;
+  }
+  .eye-el-2x2 {
+    width: 290px;
+    height: 290px;
+  }
+}
+@media (max-width: 650px) {
+  .eye-el-1x1 {
+    height: 156px;
+    width: 156px;
+  }
+  .eye-el-1x2 {
+    height: 160px;
+    width: 330px;
+  }
+  .eye-el-2x2 {
+    width: 330px;
+    height: 330px;
+  }
+  .eye-wr {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .home-cat-parent .home-el-title {
   color: white;
   font-weight: bold;
   font-size: 22px;
-  margin: 30px 10px 0px 10px;
+  margin: 50px 10px 0px 10px;
   display: flex;
   align-items: center;
 }
@@ -894,7 +982,7 @@ html body main {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  width: 80%;
+  width: 1350px;
 }
 html body main .quick-search {
   margin: 5px;
@@ -967,8 +1055,21 @@ html body main .quick-search .quick-search-el a {
   border-radius: 5px;
 }
 
+@media (max-width: 1400px) {
+  main {
+    width: 1000px !important;
+  }
+}
 @media screen and (max-width: 1080px) {
-  .quick-search, .user {
+  .user {
     display: none !important;
+  }
+  main {
+    width: 600px !important;
+  }
+}
+@media screen and (max-width: 650px) {
+  main {
+    width: 340px !important;
   }
 }
