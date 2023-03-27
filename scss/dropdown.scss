@@ -12,6 +12,7 @@ $width: 60%;
 $header-bg: rgb(28, 28, 28);
 $hover-orange: #f8cb80;
 $user-pp-size: 40px;
+$dd-more-bg: rgb(24, 24, 24);
 
 
 .top-nav {
@@ -151,6 +152,7 @@ $user-pp-size: 40px;
         display: flex;
         flex-direction: column;
         padding: 10px;
+        border-radius: 5px 5px 0 0;
 
         a {
           font-weight: normal;
@@ -158,16 +160,16 @@ $user-pp-size: 40px;
         }
       }
 
-      &.more-dd-menu {
-        width: 100%;
-        background-color: $header-bg;
-        display: flex;
-        flex-direction: column;
+      &.more-dd-el {
+        background-color: $dd-more-bg;
+        border-radius: 0 0 5px 5px;
+
       }
     }
 
     .second-dd-el {
-      padding: 0 !important;
+      padding: 0 0 0 5px !important;
+
 
       a {
         font-size: 14px;

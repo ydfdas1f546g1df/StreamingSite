@@ -130,6 +130,19 @@ footer {
   width: 100%;
   height: 200px;
   background-color: rgb(28, 28, 28);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+footer span {
+  color: rgb(66, 66, 66);
+}
+footer .copyright {
+  margin: 20px;
+}
+footer a {
+  color: rgb(255, 171, 16);
 }
 
 .down-arrow {
@@ -502,6 +515,47 @@ footer {
   bottom: 0;
 }
 
+.gg-software-upload {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 16px;
+  height: 6px;
+  border: 2px solid;
+  border-top: 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  margin-top: 8px;
+}
+
+.gg-software-upload::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-left: 2px solid;
+  border-top: 2px solid;
+  transform: rotate(45deg);
+  left: 2px;
+  bottom: 4px;
+}
+
+.gg-software-upload::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  border-radius: 3px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+  left: 5px;
+  bottom: 3px;
+}
+
 .top-nav {
   display: none;
 }
@@ -626,19 +680,18 @@ footer {
     display: flex;
     flex-direction: column;
     padding: 10px;
+    border-radius: 5px 5px 0 0;
   }
   .menu li.more-dd a {
     font-weight: normal;
     padding: 5px;
   }
-  .menu li.more-dd-menu {
-    width: 100%;
-    background-color: rgb(28, 28, 28);
-    display: flex;
-    flex-direction: column;
+  .menu li.more-dd-el {
+    background-color: rgb(24, 24, 24);
+    border-radius: 0 0 5px 5px;
   }
   .menu .second-dd-el {
-    padding: 0 !important;
+    padding: 0 0 0 5px !important;
   }
   .menu .second-dd-el a {
     font-size: 14px;
@@ -660,6 +713,7 @@ a * {
 html {
   margin: 0;
   height: 100%;
+  overflow: hidden;
 }
 html body {
   background-color: rgb(17, 17, 17);

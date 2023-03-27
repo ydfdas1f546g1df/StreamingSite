@@ -12,6 +12,7 @@ $width: 60%;
 $header-bg: rgb(28, 28, 28);
 $hover-orange: #f8cb80;
 $user-pp-size: 40px;
+$dd-more-bg: rgb(24, 24, 24);
 
 @import "header";
 @import "footer";
@@ -37,6 +38,7 @@ a {
 html {
   margin: 0;
   height: 100%;
+  overflow: hidden;
 
   body {
     background-color: $main-bg;
