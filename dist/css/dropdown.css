@@ -140,3 +140,10 @@
     font-weight: normal;
   }
 }
+.more-dd-icon {
+  width: 25px !important;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

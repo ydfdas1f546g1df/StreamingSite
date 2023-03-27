@@ -367,3 +367,82 @@
 .gg-list-tree::after {
   bottom: 0;
 }
+
+.gg-software-upload {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 16px;
+  height: 6px;
+  border: 2px solid;
+  border-top: 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  margin-top: 8px;
+}
+
+.gg-software-upload::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-left: 2px solid;
+  border-top: 2px solid;
+  transform: rotate(45deg);
+  left: 2px;
+  bottom: 4px;
+}
+
+.gg-software-upload::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  border-radius: 3px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+  left: 5px;
+  bottom: 3px;
+}
+
+.gg-git-fork {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 2px;
+  height: 14px;
+  background: currentColor;
+}
+
+.gg-git-fork::after,
+.gg-git-fork::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.gg-git-fork::before {
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+  border-bottom-right-radius: 4px;
+  bottom: 4px;
+  width: 8px;
+  height: 6px;
+  left: 0;
+}
+
+.gg-git-fork::after {
+  width: 4px;
+  height: 4px;
+  background: currentColor;
+  box-shadow: 0 12px 0 0, 6px 2px 0 0;
+  border-radius: 100%;
+  left: -1px;
+  top: -1px;
+}

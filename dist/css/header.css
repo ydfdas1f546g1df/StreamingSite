@@ -62,6 +62,10 @@ header nav .nav-more {
   padding: 5px 10px;
   border-radius: 30px;
   background-color: black;
+  color: white;
+}
+header nav .nav-more a {
+  width: 160px !important;
 }
 header .user {
   display: flex;
