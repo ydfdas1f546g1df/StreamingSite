@@ -197,3 +197,24 @@ $trans: all .25s ease-in;
     color: $orange;
   }
 }
+
+@media (max-width: 1080px) {
+  .menu-button,
+  .menu-button::before,
+  .menu-button::after {
+    height: 12px;
+    width: 90px;
+  }
+
+  .menu-button::before {
+    content: '';
+    margin-top: -24px;
+  }
+
+  .menu-button::after {
+    content: '';
+    margin-top: 24px;
+  }
+
+
+}

@@ -126,13 +126,4 @@ header .user #user-name .user-dd-el:last-child {
   .user {
     display: none !important;
   }
-  .logo-1, .logo-2 {
-    font-size: 20px !important;
-  }
-  header {
-    height: 70px;
-  }
-  .logo-1 {
-    padding-left: 60% !important;
-  }
 }

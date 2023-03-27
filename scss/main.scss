@@ -176,15 +176,23 @@ html {
   .user {
     display: none !important;
   }
-  main {
-    width: 600px !important;
+
+  .logo-1, .logo-2 {
+    font-size: $logo-size + 50px !important;
   }
-}
-@media screen and (max-width: 650px) {
+
+  .quick-search-el {
+    font-size: 55px;
+    min-height: 100px !important;
+    min-width: 100px !important;
+    border-radius: 10px !important;
+    margin: 10px !important;
+  }
 
   main {
-    width: 340px !important;
+    width: 900px !important;
   }
 }
+
 
 
