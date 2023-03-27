@@ -1,7 +1,8 @@
 $footer-height: 10vh;
+$footer-bg:rgb(28, 28, 28);
 
 footer{
   width: 100%;
   height: $footer-height;
-  background-color: rgba(168, 168, 168, 0.5);
+  background-color: $footer-bg;
 }
