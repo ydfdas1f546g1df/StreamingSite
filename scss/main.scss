@@ -1,8 +1,29 @@
-body   {
-  a {
-    color: red;
+@import "footer";
+@import "header";
+
+$body-height: 100vh - $footer-height - $header-height;
+
+html {
+  body {
+    main{
+      display: flex;
+      flex-direction: column;
+      height: $body-height;
+    }
+
+    flex: 1;
+
+    margin: 0;
+
+    height: 100%;
+
+
+    background: rgb(37, 25, 242);
+    background: linear-gradient(120deg, rgba(37, 25, 242, 1) 15%, rgba(0, 197, 255, 1) 77%, rgba(0, 212, 255, 1) 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
-  h1 {
-    color: orange;
-  }
+  margin: 0;
+  height: 100%;
 }
