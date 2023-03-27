@@ -19,6 +19,11 @@ $ npm run dev
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 ```
 
+## Link VUE.js
+```
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+```
+
 ## SQL
 <a href="https://drawsql.app/teams/fdagadsgdsfg/diagrams/copy-of-copy-of-connect-information">Data Model: drawsql.app</a>
 
