@@ -790,8 +790,50 @@ footer .copyright a {
   color: rgb(255, 171, 16);
 }
 
+.home-cat {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+}
+.home-cat .home-el {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px;
+}
+.home-cat .home-el .cover-title {
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.home-cat .home-el img {
+  margin: 0 0 8px 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(28, 28, 28);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(55, 55, 55);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 * {
-  font-family: Arial;
+  font-family: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif;
 }
 
 a {
@@ -803,10 +845,15 @@ a * {
   cursor: pointer;
 }
 
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 html {
   margin: 0;
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 html body {
   background-color: rgb(17, 17, 17);
@@ -825,7 +872,6 @@ html body main {
   flex-direction: column;
   height: 100%;
   width: 80%;
-  background-color: rgba(255, 0, 0, 0.13);
 }
 html body main .quick-search {
   margin: 5px;
@@ -855,7 +901,7 @@ html body main .quick-search .quick-search-el a {
 }
 
 .tooltip .tooltiptext {
-  top: 100%;
+  top: 150%;
   left: 50%;
   margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
 }
@@ -864,9 +910,9 @@ html body main .quick-search .quick-search-el a {
   content: " ";
   position: absolute;
   bottom: 100%; /* At the top of the tooltip */
-  left: 50%;
+  left: 40%;
   margin-left: -5px;
-  border-width: 5px;
+  border-width: 10px;
   border-style: solid;
   border-color: transparent transparent rgb(24, 24, 24) transparent;
 }

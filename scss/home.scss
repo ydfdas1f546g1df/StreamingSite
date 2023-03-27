@@ -1,0 +1,43 @@
+$main-bg: rgb(17, 17, 17);
+$dd-padding: 3vw;
+$dd-width: 100vw - (2 * $dd-padding);
+$dd-el-padding: 0.6em;
+$dd-el-width: $dd-width - (2 * $dd-padding);
+$footer-height: 300px;
+$footer-bg: rgb(28, 28, 28);
+$header-height: 70px;
+$orange: rgb(255, 171, 16);
+$logo-size: 40px;
+$width: 60%;
+$header-bg: rgb(28, 28, 28);
+$hover-orange: #f8cb80;
+$user-pp-size: 40px;
+$dd-more-bg: rgb(24, 24, 24);
+$light-gray: rgb(55, 55, 55);
+$trans: all .25s ease-in;
+
+.home-cat {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+
+  .home-el {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px;
+
+    .cover-title {
+      color: white;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    img {
+      margin: 0 0 8px 0;
+    }
+  }
+}
