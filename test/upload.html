@@ -54,6 +54,7 @@
                     // Disable the submit button
                     uploadForm.querySelector('button').disabled = true;
                 });
+
                 // The following code will execute when the request is complete
                 request.onreadystatechange = () => {
                     if (request.readyState === 4 && request.status === 200) {
