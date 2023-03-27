@@ -162,9 +162,10 @@ $dd-more-bg: rgb(24, 24, 24);
 
       &.more-dd-el {
         background-color: $dd-more-bg;
+
+        &:last-child {
         border-radius: 0 0 5px 5px;
-
-
+        }
       }
     }
 
@@ -181,7 +182,7 @@ $dd-more-bg: rgb(24, 24, 24);
 }
 
 .more-dd-icon {
-  width: 25px !important;
+  width: 30px !important;
   margin-right: 10px;
   display: flex;
   align-items: center;

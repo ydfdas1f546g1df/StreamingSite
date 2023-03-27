@@ -23,15 +23,13 @@ footer {
   align-items: center;
   justify-content: flex-end;
 
-  span {
-    color: rgb(66, 66, 66);
-  }
   .copyright {
+    color: rgb(66, 66, 66);
     margin: 20px;
-  }
 
-  a {
-    color: $orange;
+    a {
+      color: $orange;
+    }
   }
 }
 

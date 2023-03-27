@@ -139,13 +139,11 @@ footer {
   align-items: center;
   justify-content: flex-end;
 }
-footer span {
-  color: rgb(66, 66, 66);
-}
 footer .copyright {
+  color: rgb(66, 66, 66);
   margin: 20px;
 }
-footer a {
+footer .copyright a {
   color: rgb(255, 171, 16);
 }
 
@@ -730,6 +728,8 @@ footer a {
   }
   .menu li.more-dd-el {
     background-color: rgb(24, 24, 24);
+  }
+  .menu li.more-dd-el:last-child {
     border-radius: 0 0 5px 5px;
   }
   .menu .second-dd-el {
@@ -741,7 +741,7 @@ footer a {
   }
 }
 .more-dd-icon {
-  width: 25px !important;
+  width: 30px !important;
   margin-right: 10px;
   display: flex;
   align-items: center;
