@@ -18,7 +18,7 @@ footer .wrapper .footer-el {
   align-items: center;
 }
 footer .wrapper .footer-el .footer-el-title {
-  color: rgb(66, 66, 66);
+  color: rgb(55, 55, 55);
   font-weight: bold;
   font-size: 22px;
   margin-bottom: 20px;
@@ -31,7 +31,7 @@ footer .wrapper .footer-el .footer-el-item:hover {
   color: rgb(255, 171, 16);
 }
 footer .copyright {
-  color: rgb(66, 66, 66);
+  color: rgb(55, 55, 55);
   margin: 20px;
 }
 footer .copyright a {

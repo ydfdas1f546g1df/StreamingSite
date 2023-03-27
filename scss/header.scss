@@ -3,7 +3,7 @@ $dd-padding: 3vw;
 $dd-width: 100vw - (2 * $dd-padding);
 $dd-el-padding: 0.6em;
 $dd-el-width: $dd-width - (2 * $dd-padding);
-$footer-height: 200px;
+$footer-height: 300px;
 $footer-bg: rgb(28, 28, 28);
 $header-height: 70px;
 $orange: rgb(255, 171, 16);
@@ -13,6 +13,7 @@ $header-bg: rgb(28, 28, 28);
 $hover-orange: #f8cb80;
 $user-pp-size: 40px;
 $dd-more-bg: rgb(24, 24, 24);
+$light-gray: rgb(55, 55, 55);
 
 header {
   width: 100%;
@@ -27,6 +28,7 @@ header {
   * {
     cursor: pointer;
   }
+
   .logo {
     font-weight: bold;
     display: flex;
@@ -87,6 +89,7 @@ header {
       border-radius: 30px;
       background-color: black;
       color: white;
+
       a {
         width: 160px !important;
       }
@@ -128,11 +131,15 @@ header {
           color: $orange;
         }
 
+        .user-dd-name {
+          margin-left: 8px;
+        }
+
         .user-dd-icon {
           color: $orange;
           height: 45px;
           width: 45px;
-          background-color: $main-bg;
+          background-color: $header-bg;
           display: flex;
           align-items: center;
           justify-content: center;

@@ -102,12 +102,18 @@
     padding: 0 3vw;
     background-color: rgb(28, 28, 28);
   }
+  .menu more-dd-el-last:last-child {
+    border-radius: 0 0 5px 5px;
+  }
   .menu li {
     font-weight: bold;
     display: flex;
     justify-content: flex-start;
     padding: 0;
     width: 88vw;
+  }
+  .menu li.more-dd-el {
+    background-color: rgb(24, 24, 24);
   }
   .menu li a {
     display: flex;
@@ -127,12 +133,6 @@
   .menu li.more-dd a {
     font-weight: normal;
     padding: 5px;
-  }
-  .menu li.more-dd-el {
-    background-color: rgb(24, 24, 24);
-  }
-  .menu li.more-dd-el:last-child {
-    border-radius: 0 0 5px 5px;
   }
   .menu .second-dd-el {
     padding: 0 0 0 5px !important;

@@ -99,11 +99,14 @@ header .user #user-name .user-dd-el {
 header .user #user-name .user-dd-el:hover {
   color: rgb(255, 171, 16);
 }
+header .user #user-name .user-dd-el .user-dd-name {
+  margin-left: 8px;
+}
 header .user #user-name .user-dd-el .user-dd-icon {
   color: rgb(255, 171, 16);
   height: 45px;
   width: 45px;
-  background-color: rgb(17, 17, 17);
+  background-color: rgb(28, 28, 28);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -153,7 +156,7 @@ footer .wrapper .footer-el {
   align-items: center;
 }
 footer .wrapper .footer-el .footer-el-title {
-  color: rgb(66, 66, 66);
+  color: rgb(55, 55, 55);
   font-weight: bold;
   font-size: 22px;
   margin-bottom: 20px;
@@ -166,7 +169,7 @@ footer .wrapper .footer-el .footer-el-item:hover {
   color: rgb(255, 171, 16);
 }
 footer .copyright {
-  color: rgb(66, 66, 66);
+  color: rgb(55, 55, 55);
   margin: 20px;
 }
 footer .copyright a {
@@ -736,12 +739,18 @@ footer .copyright a {
     padding: 0 3vw;
     background-color: rgb(28, 28, 28);
   }
+  .menu more-dd-el-last:last-child {
+    border-radius: 0 0 5px 5px;
+  }
   .menu li {
     font-weight: bold;
     display: flex;
     justify-content: flex-start;
     padding: 0;
     width: 88vw;
+  }
+  .menu li.more-dd-el {
+    background-color: rgb(24, 24, 24);
   }
   .menu li a {
     display: flex;
@@ -761,12 +770,6 @@ footer .copyright a {
   .menu li.more-dd a {
     font-weight: normal;
     padding: 5px;
-  }
-  .menu li.more-dd-el {
-    background-color: rgb(24, 24, 24);
-  }
-  .menu li.more-dd-el:last-child {
-    border-radius: 0 0 5px 5px;
   }
   .menu .second-dd-el {
     padding: 0 0 0 5px !important;
@@ -839,6 +842,12 @@ html body main .quick-search .quick-search-el {
   align-items: center;
   justify-content: center;
 }
+html body main .quick-search .quick-search-el:hover {
+  background: white;
+}
+html body main .quick-search .quick-search-el:hover a {
+  color: rgb(255, 171, 16);
+}
 html body main .quick-search .quick-search-el a {
   color: white;
   font-weight: bold;
@@ -856,7 +865,9 @@ html body main .quick-search .quick-search-el a {
   bottom: 100%; /* At the top of the tooltip */
   left: 50%;
   margin-left: -5px;
-  border-color: transparent transparent rgb(28, 28, 28) transparent;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent rgb(24, 24, 24) transparent;
 }
 
 /* Tooltip container */
@@ -868,7 +879,7 @@ html body main .quick-search .quick-search-el a {
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
-  background-color: rgb(28, 28, 28);
+  background-color: rgb(24, 24, 24);
   color: #fff;
   text-align: center;
   /* Position the tooltip text - see examples below! */
@@ -882,7 +893,7 @@ html body main .quick-search .quick-search-el a {
 }
 
 .tooltiptext {
-  min-width: 200px;
+  min-width: 140px;
 }
 
 @media screen and (max-width: 1080px) {

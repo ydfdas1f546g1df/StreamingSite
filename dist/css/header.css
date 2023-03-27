@@ -99,11 +99,14 @@ header .user #user-name .user-dd-el {
 header .user #user-name .user-dd-el:hover {
   color: rgb(255, 171, 16);
 }
+header .user #user-name .user-dd-el .user-dd-name {
+  margin-left: 8px;
+}
 header .user #user-name .user-dd-el .user-dd-icon {
   color: rgb(255, 171, 16);
   height: 45px;
   width: 45px;
-  background-color: rgb(17, 17, 17);
+  background-color: rgb(28, 28, 28);
   display: flex;
   align-items: center;
   justify-content: center;

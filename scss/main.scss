@@ -3,7 +3,7 @@ $dd-padding: 3vw;
 $dd-width: 100vw - (2 * $dd-padding);
 $dd-el-padding: 0.6em;
 $dd-el-width: $dd-width - (2 * $dd-padding);
-$footer-height: 200px;
+$footer-height: 300px;
 $footer-bg: rgb(28, 28, 28);
 $header-height: 70px;
 $orange: rgb(255, 171, 16);
@@ -13,12 +13,12 @@ $header-bg: rgb(28, 28, 28);
 $hover-orange: #f8cb80;
 $user-pp-size: 40px;
 $dd-more-bg: rgb(24, 24, 24);
+$light-gray: rgb(55, 55, 55);
 
 @import "header";
 @import "footer";
 @import "icons";
 @import "dropdown";
-
 
 
 * {
@@ -75,9 +75,18 @@ html {
           align-items: center;
           justify-content: center;
 
+          &:hover {
+            background: white;
+
+            a {
+              color: $orange;
+            }
+          }
+
           a {
             color: white;
             font-weight: bold;
+
           }
         }
       }
@@ -94,10 +103,12 @@ html {
 .tooltip .tooltiptext::after {
   content: " ";
   position: absolute;
-  bottom: 100%; /* At the top of the tooltip */
+  bottom: 100%;  /* At the top of the tooltip */
   left: 50%;
   margin-left: -5px;
-  border-color: transparent transparent $header-bg transparent;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent $dd-more-bg transparent;
 }
 
 /* Tooltip container */
@@ -109,7 +120,7 @@ html {
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
-  background-color: $header-bg;
+  background-color: $dd-more-bg;
   color: #fff;
   text-align: center;
 
@@ -122,9 +133,11 @@ html {
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+
 .tooltiptext {
-  min-width: 200px;
+  min-width: 140px;
 }
+
 @media screen and (max-width: 1080px) {
   .quick-search, .user {
     display: none !important;
