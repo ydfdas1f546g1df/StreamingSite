@@ -1,5 +1,6 @@
 .eye-catcher {
   display: flex;
+  align-items: center;
 }
 .eye-catcher .eye-wr {
   display: flex;
@@ -62,16 +63,16 @@
     flex-direction: column;
   }
   .eye-el-1x1 {
-    height: 210px;
-    width: 210px;
+    height: 180px;
+    width: 180px;
   }
   .eye-el-1x2 {
-    height: 210px;
-    width: 434px;
+    height: 180px;
+    width: 374px;
   }
   .eye-el-2x2 {
-    width: 434px;
-    height: 434px;
+    width: 374px;
+    height: 374px;
   }
   .home-el-title {
     font-size: 52px !important;

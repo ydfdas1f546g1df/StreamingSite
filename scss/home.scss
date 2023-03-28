@@ -21,11 +21,12 @@ $eye-catcher-margin-1400: 3px;
 $eye-catcher-margin-1080: 7px;
 $eye-catcher-height: 156px;
 $eye-catcher-height-1400: 119px;
-$eye-catcher-height-1080: 210px;
+$eye-catcher-height-1080: 180px;
 
 
 .eye-catcher {
   display: flex;
+  align-items: center;
 
   .eye-wr {
     display: flex;
