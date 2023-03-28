@@ -113,18 +113,18 @@ $eye-catcher-height-1080: 210px;
   //}
 
   .eye-el-1x1 {
-    height: $eye-catcher-height-1080 - 40px;
+    height: $eye-catcher-height-1080;
     width: $eye-catcher-height-1080;
   }
 
   .eye-el-1x2 {
-    height: $eye-catcher-height-1080 - 40px;
+    height: $eye-catcher-height-1080;
     width: 2 * $eye-catcher-height-1080 + 2 * $eye-catcher-margin-1080;
   }
 
   .eye-el-2x2 {
     width: 2 * $eye-catcher-height-1080 + 2 * $eye-catcher-margin-1080;
-    height: 2 * $eye-catcher-height-1080 - 26;
+    height: 2 * $eye-catcher-height-1080 + 2 * $eye-catcher-margin-1080;
   }
 
   .home-el-title {
