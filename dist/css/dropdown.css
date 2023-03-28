@@ -125,7 +125,7 @@
     color: white;
   }
   .menu li a:hover {
-    color: rgb(255, 171, 16);
+    color: rgb(255, 100, 16);
   }
   .menu li.more-dd {
     background: rgb(17, 17, 17);
@@ -154,5 +154,5 @@
   justify-content: center;
 }
 .more-dd-icon i {
-  color: rgb(255, 171, 16);
+  color: rgb(255, 100, 16);
 }

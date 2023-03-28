@@ -29,14 +29,14 @@ footer .wrapper .footer-el .footer-el-item {
   margin-bottom: 10px;
 }
 footer .wrapper .footer-el .footer-el-item:hover {
-  color: rgb(255, 171, 16);
+  color: rgb(255, 100, 16);
 }
 footer .copyright {
   color: rgb(55, 55, 55);
   margin: 20px;
 }
 footer .copyright a {
-  color: rgb(255, 171, 16);
+  color: rgb(255, 100, 16);
 }
 
 @media screen and (max-width: 1080px) {

@@ -6,7 +6,7 @@ $dd-el-width: $dd-width - (2 * $dd-padding);
 $footer-height: 300px;
 $footer-bg: rgb(28, 28, 28);
 $header-height: 70px;
-$orange: rgb(255, 171, 16);
+$orange: rgb(255, 100, 16);
 $logo-size: 40px;
 $width: 60%;
 $header-bg: rgb(28, 28, 28);
@@ -17,11 +17,11 @@ $light-gray: rgb(55, 55, 55);
 $trans: all .25s ease-in;
 $cat-title-size: 22px;
 $eye-catcher-margin: 5px;
-$eye-catcher-margin-1400: 10px;
-$eye-catcher-margin-1080: 20px;
+$eye-catcher-margin-1400: 3px;
+$eye-catcher-margin-1080: 7px;
 $eye-catcher-height: 156px;
-$eye-catcher-height-1400: 230px;
-$eye-catcher-height-1080: 410px;
+$eye-catcher-height-1400: 119px;
+$eye-catcher-height-1080: 210px;
 
 
 .eye-catcher {
@@ -71,11 +71,11 @@ $eye-catcher-height-1080: 410px;
   .eye-catcher-el {
     margin: $eye-catcher-margin-1400 !important;
   }
-
-  .eye-catcher {
-    display: flex;
-    flex-direction: column;
-  }
+  //
+  //.eye-catcher {
+  //  display: flex;
+  //  flex-direction: column;
+  //}
 
   .eye-el-1x1 {
     height: $eye-catcher-height-1400;
@@ -105,10 +105,10 @@ $eye-catcher-height-1080: 410px;
     display: flex;
     flex-direction: column;
   }
-  .eye-wr {
-   display: flex;
-    flex-direction: column;
-  }
+  //.eye-wr {
+  // display: flex;
+  //  flex-direction: column;
+  //}
 
   .eye-el-1x1 {
     height: $eye-catcher-height-1080;

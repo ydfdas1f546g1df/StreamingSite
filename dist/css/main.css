@@ -22,7 +22,7 @@ header .logo .logo-1 {
   height: 100%;
   display: flex;
   justify-content: flex-end;
-  background-color: rgb(255, 171, 16);
+  background-color: rgb(255, 100, 16);
   font-size: 40px;
   align-items: center;
   padding-right: 10px;
@@ -36,7 +36,7 @@ header .logo .logo-2 {
   justify-content: flex-start;
   align-items: center;
   font-size: 40px;
-  color: rgb(255, 171, 16);
+  color: rgb(255, 100, 16);
 }
 header nav {
   display: flex;
@@ -56,7 +56,7 @@ header nav a i {
   margin: 3px;
 }
 header nav a:hover {
-  color: rgb(255, 171, 16);
+  color: rgb(255, 100, 16);
 }
 header nav .nav-more {
   padding: 5px 10px;
@@ -89,21 +89,22 @@ header .user #user-name {
   color: white;
 }
 header .user #user-name:hover {
-  color: rgb(255, 171, 16);
+  color: rgb(255, 100, 16);
 }
 header .user #user-name .user-dd-el {
   display: flex;
   align-items: center;
   font-size: 14px;
+  color: white;
 }
 header .user #user-name .user-dd-el:hover {
-  color: rgb(255, 171, 16);
+  color: rgb(255, 100, 16);
 }
 header .user #user-name .user-dd-el .user-dd-name {
   margin-left: 8px;
 }
 header .user #user-name .user-dd-el .user-dd-icon {
-  color: rgb(255, 171, 16);
+  color: rgb(255, 100, 16);
   height: 45px;
   width: 45px;
   background-color: rgb(28, 28, 28);
@@ -158,14 +159,14 @@ footer .wrapper .footer-el .footer-el-item {
   margin-bottom: 10px;
 }
 footer .wrapper .footer-el .footer-el-item:hover {
-  color: rgb(255, 171, 16);
+  color: rgb(255, 100, 16);
 }
 footer .copyright {
   color: rgb(55, 55, 55);
   margin: 20px;
 }
 footer .copyright a {
-  color: rgb(255, 171, 16);
+  color: rgb(255, 100, 16);
 }
 
 @media screen and (max-width: 1080px) {
@@ -754,7 +755,7 @@ footer .copyright a {
     color: white;
   }
   .menu li a:hover {
-    color: rgb(255, 171, 16);
+    color: rgb(255, 100, 16);
   }
   .menu li.more-dd {
     background: rgb(17, 17, 17);
@@ -783,7 +784,7 @@ footer .copyright a {
   justify-content: center;
 }
 .more-dd-icon i {
-  color: rgb(255, 171, 16);
+  color: rgb(255, 100, 16);
 }
 
 .eye-catcher {
@@ -826,48 +827,40 @@ footer .copyright a {
 
 @media (max-width: 1400px) {
   .eye-catcher-el {
-    margin: 10px !important;
-  }
-  .eye-catcher {
-    display: flex;
-    flex-direction: column;
+    margin: 3px !important;
   }
   .eye-el-1x1 {
-    height: 230px;
-    width: 230px;
+    height: 119px;
+    width: 119px;
   }
   .eye-el-1x2 {
-    height: 230px;
-    width: 480px;
+    height: 119px;
+    width: 244px;
   }
   .eye-el-2x2 {
-    width: 480px;
-    height: 480px;
+    width: 244px;
+    height: 244px;
   }
 }
 @media (max-width: 1080px) {
   .eye-catcher-el {
-    margin: 20px !important;
+    margin: 7px !important;
   }
   .eye-catcher {
     display: flex;
     flex-direction: column;
   }
-  .eye-wr {
-    display: flex;
-    flex-direction: column;
-  }
   .eye-el-1x1 {
-    height: 410px;
-    width: 410px;
+    height: 210px;
+    width: 210px;
   }
   .eye-el-1x2 {
-    height: 410px;
-    width: 860px;
+    height: 210px;
+    width: 434px;
   }
   .eye-el-2x2 {
-    width: 860px;
-    height: 860px;
+    width: 434px;
+    height: 434px;
   }
   .home-el-title {
     font-size: 52px !important;
@@ -894,14 +887,14 @@ footer .copyright a {
   color: white;
   padding: 5px;
   border-radius: 5px;
-  background: rgb(255, 171, 16);
+  background: rgb(255, 100, 16);
   font-size: 12.2222222222px;
   cursor: pointer;
   margin-left: 10px;
 }
 .home-cat-parent .home-el-title .home-el-all:hover {
   background: rgb(24, 24, 24);
-  color: rgb(255, 171, 16);
+  color: rgb(255, 100, 16);
 }
 .home-cat-parent .home-cat {
   cursor: pointer;
@@ -993,7 +986,7 @@ html body main .quick-search {
   flex-wrap: wrap;
 }
 html body main .quick-search .quick-search-el {
-  background-color: rgb(255, 171, 16);
+  background-color: rgb(255, 100, 16);
   margin: 3px;
   min-height: 26px;
   min-width: 27px;
@@ -1007,7 +1000,7 @@ html body main .quick-search .quick-search-el:hover {
   background: rgb(24, 24, 24);
 }
 html body main .quick-search .quick-search-el:hover a {
-  color: rgb(255, 171, 16);
+  color: rgb(255, 100, 16);
 }
 html body main .quick-search .quick-search-el a {
   color: white;
@@ -1064,7 +1057,7 @@ html body main .quick-search .quick-search-el a {
   }
 }
 @media screen and (max-width: 1080px) {
-  .user {
+  .user, .quick-search {
     display: none !important;
   }
   .logo-1, .logo-2 {

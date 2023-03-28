@@ -6,7 +6,7 @@ $dd-el-width: $dd-width - (2 * $dd-padding);
 $footer-height: 300px;
 $footer-bg: rgb(28, 28, 28);
 $header-height: 70px;
-$orange: rgb(255, 171, 16);
+$orange: rgb(255, 100, 16);
 $logo-size: 40px;
 $width: 60%;
 $header-bg: rgb(28, 28, 28);
@@ -15,6 +15,13 @@ $user-pp-size: 40px;
 $dd-more-bg: rgb(24, 24, 24);
 $light-gray: rgb(55, 55, 55);
 $trans: all .25s ease-in;
+$cat-title-size: 22px;
+$eye-catcher-margin: 5px;
+$eye-catcher-margin-1400: 10px;
+$eye-catcher-margin-1080: 20px;
+$eye-catcher-height: 156px;
+$eye-catcher-height-1400: 230px;
+$eye-catcher-height-1080: 410px;
 
 @import "header";
 @import "footer";
@@ -173,7 +180,7 @@ html {
 }
 
 @media screen and (max-width: 1080px) {
-  .user {
+  .user, .quick-search {
     display: none !important;
   }
 
