@@ -21,7 +21,7 @@ $eye-catcher-margin-1400: 3px;
 $eye-catcher-margin-1080: 7px;
 $eye-catcher-height: 156px;
 $eye-catcher-height-1400: 119px;
-$eye-catcher-height-1080: 180px;
+$eye-catcher-height-1080: 210px;
 
 
 .eye-catcher {
@@ -31,6 +31,7 @@ $eye-catcher-height-1080: 180px;
   .eye-wr {
     display: flex;
   }
+
   .eye-wrapper-wrapper {
     display: flex;
   }
@@ -112,18 +113,18 @@ $eye-catcher-height-1080: 180px;
   //}
 
   .eye-el-1x1 {
-    height: $eye-catcher-height-1080;
+    height: $eye-catcher-height-1080 - 40px;
     width: $eye-catcher-height-1080;
   }
 
   .eye-el-1x2 {
-    height: $eye-catcher-height-1080;
+    height: $eye-catcher-height-1080 - 40px;
     width: 2 * $eye-catcher-height-1080 + 2 * $eye-catcher-margin-1080;
   }
 
   .eye-el-2x2 {
     width: 2 * $eye-catcher-height-1080 + 2 * $eye-catcher-margin-1080;
-    height: 2 * $eye-catcher-height-1080 + 2 * $eye-catcher-margin-1080;
+    height: 2 * $eye-catcher-height-1080 - 26;
   }
 
   .home-el-title {
@@ -145,7 +146,6 @@ $eye-catcher-height-1080: 180px;
 }
 
 
-
 .home-cat-parent {
 
   .home-el-title {
@@ -155,6 +155,7 @@ $eye-catcher-height-1080: 180px;
     margin: 50px 10px 0px 10px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     .home-el-all {
       color: white;
