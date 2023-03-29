@@ -50,6 +50,11 @@ $eye-catcher-height-1080: 210px;
       background-image: url("/dist/img/testcover.jpg");
       display: flex;
       align-items: flex-end;
+      cursor: pointer;
+      //&:hover {
+      //
+      //  animation: zoom-in-zoom-out .5s ease forwards;
+      //}
 
 
       span {
@@ -196,6 +201,14 @@ $eye-catcher-height-1080: 210px;
       align-items: flex-start;
       margin: 7px;
 
+      //&:hover {
+      //  img {
+      //
+      //    animation: zoom-in-zoom-out .5s ease forwards;
+      //
+      //  }
+      //}
+
       .cover-title {
         color: white;
         font-weight: bold;
@@ -203,12 +216,24 @@ $eye-catcher-height-1080: 210px;
         align-items: center;
         justify-content: space-between;
         width: 100%;
+        font-size: 16px;
 
       }
 
       img {
-        margin: 0 0 8px 0;
+        margin: 0 0 5px 0;
         width: 150px;
+        z-index: 1;
+
+        @keyframes zoom-in-zoom-out {
+          0% {
+            transform: scale(1, 1);
+          }
+          100% {
+            transform: scale(1.1, 1.1);
+          }
+        }
+
       }
     }
   }
