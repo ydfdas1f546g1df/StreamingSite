@@ -1,4 +1,6 @@
 $(function () {
+
+
     const base_url = window.location.origin;
 
     const getUser = async (api) => {
@@ -13,7 +15,17 @@ $(function () {
         });
         const JSON  = await response.json()
         console.log(response);
-        console.log(JSON)
+        console.log(JSON);
     }
     console.log(getUser('test'))
+
+
+
+    Vue.createApp({
+        data() {
+            return {
+                users: JSON,
+            };
+        }
+    }).mount("#all-users");
 });
