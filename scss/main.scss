@@ -53,6 +53,9 @@ $eye-catcher-height-1080: 410px;
 * {
   //font-family: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  &::selection {
+    background: $orange;
+  }
 }
 
 a {

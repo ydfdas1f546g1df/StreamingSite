@@ -939,6 +939,12 @@ footer .copyright a {
 * {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+*::-moz-selection {
+  background: rgb(255, 100, 16);
+}
+*::selection {
+  background: rgb(255, 100, 16);
+}
 
 a {
   text-decoration: none;
