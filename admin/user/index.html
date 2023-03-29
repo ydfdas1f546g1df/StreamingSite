@@ -57,7 +57,7 @@
                 <span class="user-dd-name">Watchlist</span>
             </a> <a class="user-dd-el" href="#">
                 <div class="user-dd-icon">
-                    <i class="gg-list-tree"></i>
+                    <i class="fa-solid fa-gear"></i>
                 </div>
                 <span class="user-dd-name">Settings</span>
             </a><a class="user-dd-el" href="#">
@@ -121,8 +121,30 @@
                 Search User
                 <input type="text" name="search-user" placeholder="@username | name">
             </label>
-            <div class="user-list">
-                <div class="user-list-el"></div>
+            <div class="user-list" id="all-users">
+                <div class="user-list-el-header">
+                    <span class="user-list-el-id">ID</span>
+                    <span class="user-list-el-username">username</span>
+                    <span class="user-list-el-name">name</span>
+                    <span class="user-list-el-email">email</span>
+                    <span class="user-list-el-admin">admin</span>
+                    <span class="user-list-btn-placeholder"></span>
+                    <span class="user-list-btn-placeholder"></span>
+
+                </div>
+                <div class="user-list-el" v-for="user in users" id="{{ user.id }}" >
+                    <span class="user-list-el-id">{{ user.id }}</span>
+                    <span class="user-list-el-username">{{ user.username }}</span>
+                    <span class="user-list-el-name">{{ user.name }}</span>
+                    <span class="user-list-el-email">{{ user.email }}</span>
+                    <span class="user-list-el-admin">{{ user.admin }}</span>
+                    <span class="user-list-btn-placeholder">
+                        <span class="edit-btn user-list-btn">edit</span>
+                        </span>
+                    <span class="user-list-btn-placeholder">
+                        <span class="del-btn user-list-btn">delete</span>
+                        </span>
+                </div>
             </div>
         </div>
     </article>
@@ -151,5 +173,6 @@
     <span class="copyright">&copy; Copyright 2023. All Rights Reserved. <a href="/">StreamingSite</a></span>
 </footer>
 <script src="/script/main.js"></script>
+<script src="/script/admin_user.js"></script>
 </body>
 </html>

@@ -34,6 +34,12 @@ $aside-width: 220px;
           background: $orange;
           border-radius: 5px;
           min-width: 50px;
+          cursor: pointer;
+          transition: $trans;
+
+          &:hover {
+            background: $light_gray;
+          }
         }
       }
 
@@ -68,10 +74,55 @@ $aside-width: 220px;
 
       .user-list {
         margin-top: 50px;
+        height: 100%;
+        width: 100%;
+
+        .user-list-el-header {
+          span {
+            font-weight: bold;
+          }
+        }
+
+        .user-list-el-header, .user-list-el {
+          border-radius: 5px;
+          width: 100%;
+          height: 50px;
+          display: grid;
+          grid-template-columns: 8% 20% 20% 26% 12% 55px 70px;
+          margin-top: 10px;
+
+          span {
+            padding-left: 20px;
+            display: flex;
+            align-items: center;
+
+            &.user-list-btn-placeholder {
+              display: flex;
+              justify-content: center;
+
+              .user-list-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 40px;
+                border-radius: 5px;
+                padding: 0 10px;
+
+                &.del-btn {
+                  background: $orange;
+                }
+
+                &.edit-btn {
+                  background: $header-bg;
+
+                }
+              }
+            }
+          }
+        }
 
         .user-list-el {
-          height: 50px;
-          background: $orange;
+          background: $light-gray;
         }
       }
     }

@@ -800,6 +800,11 @@ footer .copyright a {
   background: rgb(255, 100, 16);
   border-radius: 5px;
   min-width: 50px;
+  cursor: pointer;
+  transition: all 0.25s ease-in;
+}
+.admin-main article .user .btns .user-btn:hover {
+  background: rgb(55, 55, 55);
 }
 .admin-main article .user label {
   font-weight: bold;
@@ -830,10 +835,45 @@ footer .copyright a {
 }
 .admin-main article .user .user-list {
   margin-top: 50px;
+  height: 100%;
+  width: 100%;
+}
+.admin-main article .user .user-list .user-list-el-header span {
+  font-weight: bold;
+}
+.admin-main article .user .user-list .user-list-el-header, .admin-main article .user .user-list .user-list-el {
+  border-radius: 5px;
+  width: 100%;
+  height: 50px;
+  display: grid;
+  grid-template-columns: 8% 20% 20% 26% 12% 55px 70px;
+  margin-top: 10px;
+}
+.admin-main article .user .user-list .user-list-el-header span, .admin-main article .user .user-list .user-list-el span {
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+.admin-main article .user .user-list .user-list-el-header span.user-list-btn-placeholder, .admin-main article .user .user-list .user-list-el span.user-list-btn-placeholder {
+  display: flex;
+  justify-content: center;
+}
+.admin-main article .user .user-list .user-list-el-header span.user-list-btn-placeholder .user-list-btn, .admin-main article .user .user-list .user-list-el span.user-list-btn-placeholder .user-list-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+.admin-main article .user .user-list .user-list-el-header span.user-list-btn-placeholder .user-list-btn.del-btn, .admin-main article .user .user-list .user-list-el span.user-list-btn-placeholder .user-list-btn.del-btn {
+  background: rgb(255, 100, 16);
+}
+.admin-main article .user .user-list .user-list-el-header span.user-list-btn-placeholder .user-list-btn.edit-btn, .admin-main article .user .user-list .user-list-el span.user-list-btn-placeholder .user-list-btn.edit-btn {
+  background: rgb(28, 28, 28);
 }
 .admin-main article .user .user-list .user-list-el {
-  height: 50px;
-  background: rgb(255, 100, 16);
+  background: rgb(55, 55, 55);
 }
 .admin-main aside {
   width: 220px;
