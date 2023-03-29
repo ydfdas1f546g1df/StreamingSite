@@ -177,13 +177,13 @@ html {
   border-radius: 5px;
 }
 
-//@media (max-width: 1400px) {
-//  main {
-//    width: 1000px !important;
-//  }
-//
-//}
-//
+@media (max-width: 1400px) {
+  main {
+    width: 1000px !important;
+  }
+
+}
+
 //@media screen and (max-width: 1080px) {
 //  .user, .quick-search {
 //    display: none !important;

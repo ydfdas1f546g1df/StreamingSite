@@ -47,6 +47,23 @@
   height: 322px;
 }
 
+@media (max-width: 1400px) {
+  .eye-catcher-el {
+    margin: 3px !important;
+  }
+  .eye-el-1x1 {
+    height: 119px;
+    width: 119px;
+  }
+  .eye-el-1x2 {
+    height: 119px;
+    width: 244px;
+  }
+  .eye-el-2x2 {
+    width: 244px;
+    height: 244px;
+  }
+}
 .home-cat-parent .home-el-title {
   color: white;
   font-weight: bold;
