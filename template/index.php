@@ -1,6 +1,6 @@
 <?php
 
-$header = `<!DOCTYPE html>
+$header_1 = `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,7 +22,9 @@ $header = `<!DOCTYPE html>
             <a href="#" title="All series and films on this website"><i class="gg-play-button-o"></i>&nbsp;Series</a>
             <a href="#" title="This is popular right now"><i class="gg-align-bottom"></i>&nbsp;Popular</a>
             <a href="#" title="Search for series and films"><i class="gg-search"></i>&nbsp;Search</a>
-            <span class="nav-more tooltip" title="There is more here">more
+`;
+$admin_1 = `
+            <span class="nav-more tooltip" title="Admin Stuff">admin
              <div class="tooltiptext">
                  <a href="https://github.com/ydfdas1f546g1df/StreamingSite" target="_blank">
                 <div class="more-dd-icon"><i class="gg-git-fork"></i></div>
@@ -34,9 +36,15 @@ $header = `<!DOCTYPE html>
                 <div class="more-dd-icon"><i class="gg-terminal"></i></div>
                 Admin</a>
             </div>
-            </span>
+            </span>`;
+$header_2 = `
         </nav>
+    </div>`;
 
+$notLoggedIn = `
+<div class="login-div">
+        <a href="#" class="nl-btn l-btn" >LOGIN</a>
+        <a href="#" class="nl-btn r-btn" >REGISTER</a>
     </div>`;
 
 $loggedIn = `
@@ -83,7 +91,8 @@ $loggedIn = `
             <li><a href="/pages/all.html"><i class="gg-play-button-o"></i>&nbsp;Series</a></li>
             <li><a href="/pages/popular.html"><i class="gg-align-bottom"></i>&nbsp;Popular</a></li>
             <li><a href="/pages/Search.html"><i class="gg-search"></i>&nbsp;Search</a></li>
-            <li class="more-dd">more</li>
+            `;
+$admin_2 = `<li class="more-dd">more</li>
             <li class="more-dd-el"><a href="https://github.com/ydfdas1f546g1df/StreamingSite" target="_blank">
                 <div class="more-dd-icon"><i class="gg-git-fork"></i></div>
                 GitHub</a></li>
@@ -93,6 +102,8 @@ $loggedIn = `
             <li class="more-dd-el more-dd-el-last"><a href="/admin/">
                 <div class="more-dd-icon"><i class="gg-terminal"></i></div>
                 Admin</a></li>
+`;
+$header_3 = `
             <li class="second-dd-el"></li>
             <li class="second-dd-el"><a href="#">Account</a></li>
             <li class="second-dd-el"><a href="#">Profile</a></li>
@@ -103,8 +114,7 @@ $loggedIn = `
         </ul>
     </section>`;
 
-$notLoggedIn = ``;
-$body = `
+$HomePageBody = `
 </header>
 <main>
     <div class="quick-search" id="quick-search">
@@ -206,7 +216,8 @@ $body = `
     </div>
 
 </main>
-
+`;
+$footer = `
 <footer>
     <div class="wrapper">
         <div class="footer-el">
@@ -232,3 +243,23 @@ $body = `
 <script src="/script/main.js"></script>
 </body>
 </html>`;
+$login = true;
+$cookie = true;
+$IsAdmin = true;
+
+$Page = $header_1;
+
+if (isset($cookie)) {
+    if ($login) {
+        if ($IsAdmin) {
+            $Page = $Page . $admin_1 . $header_2 . $admin_2 . $loggedIn . $header_3;
+        } else {
+            $Page = $Page . $header_2 . $loggedIn . $header_3;
+        }
+    }
+} else {
+    $Page = $Page . $header_2 . $notLoggedIn . $header_3;
+}
+$Page = $Page . $HomePageBody . $footer;
+echo $Page;
+echo `hallo`;

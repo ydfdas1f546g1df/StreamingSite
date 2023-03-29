@@ -90,7 +90,7 @@ header .login-div .nl-btn {
   height: 50px;
 }
 header .login-div .nl-btn:hover {
-  background: rgb(61, 25, 0);
+  background: rgb(21, 21, 21);
 }
 header .user {
   display: flex;
@@ -143,13 +143,4 @@ header .user #user-name .user-dd-el:first-child {
 }
 header .user #user-name .user-dd-el:last-child {
   border-radius: 0 0 0 5px;
-}
-
-@media screen and (max-width: 1080px) {
-  nav {
-    display: none !important;
-  }
-  .user {
-    display: none !important;
-  }
 }

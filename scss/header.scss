@@ -7,7 +7,7 @@ $footer-height: 300px;
 $footer-bg: rgb(28, 28, 28);
 $header-height: 70px;
 $orange: rgb(255, 100, 16);
-$orange-hover: rgb(61, 25, 0);
+$orange-hover: rgb(21, 21, 21);
 $logo-size: 40px;
 $width: 60%;
 $header-bg: rgb(28, 28, 28);
@@ -199,12 +199,12 @@ header {
   }
 }
 
-@media screen and (max-width: 1080px) {
-  nav {
-    display: none !important;
-  }
-  .user {
-    display: none !important;
-  }
-
-}
+//@media screen and (max-width: 1080px) {
+//  nav {
+//    display: none !important;
+//  }
+//  .user {
+//    display: none !important;
+//  }
+//
+//}
