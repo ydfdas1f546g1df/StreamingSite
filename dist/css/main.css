@@ -67,6 +67,31 @@ header nav .nav-more {
 header nav .nav-more a {
   width: 160px !important;
 }
+header .login-div {
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+}
+header .login-div .l-btn {
+  background: black;
+}
+header .login-div .r-btn {
+  background: rgb(255, 100, 16);
+}
+header .login-div .nl-btn {
+  color: white;
+  font-weight: bold;
+  margin: 5px;
+  border-radius: 5px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+header .login-div .nl-btn:hover {
+  background: rgb(61, 25, 0);
+}
 header .user {
   display: flex;
   align-items: center;

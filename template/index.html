@@ -25,10 +25,10 @@
                  <a href="https://github.com/ydfdas1f546g1df/StreamingSite" target="_blank">
                 <div class="more-dd-icon"><i class="gg-git-fork"></i></div>
                 GitHub</a>
-                 <a href="#">
+                 <a href="/admin/media/">
                 <div class="more-dd-icon"><i class="gg-software-upload"></i></div>
                 Upload</a>
-               <a href="#">
+               <a href="/admin/user/">
                 <div class="more-dd-icon"><i class="gg-terminal"></i></div>
                 Admin</a>
             </div>
@@ -36,39 +36,45 @@
         </nav>
 
     </div>
-    <div class="user">
-        <img src="/dist/img/testpp.jpg" id="user-pp" alt="user-pp"/>
-        <div id="user-name" class="tooltip">Username<i class="down-arrow"></i>
-            <div class="tooltiptext">
-                <a class="user-dd-el" href="#">
-                    <div class="user-dd-icon">
-                        <i class="gg-format-justify"></i>
-                    </div>
-                    <span class="user-dd-name">Account</span>
-                </a> <a class="user-dd-el" href="#">
-                <div class="user-dd-icon">
-                    <i class="gg-user"></i>
-                </div>
-                <span class="user-dd-name">Profile</span>
-            </a> <a class="user-dd-el" href="#">
-                <div class="user-dd-icon">
-                    <i class="gg-eye-alt"></i>
-                </div>
-                <span class="user-dd-name">Watchlist</span>
-            </a> <a class="user-dd-el" href="#">
-                <div class="user-dd-icon">
-                    <i class="gg-list-tree"></i>
-                </div>
-                <span class="user-dd-name">Settings</span>
-            </a><a class="user-dd-el" href="#">
-                <div class="user-dd-icon">
-                    <i class="gg-log-in"></i>
-                </div>
-                <span class="user-dd-name">Logout</span>
-            </a>
+<!--    <div class="user">-->
+<!--        <img src="/dist/img/testpp.jpg" id="user-pp" alt="user-pp"/>-->
+<!--        <div id="user-name" class="tooltip">Username<i class="down-arrow"></i>-->
+<!--            <div class="tooltiptext">-->
+<!--                <a class="user-dd-el" href="#">-->
+<!--                    <div class="user-dd-icon">-->
+<!--                        <i class="gg-format-justify"></i>-->
+<!--                    </div>-->
+<!--                    <span class="user-dd-name">Account</span>-->
+<!--                </a> <a class="user-dd-el" href="#">-->
+<!--                <div class="user-dd-icon">-->
+<!--                    <i class="gg-user"></i>-->
+<!--                </div>-->
+<!--                <span class="user-dd-name">Profile</span>-->
+<!--            </a> <a class="user-dd-el" href="#">-->
+<!--                <div class="user-dd-icon">-->
+<!--                    <i class="gg-eye-alt"></i>-->
+<!--                </div>-->
+<!--                <span class="user-dd-name">Watchlist</span>-->
+<!--            </a> <a class="user-dd-el" href="#">-->
+<!--                <div class="user-dd-icon">-->
+<!--                    <i class="gg-list-tree"></i>-->
+<!--                </div>-->
+<!--                <span class="user-dd-name">Settings</span>-->
+<!--            </a><a class="user-dd-el" href="#">-->
+<!--                <div class="user-dd-icon">-->
+<!--                    <i class="gg-log-in"></i>-->
+<!--                </div>-->
+<!--                <span class="user-dd-name">Logout</span>-->
+<!--            </a>-->
 
-            </div>
-        </div>
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+
+    <div class="login-div">
+        <a href="#" class="nl-btn l-btn" >LOGIN</a>
+        <a href="#" class="nl-btn r-btn" >REGISTER</a>
     </div>
     <section class="top-nav">
         <input id="menu-toggle" type="checkbox"/>
@@ -76,17 +82,17 @@
             <div class='menu-button'></div>
         </label>
         <ul class="menu">
-            <li><a href=""><i class="gg-play-button-o"></i>&nbsp;Series</a></li>
-            <li><a href=""><i class="gg-align-bottom"></i>&nbsp;Popular</a></li>
-            <li><a href=""><i class="gg-search"></i>&nbsp;Search</a></li>
+            <li><a href="/pages/all.html"><i class="gg-play-button-o"></i>&nbsp;Series</a></li>
+            <li><a href="/pages/popular.html"><i class="gg-align-bottom"></i>&nbsp;Popular</a></li>
+            <li><a href="/pages/Search.html"><i class="gg-search"></i>&nbsp;Search</a></li>
             <li class="more-dd">more</li>
             <li class="more-dd-el"><a href="https://github.com/ydfdas1f546g1df/StreamingSite" target="_blank">
                 <div class="more-dd-icon"><i class="gg-git-fork"></i></div>
                 GitHub</a></li>
-            <li class="more-dd-el"><a href="#">
+            <li class="more-dd-el"><a href="/admin/media/">
                 <div class="more-dd-icon"><i class="gg-software-upload"></i></div>
                 Upload</a></li>
-            <li class="more-dd-el more-dd-el-last"><a href="#">
+            <li class="more-dd-el more-dd-el-last"><a href="/admin/">
                 <div class="more-dd-icon"><i class="gg-terminal"></i></div>
                 Admin</a></li>
             <li class="second-dd-el"></li>
@@ -187,7 +193,7 @@
         </div>
     </div>
     <div class="home-cat-parent">
-        <span class="home-el-title">Latest uploads
+        <span class="home-el-title" id="latest">Latest uploads
             <a href="#" class="home-el-all">View all</a>
         </span>
         <div id="home-cat-3" class="wrapper home-cat">
@@ -204,20 +210,20 @@
     <div class="wrapper">
         <div class="footer-el">
             <span class="footer-el-title">Series</span>
-            <a class="footer-el-item">All</a>
-            <a class="footer-el-item">New</a>
-            <a class="footer-el-item">Popular</a>
+            <a class="footer-el-item" href="/pages/all.html">All</a>
+            <a class="footer-el-item" href="#latest">New</a>
+            <a class="footer-el-item" href="/pages/popular.html">Popular</a>
         </div>
         <div class="footer-el">
             <span class="footer-el-title">About</span>
-            <a class="footer-el-item">Contact</a>
-            <a class="footer-el-item">AGBs</a>
-            <a class="footer-el-item">Imprint</a>
+            <a class="footer-el-item" href="/pages/contact.html">Contact</a>
+            <a class="footer-el-item" href="#">AGBs</a>
+            <a class="footer-el-item" href="#">Imprint</a>
         </div>
         <div class="footer-el">
             <span class="footer-el-title">Discover</span>
             <a class="footer-el-item">Random</a>
-            <a class="footer-el-item">Search</a>
+            <a class="footer-el-item" href="/pages/Search.html">Search</a>
         </div>
     </div>
     <span class="copyright">&copy; Copyright 2023. All Rights Reserved. <a href="/">StreamingSite</a></span>

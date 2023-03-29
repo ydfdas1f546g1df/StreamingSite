@@ -7,6 +7,7 @@ $footer-height: 300px;
 $footer-bg: rgb(28, 28, 28);
 $header-height: 70px;
 $orange: rgb(255, 100, 16);
+$orange-hover: rgb(61, 25, 0);
 $logo-size: 40px;
 $width: 60%;
 $header-bg: rgb(28, 28, 28);
@@ -100,6 +101,36 @@ header {
 
       a {
         width: 160px !important;
+      }
+    }
+  }
+
+  .login-div {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+
+    .l-btn {
+      background: black;
+    }
+
+    .r-btn {
+      background: $orange;
+
+    }
+
+    .nl-btn {
+      color: white;
+      font-weight: bold;
+      margin: 5px;
+      border-radius: 5px;
+      padding: 0 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+      &:hover {
+        background: $orange-hover;
       }
     }
   }
