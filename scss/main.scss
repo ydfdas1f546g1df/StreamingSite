@@ -3,31 +3,61 @@ $dd-padding: 3vw;
 $dd-width: 100vw - (2 * $dd-padding);
 $dd-el-padding: 0.6em;
 $dd-el-width: $dd-width - (2 * $dd-padding);
-$footer-height: 200px;
+$footer-height: 300px;
 $footer-bg: rgb(28, 28, 28);
 $header-height: 70px;
-$orange: rgb(255, 171, 16);
+$orange: rgb(255, 100, 16);
 $logo-size: 40px;
 $width: 60%;
 $header-bg: rgb(28, 28, 28);
 $hover-orange: #f8cb80;
 $user-pp-size: 40px;
 $dd-more-bg: rgb(24, 24, 24);
+$light-gray: rgb(55, 55, 55);
+$trans: all .25s ease-in;
+$cat-title-size: 22px;
+$eye-catcher-margin: 5px;
+$eye-catcher-margin-1400: 10px;
+$eye-catcher-margin-1080: 20px;
+$eye-catcher-height: 156px;
+$eye-catcher-height-1400: 230px;
+$eye-catcher-height-1080: 410px;
 
 @import "header";
 @import "footer";
 @import "icons";
 @import "dropdown";
+@import "home";
 
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $header-bg;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $light-gray;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 
 * {
-  font-family: Arial;
+  //font-family: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 a {
   text-decoration: none;
-  transition: all .25s ease-in;
+  transition: $trans;
+  cursor: pointer;
 
   * {
     cursor: pointer;
@@ -35,14 +65,18 @@ a {
   }
 }
 
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 html {
   margin: 0;
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 
   body {
     background-color: $main-bg;
-    flex: 0 1 auto;
     margin: 0;
     height: 100%;
     background-size: cover;
@@ -53,11 +87,12 @@ html {
     flex-direction: column;
 
     main {
+      flex: 1 0 auto;
       display: flex;
       flex-direction: column;
-      height: 100%;
-      width: 80%;
-      background-color: rgba(255, 0, 0, 0.13);
+      min-height: 100%;
+      width: 1350px;
+      //background-color: rgba(255, 0, 0, 0.13);
 
       .quick-search {
         margin: 5px;
@@ -73,6 +108,15 @@ html {
           display: flex;
           align-items: center;
           justify-content: center;
+          transition: $trans;
+
+          &:hover {
+            background: $dd-more-bg;
+
+            a {
+              color: $orange;
+            }
+          }
 
           a {
             color: white;
@@ -85,7 +129,7 @@ html {
 }
 
 .tooltip .tooltiptext {
-  top: 100%;
+  top: 150%;
   left: 50%;
   margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
 }
@@ -94,9 +138,11 @@ html {
   content: " ";
   position: absolute;
   bottom: 100%; /* At the top of the tooltip */
-  left: 50%;
+  left: 40%;
   margin-left: -5px;
-  border-color: transparent transparent $header-bg transparent;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent $dd-more-bg transparent;
 }
 
 /* Tooltip container */
@@ -108,7 +154,7 @@ html {
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
-  background-color: $header-bg;
+  background-color: $dd-more-bg;
   color: #fff;
   text-align: center;
 
@@ -121,13 +167,41 @@ html {
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+
 .tooltiptext {
-  min-width: 200px;
+  min-width: 140px;
+  border-radius: 5px;
 }
+
+@media (max-width: 1400px) {
+  main {
+    width: 1000px !important;
+  }
+
+}
+
 @media screen and (max-width: 1080px) {
-  .quick-search, .user {
+  .user, .quick-search {
     display: none !important;
   }
+
+  .logo-1, .logo-2 {
+    font-size: $logo-size + 50px !important;
+  }
+
+  .quick-search-el {
+    font-size: 55px;
+    min-height: 100px !important;
+    min-width: 100px !important;
+    border-radius: 10px !important;
+    margin: 10px !important;
+  }
+
+  main {
+    width: 900px !important;
+  }
+
 }
+
 
 

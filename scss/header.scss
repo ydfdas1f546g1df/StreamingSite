@@ -3,20 +3,29 @@ $dd-padding: 3vw;
 $dd-width: 100vw - (2 * $dd-padding);
 $dd-el-padding: 0.6em;
 $dd-el-width: $dd-width - (2 * $dd-padding);
-$footer-height: 200px;
+$footer-height: 300px;
 $footer-bg: rgb(28, 28, 28);
 $header-height: 70px;
-$orange: rgb(255, 171, 16);
+$orange: rgb(255, 100, 16);
 $logo-size: 40px;
 $width: 60%;
 $header-bg: rgb(28, 28, 28);
 $hover-orange: #f8cb80;
 $user-pp-size: 40px;
 $dd-more-bg: rgb(24, 24, 24);
+$light-gray: rgb(55, 55, 55);
+$trans: all .25s ease-in;
+$cat-title-size: 22px;
+$eye-catcher-margin: 5px;
+$eye-catcher-margin-1400: 10px;
+$eye-catcher-margin-1080: 20px;
+$eye-catcher-height: 156px;
+$eye-catcher-height-1400: 230px;
+$eye-catcher-height-1080: 410px;
 
 header {
   width: 100%;
-  max-height: $header-height + 30px;
+  max-height: $header-height + 70px;
   height: 100%;
   background-color: $header-bg;
   display: flex;
@@ -27,6 +36,7 @@ header {
   * {
     cursor: pointer;
   }
+
   .logo {
     font-weight: bold;
     display: flex;
@@ -87,6 +97,7 @@ header {
       border-radius: 30px;
       background-color: black;
       color: white;
+
       a {
         width: 160px !important;
       }
@@ -123,20 +134,26 @@ header {
         display: flex;
         align-items: center;
         font-size: 14px;
+        color: white;
 
         &:hover {
           color: $orange;
+        }
+
+        .user-dd-name {
+          margin-left: 8px;
         }
 
         .user-dd-icon {
           color: $orange;
           height: 45px;
           width: 45px;
-          background-color: $main-bg;
+          background-color: $header-bg;
           display: flex;
           align-items: center;
           justify-content: center;
           margin: 0 5px 0 0;
+
         }
 
         &:first-child {
@@ -158,10 +175,5 @@ header {
   .user {
     display: none !important;
   }
-  .logo-1, .logo-2 {
-    font-size: $logo-size - 20 !important;
-  }
-  header {
-    height: $header-height;
-  }
+
 }

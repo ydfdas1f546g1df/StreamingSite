@@ -3,16 +3,25 @@ $dd-padding: 3vw;
 $dd-width: 100vw - (2 * $dd-padding);
 $dd-el-padding: 0.6em;
 $dd-el-width: $dd-width - (2 * $dd-padding);
-$footer-height: 200px;
+$footer-height: 300px;
 $footer-bg: rgb(28, 28, 28);
 $header-height: 70px;
-$orange: rgb(255, 171, 16);
+$orange: rgb(255, 100, 16);
 $logo-size: 40px;
 $width: 60%;
 $header-bg: rgb(28, 28, 28);
 $hover-orange: #f8cb80;
 $user-pp-size: 40px;
 $dd-more-bg: rgb(24, 24, 24);
+$light-gray: rgb(55, 55, 55);
+$trans: all .25s ease-in;
+$cat-title-size: 22px;
+$eye-catcher-margin: 5px;
+$eye-catcher-margin-1400: 10px;
+$eye-catcher-margin-1080: 20px;
+$eye-catcher-height: 156px;
+$eye-catcher-height-1400: 230px;
+$eye-catcher-height-1080: 410px;
 
 
 .top-nav {
@@ -27,8 +36,9 @@ $dd-more-bg: rgb(24, 24, 24);
     justify-content: space-between;
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #FFF;
-    height: 50px;
+    height: 100px;
     padding: 1em;
+    margin-right: 5%;
   }
 
   .menu {
@@ -37,6 +47,10 @@ $dd-more-bg: rgb(24, 24, 24);
     list-style-type: none;
     margin: 0;
     padding: 0;
+
+     * {
+       font-size: 32px !important;
+     }
   }
 
   .menu > li {
@@ -47,7 +61,7 @@ $dd-more-bg: rgb(24, 24, 24);
   .menu-button-container {
     display: none;
     height: 100%;
-    width: 30px;
+    width: 100px;
     cursor: pointer;
     flex-direction: column;
     justify-content: center;
@@ -64,20 +78,20 @@ $dd-more-bg: rgb(24, 24, 24);
     display: block;
     background-color: #fff;
     position: absolute;
-    height: 4px;
-    width: 30px;
+    height: 12px;
+    width: 90px;
     transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
     border-radius: 2px;
   }
 
   .menu-button::before {
     content: '';
-    margin-top: -8px;
+    margin-top: -24px;
   }
 
   .menu-button::after {
     content: '';
-    margin-top: 8px;
+    margin-top: 24px;
   }
 
   #menu-toggle:checked + .menu-button-container .menu-button::before {
@@ -100,7 +114,7 @@ $dd-more-bg: rgb(24, 24, 24);
   .menu {
     position: absolute;
     top: 0;
-    margin-top: $header-height;
+    margin-top: $header-height + 62px;
     left: 0;
     flex-direction: column;
     width: $dd-width;
@@ -130,6 +144,10 @@ $dd-more-bg: rgb(24, 24, 24);
     padding: 0 $dd-padding;
     background-color: $header-bg;
 
+    .more-dd-el-last {
+      border-radius: 0 0 5px 5px;
+    }
+
     li {
       font-weight: bold;
       display: flex;
@@ -137,10 +155,17 @@ $dd-more-bg: rgb(24, 24, 24);
       padding: 0;
       width: $dd-el-width;
 
+      &.more-dd-el {
+        background-color: $dd-more-bg;
+
+      }
+
+
       a {
         display: flex;
         align-items: center;
         color: white;
+        width: 100%;
 
         &:hover {
           color: $orange;
@@ -160,12 +185,6 @@ $dd-more-bg: rgb(24, 24, 24);
         }
       }
 
-      &.more-dd-el {
-        background-color: $dd-more-bg;
-        border-radius: 0 0 5px 5px;
-
-
-      }
     }
 
     .second-dd-el {
@@ -181,7 +200,7 @@ $dd-more-bg: rgb(24, 24, 24);
 }
 
 .more-dd-icon {
-  width: 25px !important;
+  width: 30px !important;
   margin-right: 10px;
   display: flex;
   align-items: center;

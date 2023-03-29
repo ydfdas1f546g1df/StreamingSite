@@ -1,0 +1,143 @@
+.eye-catcher {
+  display: flex;
+  align-items: center;
+}
+.eye-catcher .eye-wr {
+  display: flex;
+}
+.eye-catcher .eye-wrapper-wrapper {
+  display: flex;
+}
+.eye-catcher .eye-wrapper {
+  width: 100%;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+}
+.eye-catcher .eye-wrapper .eye-catcher-el {
+  border-radius: 15px;
+  margin: 5px;
+  background-position: center;
+  background-size: cover;
+  background-image: url("/dist/img/testcover.jpg");
+  display: flex;
+  align-items: flex-end;
+}
+.eye-catcher .eye-wrapper .eye-catcher-el span {
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 3px black;
+  margin-left: 7px;
+  margin-bottom: 7px;
+}
+
+.eye-el-1x1 {
+  height: 156px;
+  width: 156px;
+}
+
+.eye-el-1x2 {
+  height: 156px;
+  width: 322px;
+}
+
+.eye-el-2x2 {
+  width: 322px;
+  height: 322px;
+}
+
+@media (max-width: 1400px) {
+  .eye-catcher-el {
+    margin: 3px !important;
+  }
+  .eye-el-1x1 {
+    height: 119px;
+    width: 119px;
+  }
+  .eye-el-1x2 {
+    height: 119px;
+    width: 244px;
+  }
+  .eye-el-2x2 {
+    width: 244px;
+    height: 244px;
+  }
+}
+@media (max-width: 1080px) {
+  .eye-catcher-el {
+    margin: 7px !important;
+  }
+  .eye-catcher {
+    display: flex;
+    flex-direction: column;
+  }
+  .eye-el-1x1 {
+    height: 210px;
+    width: 210px;
+  }
+  .eye-el-1x2 {
+    height: 210px;
+    width: 434px;
+  }
+  .eye-el-2x2 {
+    width: 434px;
+    height: 434px;
+  }
+  .home-el-title {
+    font-size: 52px !important;
+  }
+  .home-el-title .home-el-all {
+    font-size: 22px !important;
+  }
+  img.cover {
+    width: 280px !important;
+  }
+  .cover-title {
+    font-size: 22px;
+  }
+}
+.home-cat-parent .home-el-title {
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  margin: 50px 10px 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.home-cat-parent .home-el-title .home-el-all {
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  background: rgb(255, 100, 16);
+  font-size: 12.2222222222px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.home-cat-parent .home-el-title .home-el-all:hover {
+  background: rgb(24, 24, 24);
+  color: rgb(255, 100, 16);
+}
+.home-cat-parent .home-cat {
+  cursor: pointer;
+  display: flex;
+  align-content: flex-start;
+}
+.home-cat-parent .home-cat .home-el {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 7px;
+}
+.home-cat-parent .home-cat .home-el .cover-title {
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.home-cat-parent .home-cat .home-el img {
+  margin: 0 0 8px 0;
+  width: 150px;
+}

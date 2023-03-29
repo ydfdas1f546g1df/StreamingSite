@@ -3,35 +3,86 @@ $dd-padding: 3vw;
 $dd-width: 100vw - (2 * $dd-padding);
 $dd-el-padding: 0.6em;
 $dd-el-width: $dd-width - (2 * $dd-padding);
-$footer-height: 200px;
+$footer-height: 300px;
 $footer-bg: rgb(28, 28, 28);
 $header-height: 70px;
-$orange: rgb(255, 171, 16);
+$orange: rgb(255, 100, 16);
 $logo-size: 40px;
 $width: 60%;
 $header-bg: rgb(28, 28, 28);
 $hover-orange: #f8cb80;
 $user-pp-size: 40px;
 $dd-more-bg: rgb(24, 24, 24);
+$light-gray: rgb(55, 55, 55);
+$trans: all .25s ease-in;
+$cat-title-size: 22px;
+$eye-catcher-margin: 5px;
+$eye-catcher-margin-1400: 10px;
+$eye-catcher-margin-1080: 20px;
+$eye-catcher-height: 156px;
+$eye-catcher-height-1400: 230px;
+$eye-catcher-height-1080: 410px;
 
 footer {
+  flex-shrink: 0;
   width: 100%;
-  height: $footer-height;
+  min-height: $footer-height;
   background-color: $footer-bg;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
+  margin-top: 300px;
 
-  span {
-    color: rgb(66, 66, 66);
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    .footer-el {
+      margin: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+
+      .footer-el-title {
+        color: $light-gray;
+        font-weight: bold;
+        font-size: 22px;
+        margin-bottom: 20px;
+      }
+
+      .footer-el-item {
+        color: #ffffff;
+        margin-bottom: 10px;
+
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
   }
+
   .copyright {
+    color: $light-gray;
     margin: 20px;
-  }
 
-  a {
-    color: $orange;
+    a {
+      color: $orange;
+    }
   }
 }
+@media screen and (max-width: 1080px) {
+  footer {
+   min-height: $footer-height + 150px;
+  }
+
+  .copyright {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+
 
