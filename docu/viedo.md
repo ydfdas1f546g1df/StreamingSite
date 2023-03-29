@@ -13,6 +13,18 @@ POST /api/upload_Complete
 | description |    No    | Description                   |
 | language    |   Yes    | Language                      |
 
+Response Code 200 if OK
+
+**else**
+
+```
+[
+    {
+        error: `message`
+    }
+]
+```
+
 ```
 POST /api/uploadFile
 ```
@@ -22,6 +34,18 @@ POST /api/uploadFile
 | serie       |   Yes    |                               |
 | episode     |   Yes    | Episode                       |
 | season      |   Yes    | Season                        |
+
+Response Code 200 if OK
+
+else
+
+```
+[
+    {
+        error: `message`
+    }
+]
+```
 
 # Edit Episode
 
@@ -37,6 +61,18 @@ POST /api/update
 | description |    No    |                   Description |
 | language    |    No    |                      Language |
 
+
+Response Code 200 if OK
+
+else
+
+```
+[
+    {
+        error: `message`
+    }
+]
+```
 
 # List
 
@@ -110,6 +146,18 @@ POST /api/create
 | genre       |    No    |                         Genre |
 | language    |    No    |                      Language |
 
+Response Code 200 if OK
+
+else
+
+```
+[
+    {
+        error: `message`
+    }
+]
+```
+
 # Edit Series
 ```
 POST /api/updateS
@@ -124,3 +172,16 @@ POST /api/updateS
 | regisseur   |    No    |                     Regisseur |
 | genre       |    No    |                         Genre |
 | language    |    No    |                      Language |
+
+
+Response Code 200 if OK
+
+else
+
+```
+[
+    {
+        error: `message`
+    }
+]
+```

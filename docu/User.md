@@ -61,6 +61,18 @@ POST /api/register
 | username  |   Yes    |                                                                     Username |
 | name      |   Yes    |                                                                 Name on Site |
 
+Response Code 200 if OK
+
+else
+
+```
+[
+    {
+        error: `message`
+    }
+]
+```
+
 # Login
 
 ```
@@ -80,4 +92,17 @@ POST /api/login
     }
 ]
 
+```
+
+
+Response Code 200 if OK
+
+else
+
+```
+[
+    {
+        error: `message`
+    }
+]
 ```
