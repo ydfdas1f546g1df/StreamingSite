@@ -35,9 +35,12 @@ $ npm run dev
 
 <style>
 body{
-    background-color: #1f1f1f;
+    background-color: rgb(17, 17, 17);
 }
-*{
-    color: #fff;
+/** {*/
+/*    color: #fff;*/
+/*}*/
+a {
+    color: #FF6410FF;
 }
 </style>

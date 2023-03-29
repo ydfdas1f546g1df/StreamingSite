@@ -8,6 +8,8 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"
     />
+    <script src="/jsLibs/vue.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 </head>
 <body>
 <header>
@@ -89,7 +91,7 @@
                 Admin</a></li>
             <li class="second-dd-el"></li>
             <li class="second-dd-el"><a href="#">Account</a></li>
-            <li class="second-dd-el"><a href="#">Profil</a></li>
+            <li class="second-dd-el"><a href="#">Profile</a></li>
             <li class="second-dd-el"><a href="#">Watchlist</a></li>
             <li class="second-dd-el"><a href="#">Settings</a></li>
             <li class="second-dd-el"><a href="#">Logout</a></li>
@@ -98,36 +100,10 @@
     </section>
 </header>
 <main>
-    <div class="quick-search">
-        <div class="quick-search-el"><a href="">A</a></div>
-        <div class="quick-search-el"><a href="">B</a></div>
-        <div class="quick-search-el"><a href="">C</a></div>
-        <div class="quick-search-el"><a href="">D</a></div>
-        <div class="quick-search-el"><a href="">E</a></div>
-        <div class="quick-search-el"><a href="">F</a></div>
-        <div class="quick-search-el"><a href="">G</a></div>
-        <div class="quick-search-el"><a href="">H</a></div>
-        <div class="quick-search-el"><a href="">I</a></div>
-        <div class="quick-search-el"><a href="">J</a></div>
-        <div class="quick-search-el"><a href="">K</a></div>
-        <div class="quick-search-el"><a href="">L</a></div>
-        <div class="quick-search-el"><a href="">M</a></div>
-        <div class="quick-search-el"><a href="">N</a></div>
-        <div class="quick-search-el"><a href="">O</a></div>
-        <div class="quick-search-el"><a href="">P</a></div>
-        <div class="quick-search-el"><a href="">Q</a></div>
-        <div class="quick-search-el"><a href="">R</a></div>
-        <div class="quick-search-el"><a href="">S</a></div>
-        <div class="quick-search-el"><a href="">T</a></div>
-        <div class="quick-search-el"><a href="">U</a></div>
-        <div class="quick-search-el"><a href="">V</a></div>
-        <div class="quick-search-el"><a href="">W</a></div>
-        <div class="quick-search-el"><a href="">X</a></div>
-        <div class="quick-search-el"><a href="">Y</a></div>
-        <div class="quick-search-el"><a href="">Z</a></div>
-        <div class="quick-search-el"><a href="">#</a></div>
+    <div class="quick-search" id="quick-search">
+        <div class="quick-search-el" v-for="quick in quicks"><a href="#">{{ quick }}</a></div>
     </div>
-    <div class="eye-catcher">
+    <div class="eye-catcher" id="eye-catcher">
         <div class="eye-wr">
 
             <div class="eye-wrapper">
@@ -191,34 +167,12 @@
             <a href="#" class="home-el-all">View all</a>
         </span>
         <div id="home-cat-1" class="wrapper home-cat">
-            <a href="#" class="home-el">
-                <img src="/dist/img/testcover.jpg" alt="cover" class="cover">
-                <span class="cover-title">Vinland Saga <span class="fi fi-de"></span></span>
-            </a><a href="#" class="home-el">
-            <img src="/dist/img/testcover.jpg" alt="cover" class="cover">
-            <span class="cover-title">Vinland Saga <span class="fi fi-de"></span></span>
-        </a><a href="#" class="home-el">
-            <img src="/dist/img/testcover.jpg" alt="cover" class="cover">
-            <span class="cover-title">Vinland Saga <span class="fi fi-de"></span></span>
-        </a><a href="#" class="home-el">
-            <img src="/dist/img/testcover.jpg" alt="cover" class="cover">
-            <span class="cover-title">Vinland Saga <span class="fi fi-de"></span></span>
-        </a><a href="#" class="home-el">
-            <img src="/dist/img/testcover.jpg" alt="cover" class="cover">
-            <span class="cover-title">Vinland Saga <span class="fi fi-de"></span></span>
-        </a><a href="#" class="home-el">
-            <img src="/dist/img/testcover.jpg" alt="cover" class="cover">
-            <span class="cover-title">Vinland Saga <span class="fi fi-de"></span></span>
-        </a><a href="#" class="home-el">
-            <img src="/dist/img/testcover.jpg" alt="cover" class="cover">
-            <span class="cover-title">Vinland Saga <span class="fi fi-de"></span></span>
-        </a><a href="#" class="home-el">
-            <img src="/dist/img/testcover.jpg" alt="cover" class="cover">
-            <span class="cover-title">Vinland Saga <span class="fi fi-de"></span></span>
-        </a><a href="#" class="home-el">
-            <img src="/dist/img/testcover.jpg" alt="cover" class="cover">
-            <span class="cover-title">Vinland Saga <span class="fi fi-de"></span></span>
-        </a>
+            <span id="hello" style="color: white; cursor: pointer">Hello</span>
+
+            <a href="#" class="home-el" v-for="media in Media" :title="media.name + ', watch it now for free and in full length.'">
+                <img v-bind:src="media.coverSrc" alt="cover" class="cover">
+                <span class="cover-title">{{ media.name }}<span class="fi fi-de"></span></span>
+            </a>
         </div>
     </div>
     <div class="home-cat-parent">
@@ -226,42 +180,9 @@
             <a href="#" class="home-el-all">View all</a>
         </span>
         <div id="home-cat-2" class="wrapper home-cat">
-
-            <a href="#" class="home-el">
-                <img src="/dist/img/testcover.jpg" alt="cover" class="cover">
-                <span class="cover-title">Vinland Saga<span class="fi fi-de"></span></span>
-            </a>
-            <a href="#" class="home-el">
-                <img src="/dist/img/testcover.jpg" alt="cover" class="cover">
-                <span class="cover-title">Vinland Saga<span class="fi fi-de"></span></span>
-            </a>
-            <a href="#" class="home-el">
-                <img src="/dist/img/testcover.jpg" alt="cover" class="cover">
-                <span class="cover-title">Vinland Saga<span class="fi fi-de"></span></span>
-            </a>
-            <a href="#" class="home-el">
-                <img src="/dist/img/testcover.jpg" alt="cover" class="cover">
-                <span class="cover-title">Vinland Saga <span class="fi fi-de"></span></span>
-            </a>
-            <a href="#" class="home-el">
-                <img src="/dist/img/testcover.jpg" alt="cover" class="cover">
-                <span class="cover-title">Vinland Saga<span class="fi fi-de"></span></span>
-            </a>
-            <a href="#" class="home-el">
-                <img src="/dist/img/testcover.jpg" alt="cover" class="cover">
-                <span class="cover-title">Vinland Saga<span class="fi fi-de"></span></span>
-            </a>
-            <a href="#" class="home-el">
-                <img src="/dist/img/testcover.jpg" alt="cover" class="cover">
-                <span class="cover-title">Vinland Saga<span class="fi fi-de"></span></span>
-            </a>
-            <a href="#" class="home-el">
-                <img src="/dist/img/testcover.jpg" alt="cover" class="cover">
-                <span class="cover-title">Vinland Saga<span class="fi fi-de"></span></span>
-            </a>
-            <a href="#" class="home-el">
-                <img src="/dist/img/testcover.jpg" alt="cover" class="cover">
-                <span class="cover-title">Vinland Saga<span class="fi fi-de"></span></span>
+            <a href="#" class="home-el" v-for="media in Media" :title="media.name + ', watch it now for free and in full length.'">
+                <img v-bind:src="media.coverSrc" alt="cover" class="cover">
+                <span class="cover-title">{{ media.name }}<span class="fi fi-de"></span></span>
             </a>
         </div>
     </div>
@@ -270,35 +191,10 @@
             <a href="#" class="home-el-all">View all</a>
         </span>
         <div id="home-cat-3" class="wrapper home-cat">
-
-            <a href="#" class="home-el">
-                <img src="/dist/img/testcover.jpg" alt="cover" class="cover">
-                <span class="cover-title">Vinland Saga <span class="fi fi-de"></span></span>
-            </a><a href="#" class="home-el">
-            <img src="/dist/img/testcover.jpg" alt="cover" class="cover">
-            <span class="cover-title">Vinland Saga <span class="fi fi-de"></span></span>
-        </a><a href="#" class="home-el">
-            <img src="/dist/img/testcover.jpg" alt="cover" class="cover">
-            <span class="cover-title">Vinland Saga <span class="fi fi-de"></span></span>
-        </a><a href="#" class="home-el">
-            <img src="/dist/img/testcover.jpg" alt="cover" class="cover">
-            <span class="cover-title">Vinland Saga <span class="fi fi-de"></span></span>
-        </a><a href="#" class="home-el">
-            <img src="/dist/img/testcover.jpg" alt="cover" class="cover">
-            <span class="cover-title">Vinland Saga <span class="fi fi-de"></span></span>
-        </a><a href="#" class="home-el">
-            <img src="/dist/img/testcover.jpg" alt="cover" class="cover">
-            <span class="cover-title">Vinland Saga <span class="fi fi-de"></span></span>
-        </a><a href="#" class="home-el">
-            <img src="/dist/img/testcover.jpg" alt="cover" class="cover">
-            <span class="cover-title">Vinland Saga <span class="fi fi-de"></span></span>
-        </a><a href="#" class="home-el">
-            <img src="/dist/img/testcover.jpg" alt="cover" class="cover">
-            <span class="cover-title">Vinland Saga <span class="fi fi-de"></span></span>
-        </a><a href="#" class="home-el">
-            <img src="/dist/img/testcover.jpg" alt="cover" class="cover">
-            <span class="cover-title">Vinland Saga <span class="fi fi-de"></span></span>
-        </a>
+            <a href="#" class="home-el" v-for="media in Media" :title="media.name + ', watch it now for free and in full length.'">
+                <img v-bind:src="media.coverSrc" alt="cover" class="cover">
+                <span class="cover-title">{{ media.name }}<span class="fi fi-de"></span></span>
+            </a>
         </div>
     </div>
 
@@ -326,5 +222,6 @@
     </div>
     <span class="copyright">&copy; Copyright 2023. All Rights Reserved. <a href="/">StreamingSite</a></span>
 </footer>
+<script src="/script/main.js"></script>
 </body>
 </html>
