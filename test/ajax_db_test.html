@@ -3,15 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="/jsLibs/vue.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="ajax.js"></script>
 </head>
 <body>
-    <h1>TEST</h1>
+    <h1>Get Users</h1>
     <div class="result">
 
         <button type="button">Load AJAX</button>
     </div>
+<div id="all-users" v-for="user in users">
+    <span>
+        Name:
+    {{ name }}
+    </span>
+    Username:
+    {{ username }}
+</div>
 
 </body>
 </html>

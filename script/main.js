@@ -69,6 +69,8 @@ Vue.createApp({
 }).mount("#home-cat-3");
 
 $("#hello").on("click", function () {
-    TestMedia = {name: "Pokemon", coverSrc: "/dist/img/testcover.jpg"}
-    console.log(32234)
+    // TestMedia = {name: "Pokemon", coverSrc: "/dist/img/testcover.jpg"}
+    app.Media.name = "John Doe";
+
+    console.log(app.Media.name)
 })
