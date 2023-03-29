@@ -2,25 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
     <script src="/jsLibs/vue.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="ajax.js"></script>
+    <title>JSON request</title>
 </head>
 <body>
-    <h1>Get Users</h1>
-    <div class="result">
+<h1>Get Users</h1>
+<div class="result">
 
-        <button type="button">Load AJAX</button>
-    </div>
-<div id="all-users" v-for="user in users">
-    <span>
+    <button type="button">Load AJAX</button>
+</div>
+<div id="all-users">
+    <span v-for="user in users">
         Name:
-    {{ name }}
-    </span>
+    {{ user.name }}
     Username:
-    {{ username }}
+    {{ user.username }}
+    <br>
+    </span>
 </div>
 
+<script src="ajax.js"></script>
 </body>
 </html>
