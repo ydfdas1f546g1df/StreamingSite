@@ -16,9 +16,9 @@ $(function () {
         const JSON  = await response.json()
         console.log(response);
         console.log(JSON);
+        $("#test-div").text(JSON[1].name)
     }
     console.log(getUser('test'))
-
 
 
     Vue.createApp({
@@ -28,4 +28,5 @@ $(function () {
             };
         }
     }).mount("#all-users");
+
 });
