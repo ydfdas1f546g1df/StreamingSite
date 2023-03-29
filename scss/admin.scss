@@ -107,14 +107,20 @@ $aside-width: 220px;
                 height: 40px;
                 border-radius: 5px;
                 padding: 0 10px;
+                cursor: pointer;
+                transition: $trans;
 
                 &.del-btn {
                   background: $orange;
                 }
 
                 &.edit-btn {
-                  background: $header-bg;
+                  background: $main-bg;
 
+                }
+
+                &:hover {
+                  background: $header-bg;
                 }
               }
             }

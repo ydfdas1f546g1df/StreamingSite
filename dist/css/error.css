@@ -865,11 +865,16 @@ footer .copyright a {
   height: 40px;
   border-radius: 5px;
   padding: 0 10px;
+  cursor: pointer;
+  transition: all 0.25s ease-in;
 }
 .admin-main article .user .user-list .user-list-el-header span.user-list-btn-placeholder .user-list-btn.del-btn, .admin-main article .user .user-list .user-list-el span.user-list-btn-placeholder .user-list-btn.del-btn {
   background: rgb(255, 100, 16);
 }
 .admin-main article .user .user-list .user-list-el-header span.user-list-btn-placeholder .user-list-btn.edit-btn, .admin-main article .user .user-list .user-list-el span.user-list-btn-placeholder .user-list-btn.edit-btn {
+  background: rgb(17, 17, 17);
+}
+.admin-main article .user .user-list .user-list-el-header span.user-list-btn-placeholder .user-list-btn:hover, .admin-main article .user .user-list .user-list-el span.user-list-btn-placeholder .user-list-btn:hover {
   background: rgb(28, 28, 28);
 }
 .admin-main article .user .user-list .user-list-el {

@@ -30,6 +30,7 @@ $(function () {
                 email: JSON[i].email,
                 passwordHash: JSON[i].passwordHash,
                 bio: JSON[i].bio,
+                search: "",
             })
         }
 

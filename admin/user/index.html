@@ -112,16 +112,28 @@
             User</a>
     </aside>
     <article>
-        <div class="user">
+        <div class="user" id="all-users">
             <div class="btns">
                 <span class="add-btn user-btn"><i class="gg-user-add"></i></span>
                 <span class="save-btn user-btn"><i class="fas fa-save"></i></span>
             </div>
             <label for="">
                 Search User
-                <input type="text" name="search-user" placeholder="@username | name">
+                <input type="text" name="search-user" placeholder="username" >
+<!--                <span>{{ user.search }}</span>-->
+                <div id="app">
+                    <p>{{ message }}</p>
+                    <p><input v-model="message"></p>
+                </div>
+
+                <script>
+                    myObject = new Vue({
+                        el: '#app',
+                        data: {message: 'Hello Vue.js!'}
+                    })
+                </script>
             </label>
-            <div class="user-list" id="all-users">
+            <div class="user-list">
                 <div class="user-list-el-header">
                     <span class="user-list-el-id">ID</span>
                     <span class="user-list-el-username">username</span>
@@ -130,7 +142,7 @@
                     <span class="user-list-el-admin">admin</span>
                     <span class="user-list-btn-placeholder"></span>
                     <span class="user-list-btn-placeholder"></span>
-
+<!--                    v-if=" user.username ? user.search: 'hello' "-->
                 </div>
                 <div class="user-list-el" v-for="user in users" id="{{ user.id }}" >
                     <span class="user-list-el-id">{{ user.id }}</span>
