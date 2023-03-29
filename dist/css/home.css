@@ -64,39 +64,6 @@
     height: 244px;
   }
 }
-@media (max-width: 1080px) {
-  .eye-catcher-el {
-    margin: 7px !important;
-  }
-  .eye-catcher {
-    display: flex;
-    flex-direction: column;
-  }
-  .eye-el-1x1 {
-    height: 210px;
-    width: 210px;
-  }
-  .eye-el-1x2 {
-    height: 210px;
-    width: 434px;
-  }
-  .eye-el-2x2 {
-    width: 434px;
-    height: 434px;
-  }
-  .home-el-title {
-    font-size: 52px !important;
-  }
-  .home-el-title .home-el-all {
-    font-size: 22px !important;
-  }
-  img.cover {
-    width: 280px !important;
-  }
-  .cover-title {
-    font-size: 22px;
-  }
-}
 .home-cat-parent .home-el-title {
   color: white;
   font-weight: bold;

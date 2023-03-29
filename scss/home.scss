@@ -112,54 +112,54 @@ $eye-catcher-height-1080: 210px;
 
 
 }
-
-@media (max-width: 1080px) {
-
-  .eye-catcher-el {
-    margin: $eye-catcher-margin-1080 !important;
-  }
-
-  .eye-catcher {
-    display: flex;
-    flex-direction: column;
-  }
-  //.eye-wr {
-  // display: flex;
-  //  flex-direction: column;
-  //}
-
-  .eye-el-1x1 {
-    height: $eye-catcher-height-1080;
-    width: $eye-catcher-height-1080;
-  }
-
-  .eye-el-1x2 {
-    height: $eye-catcher-height-1080;
-    width: 2 * $eye-catcher-height-1080 + 2 * $eye-catcher-margin-1080;
-  }
-
-  .eye-el-2x2 {
-    width: 2 * $eye-catcher-height-1080 + 2 * $eye-catcher-margin-1080;
-    height: 2 * $eye-catcher-height-1080 + 2 * $eye-catcher-margin-1080;
-  }
-
-  .home-el-title {
-    font-size: $cat-title-size + 30px !important;
-
-    .home-el-all {
-      font-size: $cat-title-size !important;
-    }
-  }
-
-  img {
-    &.cover {
-      width: 280px !important;
-    }
-  }
-  .cover-title {
-    font-size: $cat-title-size;
-  }
-}
+//
+//@media (max-width: 1080px) {
+//
+//  .eye-catcher-el {
+//    margin: $eye-catcher-margin-1080 !important;
+//  }
+//
+//  .eye-catcher {
+//    display: flex;
+//    flex-direction: column;
+//  }
+//  //.eye-wr {
+//  // display: flex;
+//  //  flex-direction: column;
+//  //}
+//
+//  .eye-el-1x1 {
+//    height: $eye-catcher-height-1080;
+//    width: $eye-catcher-height-1080;
+//  }
+//
+//  .eye-el-1x2 {
+//    height: $eye-catcher-height-1080;
+//    width: 2 * $eye-catcher-height-1080 + 2 * $eye-catcher-margin-1080;
+//  }
+//
+//  .eye-el-2x2 {
+//    width: 2 * $eye-catcher-height-1080 + 2 * $eye-catcher-margin-1080;
+//    height: 2 * $eye-catcher-height-1080 + 2 * $eye-catcher-margin-1080;
+//  }
+//
+//  .home-el-title {
+//    font-size: $cat-title-size + 30px !important;
+//
+//    .home-el-all {
+//      font-size: $cat-title-size !important;
+//    }
+//  }
+//
+//  img {
+//    &.cover {
+//      width: 280px !important;
+//    }
+//  }
+//  .cover-title {
+//    font-size: $cat-title-size;
+//  }
+//}
 
 
 .home-cat-parent {

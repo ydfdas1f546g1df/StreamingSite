@@ -28,6 +28,7 @@ $eye-catcher-height-1080: 410px;
 @import "icons";
 @import "dropdown";
 @import "home";
+@import "admin";
 
 
 ::-webkit-scrollbar {
@@ -52,6 +53,9 @@ $eye-catcher-height-1080: 410px;
 * {
   //font-family: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  &::selection {
+    background: $orange;
+  }
 }
 
 a {
@@ -180,28 +184,28 @@ html {
 
 }
 
-@media screen and (max-width: 1080px) {
-  .user, .quick-search {
-    display: none !important;
-  }
-
-  .logo-1, .logo-2 {
-    font-size: $logo-size + 50px !important;
-  }
-
-  .quick-search-el {
-    font-size: 55px;
-    min-height: 100px !important;
-    min-width: 100px !important;
-    border-radius: 10px !important;
-    margin: 10px !important;
-  }
-
-  main {
-    width: 900px !important;
-  }
-
-}
+//@media screen and (max-width: 1080px) {
+//  .user, .quick-search {
+//    display: none !important;
+//  }
+//
+//  .logo-1, .logo-2 {
+//    font-size: $logo-size + 50px !important;
+//  }
+//
+//  .quick-search-el {
+//    font-size: 55px;
+//    min-height: 100px !important;
+//    min-width: 100px !important;
+//    border-radius: 10px !important;
+//    margin: 10px !important;
+//  }
+//
+//  main {
+//    width: 900px !important;
+//  }
+//
+//}
 
 
 
