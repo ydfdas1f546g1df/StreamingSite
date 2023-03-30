@@ -5,5 +5,6 @@
     "/dist/css/home.css": "/dist/css/home.css",
     "/dist/css/header.css": "/dist/css/header.css",
     "/dist/css/footer.css": "/dist/css/footer.css",
-    "/dist/css/dropdown.css": "/dist/css/dropdown.css"
+    "/dist/css/dropdown.css": "/dist/css/dropdown.css",
+    "/dist/css/admin.css": "/dist/css/admin.css"
 }
