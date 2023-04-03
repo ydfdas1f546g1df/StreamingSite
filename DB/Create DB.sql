@@ -72,6 +72,7 @@ CREATE TABLE tbl_users
     passwordHash char(64)    NOT NULL,
     admin        boolean      DEFAULT FALSE,
     bio          varchar(300) DEFAULT 'This Website is the Best',
+    created      date         DEFAULT CURDATE(),
     PRIMARY KEY tbl_users_id_primary (id)
 );
 

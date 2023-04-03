@@ -24,13 +24,13 @@ You must use the token which was created before
     "name": "Jack J.",
     "bio": "Im the Real Jack",
     "created_at": "2015-05-23T08:00:58Z",
-    "avatar_url": "http://localhost.com/dist/pic/e32131cd8.jpeg",
-    "web_url": "http://localhost/jack_smith"
+    "avatar_url": "http://localhost.com/data/pic/e32131cd8.jpeg",
+    "web_url": "http://localhost/user/jack_smith"
   }
 ]
 ```
 
-You can also use ?search= to search for users by name, username, or public email. For example, /users?search=John. When
+You can also use ?search= to search for users by name, or public email. For example, /users?search=John. When
 you search for a:
 <ul>
 <li>Public email, you must use the full email address to get an exact match. A search might return a partial match. For example, if you search for the email on@example.com, the search can return both on@example.com and jon@example.com.</li>
@@ -39,7 +39,7 @@ you search for a:
 In addition, you can lookup users by username:
 
 ```
-POST /api/users?username=:username
+POST /api/users?search=:@username
 ```
 
 
