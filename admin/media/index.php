@@ -26,7 +26,7 @@ $mainContent = '
     </div>
 </main>';
 
-include '.././template/index.php';
+include '../.././template/index.php';
 
 //$content = file_get_contents("https://127.69.69.69/api/check_user");
 $login = true;
