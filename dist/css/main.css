@@ -758,6 +758,7 @@ footer .copyright a {
   margin: 0 0 5px 0;
   width: 150px;
   z-index: 1;
+  border-radius: 5px;
 }
 @keyframes zoom-in-zoom-out {
   0% {

@@ -97,7 +97,6 @@ CREATE TABLE tbl_episode
     upload      date         DEFAULT CURDATE(),
     language    char(2)      NOT NULL,
     season      int          NOT NULL,
-    nthEpisode  int          NOT NULL,
     PRIMARY KEY tbl_episode_id_primary (id),
     FOREIGN KEY tbl_episode_regisseur (regisseur) REFERENCES tbl_regisseur (id),
     FOREIGN KEY tbl_episode_genre (genre) REFERENCES tbl_genre (id),
