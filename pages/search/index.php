@@ -1,5 +1,9 @@
 <?php
-
+if (strpos($_SERVER['REQUEST_URI'], "=")) {
+   $quick = explode("=", $_SERVER['REQUEST_URI'])[1];
+} else {
+    $quick = "";
+};
 
 $searchContent = '
 </header>
@@ -12,7 +16,7 @@ $searchContent = '
     <label class="search">
         Search
         <div id="search-input">
-            <input type="text" value="'.  explode("=", $_SERVER['REQUEST_URI'])[1].'">
+            <input type="text" value="'. $quick .'">
         </div>
     </label>
     <div id="search-result">

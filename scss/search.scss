@@ -23,6 +23,8 @@ $eye-catcher-height: 156px;
 $eye-catcher-height-1400: 230px;
 $eye-catcher-height-1080: 410px;
 $lighter-gray: #636363;
+$black-shadow: 0px 0px 10px 1px rgba(10, 10, 10, 0.36);
+$orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
 
 .search-main {
   label.search {
@@ -69,9 +71,10 @@ $lighter-gray: #636363;
       background: $header-bg;
       border-radius: 10px;
       margin: 10px 0;
+      box-shadow: $black-shadow;
 
       &:hover {
-        box-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.36);
+        box-shadow: $orange-shadow;
       }
 
       .result-head {
@@ -81,9 +84,11 @@ $lighter-gray: #636363;
 
         #add-wl-btn {
           color: $lighter-gray;
+
           &:hover {
             color: green;
           }
+
           .tooltiptext {
             top: -300%;
             left: -50%;
@@ -92,11 +97,13 @@ $lighter-gray: #636363;
             background: $orange;
             padding: 10px;
             border-radius: 5px;
+
             &::after {
               display: none;
             }
           }
         }
+
         .result-title {
           font-weight: bold;
           font-size: 22px;
