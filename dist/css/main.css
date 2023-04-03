@@ -1169,3 +1169,6 @@ html body main .quick-search .quick-search-el a {
   min-width: 140px;
   border-radius: 5px;
 }
+.tooltiptext a:hover {
+  background: rgb(55, 55, 55);
+}
