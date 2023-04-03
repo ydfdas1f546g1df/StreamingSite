@@ -46,20 +46,21 @@ POST /api/users?username=:username
 |:----------|:--------:|-------------------------:|
 | token     |   Yes    | Is Used to Identify User |
 
+```token is saved in Cokkies```
+
 # Register
 
 ```
 POST /api/register
 ```
 
-| Atrribute | Required |                                                                  Description |
-|:----------|:--------:|-----------------------------------------------------------------------------:|
-| token     |   Yes    |                                                     Is Used to Identify User |
-| admin     |    No    | User is an administrator. Valid values are true or false. Defaults to false. |
-| bio       |    No    |                                                             User’s biography |
-| email     |   Yes    |                                                                        Email |
-| username  |   Yes    |                                                                     Username |
-| name      |   Yes    |                                                                 Name on Site |
+| Atrribute | Required |                           Description |
+|:----------|:--------:|--------------------------------------:|
+| token     |   Yes    | Is Used to Identify User is in Cookie |
+| bio       |    No    |                      User’s biography |
+| email     |   Yes    |                                 Email |
+| username  |   Yes    |                              Username |
+| name      |   Yes    |                          Name on Site |
 
 Response Code 200 if OK
 
