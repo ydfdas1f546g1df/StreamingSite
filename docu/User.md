@@ -1,10 +1,9 @@
 # List
 
-## For Administrative Users
 
 You must use the token which was created before
 
-```POST /api/users```
+```GET /api/users```
 
 ```
 [
@@ -42,9 +41,7 @@ In addition, you can lookup users by username:
 ```
 POST /api/users?username=:username
 ```
-| Atrribute | Required |              Description |
-|:----------|:--------:|-------------------------:|
-| token     |   Yes    | Is Used to Identify User |
+
 
 # Register
 
