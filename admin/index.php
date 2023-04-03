@@ -1,5 +1,5 @@
 <?php
-include './template/index.php';
+include './../template/index.php';
 
 //$content = file_get_contents("https://127.69.69.69/api/check_user");
 $login = true;
@@ -13,15 +13,16 @@ if (isset($cookie)) {
         if ($IsAdmin) {
             $Page = $Page . $admin_1 . $header_2 . $loggedIn . $header_3;
         } else {
-            header("Location: /index.php");
+            header("location: /");
         }
     }
 } else {
     $Page = $Page . $header_2 . $notLoggedIn . $header_3;
 }
-$Page = $Page . $HomePageBody . $footer;
+$Page = $Page . $admin_dashboard . $footer;
 echo $Page;
 
-?>
+
+
 
 
