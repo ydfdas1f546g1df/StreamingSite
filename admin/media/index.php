@@ -4,13 +4,11 @@ $mainContent = '
 </header>
 <main class="admin-main">
     <div id="admin-main-div">
-
-
     <aside>
-        <a href="/admin" class="current-admin">
+        <a href="/admin">
             <div class="icon-container"><i class="gg-terminal"></i></div>
             Dashboard</a>
-        <a href="/admin/media">
+        <a href="/admin/media" class="current-admin">
             <div class="icon-container"><i class="fa-solid fa-photo-film"></i></div>
             Media
         </a>
@@ -22,8 +20,8 @@ $mainContent = '
             User</a>
     </aside>
     <article class="dash-article">
-
-
+    
+    
     </article>
     </div>
 </main>';

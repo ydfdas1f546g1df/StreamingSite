@@ -7,14 +7,14 @@ $mainContent = '
 
 
     <aside>
-        <a href="/admin" class="current-admin">
+        <a href="/admin">
             <div class="icon-container"><i class="gg-terminal"></i></div>
             Dashboard</a>
         <a href="/admin/media">
             <div class="icon-container"><i class="fa-solid fa-photo-film"></i></div>
             Media
         </a>
-        <a href="/admin/upload">
+        <a href="/admin/upload" class="current-admin">
             <div class="icon-container"><i class="gg-software-upload"></i></div>
             upload</a>
         <a href="/admin/user">
