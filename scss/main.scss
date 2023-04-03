@@ -53,6 +53,7 @@ $eye-catcher-height-1080: 410px;
 * {
   //font-family: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
   &::selection {
     background: $orange;
   }
@@ -95,7 +96,7 @@ html {
       display: flex;
       flex-direction: column;
       height: auto;
-      width: 1350px;
+      width: 1150px;
       //background-color: rgba(255, 0, 0, 0.13);
 
       .quick-search {
@@ -113,13 +114,12 @@ html {
           align-items: center;
           justify-content: center;
           transition: $trans;
+          font-weight: bold;
+          color: white;
 
           &:hover {
             background: $dd-more-bg;
-
-            a {
-              color: $orange;
-            }
+            color: $orange;
           }
 
           a {

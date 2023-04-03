@@ -17,9 +17,9 @@ $header_1 = '<!DOCTYPE html>
         <a href="/" class="logo-1" title="StreamingSite">Streaming</a>
         <a href="/" class="logo-2" title="StreamingSite">Site</a>
         <nav>
-            <a href="/pages/all.php" title="All series and films on this website"><i class="gg-play-button-o"></i>&nbsp;Series</a>
+            <a href="/pages/allseries/" title="All series and films on this website"><i class="gg-play-button-o"></i>&nbsp;Series</a>
             <a href="/pages/popular.php" title="This is popular right now"><i class="gg-align-bottom"></i>&nbsp;Popular</a>
-            <a href="/pages/Search.php" title="Search for series and films"><i class="gg-search"></i>&nbsp;Search</a>
+            <a href="/pages/search/" title="Search for series and films"><i class="gg-search"></i>&nbsp;Search</a>
 ';
 $admin_1 = '
             <span class="nav-more tooltip" title="There is more here">admin
@@ -86,9 +86,9 @@ $loggedIn = '
             <div class="menu-button""></div>
         </label>
         <ul class="menu">
-            <li><a href="/pages/all.php"><i class="gg-play-button-o"></i>&nbsp;Series</a></li>
+            <li><a href="/pages/allseries/index.php"><i class="gg-play-button-o"></i>&nbsp;Series</a></li>
             <li><a href="/pages/popular.php"><i class="gg-align-bottom"></i>&nbsp;Popular</a></li>
-            <li><a href="/pages/Search.php"><i class="gg-search"></i>&nbsp;Search</a></li>
+            <li><a href="/pages/search/"><i class="gg-search"></i>&nbsp;Search</a></li>
             ';
 $admin_2 = '<li class="more-dd">admin</li>
             <li class="more-dd-el"><a href="https://github.com/ydfdas1f546g1df/StreamingSite" target="_blank">
@@ -117,9 +117,9 @@ $footer = '
     <div class="wrapper">
         <div class="footer-el">
             <span class="footer-el-title">Series</span>
-            <a class="footer-el-item" href="/pages/all.php">All</a>
-            <a class="footer-el-item" href="#latest">New</a>
-            <a class="footer-el-item" href="/pages/popular.php>Popular</a>
+            <a class="footer-el-item" href="/pages/allseries/">All</a>
+            <a class="footer-el-item" href="/#latest">New</a>
+            <a class="footer-el-item" href="/pages/popular.php">Popular</a>
         </div>
         <div class="footer-el">
             <span class="footer-el-title">About</span>
@@ -130,14 +130,13 @@ $footer = '
         <div class="footer-el">
             <span class="footer-el-title">Discover</span>
             <a class="footer-el-item">Random</a>
-            <a class="footer-el-item" href="/pages/Search.php">Search</a>
+            <a class="footer-el-item" href="/pages/search/">Search</a>
         </div>
     </div>
     <span class="copyright">&copy; Copyright 2023. All Rights Reserved. <a href="/">StreamingSite</a></span>
 </footer>
 <script>
     $("#logout").on("click", function () {
-        console.log(document.cookie)
         document.cookie = "LoginUser=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT";
     })
 </script>

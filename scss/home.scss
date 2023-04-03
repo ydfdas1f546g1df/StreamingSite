@@ -19,7 +19,7 @@ $cat-title-size: 22px;
 $eye-catcher-margin: 5px;
 $eye-catcher-margin-1400: 3px;
 $eye-catcher-margin-1080: 7px;
-$eye-catcher-height: 156px;
+$eye-catcher-height: 134px;
 $eye-catcher-height-1400: 119px;
 $eye-catcher-height-1080: 210px;
 
@@ -195,6 +195,9 @@ $eye-catcher-height-1080: 210px;
     //justify-content: space-between;
     align-content: flex-start;
 
+    &#home-cat-3 {
+      margin-bottom: 300px;
+    }
     .home-el {
       display: flex;
       flex-direction: column;
