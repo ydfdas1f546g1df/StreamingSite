@@ -4,7 +4,7 @@ $header_1 = '<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Admin Panel</title>
+    <title>StreamingSite</title>
     <link href="/dist/css/main.css" rel="stylesheet" type="text/css">
     <link
             rel="stylesheet"
