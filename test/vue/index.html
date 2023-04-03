@@ -1,32 +1,46 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <script src="/jsLibs/vue.js"></script>
-    <title>Vue Test</title>
-</head>
-
-<body>
-<div id="content" class="container">
-    <h1>{{ pageTitle }}</h1>
-    <h1>{{ content }}</h1>
+<script src="https://unpkg.com/vue@next"></script>
+<div id="app">
+    <div class="search-wrapper panel-heading col-sm-12">
+        <input type="text" v-model="search" placeholder="Search" /> <br> <br>
+    </div>
+    <table class="table" id="myTable">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="product in filteredProducts" :key="product.id">
+            <td>{{ product.id }}</td>
+            <td>{{ product.name }}</td>
+        </tr>
+        </tbody>
+    </table>
 </div>
-<!-- <script src="script.js"></script> -->
 <script>
     Vue.createApp({
         data() {
             return {
-                pageTitle: "Vue Test",
-                content: "Hello ma Friend"
+                users: [
+                    {id: 1, name: "Foo"},
+                    {id: 2, name: "Bar"},
+                    {id: 3, name: "Baz"},
+                    {id: 4, name: "Foobar"}
+                ],
+                search: ""
             };
-        }
-    }).mount("#content");
-</script>
-</body>
+        },
+        computed: {
+            filteredProducts() {
+                return this.users.filter(p => {
+                    // return true if the product should be visible
 
-</html>
+                    // in this example we just check if the search string
+                    // is a substring of the product name (case insensitive)
+                    return p.name.toLowerCase().indexOf(this.search.toLowerCase()) != -1;
+                });
+            }
+        }
+    }).mount('#app');
+</script>

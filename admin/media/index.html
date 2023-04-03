@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel</title>
+    <link href="/dist/css/main.css" rel="stylesheet" type="text/css">
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"
+    />
+    <script src="/jsLibs/vue.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <a href="/" class="logo-1" title="StreamingSite">Streaming</a>
+        <a href="/" class="logo-2" title="StreamingSite">Site</a>
+        <nav>
+            <a href="#" title="All series and films on this website"><i class="gg-play-button-o"></i>&nbsp;Series</a>
+            <a href="#" title="This is popular right now"><i class="gg-align-bottom"></i>&nbsp;Popular</a>
+            <a href="#" title="Search for series and films"><i class="gg-search"></i>&nbsp;Search</a>
+            <span class="nav-more tooltip" title="There is more here">admin
+             <div class="tooltiptext">
+                 <a href="https://github.com/ydfdas1f546g1df/StreamingSite" target="_blank">
+                <div class="more-dd-icon"><i class="gg-git-fork"></i></div>
+                GitHub</a>
+                 <a href="/admin/media/">
+                <div class="more-dd-icon"><i class="gg-software-upload"></i></div>
+                Upload</a>
+               <a href="/admin/">
+                <div class="more-dd-icon"><i class="gg-terminal"></i></div>
+                Admin</a>
+            </div>
+            </span>
+        </nav>
+
+    </div>
+    <div class="user">
+        <img src="/dist/img/testpp.jpg" id="user-pp" alt="user-pp"/>
+        <div id="user-name" class="tooltip">Username<i class="down-arrow"></i>
+            <div class="tooltiptext">
+                <a class="user-dd-el" href="#">
+                    <div class="user-dd-icon">
+                        <i class="gg-format-justify"></i>
+                    </div>
+                    <span class="user-dd-name">Account</span>
+                </a> <a class="user-dd-el" href="#">
+                <div class="user-dd-icon">
+                    <i class="gg-user"></i>
+                </div>
+                <span class="user-dd-name">Profile</span>
+            </a> <a class="user-dd-el" href="#">
+                <div class="user-dd-icon">
+                    <i class="gg-eye-alt"></i>
+                </div>
+                <span class="user-dd-name">Watchlist</span>
+            </a> <a class="user-dd-el" href="#">
+                <div class="user-dd-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </div>
+                <span class="user-dd-name">Settings</span>
+            </a><a class="user-dd-el" href="#">
+                <div class="user-dd-icon">
+                    <i class="gg-log-in"></i>
+                </div>
+                <span class="user-dd-name">Logout</span>
+            </a>
+
+            </div>
+        </div>
+    </div>
+    <section class="top-nav">
+        <input id="menu-toggle" type="checkbox"/>
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+            <li><a href="/pages/all.html"><i class="gg-play-button-o"></i>&nbsp;Series</a></li>
+            <li><a href="/pages/popular.html"><i class="gg-align-bottom"></i>&nbsp;Popular</a></li>
+            <li><a href="/pages/Search.html"><i class="gg-search"></i>&nbsp;Search</a></li>
+            <li class="more-dd">admin</li>
+            <li class="more-dd-el"><a href="https://github.com/ydfdas1f546g1df/StreamingSite" target="_blank">
+                <div class="more-dd-icon"><i class="gg-git-fork"></i></div>
+                GitHub</a></li>
+            <li class="more-dd-el"><a href="/admin/media/">
+                <div class="more-dd-icon"><i class="gg-software-upload"></i></div>
+                Upload</a></li>
+            <li class="more-dd-el more-dd-el-last"><a href="/admin/">
+                <div class="more-dd-icon"><i class="gg-terminal"></i></div>
+                Admin</a></li>
+            <li class="second-dd-el"></li>
+            <li class="second-dd-el"><a href="#">Account</a></li>
+            <li class="second-dd-el"><a href="#">Profile</a></li>
+            <li class="second-dd-el"><a href="#">Watchlist</a></li>
+            <li class="second-dd-el"><a href="#">Settings</a></li>
+            <li class="second-dd-el"><a href="#">Logout</a></li>
+            <li class="second-dd-el"></li>
+        </ul>
+    </section>
+</header>
+<main class="admin-main">
+    <aside>
+        <a href="/admin/">
+            <div class="icon-container"><i class="gg-terminal"></i></div>
+            Dashboard</a>
+        <a href="/admin/media/" class="current-admin">
+            <div class="icon-container"><i class="gg-software-upload"></i></div>
+            Media/Upload</a>
+        <a href="/admin/user">
+            <div class="icon-container"><i class="gg-user"></i></div>
+            User</a>
+    </aside>
+    <article class="dash-article">
+
+
+    </article>
+</main>
+
+<footer>
+    <div class="wrapper">
+        <div class="footer-el">
+            <span class="footer-el-title">Series</span>
+            <a class="footer-el-item" href="/pages/all.html">All</a>
+            <a class="footer-el-item" href="#latest">New</a>
+            <a class="footer-el-item" href="/pages/popular.html">Popular</a>
+        </div>
+        <div class="footer-el">
+            <span class="footer-el-title">About</span>
+            <a class="footer-el-item" href="/pages/contact.html">Contact</a>
+            <a class="footer-el-item" href="#">AGBs</a>
+            <a class="footer-el-item" href="#">Imprint</a>
+        </div>
+        <div class="footer-el">
+            <span class="footer-el-title">Discover</span>
+            <a class="footer-el-item">Random</a>
+            <a class="footer-el-item" href="/pages/Search.html">Search</a>
+        </div>
+    </div>
+    <span class="copyright">&copy; Copyright 2023. All Rights Reserved. <a href="/">StreamingSite</a></span>
+</footer>
+
+<script src="/script/main.js"></script>
+</body>
+</html>
