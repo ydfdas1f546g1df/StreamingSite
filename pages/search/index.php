@@ -1,10 +1,18 @@
 
 <?php
-$HomePageBody = '
-<div class="quick-search" id="quick-search"> 
-        <a v-for="quick in quicks" :href="\'/pages/?search=\' + quick"  class="quick-search-el"><div>{{ quick }}</div></a>
+$searchContent = '
+</header>
+<main class="search-main">
+    <div class="quick-search" id="quick-search">
+        <a v-for="quick in quicks" :href="\'/pages/?search=\' + quick" class="quick-search-el">
+            <div>{{ quick }}</div>
+        </a>
     </div>
+    <label class="search">
+    Search
     <div id="search-input">
+</label>
+    <input type="text">
     </div>
     <div id="search-result">
     </div>
@@ -32,5 +40,5 @@ if (isset($cookie)) {
         $Page = $Page . $header_2 . $notLoggedIn;
     }
 }
-$Page = $Page . $HomePageBody . $footer;
+$Page = $Page . $searchContent . $footer;
 echo $Page;
