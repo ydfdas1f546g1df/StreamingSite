@@ -9,12 +9,22 @@ $searchContent = '
         </a>
     </div>
     <label class="search">
-    Search
-    <div id="search-input">
-</label>
+        Search
+        <div id="search-input">
     <input type="text">
     </div>
+    </label>
     <div id="search-result">
+        <a class="result-item" v-for="result in results">
+            <div class="result-head">
+                <span class="result-title">{{ result.showName }}</span>
+                <span class="result-info result-watched">{{ result.watched }} 
+                <i class="gg-eye-alt"></i>
+                </span> 
+                <span class="result-info result-watchlist">{{ result.watchlist }}<i class="fa-solid fa-list-ul"></i></span>
+            </div>
+            <span class="result-description">{{ result.desc }}</span>
+        </a>
     </div>
 </main>
 <script src="/script/search.js"></script>

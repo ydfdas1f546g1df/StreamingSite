@@ -13,6 +13,7 @@
   font-size: 40px;
   width: 1150px;
   height: 80px;
+  margin-bottom: 20px;
   border-radius: 5px;
   background: none;
   box-shadow: none;
@@ -30,6 +31,47 @@
 }
 .search-main label.search input::placeholder {
   color: rgba(255, 255, 255, 0.51);
+}
+.search-main #search-result {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  height: 100%;
+}
+.search-main #search-result .result-item {
+  padding: 20px;
+  background: rgb(28, 28, 28);
+  border-radius: 10px;
+  margin: 10px 0;
+}
+.search-main #search-result .result-item .result-head {
+  display: flex;
+  align-items: center;
+}
+.search-main #search-result .result-item .result-head .result-title {
+  font-weight: bold;
+}
+.search-main #search-result .result-item .result-head .result-info {
+  padding: 0 0 0 10px;
+  display: flex;
+  align-items: center;
+}
+.search-main #search-result .result-item .result-head .result-info i {
+  margin: 0 0 0 5px;
+}
+.search-main #search-result .result-item .result-head .result-info .result-watchlist {
+  color: green;
+}
+.search-main #search-result .result-item .result-head .result-info .result-watched {
+  color: rgb(255, 100, 16);
+}
+.search-main #search-result .result-item .result-head .result-watchlist {
+  display: flex;
+  align-items: center;
+  color: green;
+}
+.search-main #search-result .result-item .result-description {
+  color: #636363;
 }
 
 header {
