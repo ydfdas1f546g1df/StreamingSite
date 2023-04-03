@@ -22,7 +22,7 @@ $eye-catcher-margin-1080: 20px;
 $eye-catcher-height: 156px;
 $eye-catcher-height-1400: 230px;
 $eye-catcher-height-1080: 410px;
-
+@import "search";
 @import "header";
 @import "footer";
 @import "icons";
@@ -53,6 +53,7 @@ $eye-catcher-height-1080: 410px;
 * {
   //font-family: "Open Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
   &::selection {
     background: $orange;
   }
@@ -94,8 +95,8 @@ html {
       flex: 1 0 auto;
       display: flex;
       flex-direction: column;
-      min-height: 100%;
-      width: 1350px;
+      height: auto;
+      width: 1150px;
       //background-color: rgba(255, 0, 0, 0.13);
 
       .quick-search {
@@ -113,13 +114,12 @@ html {
           align-items: center;
           justify-content: center;
           transition: $trans;
+          font-weight: bold;
+          color: white;
 
           &:hover {
             background: $dd-more-bg;
-
-            a {
-              color: $orange;
-            }
+            color: $orange;
           }
 
           a {
@@ -177,12 +177,12 @@ html {
   border-radius: 5px;
 }
 
-@media (max-width: 1400px) {
-  main {
-    width: 1000px !important;
-  }
-
-}
+//@media (max-width: 1400px) {
+//  main {
+//    width: 1000px !important;
+//  }
+//
+//}
 
 //@media screen and (max-width: 1080px) {
 //  .user, .quick-search {
