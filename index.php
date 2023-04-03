@@ -1,3 +1,4 @@
+<?php
 $homeContent = '</header>
 <main>
     <div class="quick-search" id="quick-search">
@@ -102,7 +103,7 @@ $homeContent = '</header>
     </div>
 
 </main>';
-<?php
+
 include './template/index.php';
 
 //$content = file_get_contents("https://127.69.69.69/api/check_user");
