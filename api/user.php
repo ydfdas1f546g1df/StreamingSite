@@ -1,26 +1,34 @@
 <?php
-$mysqli = null;
-include_once 'db_connect.php';
+/**
+ * @var mysqli $mysqli
+ */
+
+include_once("db_connect.php");
 
 
-if (isset($_GET['search'])) {
-    echo $_GET['search'];
+if(isset($_GET['search'])){
     $search = $_GET['search'];
-    $emailRegex = '/^[[:ascii:],0-9]{1,20}\@[[:ascii:],0-9]{1,10}\.[[:ascii:]]{0,4}$/';
-    $userRegex = '/^@.*$/';
-    if (preg_match($emailRegex, $search)) {
-        $stmt = $mysqli->prepare('SELECT * FROM tbl_users WHERE email LIKE (?)');
-    } elseif (preg_match($userRegex, $search)) {
-        $stmt = $mysqli->prepare('SELECT * FROM tbl_users WHERE username LIKE (?)');
-        $search = ltrim($search, '@');
-    } else {
-        $stmt = $mysqli->prepare('SELECT * FROM tbl_users WHERE name LIKE (?)');
-    }
-    $search = '%'.$search.'%';
-    $stmt->bind_param('s', $search);
+    $regemail = '/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,5})$/im';
+    $reguser = '/^@.*$/';
 
-} else {
-    $stmt = $mysqli->prepare('SELECT * FROM tbl_users');
+    if(preg_match($regemail, $search)){
+        $stmt = $mysqli->prepare('SELECT id, username, admin, name, bio, created FROM tbl_users WHERE email LIKE (?)');
+        $search = '%'.$search.'%';
+        $stmt->bind_param('s', $search);
+    }elseif (preg_match($reguser, $search)){
+        $stmt = $mysqli->prepare('SELECT id, username, admin, name, bio, created FROM tbl_users WHERE username LIKE (?)');
+        $search = ltrim($search, '@');
+        $search = '%'.$search.'%';
+        $stmt->bind_param('s', $search);
+    }else{
+        $stmt = $mysqli->prepare('SELECT id, username, admin, name, bio, created FROM tbl_users WHERE name LIKE (?)');
+        $search = '%'.$search.'%';
+        $stmt->bind_param('s', $search);
+    }
+}else {
+
+    $stmt = $mysqli->prepare('SELECT id, username, admin, name, bio, created FROM tbl_users');
+
 }
 
 $stmt->execute();
