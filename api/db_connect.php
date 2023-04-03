@@ -1,7 +1,4 @@
 <?php
-$databaseHost = 'localhost';
-$databaseUsername = 'root';
-$databasePassword = 'Bananen.123';
-$databaseName = 'test';
+$data = json_decode(file_get_contents('database.json'),true);
 
-$mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
+$mysqli = mysqli_connect($data['host'], $data['username'], $data['password'], $data['name']);

@@ -1,5 +1,8 @@
 <?php
-$mysqli = null;
+/**
+ * @var mysqli $mysqli
+ */
+
 include_once("db_connect.php");
 
 $stmt = $mysqli->prepare('SELECT * FROM tbl_users');
