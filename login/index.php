@@ -1,16 +1,27 @@
 
 <?php
-if (!empty($_REQUEST["email"])) {
-    $email = htmlspecialchars($_REQUEST("email"));
-} else {
-    $email = "";
-};
-if (!empty($_REQUEST["password"])) {
-    $pw = htmlspecialchars($_REQUEST("password"));
-} else {
-    $pw = "";
-};
 
+$pw = "test";
+$email = "test";
+
+$email = htmlspecialchars($_POST["email"]);
+$pw = htmlspecialchars($_POST["password"]);
+echo implode(",",$_POST);
+
+if (empty($email)) {
+    $email = "";
+}
+//else {
+//
+//};
+if (empty($pw)) {
+    $pw = "";
+}
+//else {
+//
+//};
+echo $pw;
+echo $email;
 $homeContent = '
 <main class="loginRegster-main">
 <div class="login-wrapper">
@@ -65,6 +76,6 @@ if (isset($cookie)) {
 }  else {
     $Page = $notLoggedInHeader;
 }
-$Page = $Page . $homeContent . $footer;
+$Page .=  $homeContent . $footer;
 echo $Page;
 
