@@ -96,6 +96,10 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
         color: white;
         font-size: 22px;
         cursor: pointer;
+        &:hover {
+          transition: $trans;
+          background: $header-bg;
+        }
       }
 
       label {

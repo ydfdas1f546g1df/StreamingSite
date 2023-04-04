@@ -1129,6 +1129,10 @@ main.errorpage article .error-btns .error-btn:hover {
   font-size: 22px;
   cursor: pointer;
 }
+.loginRegster-main .login-wrapper form input[type=submit]:hover {
+  transition: all 0.25s ease-in;
+  background: rgb(28, 28, 28);
+}
 .loginRegster-main .login-wrapper form label {
   display: flex;
   align-items: center;
