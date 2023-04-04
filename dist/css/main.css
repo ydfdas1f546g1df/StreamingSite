@@ -1115,7 +1115,7 @@ main.errorpage article .error-btns .error-btn:hover {
   justify-content: space-between;
   margin: 10px 20px;
 }
-.loginRegster-main .login-wrapper form label input[type=email], .loginRegster-main .login-wrapper form label input[type=password] {
+.loginRegster-main .login-wrapper form label input[type=email], .loginRegster-main .login-wrapper form label input[type=password], .loginRegster-main .login-wrapper form label input[type=text] {
   width: 60%;
   height: 30px;
   border-radius: 5px;
@@ -1126,22 +1126,22 @@ main.errorpage article .error-btns .error-btn:hover {
   color: white;
   border-bottom: rgb(55, 55, 55) solid 4px;
 }
-.loginRegster-main .login-wrapper form label input[type=email].touched, .loginRegster-main .login-wrapper form label input[type=password].touched {
+.loginRegster-main .login-wrapper form label input[type=email].touched, .loginRegster-main .login-wrapper form label input[type=password].touched, .loginRegster-main .login-wrapper form label input[type=text].touched {
   color: #0084d0;
   border-color: transparent transparent #0084d0 transparent;
 }
-.loginRegster-main .login-wrapper form label input[type=email].touched:invalid, .loginRegster-main .login-wrapper form label input[type=password].touched:invalid {
+.loginRegster-main .login-wrapper form label input[type=email].touched:invalid, .loginRegster-main .login-wrapper form label input[type=password].touched:invalid, .loginRegster-main .login-wrapper form label input[type=text].touched:invalid {
   color: red;
   border-color: transparent transparent red transparent;
 }
-.loginRegster-main .login-wrapper form label input[type=email]:focus-visible, .loginRegster-main .login-wrapper form label input[type=password]:focus-visible {
+.loginRegster-main .login-wrapper form label input[type=email]:focus-visible, .loginRegster-main .login-wrapper form label input[type=password]:focus-visible, .loginRegster-main .login-wrapper form label input[type=text]:focus-visible {
   outline: none;
   border-bottom: rgb(255, 100, 16) solid 4px;
 }
-.loginRegster-main .login-wrapper form label input[type=email]::-moz-placeholder, .loginRegster-main .login-wrapper form label input[type=password]::-moz-placeholder {
+.loginRegster-main .login-wrapper form label input[type=email]::-moz-placeholder, .loginRegster-main .login-wrapper form label input[type=password]::-moz-placeholder, .loginRegster-main .login-wrapper form label input[type=text]::-moz-placeholder {
   color: rgba(255, 255, 255, 0.51);
 }
-.loginRegster-main .login-wrapper form label input[type=email]::placeholder, .loginRegster-main .login-wrapper form label input[type=password]::placeholder {
+.loginRegster-main .login-wrapper form label input[type=email]::placeholder, .loginRegster-main .login-wrapper form label input[type=password]::placeholder, .loginRegster-main .login-wrapper form label input[type=text]::placeholder {
   color: rgba(255, 255, 255, 0.51);
 }
 .loginRegster-main .login-wrapper form label #stay {
