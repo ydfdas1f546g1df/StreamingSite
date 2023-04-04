@@ -49,10 +49,10 @@ $admin_user = '
                     <span class="user-list-el-email">{{ user.email }}</span>
                     <span class="user-list-el-admin"><i :class="user.admin"></i></span>
                     <span class="user-list-btn-placeholder">
-                        <span class="edit-btn user-list-btn"><i class="fa-solid fa-pen-to-square"></i></span>
+                        <i class="fa-solid fa-pen-to-square edit-btn user-list-btn"></i>
                         </span>
                     <span class="user-list-btn-placeholder">
-                        <span class="del-btn user-list-btn"><i class="fa-solid fa-trash"></i></span>
+                        <i class="fa-solid fa-trash del-btn user-list-btn" @click="removeUser"></i>
                         </span>
                 </div>
             </div>

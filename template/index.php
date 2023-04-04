@@ -6,6 +6,9 @@ if (strpos($_SERVER['REQUEST_URI'], "=")) {
     $username = "Username";
 };
 
+$letters = range('A', 'Z');
+$letter = [$letters[array_rand($letters)]];
+
 $header_1 = '<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -130,13 +133,12 @@ $footer = '
         <div class="footer-el">
             <span class="footer-el-title">About</span>
             <a class="footer-el-item" href="/pages/contact.php">Contact</a>
-            <a class="footer-el-item" href="/pages/about/">Contact</a>
             <a class="footer-el-item" href="#">AGBs</a>
             <a class="footer-el-item" href="#">Imprint</a>
         </div>
         <div class="footer-el">
             <span class="footer-el-title">Discover</span>
-            <a class="footer-el-item">Random</a>
+            <a class="footer-el-item" href="/pages/search/?search='. implode(",",$letter) .'">Random</a>
             <a class="footer-el-item" href="/pages/search/">Search</a>
         </div>
     </div>

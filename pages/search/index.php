@@ -21,7 +21,7 @@ $searchContent = '
     </label>
     <div id="search-result">
         <a class="result-item" v-for="result in results" :href="\'/stream/\' + result.name">
-            <div class="result-head" :name="result.name">
+            <div class="result-head" :name="result.name" :showName="result.showName">
                 <span class="result-title">{{ result.showName }}</span>
                 <span class="result-info result-watched" :title="result.watched + \' people have watched this show.\'">{{ result.watched }}
                 <i class="gg-eye-alt"></i>
