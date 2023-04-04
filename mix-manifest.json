@@ -4,8 +4,9 @@
     "/dist/css/home.css": "/dist/css/home.css",
     "/dist/css/header.css": "/dist/css/header.css",
     "/dist/css/footer.css": "/dist/css/footer.css",
+    "/dist/css/error.css": "/dist/css/error.css",
     "/dist/css/dropdown.css": "/dist/css/dropdown.css",
     "/dist/css/admin.css": "/dist/css/admin.css",
     "/dist/css/search.css": "/dist/css/search.css",
-    "/dist/css/error.css": "/dist/css/error.css"
+    "/dist/css/loginregister.css": "/dist/css/loginregister.css"
 }

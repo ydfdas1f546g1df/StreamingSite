@@ -4,7 +4,7 @@ $homeContent = '
 <main class="loginRegster-main">
 <div class="login-wrapper">
 
-    <form action="/login" method="get">
+    <form action="./sendmail.php" method="get">
         <span class="Login-title">Register</span>
         <label>
             <span>Username</span>
@@ -20,23 +20,28 @@ $homeContent = '
         </label>
         <label>
             <span>Password</span>
-            <input type=password name="password" id="password" minlength="10" maxlength="128" placeholder="password"
+            <i class="fa-sharp fa-solid fa-eye-slash showPw"></i>
+            <input type=password class="pw" name="password" id="password" minlength="10" maxlength="128" placeholder="password"
                    required>
+                   
         </label>
         <label>
-            <span>repeat password</span>
-            <input type=password name="rpassword" id="rpassword" minlength="10" maxlength="128" placeholder="password"
+            <span>Password</span>
+            <input type=password name="rpassword" class="pw" id="rpassword" minlength="10" maxlength="128" placeholder="password"
                    required>
         </label>
         <input type="submit" value="Register">
-        <a href="/register">I already have an account</a>
+        <a href="/login">I already have an account</a>
+        <span class="agree">By registering, you agree to our <a href="/pages/about/agb.pgp">terms of use and privacy policy</a>.</span>
+        <span id="error-field"></span>
     </form>
-    <div class="login-info">
-    <img src="/dist/img/logo.png" alt="logo">
-    <span class="login-info-title">Advantages with one account</span>
-        <span class="login-info-text">Register now for free and get access to great features that will give you an exclusive watch experience! <a
-                    href="/register">Click Here</a></span>
-
+    <div class="login-info register-info">
+        <img src="/dist/img/logo.png" alt="logo">
+        <span class="login-info-title">Advantages with an account?</span>
+            <span class="login-info-text regi"><div><i class="fa-solid fa-xmark ads"></i></div> No StreamingSite ads</span>
+            <span class="login-info-text"><div><i class="gg-eye-alt watched"></i></div> Remember episodes you \'ve watched</span>
+            <span class="login-info-text"><div><i class="fa-solid fa-list watchlist"></i></div>Create Watchlist</span>
+            <span class="login-info-subtitle">And all this for free!</span>
     </div>
 </div>
 </main>

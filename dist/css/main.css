@@ -273,7 +273,7 @@ footer .wrapper .footer-el .footer-el-title {
   margin-bottom: 20px;
 }
 footer .wrapper .footer-el .footer-el-item {
-  color: #ffffff;
+  color: #636363;
   margin-bottom: 10px;
 }
 footer .wrapper .footer-el .footer-el-item:hover {
@@ -1084,14 +1084,34 @@ main.errorpage article .error-btns .error-btn:hover {
 }
 .loginRegster-main .login-wrapper form {
   width: 400px;
-  height: 1;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
+  border: rgb(55, 55, 55) solid 3px;
 }
 .loginRegster-main .login-wrapper form a {
   color: rgb(255, 100, 16);
   margin-left: 20px;
+  margin-bottom: 20px;
+}
+.loginRegster-main .login-wrapper form #error-field {
+  display: none;
+  color: #520000;
+  background: rgba(253, 87, 87, 0.51);
+  margin: 10px 20px 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.loginRegster-main .login-wrapper form .agree {
+  margin: 0 20px 20px 20px;
+  color: #636363;
+}
+.loginRegster-main .login-wrapper form .agree a {
+  margin: 0;
+  color: rgb(55, 55, 55);
+}
+.loginRegster-main .login-wrapper form .agree a:hover {
+  color: rgb(255, 100, 16);
 }
 .loginRegster-main .login-wrapper form input[type=submit] {
   width: 360px;
@@ -1114,6 +1134,10 @@ main.errorpage article .error-btns .error-btn:hover {
   align-items: center;
   justify-content: space-between;
   margin: 10px 20px;
+}
+.loginRegster-main .login-wrapper form label i {
+  color: white;
+  cursor: pointer;
 }
 .loginRegster-main .login-wrapper form label input[type=email], .loginRegster-main .login-wrapper form label input[type=password], .loginRegster-main .login-wrapper form label input[type=text] {
   width: 60%;
@@ -1160,20 +1184,49 @@ main.errorpage article .error-btns .error-btn:hover {
 .loginRegster-main .login-wrapper .login-info .login-info-title {
   color: white;
   font-size: 25px;
+  margin-bottom: 15px;
 }
 .loginRegster-main .login-wrapper .login-info img {
   height: 150px;
 }
 .loginRegster-main .login-wrapper .login-info .login-info-text {
+  display: flex;
+  align-items: center;
   text-align: center;
   font-size: 18px;
   color: #636363;
 }
-.loginRegster-main .login-wrapper .login-info .login-info-text a {
+.loginRegster-main .login-wrapper .login-info a {
   color: rgb(255, 100, 16);
 }
-.loginRegster-main .login-wrapper .login-info .login-info-text a:hover {
+.loginRegster-main .login-wrapper .login-info a:hover {
   color: white;
+}
+.loginRegster-main .login-wrapper .register-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.loginRegster-main .login-wrapper .register-info .login-info-subtitle {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 10px 10px 0;
+}
+.loginRegster-main .login-wrapper .register-info div {
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loginRegster-main .login-wrapper .register-info div i.watchlist {
+  color: #5da3f4;
+}
+.loginRegster-main .login-wrapper .register-info div i.watched {
+  color: rgb(255, 100, 16);
+}
+.loginRegster-main .login-wrapper .register-info div i.ads {
+  color: red;
 }
 
 .checkbox-wrapper-55 input[type=checkbox] {
