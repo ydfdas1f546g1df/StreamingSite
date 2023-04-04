@@ -144,6 +144,10 @@ $footer = '
             <a class="footer-el-item" href="/pages/search/">Search</a>
             <a class="footer-el-item" href="/pages/popular.php">Popular</a>
         </div>
+        <div class="footer-el">
+            <span class="footer-el-title">more</span>
+            <a class="footer-el-item" href="/register">Free Account</a>
+        </div>
     </div>
     <span class="copyright">&copy; Copyright 2023. All Rights Reserved. <a href="/">StreamingSite</a></span>
 </footer>
@@ -173,6 +177,6 @@ $notLoggedInHeader = $header_1 . $header_2 . $notLoggedIn;
 
 
 
-//$cookie = true;
+$cookie = true;
 $login = true;
 $IsAdmin = true;

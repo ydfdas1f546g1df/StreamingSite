@@ -18,10 +18,6 @@ $("input[type='password']").on("blur", function (e) {
     }
 });
 
-$("input[type='submit']").on("keyup", function () {
-    e.preventDefault()
-    checkPw(e)
-})
 
 $("input[type='submit']").on("click", function (e) {
     e.preventDefault()

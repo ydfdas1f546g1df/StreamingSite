@@ -45,7 +45,7 @@ $homeContent = '
     </div>
 </div>
 </main>
-<script src="/script/loginRegister.js"></script>
+<script src="/script/register.js"></script>
 ';
 
 include '.././template/index.php';
