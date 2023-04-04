@@ -72,7 +72,7 @@ $homeContent = '</header>
 
             <a href="#" class="home-el" v-for="media in Media"
                :title="media.name + \', watch it now for free and in full length.\'">
-                <img v-bind:src="media.coverSrc" alt="cover" class="cover">
+                <img :src="media.coverSrc" alt="cover" class="cover">
                 <span class="cover-title">{{ media.name }}<span class="fi fi-de"></span></span>
             </a>
         </div>
