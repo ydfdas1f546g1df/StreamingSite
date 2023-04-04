@@ -145,7 +145,7 @@ $footer = '
             <a class="footer-el-item" href="/pages/popular.php">Popular</a>
         </div>
         <div class="footer-el">
-            <span class="footer-el-title">more</span>
+            <span class="footer-el-title">More</span>
             <a class="footer-el-item" href="/register">Free Account</a>
         </div>
     </div>
