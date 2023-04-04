@@ -40,6 +40,8 @@ if (isset($cookie)) {
     } else {
         header("location: /error/403.php");
     }
+} else {
+    header("Location: /error/403.php");
 }
 $Page = $Page . $mainContent . $footer;
 echo $Page;

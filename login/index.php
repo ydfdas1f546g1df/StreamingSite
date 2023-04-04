@@ -1,24 +1,21 @@
 
 <?php
-
-//if (!empty($_REQUEST("email"))) {
-//    $email = htmlspecialchars($_REQUEST("email"));
-//} else {
-//    $email = "";
-//};
-//if (!empty($_REQUEST("password"))) {
-//    $pw = htmlspecialchars($_REQUEST("password"));
-//} else {
-//    $pw = "";
-//};
-$pw = "";
-$email = "";
+if (!empty($_REQUEST["email"])) {
+    $email = htmlspecialchars($_REQUEST("email"));
+} else {
+    $email = "";
+};
+if (!empty($_REQUEST["password"])) {
+    $pw = htmlspecialchars($_REQUEST("password"));
+} else {
+    $pw = "";
+};
 
 $homeContent = '
 <main class="loginRegster-main">
 <div class="login-wrapper">
 
-    <form action="/" method="post">
+    <form action="/user" method="post">
         <span class="Login-title">Login</span>
         <label>
             <span>Email</span>
@@ -65,6 +62,8 @@ if (isset($cookie)) {
     } else {
         $Page = $notLoggedInHeader;
     }
+}  else {
+    $Page = $notLoggedInHeader;
 }
 $Page = $Page . $homeContent . $footer;
 echo $Page;

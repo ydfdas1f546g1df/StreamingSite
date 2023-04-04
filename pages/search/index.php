@@ -54,6 +54,8 @@ if (isset($cookie)) {
     } else {
         $Page = $notLoggedInHeader;
     }
+} else {
+    $Page = $notLoggedInHeader;
 }
 $Page = $Page . $searchContent . $footer;
 echo $Page;

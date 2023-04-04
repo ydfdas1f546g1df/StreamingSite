@@ -170,6 +170,9 @@ $notLoggedInHeader = $header_1 . $header_2 . $notLoggedIn;
 //    echo "Cookie '" . $cookie_name . "' is set!<br>";
 //    echo "Value is: " . $_COOKIE[$cookie_name];
 //}
-$login = false;
-$cookie = true;
+
+
+
+//$cookie = true;
+$login = true;
 $IsAdmin = true;

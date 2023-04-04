@@ -39,14 +39,3 @@ footer .copyright {
 footer .copyright a {
   color: rgb(255, 100, 16);
 }
-
-@media screen and (max-width: 1080px) {
-  footer {
-    min-height: 450px;
-  }
-  .copyright {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-}

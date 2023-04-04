@@ -287,16 +287,6 @@ footer .copyright a {
   color: rgb(255, 100, 16);
 }
 
-@media screen and (max-width: 1080px) {
-  footer {
-    min-height: 450px;
-  }
-  .copyright {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-}
 .down-arrow {
   box-sizing: border-box;
   position: relative;
@@ -1103,6 +1093,22 @@ main.errorpage article .error-btns .error-btn:hover {
   color: rgb(255, 100, 16);
   margin-left: 20px;
 }
+.loginRegster-main .login-wrapper form input[type=submit] {
+  width: 360px;
+  height: 50px;
+  padding: 10px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 100, 16);
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
 .loginRegster-main .login-wrapper form label {
   display: flex;
   align-items: center;
@@ -1137,11 +1143,6 @@ main.errorpage article .error-btns .error-btn:hover {
 }
 .loginRegster-main .login-wrapper form label input[type=email]::placeholder, .loginRegster-main .login-wrapper form label input[type=password]::placeholder {
   color: rgba(255, 255, 255, 0.51);
-}
-.loginRegster-main .login-wrapper form label input[type=submit] {
-  width: 360px;
-  height: 50px;
-  padding: 10px;
 }
 .loginRegster-main .login-wrapper form label #stay {
   height: 15px;
