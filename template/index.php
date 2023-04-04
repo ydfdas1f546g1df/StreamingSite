@@ -1,5 +1,11 @@
 <?php
 
+if (strpos($_SERVER['REQUEST_URI'], "=")) {
+    $username = explode("=", $_SERVER['REQUEST_URI'])[1];
+} else {
+    $username = "Username";
+};
+
 $header_1 = '<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,26 +47,26 @@ $header_2 = '
 
 $notLoggedIn = '
 <div class="login-div">
-        <a href="/login/" class="nl-btn l-btn" >LOGIN</a>
-        <a href="/register/" class="nl-btn r-btn" >REGISTER</a>
+        <a href="/login" class="nl-btn l-btn" >LOGIN</a>
+        <a href="/register" class="nl-btn r-btn" >REGISTER</a>
     </div>';
 
 $loggedIn = '
     <div class="user">
         <img src="/dist/img/testpp.jpg" id="user-pp" alt="user-pp"/>
-        <div id="user-name" class="tooltip">Username<i class="down-arrow"></i>
+        <div id="user-name" class="tooltip">' . $username . '<i class="down-arrow"></i>
             <div class="tooltiptext">
-                <a class="user-dd-el" href="#">
+                <a class="user-dd-el" href="/user">
                     <div class="user-dd-icon">
                         <i class="gg-format-justify"></i>
                     </div>
                     <span class="user-dd-name">Account</span>
-                </a> <a class="user-dd-el" href="#">
+                </a> <a class="user-dd-el" href="/user/profil/' . $username . '">
                 <div class="user-dd-icon">
                     <i class="gg-user"></i>
                 </div>
                 <span class="user-dd-name">Profile</span>
-            </a> <a class="user-dd-el" href="#">
+            </a> <a class="user-dd-el" href="/user/watchlist/' . $username . '">
                 <div class="user-dd-icon">
                     <i class="gg-eye-alt"></i>
                 </div>
