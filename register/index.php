@@ -32,7 +32,7 @@ $homeContent = '
         </label>
         <input type="submit" value="Register">
         <a href="/login">I already have an account</a>
-        <span class="agree">By registering, you agree to our <a href="/pages/about/agb.pgp">terms of use and privacy policy</a>.</span>
+        <span class="agree">By registering, you agree to our <a href="/pages/about/agb.php">terms of use and privacy policy</a>.</span>
         <span id="error-field"></span>
     </form>
     <div class="login-info register-info">

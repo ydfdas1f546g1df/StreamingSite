@@ -98,7 +98,7 @@ $loggedIn = '
 //            <div class="menu-button""></div>
 //        </label>
 //        <ul class="menu">
-//            <li><a href="/pages/allseries/index.php"><i class="gg-play-button-o"></i>&nbsp;Series</a></li>
+//            <li><a href="/pages/allseries/"><i class="gg-play-button-o"></i>&nbsp;Series</a></li>
 //            <li><a href="/pages/popular.php"><i class="gg-align-bottom"></i>&nbsp;Popular</a></li>
 //            <li><a href="/pages/search/"><i class="gg-search"></i>&nbsp;Search</a></li>
 $admin_2 = '<li class="more-dd">admin</li>
@@ -135,7 +135,7 @@ $footer = '
         <div class="footer-el">
             <span class="footer-el-title">About</span>
             <a class="footer-el-item" href="/pages/contact.php">Contact</a>
-            <a class="footer-el-item" href="#">AGBs</a>
+            <a class="footer-el-item" href="/pages/about/agb.php">AGBs</a>
             <a class="footer-el-item" href="#">Imprint</a>
         </div>
         <div class="footer-el">
@@ -177,6 +177,6 @@ $notLoggedInHeader = $header_1 . $header_2 . $notLoggedIn;
 
 
 
-$cookie = true;
+//$cookie = true;
 $login = true;
 $IsAdmin = true;
