@@ -52,7 +52,8 @@ $notLoggedIn = '
 <div class="login-div">
         <a href="/login" class="nl-btn l-btn" >LOGIN</a>
         <a href="/register" class="nl-btn r-btn" >REGISTER</a>
-    </div>';
+    </div>
+    </header>';
 
 $loggedIn = '
     <div class="user">
@@ -89,16 +90,17 @@ $loggedIn = '
             </div>
         </div>
     </div>
-    <section class="top-nav">
-        <input id="menu-toggle" type="checkbox"/>
-        <label class="menu-button-container" for="menu-toggle">
-            <div class="menu-button""></div>
-        </label>
-        <ul class="menu">
-            <li><a href="/pages/allseries/index.php"><i class="gg-play-button-o"></i>&nbsp;Series</a></li>
-            <li><a href="/pages/popular.php"><i class="gg-align-bottom"></i>&nbsp;Popular</a></li>
-            <li><a href="/pages/search/"><i class="gg-search"></i>&nbsp;Search</a></li>
-            ';
+    </header>';
+
+//    <section class="top-nav">
+//        <input id="menu-toggle" type="checkbox"/>
+//        <label class="menu-button-container" for="menu-toggle">
+//            <div class="menu-button""></div>
+//        </label>
+//        <ul class="menu">
+//            <li><a href="/pages/allseries/index.php"><i class="gg-play-button-o"></i>&nbsp;Series</a></li>
+//            <li><a href="/pages/popular.php"><i class="gg-align-bottom"></i>&nbsp;Popular</a></li>
+//            <li><a href="/pages/search/"><i class="gg-search"></i>&nbsp;Search</a></li>
 $admin_2 = '<li class="more-dd">admin</li>
             <li class="more-dd-el"><a href="https://github.com/ydfdas1f546g1df/StreamingSite" target="_blank">
                 <div class="more-dd-icon"><i class="gg-git-fork"></i></div>
@@ -140,6 +142,7 @@ $footer = '
             <span class="footer-el-title">Discover</span>
             <a class="footer-el-item" href="/pages/search/?search='. implode(",",$letter) .'">Random</a>
             <a class="footer-el-item" href="/pages/search/">Search</a>
+            <a class="footer-el-item" href="/pages/popular.php">Popular</a>
         </div>
     </div>
     <span class="copyright">&copy; Copyright 2023. All Rights Reserved. <a href="/">StreamingSite</a></span>
@@ -153,6 +156,9 @@ $footer = '
 </body>
 </html>';
 
+$adminHeader  = $header_1 . $admin_1 . $header_2 . $loggedIn;
+$loggedInHeader = $header_1 . $header_2 . $loggedIn;
+$notLoggedInHeader = $header_1 . $header_2 . $notLoggedIn;
 //
 //$date = time() + (86400 * 30);
 //$cookie_name = "LoginUser";
@@ -164,3 +170,6 @@ $footer = '
 //    echo "Cookie '" . $cookie_name . "' is set!<br>";
 //    echo "Value is: " . $_COOKIE[$cookie_name];
 //}
+$login = false;
+$cookie = true;
+$IsAdmin = true;
