@@ -4,9 +4,9 @@
 $pw = "test";
 $email = "test";
 
-$email = htmlspecialchars($_POST["email"]);
-$pw = htmlspecialchars($_POST["password"]);
-echo implode(",",$_POST);
+$email = htmlspecialchars($_GET["email"]);
+$pw = htmlspecialchars($_GET["password"]);
+echo implode(",",$_GET);
 
 if (empty($email)) {
     $email = "";
@@ -20,8 +20,6 @@ if (empty($pw)) {
 //else {
 //
 //};
-echo $pw;
-echo $email;
 $homeContent = '
 <main class="loginRegster-main">
 <div class="login-wrapper">

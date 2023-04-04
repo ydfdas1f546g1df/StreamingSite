@@ -4,7 +4,7 @@ $homeContent = '
 <main class="loginRegster-main">
 <div class="login-wrapper">
 
-    <form action="/login" method="post">
+    <form action="/login" method="get">
         <span class="Login-title">Register</span>
         <label>
             <span>Username</span>
