@@ -1067,6 +1067,7 @@ main.errorpage article .error-btns .error-btn:hover {
 
 .loginRegster-main {
   height: 70%;
+  min-height: 700px;
 }
 .loginRegster-main .login-wrapper {
   display: flex;

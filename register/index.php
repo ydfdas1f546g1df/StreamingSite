@@ -7,12 +7,12 @@ $homeContent = '
     <form action="./sendmail.php" method="get">
         <span class="Login-title">Register</span>
         <label>
-            <span>Username</span>
-            <input type="text" name="username" id="username" placeholder="max_muster" required>
-        </label>
-        <label>
             <span>Name</span>
             <input type="text" name="name" id="name" placeholder="other people will see this name" required>
+        </label>
+        <label>
+            <span>Username</span>
+            <input type="text" name="username" id="username" placeholder="max_muster" required>
         </label>
         <label>
             <span>Email</span>
@@ -22,8 +22,7 @@ $homeContent = '
             <span>Password</span>
             <i class="fa-sharp fa-solid fa-eye-slash showPw"></i>
             <input type=password class="pw" name="password" id="password" minlength="10" maxlength="128" placeholder="password"
-                   required>
-                   
+                   required>   
         </label>
         <label>
             <span>Password</span>
@@ -55,7 +54,7 @@ include '.././template/index.php';
 
 if (isset($cookie)) {
     if ($login) {
-        header("Location: /");
+        header("Location: /user");
     } else {
         $Page = $notLoggedInHeader;
     }
