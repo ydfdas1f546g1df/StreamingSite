@@ -30,7 +30,9 @@ if ($pass1 == $pass2) {
         }
     } else {
         $error = 400;
+        http_response_code(400);
     }
 } else {
     $error = 400;
+    http_response_code(400);
 }

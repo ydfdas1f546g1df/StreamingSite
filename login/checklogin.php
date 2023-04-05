@@ -9,6 +9,8 @@ $pass = hash('sha256', htmlspecialchars($pass));
 //echo $pass;
 
 include explode("StreamingSite", __DIR__)[0] . 'StreamingSite\api\login.php';
+
+
 if ($error == 200) {
     $errorText = "Logged in";
     $errorMessage = "You have been successfully logged in";

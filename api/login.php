@@ -42,5 +42,7 @@ if (isset($email)) {
         $error = 404;
     }
 } else {
+    http_response_code(400);
+
     $error = 400;
 }
