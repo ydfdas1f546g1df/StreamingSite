@@ -1,5 +1,5 @@
 <?php
-$username = "Username";
+$name = "Username";
 $cookie_name = "token";
 
 if(isset($_COOKIE[$cookie_name])) {
@@ -7,7 +7,7 @@ if(isset($_COOKIE[$cookie_name])) {
 
 }
 
-include 'C:\Users\Colin\PhpstormProjects\StreamingSite\api\check.php';
+include explode("StreamingSite", __DIR__)[0] . 'StreamingSite\api\check.php';
 
 
 
@@ -64,7 +64,7 @@ $notLoggedIn = '
 $loggedIn = '
     <div class="user">
         <img src="/dist/img/testpp.jpg" id="user-pp" alt="user-pp"/>
-        <div id="user-name" class="tooltip">' . $username . '<i class="down-arrow"></i>
+        <div id="user-name" class="tooltip">' . $name . '<i class="down-arrow"></i>
             <div class="tooltiptext">
                 <a class="user-dd-el" href="/user">
                     <div class="user-dd-icon">
@@ -170,82 +170,6 @@ $footer = '
 $adminHeader  = $header_1 . $admin_1 . $header_2 . $loggedIn;
 $loggedInHeader = $header_1 . $header_2 . $loggedIn;
 $notLoggedInHeader = $header_1 . $header_2 . $notLoggedIn;
-
-
-
-
-//$content = http_build_query (array (
-//    // this is where you list all data you want to post
-//    'token' => '123456789012345678901234567890'
-//));
-//
-//$context = stream_context_create (array (
-//    'http' => array (
-//        'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
-//        'method' => 'POST',
-//        'content' => $content,
-//    )
-//));
-//
-//$content = file_get_contents("http://127.69.69.69/api/check.php",null, $context);
-
-
-//$context  = stream_context_create(array(
-//    // use key 'http' even if you send the request to https
-//    'http' => array(
-//        //'header' and 'content' is optional
-//        'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
-//        'method'  => 'POST',
-//        'content' => http_build_query(
-//            array('token' => 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
-//        )
-//    )
-//));
-//$result = file_get_contents('C:\Users\Colin\PhpstormProjects\StreamingSite\api\check.php', false, $context);
-//if ($result === FALSE) {
-//    echo "an error occurred during post.";
-//    http_response_code(500);
-//} else {
-//    // success
-//    var_dump($result);
-//}
-
-
-
-//
-//$url = "C:\Users\Colin\PhpstormProjects\StreamingSite\api\check.php";
-//
-//$curl = curl_init();
-//curl_setopt($curl, CURLOPT_URL, $url);
-//curl_setopt($curl, CURLOPT_POST, true);
-//curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-//
-//$headers = array(
-//    "Accept: application/json",
-//    "Content-Type: application/json",
-//);
-//curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-//
-//$data = <<<DATA
-//{
-//  "token": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-//}
-//DATA;
-//
-//curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
-//
-//$resp = curl_exec($curl);
-//curl_close($curl);
-//
-//echo $resp;
-//
-
-
-
-
-
-
-
 
 
 //$cookie = true;

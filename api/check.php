@@ -3,7 +3,8 @@
  * @var mysqli $mysqli
  */
 
-include_once("C:\Users\Colin\PhpstormProjects\StreamingSite\api\db_connect.php");
+include_once(explode("StreamingSite", __DIR__)[0] . 'StreamingSite\api\db_connect.php');
+//echo explode("StreamingSite", __DIR__)[0] . 'StreamingSite\api\db_connect.php';
 //if (isset($_COOKIE["LoginUser"])) {
 //    $token = $_COOKIE["LoginUser"];
 //if (isset($_POST['token'])) {
@@ -32,7 +33,8 @@ if (isset($token)) {
             } else {
             $IsAdmin = false;
             }
-            $username = $resultsArray[0]['name'];
+            $name = $resultsArray[0]['name'];
+            $username = $resultsArray[0]['username'];
             setcookie("token", $resultsArray[0]['token'], time() + (86400 * 180), "/"); // 86400 = 1 day
             setcookie("name", $resultsArray[0]['name'], time() + (86400 * 180), "/"); // 86400 = 1 day
 
