@@ -1,15 +1,18 @@
 .admin-main {
+  width: 100%;
+}
+.admin-main #admin-main-div {
   display: flex;
   flex-direction: row;
   height: 100%;
   width: 100%;
 }
-.admin-main article {
+.admin-main #admin-main-div article {
   width: 100%;
   height: 100%;
   margin: 30px 30px 0 30px;
 }
-.admin-main article.user-article .user {
+.admin-main #admin-main-div article.user-article .user {
   width: 100%;
   height: 100%;
   color: white;
@@ -17,12 +20,12 @@
   align-items: flex-start;
   flex-direction: column;
 }
-.admin-main article.user-article .user .btns {
+.admin-main #admin-main-div article.user-article .user .btns {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.admin-main article.user-article .user .btns .user-btn {
+.admin-main #admin-main-div article.user-article .user .btns .user-btn {
   font-weight: bold;
   height: 50px;
   display: flex;
@@ -34,17 +37,17 @@
   cursor: pointer;
   transition: all 0.25s ease-in;
 }
-.admin-main article.user-article .user .btns .user-btn:hover {
+.admin-main #admin-main-div article.user-article .user .btns .user-btn:hover {
   background: rgb(55, 55, 55);
 }
-.admin-main article.user-article .user label {
+.admin-main #admin-main-div article.user-article .user label {
   font-weight: bold;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-top: 20px;
 }
-.admin-main article.user-article .user label input {
+.admin-main #admin-main-div article.user-article .user label input {
   height: 30px;
   width: 200px;
   border-radius: 5px;
@@ -54,25 +57,25 @@
   border-color: transparent transparent black transparent;
   color: white;
 }
-.admin-main article.user-article .user label input:focus-visible {
+.admin-main #admin-main-div article.user-article .user label input:focus-visible {
   outline: none;
   border-bottom: rgb(255, 100, 16) solid 2px;
 }
-.admin-main article.user-article .user label input::-moz-placeholder {
+.admin-main #admin-main-div article.user-article .user label input::-moz-placeholder {
   color: rgba(255, 255, 255, 0.51);
 }
-.admin-main article.user-article .user label input::placeholder {
+.admin-main #admin-main-div article.user-article .user label input::placeholder {
   color: rgba(255, 255, 255, 0.51);
 }
-.admin-main article.user-article .user .user-list {
-  margin-top: 50px;
+.admin-main #admin-main-div article.user-article .user .user-list {
+  margin: 50px 0 100px 0;
   height: 100%;
   width: 100%;
 }
-.admin-main article.user-article .user .user-list .user-list-el-header span {
+.admin-main #admin-main-div article.user-article .user .user-list .user-list-el-header span {
   font-weight: bold;
 }
-.admin-main article.user-article .user .user-list .user-list-el-header, .admin-main article.user-article .user .user-list .user-list-el {
+.admin-main #admin-main-div article.user-article .user .user-list .user-list-el-header, .admin-main #admin-main-div article.user-article .user .user-list .user-list-el {
   border-radius: 5px;
   width: 100%;
   height: 50px;
@@ -80,48 +83,48 @@
   grid-template-columns: 8% 20% 20% 26% 8% 60px 60px;
   margin-top: 10px;
 }
-.admin-main article.user-article .user .user-list .user-list-el-header span, .admin-main article.user-article .user .user-list .user-list-el span {
+.admin-main #admin-main-div article.user-article .user .user-list .user-list-el-header span, .admin-main #admin-main-div article.user-article .user .user-list .user-list-el span {
   padding-left: 10px;
   display: flex;
   align-items: center;
 }
-.admin-main article.user-article .user .user-list .user-list-el-header span i, .admin-main article.user-article .user .user-list .user-list-el span i {
+.admin-main #admin-main-div article.user-article .user .user-list .user-list-el-header span i, .admin-main #admin-main-div article.user-article .user .user-list .user-list-el span i {
   zoom: 1.3;
 }
-.admin-main article.user-article .user .user-list .user-list-el-header span i.IsAdmin, .admin-main article.user-article .user .user-list .user-list-el span i.IsAdmin {
+.admin-main #admin-main-div article.user-article .user .user-list .user-list-el-header span i.IsAdmin, .admin-main #admin-main-div article.user-article .user .user-list .user-list-el span i.IsAdmin {
   color: green;
 }
-.admin-main article.user-article .user .user-list .user-list-el-header span i.IsNotAdmin, .admin-main article.user-article .user .user-list .user-list-el span i.IsNotAdmin {
+.admin-main #admin-main-div article.user-article .user .user-list .user-list-el-header span i.IsNotAdmin, .admin-main #admin-main-div article.user-article .user .user-list .user-list-el span i.IsNotAdmin {
   color: red;
 }
-.admin-main article.user-article .user .user-list .user-list-el-header span.user-list-btn-placeholder, .admin-main article.user-article .user .user-list .user-list-el span.user-list-btn-placeholder {
+.admin-main #admin-main-div article.user-article .user .user-list .user-list-el-header span.user-list-btn-placeholder, .admin-main #admin-main-div article.user-article .user .user-list .user-list-el span.user-list-btn-placeholder {
   display: flex;
   justify-content: center;
 }
-.admin-main article.user-article .user .user-list .user-list-el-header span.user-list-btn-placeholder .user-list-btn, .admin-main article.user-article .user .user-list .user-list-el span.user-list-btn-placeholder .user-list-btn {
+.admin-main #admin-main-div article.user-article .user .user-list .user-list-el-header span.user-list-btn-placeholder .user-list-btn, .admin-main #admin-main-div article.user-article .user .user-list .user-list-el span.user-list-btn-placeholder .user-list-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40px;
+  height: 30px;
   border-radius: 5px;
   padding: 0 10px;
   cursor: pointer;
   transition: all 0.25s ease-in;
   width: 100%;
 }
-.admin-main article.user-article .user .user-list .user-list-el-header span.user-list-btn-placeholder .user-list-btn.del-btn, .admin-main article.user-article .user .user-list .user-list-el span.user-list-btn-placeholder .user-list-btn.del-btn {
+.admin-main #admin-main-div article.user-article .user .user-list .user-list-el-header span.user-list-btn-placeholder .user-list-btn.del-btn, .admin-main #admin-main-div article.user-article .user .user-list .user-list-el span.user-list-btn-placeholder .user-list-btn.del-btn {
   background: rgb(255, 100, 16);
 }
-.admin-main article.user-article .user .user-list .user-list-el-header span.user-list-btn-placeholder .user-list-btn.edit-btn, .admin-main article.user-article .user .user-list .user-list-el span.user-list-btn-placeholder .user-list-btn.edit-btn {
+.admin-main #admin-main-div article.user-article .user .user-list .user-list-el-header span.user-list-btn-placeholder .user-list-btn.edit-btn, .admin-main #admin-main-div article.user-article .user .user-list .user-list-el span.user-list-btn-placeholder .user-list-btn.edit-btn {
   background: rgb(17, 17, 17);
 }
-.admin-main article.user-article .user .user-list .user-list-el-header span.user-list-btn-placeholder .user-list-btn:hover, .admin-main article.user-article .user .user-list .user-list-el span.user-list-btn-placeholder .user-list-btn:hover {
+.admin-main #admin-main-div article.user-article .user .user-list .user-list-el-header span.user-list-btn-placeholder .user-list-btn:hover, .admin-main #admin-main-div article.user-article .user .user-list .user-list-el span.user-list-btn-placeholder .user-list-btn:hover {
   background: rgb(28, 28, 28);
 }
-.admin-main article.user-article .user .user-list .user-list-el {
+.admin-main #admin-main-div article.user-article .user .user-list .user-list-el {
   background: rgb(55, 55, 55);
 }
-.admin-main aside {
+.admin-main #admin-main-div aside {
   width: 220px;
   height: 100%;
   background: rgb(28, 28, 28);
@@ -129,7 +132,7 @@
   flex-direction: column;
   align-items: flex-start;
 }
-.admin-main aside a {
+.admin-main #admin-main-div aside a {
   padding-left: 20px;
   display: flex;
   align-items: center;
@@ -137,23 +140,23 @@
   color: white;
   width: 200px;
 }
-.admin-main aside a:hover {
+.admin-main #admin-main-div aside a:hover {
   background: rgb(24, 24, 24) !important;
 }
-.admin-main aside a .icon-container {
+.admin-main #admin-main-div aside a .icon-container {
   width: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.admin-main aside a .icon-container i {
+.admin-main #admin-main-div aside a .icon-container i {
   display: flex;
   align-items: center;
 }
-.admin-main aside a.current-admin {
+.admin-main #admin-main-div aside a.current-admin {
   color: rgb(255, 100, 16);
   background: rgb(55, 55, 55);
 }
-.admin-main aside a:hover {
+.admin-main #admin-main-div aside a:hover {
   color: rgb(255, 100, 16);
 }

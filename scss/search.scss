@@ -1,3 +1,31 @@
+$main-bg: rgb(17, 17, 17);
+$dd-padding: 3vw;
+$dd-width: 100vw - (2 * $dd-padding);
+$dd-el-padding: 0.6em;
+$dd-el-width: $dd-width - (2 * $dd-padding);
+$footer-height: 300px;
+$footer-bg: rgb(28, 28, 28);
+$header-height: 70px;
+$orange: rgb(255, 100, 16);
+$logo-size: 40px;
+$width: 60%;
+$header-bg: rgb(28, 28, 28);
+$hover-orange: #f8cb80;
+$user-pp-size: 40px;
+$dd-more-bg: rgb(24, 24, 24);
+$light-gray: rgb(55, 55, 55);
+$trans: all .25s ease-in;
+$cat-title-size: 22px;
+$eye-catcher-margin: 5px;
+$eye-catcher-margin-1400: 10px;
+$eye-catcher-margin-1080: 20px;
+$eye-catcher-height: 156px;
+$eye-catcher-height-1400: 230px;
+$eye-catcher-height-1080: 410px;
+$lighter-gray: #636363;
+$black-shadow: 0px 0px 10px 1px rgba(10, 10, 10, 0.36);
+$orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
+
 .search-main {
   label.search {
     display: flex;
@@ -12,6 +40,7 @@
       font-size: 40px;
       width: 1150px;
       height: 80px;
+      margin-bottom: 20px;
       border-radius: 5px;
       background: none;
       box-shadow: none;
@@ -30,4 +59,116 @@
       }
     }
   }
+
+  #search-result {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    height: 100%;
+
+    .result-item {
+      padding: 15px 20px 20px;
+      background: $header-bg;
+      border-radius: 10px;
+      margin: 10px 0;
+      box-shadow: $black-shadow;
+
+      &:hover {
+        box-shadow: $orange-shadow;
+      }
+
+      .result-head {
+        display: flex;
+        align-items: baseline;
+        margin: 5px 0;
+
+        #add-wl-btn {
+          color: $lighter-gray;
+
+          &:hover {
+            color: green;
+          }
+
+          .tooltiptext {
+            top: -300%;
+            left: -50%;
+            color: white;
+            font-weight: normal;
+            background: $orange;
+            padding: 10px;
+            border-radius: 5px;
+
+            &::after {
+              display: none;
+            }
+          }
+        }
+
+        .result-title {
+          font-weight: bold;
+          font-size: 22px;
+          color: white;
+          display: flex;
+          align-items: baseline;
+        }
+
+        .result-info {
+          padding: 0 0 0 10px;
+          display: flex;
+          align-items: center;
+        }
+
+        i {
+          margin-left: 5px;
+          //display: flex;
+          //align-items: center;
+          //justify-content: center;
+        }
+
+        .result-watchlist {
+          color: #5da3f4;
+
+          i {
+
+            margin-top: 5px;
+          }
+        }
+
+        .result-watched {
+          color: $orange;
+        }
+      }
+
+      .result-description {
+        color: $lighter-gray;
+      }
+    }
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,7 +1,7 @@
 <?php
 
 $mainContent = '
-</header>
+
 <main class="admin-main">
     <div id="admin-main-div">
     <aside>
@@ -29,22 +29,19 @@ $mainContent = '
 include '../.././template/index.php';
 
 //$content = file_get_contents("https://127.69.69.69/api/check_user");
-$login = true;
-$cookie = true;
-$IsAdmin = true;
-
-$Page = $header_1;
 
 if (isset($cookie)) {
     if ($login) {
         if ($IsAdmin) {
-            $Page = $Page . $admin_1 . $header_2 . $loggedIn;
+            $Page = $adminHeader;
         } else {
-            header("location: /");
+            header("location: /error/403.php");
         }
     } else {
-        header("location: /");
+        header("location: /error/403.php");
     }
+} else {
+    header("Location: /error/403.php");
 }
 $Page = $Page . $mainContent . $footer;
 echo $Page;
