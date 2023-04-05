@@ -46,7 +46,7 @@ include '.././template/index.php';
 
 if (isset($cookie)) {
     if ($login) {
-        header("Location: /");
+        header("Location: /user");
     } else {
         $Page = $notLoggedInHeader;
     }

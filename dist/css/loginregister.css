@@ -1,5 +1,6 @@
 .loginRegster-main {
   height: 70%;
+  min-height: 700px;
 }
 .loginRegster-main .login-wrapper {
   display: flex;
