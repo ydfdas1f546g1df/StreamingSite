@@ -63,7 +63,7 @@ $(function () {
             }).mount("#all-users");
         }
 
-        getUser('admin_reg_user')
+        getUser('admin_req_user')
 
     }
 );
