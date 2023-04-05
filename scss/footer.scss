@@ -71,7 +71,10 @@ footer {
     margin: 20px;
 
     a {
-      color: $orange;
+      color: $lighter-gray;
+      &:hover {
+        color: $orange;
+      }
     }
   }
 }

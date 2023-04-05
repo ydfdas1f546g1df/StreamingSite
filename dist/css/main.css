@@ -284,6 +284,9 @@ footer .copyright {
   margin: 20px;
 }
 footer .copyright a {
+  color: #636363;
+}
+footer .copyright a:hover {
   color: rgb(255, 100, 16);
 }
 

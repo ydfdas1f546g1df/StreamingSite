@@ -19,9 +19,14 @@ if (isset($email)) {
         $resultsArray[] = $row;
     }
     if (isset($resultsArray[0])) {
+        $login = true;
+        $cookie = true;
+        if ($resultsArray[0]['admin'] == 1) {
+            $IsAdmin = true;
+        }
 
 
-            echo '<pre>'; print_r($resultsArray); echo '</pre>';
+//            echo '<pre>'; print_r($resultsArray); echo '</pre>';
 
         $name = $resultsArray[0]['name'];
         $username = $resultsArray[0]['username'];

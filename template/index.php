@@ -5,7 +5,6 @@ $cookie_name = "token";
 
 if(isset($_COOKIE[$cookie_name])) {
     $token = $_COOKIE[$cookie_name];
-
 }
 
 include explode("StreamingSite", __DIR__)[0] . 'StreamingSite\api\check.php';

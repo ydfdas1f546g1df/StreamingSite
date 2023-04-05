@@ -25,7 +25,7 @@ $homeContent = '
 //                    </label>
 //                </div>
 //            </label>
-'
+    '
             <input type="submit" value="Login">
             <a href="/register">I do not have an account</a>
             <span id="error-field"></span>
