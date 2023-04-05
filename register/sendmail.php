@@ -11,8 +11,7 @@ if (isset($_GET["email"])) {
     $token = substr(hash('sha256', $username), 1, 30);
     $expire = new DateTime();
     $expire->add(new DateInterval('P6M')); // add 6 months
-    $expire->add(new DateInterval('P15D')); // add 15 days (half a month)
-    echo $expire->format('Y-m-d');
+    $expire = $expire->format('Y-m-d');
 
     include explode("StreamingSite", __DIR__)[0] . 'StreamingSite\api\register.php';
 
@@ -21,11 +20,6 @@ if (isset($_GET["email"])) {
         $errorMessage = "We have sent you a mail, please verify";
         $error_link = "href='/login'";
         $error_link_text = "Go to Login";
-    } elseif ($error == 404) {
-        $errorText = "404";
-        $errorMessage = "No user with this email or password";
-        $error_link = "onclick='history.back()'";
-        $error_link_text = "Try again";
     } elseif ($error == 400) {
         $errorText = "400";
         $errorMessage = "Bad Request";
@@ -60,7 +54,7 @@ $homeContent = '
 
 include '.././template/index.php';
 
-
+$login = false;
 if (isset($cookie)) {
     if ($login) {
         if ($IsAdmin) {
@@ -69,7 +63,7 @@ if (isset($cookie)) {
             $Page = $loggedInHeader;
         }
     } else {
-        header("location: /error/404.php");
+        $Page = $loggedInHeader;
     }
 } else {
     $Page = $notLoggedInHeader;

@@ -26,11 +26,11 @@ if ($pass1 == $pass2) {
             $stmt->execute();
 
         } else {
-            http_response_code(404);
-            $error = 404;
+            http_response_code(409);
+            $error = 409;
         }
     } else {
-        $error = 409;
+        $error = 400;
     }
 } else {
     $error = 400;

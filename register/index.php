@@ -8,11 +8,11 @@ $homeContent = '
         <span class="Login-title">Register</span>
         <label>
             <span>Name</span>
-            <input type="text" name="name" id="name" placeholder="other people will see this name" required autocomplete="off">
+            <input type="text" name="name" id="name" placeholder="other people will see this name" required autocomplete="off" maxlength="30">
         </label>
         <label>
             <span>Username</span>
-            <input type="text" name="username" id="username" placeholder="max_muster" required autocomplete="off">
+            <input type="text" name="username" id="username" placeholder="max_muster" required autocomplete="off" maxlength="30">
         </label>
         <label>
             <span>Email</span>
