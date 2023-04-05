@@ -18,20 +18,22 @@ if (isset($token)) {
         $stmt->bind_param('s', $token);
         $stmt->execute();
         $result = $stmt->get_result();
-        if (!is_null($result)) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $resultsArray[] = $row;
+        }
+
+//        echo '<pre>'; print_r($resultsArray); echo '</pre>';
+        if (isset($resultsArray[0]["token"])) {
             $login = true;
             $resultArray = array();
-            while ($row = mysqli_fetch_assoc($result)) {
-                $resultsArray[] = $row;
-            }
 
-//            echo '<pre>'; print_r($resultsArray); echo '</pre>';
+
 
 
             if ($resultsArray[0]['admin'] == 1) {
-            $IsAdmin = true;
+                $IsAdmin = true;
             } else {
-            $IsAdmin = false;
+                $IsAdmin = false;
             }
             $name = $resultsArray[0]['name'];
             $username = $resultsArray[0]['username'];

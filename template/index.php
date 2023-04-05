@@ -162,6 +162,7 @@ $footer = '
         document.cookie = "username=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT";
         document.cookie = "token=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT";
         document.cookie = "name=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT";
+        location.reload();
     })
 </script>
 <script src="/script/main.js"></script>

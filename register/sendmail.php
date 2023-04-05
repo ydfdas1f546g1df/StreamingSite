@@ -27,7 +27,7 @@ if (isset($_GET["email"])) {
         $error_link_text = "Try again";
     } elseif ($error == 409) {
         $errorText = "409";
-        $errorMessage = "User with this email or Password already exist";
+        $errorMessage = "User with this email, name or username already exist";
         $error_link = "onclick='history.back()'";
         $error_link_text = "Try again";
     }
@@ -54,6 +54,10 @@ $homeContent = '
 
 include '.././template/index.php';
 
+setcookie("token", "", time() - 1000, "/");
+setcookie("name", "", time() - 1000, "/");
+setcookie("username", "", time() - 1000, "/");
+
 $login = false;
 if (isset($cookie)) {
     if ($login) {
@@ -63,7 +67,7 @@ if (isset($cookie)) {
             $Page = $loggedInHeader;
         }
     } else {
-        $Page = $loggedInHeader;
+        $Page = $notLoggedInHeader;
     }
 } else {
     $Page = $notLoggedInHeader;

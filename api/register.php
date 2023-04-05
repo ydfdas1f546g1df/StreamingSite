@@ -11,7 +11,6 @@ if ($pass1 == $pass2) {
         $stmt->bind_param('sss', $email, $username, $name);
         $stmt->execute();
         $result = $stmt->get_result();
-
         $resultsArray = array();
         while ($row = mysqli_fetch_assoc($result)) {
             $resultsArray[] = $row;
