@@ -52,7 +52,7 @@ $(function () {
                 }
             }).mount("#all-users");
         }
-        getUser('admin_reg_user')
+        getUser('user')
     }
 );
 // Make the DIV element draggable:
