@@ -18,6 +18,14 @@ $("input[type='password']").on("blur", function (e) {
     }
 });
 
+$("input[type='email']").on("blur", function (e) {
+    // console.log("blur")
+    if ($("input[type='email']:invalid").length > 0) {
+        $("#error-field").text("No Valid email")
+        $("#error-field").css("display", "flex")
+    }
+});
+
 
 $("input[type='submit']").on("click", function (e) {
     e.preventDefault()
@@ -64,35 +72,6 @@ function checkPw(e) {
     }
     submitIndex = 0
 }
-
-
-var showPw = $("i.showPw")
-showPw.mousedown(
-    function () {
-        showPw.attr("class", "fa-solid fa-eye showPw")
-        $("input#password, input#rpassword").each(
-            function () {
-                $(this).attr("type", "text")
-            }
-        )
-    }
-)
-showPw.mouseup(
-    function () {
-        showPw.attr("class", "fa-sharp fa-solid fa-eye-slash showPw")
-        $("input#password, input#rpassword").each(
-            function () {
-                $(this).attr("type", "password")
-            }
-        )
-    }
-)
-
-
-// Requiered sternchen
-$("input[required], textarea[required], select").each(function () {
-    $(this).parent().find("span").append("<span style='color: rgb(255, 100, 16);'>*</span>");
-});
 
 
 

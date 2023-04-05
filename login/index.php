@@ -8,15 +8,15 @@ $homeContent = '
             <span class="Login-title">Login</span>
             <label>
                 <span>Email</span>
-                <input type="email" name="email" id="email" placeholder="example@gmail.com" required>
+                <input type="email" name="email" id="email" placeholder="example@gmail.com" required autocomplete="off">
             </label>
             <label>
                 <span>Password</span><i class="fa-sharp fa-solid fa-eye-slash showPw"></i>
                 <input type=password name="password" class="pw" id="password" minlength="10" maxlength="128" placeholder="password"
-                       required>
+                       required autocomplete="off">
             </label>
             <label>
-                <span>Stay logged in</span>
+                <span>Remember Me</span>
                 <div class="checkbox-wrapper-55">
                     <label class="rocker rocker-small">
                         <input type="checkbox">
@@ -27,6 +27,7 @@ $homeContent = '
             </label>
             <input type="submit" value="Login">
             <a href="/register">I do not have an account</a>
+            <span id="error-field"></span>
         </form>
         <div class="login-info">
             <img src="/dist/img/logo.png" alt="logo">
@@ -36,7 +37,8 @@ $homeContent = '
         </div>
     </div>
 </main>
-<script src="/script/register.js"></script>
+<script src="/script/login.js"></script>
+<script src="/script/loginregister.js"></script>
 ';
 
 include '.././template/index.php';
