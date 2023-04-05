@@ -1,5 +1,6 @@
 <?php
 $name = "Username";
+$username = "Username";
 $cookie_name = "token";
 
 if(isset($_COOKIE[$cookie_name])) {

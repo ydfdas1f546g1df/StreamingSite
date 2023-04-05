@@ -35,10 +35,9 @@ if (isset($token)) {
             }
             $name = $resultsArray[0]['name'];
             $username = $resultsArray[0]['username'];
-            setcookie("token", $resultsArray[0]['token'], time() + (86400 * 180), "/"); // 86400 = 1 day
-            setcookie("name", $resultsArray[0]['name'], time() + (86400 * 180), "/"); // 86400 = 1 day
-
-
+            setcookie("token", $resultsArray[0]['token'], time() + (86400 * 180), "/");
+            setcookie("name", $resultsArray[0]['name'], time() + (86400 * 180), "/");
+            setcookie("username", $resultsArray[0]['username'], time() + (86400 * 180), "/");
 
         } else {
             $login = false;
