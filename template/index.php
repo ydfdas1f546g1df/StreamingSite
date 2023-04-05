@@ -1,10 +1,16 @@
 <?php
+$username = "Username";
+$cookie_name = "token";
 
-if (strpos($_SERVER['REQUEST_URI'], "=")) {
-    $username = explode("=", $_SERVER['REQUEST_URI'])[1];
-} else {
-    $username = "Username";
-};
+if(isset($_COOKIE[$cookie_name])) {
+    $token = $_COOKIE[$cookie_name];
+
+}
+
+include 'C:\Users\Colin\PhpstormProjects\StreamingSite\api\check.php';
+
+
+
 
 $letters = range('A', 'Z');
 $letter = [$letters[array_rand($letters)]];
@@ -153,7 +159,8 @@ $footer = '
 </footer>
 <script>
     $("#logout").on("click", function () {
-        document.cookie = "LoginUser=hello; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT";
+        document.cookie = "token=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa; path=/;";
+//         expires=Thu, 01 Jan 1970 00:00:01 GMT
     })
 </script>
 <script src="/script/main.js"></script>
@@ -163,22 +170,93 @@ $footer = '
 $adminHeader  = $header_1 . $admin_1 . $header_2 . $loggedIn;
 $loggedInHeader = $header_1 . $header_2 . $loggedIn;
 $notLoggedInHeader = $header_1 . $header_2 . $notLoggedIn;
+
+
+
+
+//$content = http_build_query (array (
+//    // this is where you list all data you want to post
+//    'token' => '123456789012345678901234567890'
+//));
 //
-//$date = time() + (86400 * 30);
-//$cookie_name = "LoginUser";
-//$cookie_value = "wevwev@gmail.com";
-//setcookie($cookie_name, $cookie_value, $date, "/"); // 86400 = 1 day
-//if(!isset($_COOKIE[$cookie_name])) {
-//    echo "Cookie '" . $cookie_name . "' is not set!";
+//$context = stream_context_create (array (
+//    'http' => array (
+//        'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+//        'method' => 'POST',
+//        'content' => $content,
+//    )
+//));
+//
+//$content = file_get_contents("http://127.69.69.69/api/check.php",null, $context);
+
+
+//$context  = stream_context_create(array(
+//    // use key 'http' even if you send the request to https
+//    'http' => array(
+//        //'header' and 'content' is optional
+//        'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+//        'method'  => 'POST',
+//        'content' => http_build_query(
+//            array('token' => 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
+//        )
+//    )
+//));
+//$result = file_get_contents('C:\Users\Colin\PhpstormProjects\StreamingSite\api\check.php', false, $context);
+//if ($result === FALSE) {
+//    echo "an error occurred during post.";
+//    http_response_code(500);
 //} else {
-//    echo "Cookie '" . $cookie_name . "' is set!<br>";
-//    echo "Value is: " . $_COOKIE[$cookie_name];
+//    // success
+//    var_dump($result);
 //}
 
 
 
-$cookie = true;
-$login = true;
-//$login = false;
-$IsAdmin = true;
-//$IsAdmin = false;
+//
+//$url = "C:\Users\Colin\PhpstormProjects\StreamingSite\api\check.php";
+//
+//$curl = curl_init();
+//curl_setopt($curl, CURLOPT_URL, $url);
+//curl_setopt($curl, CURLOPT_POST, true);
+//curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+//
+//$headers = array(
+//    "Accept: application/json",
+//    "Content-Type: application/json",
+//);
+//curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+//
+//$data = <<<DATA
+//{
+//  "token": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+//}
+//DATA;
+//
+//curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+//
+//$resp = curl_exec($curl);
+//curl_close($curl);
+//
+//echo $resp;
+//
+
+
+
+
+
+
+
+
+
+//$cookie = true;
+//$login = true;
+////$login = false;
+//$IsAdmin = true;
+////$IsAdmin = false;
+
+
+//echo $cookie;
+//echo $login;
+////$login = false;
+//echo $IsAdmin;
+////$IsAdmin = false;
