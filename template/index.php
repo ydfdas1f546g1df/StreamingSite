@@ -160,8 +160,9 @@ $footer = '
 </footer>
 <script>
     $("#logout").on("click", function () {
-        document.cookie = "token=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa; path=/;";
-//         expires=Thu, 01 Jan 1970 00:00:01 GMT
+        document.cookie = "username=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT";
+        document.cookie = "token=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT";
+        document.cookie = "name=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT";
     })
 </script>
 <script src="/script/main.js"></script>

@@ -14,17 +14,18 @@ $homeContent = '
                 <span>Password</span><i class="fa-sharp fa-solid fa-eye-slash showPw"></i>
                 <input type=password name="password" class="pw" id="password" minlength="10" maxlength="128" placeholder="password"
                        required autocomplete="off">
-            </label>
-            <label>
-                <span>Remember Me</span>
-                <div class="checkbox-wrapper-55">
-                    <label class="rocker rocker-small">
-                        <input type="checkbox">
-                        <span class="switch-left">Yes</span>
-                        <span class="switch-right">No</span>
-                    </label>
-                </div>
-            </label>
+            </label>' .
+//            <label>
+//                <span>Remember Me</span>
+//                <div class="checkbox-wrapper-55">
+//                    <label class="rocker rocker-small">
+//                        <input type="checkbox">
+//                        <span class="switch-left">Yes</span>
+//                        <span class="switch-right">No</span>
+//                    </label>
+//                </div>
+//            </label>
+'
             <input type="submit" value="Login">
             <a href="/register">I do not have an account</a>
             <span id="error-field"></span>
