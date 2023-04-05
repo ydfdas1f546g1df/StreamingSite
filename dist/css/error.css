@@ -13,6 +13,7 @@
   font-size: 40px;
   width: 1150px;
   height: 80px;
+  margin-bottom: 20px;
   border-radius: 5px;
   background: none;
   box-shadow: none;
@@ -30,6 +31,72 @@
 }
 .search-main label.search input::placeholder {
   color: rgba(255, 255, 255, 0.51);
+}
+.search-main #search-result {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  height: 100%;
+}
+.search-main #search-result .result-item {
+  padding: 15px 20px 20px;
+  background: rgb(28, 28, 28);
+  border-radius: 10px;
+  margin: 10px 0;
+  box-shadow: 0px 0px 10px 1px rgba(10, 10, 10, 0.36);
+}
+.search-main #search-result .result-item:hover {
+  box-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
+}
+.search-main #search-result .result-item .result-head {
+  display: flex;
+  align-items: baseline;
+  margin: 5px 0;
+}
+.search-main #search-result .result-item .result-head #add-wl-btn {
+  color: #636363;
+}
+.search-main #search-result .result-item .result-head #add-wl-btn:hover {
+  color: green;
+}
+.search-main #search-result .result-item .result-head #add-wl-btn .tooltiptext {
+  top: -300%;
+  left: -50%;
+  color: white;
+  font-weight: normal;
+  background: rgb(255, 100, 16);
+  padding: 10px;
+  border-radius: 5px;
+}
+.search-main #search-result .result-item .result-head #add-wl-btn .tooltiptext::after {
+  display: none;
+}
+.search-main #search-result .result-item .result-head .result-title {
+  font-weight: bold;
+  font-size: 22px;
+  color: white;
+  display: flex;
+  align-items: baseline;
+}
+.search-main #search-result .result-item .result-head .result-info {
+  padding: 0 0 0 10px;
+  display: flex;
+  align-items: center;
+}
+.search-main #search-result .result-item .result-head i {
+  margin-left: 5px;
+}
+.search-main #search-result .result-item .result-head .result-watchlist {
+  color: #5da3f4;
+}
+.search-main #search-result .result-item .result-head .result-watchlist i {
+  margin-top: 5px;
+}
+.search-main #search-result .result-item .result-head .result-watched {
+  color: rgb(255, 100, 16);
+}
+.search-main #search-result .result-item .result-description {
+  color: #636363;
 }
 
 header {
@@ -1101,6 +1168,9 @@ html body main .quick-search .quick-search-el a {
 .tooltiptext {
   min-width: 140px;
   border-radius: 5px;
+}
+.tooltiptext a:hover {
+  background: rgb(55, 55, 55);
 }
 
 h1 {

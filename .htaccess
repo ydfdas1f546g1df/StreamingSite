@@ -14,11 +14,11 @@ RewriteRule ^stream\/[a-z\-]{0,100}\/?$ stream/season.php [L]
 
 RewriteRule ^stream\/?$ /index.php [L]
 
-ErrorDocument 403 /error/403.html
+ErrorDocument 403 /error/403.php
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /error/404.html [L]
+RewriteRule . /error/404.php [L]
 
 </IfModule>
 

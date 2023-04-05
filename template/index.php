@@ -124,6 +124,7 @@ $footer = '
         <div class="footer-el">
             <span class="footer-el-title">About</span>
             <a class="footer-el-item" href="/pages/contact.php">Contact</a>
+            <a class="footer-el-item" href="/pages/about/">Contact</a>
             <a class="footer-el-item" href="#">AGBs</a>
             <a class="footer-el-item" href="#">Imprint</a>
         </div>

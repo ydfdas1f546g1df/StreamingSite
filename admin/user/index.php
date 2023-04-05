@@ -78,10 +78,10 @@ if (isset($cookie)) {
         if ($IsAdmin) {
             $Page = $Page . $admin_1 . $header_2 . $loggedIn;
         } else {
-            header("location: /");
+            header("location: /error/403.php");
         }
     } else {
-        header("location: /");
+        header("location: /error/403.php");
     }
 }
 $Page = $Page . $admin_user . $footer;

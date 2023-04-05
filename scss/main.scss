@@ -29,6 +29,7 @@ $eye-catcher-height-1080: 410px;
 @import "dropdown";
 @import "home";
 @import "admin";
+@import "error";
 
 
 ::-webkit-scrollbar {
@@ -175,6 +176,9 @@ html {
 .tooltiptext {
   min-width: 140px;
   border-radius: 5px;
+  a:hover {
+    background: $light-gray;
+  }
 }
 
 //@media (max-width: 1400px) {

@@ -1,5 +1,41 @@
-@import "main";
-h1 {
-  color: #ff0000;
-  font-size: 100px;
+
+main.errorpage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  article {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 30px 30px;
+    border-radius: 10px;
+    background: $dd-more-bg;
+    * {
+      margin-top: 20px;
+    }
+    .error-text {
+      color: $lighter-gray;
+    }
+    .error-num {
+      color: $orange;
+      font-size: 50px;
+      font-weight: bold;
+    }
+    .error-btns {
+      .error-btn {
+        background: $orange;
+        border-radius: 5px;
+        height: 20px;
+        color: white;
+        padding: 10px 20px;
+        cursor: pointer;
+        &:hover {
+          transition: $trans;
+          background: $light-gray;
+        }
+      }
+    }
+  }
+
 }
