@@ -1,7 +1,7 @@
 <?php
 
 $admin_user = '
-</header>
+
 <main class="admin-main">
     <div id="admin-main-div">
 
@@ -49,10 +49,10 @@ $admin_user = '
                     <span class="user-list-el-email">{{ user.email }}</span>
                     <span class="user-list-el-admin"><i :class="user.admin"></i></span>
                     <span class="user-list-btn-placeholder">
-                        <span class="edit-btn user-list-btn"><i class="fa-solid fa-pen-to-square"></i></span>
+                        <i class="fa-solid fa-pen-to-square edit-btn user-list-btn"></i>
                         </span>
                     <span class="user-list-btn-placeholder">
-                        <span class="del-btn user-list-btn"><i class="fa-solid fa-trash"></i></span>
+                        <i class="fa-solid fa-trash del-btn user-list-btn" @click="removeUser"></i>
                         </span>
                 </div>
             </div>
@@ -67,22 +67,21 @@ $admin_user = '
 include '../.././template/index.php';
 
 //$content = file_get_contents("https://127.69.69.69/api/check_user");
-$login = true;
-$cookie = true;
-$IsAdmin = true;
 
-$Page = $header_1;
+
 
 if (isset($cookie)) {
     if ($login) {
         if ($IsAdmin) {
-            $Page = $Page . $admin_1 . $header_2 . $loggedIn;
+            $Page = $adminHeader;
         } else {
             header("location: /error/403.php");
         }
     } else {
         header("location: /error/403.php");
     }
+}else {
+    header("Location: /error/403.php");
 }
 $Page = $Page . $admin_user . $footer;
 echo $Page;

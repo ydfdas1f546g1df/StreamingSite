@@ -1,5 +1,14 @@
 <?php
 
+if (strpos($_SERVER['REQUEST_URI'], "=")) {
+    $username = explode("=", $_SERVER['REQUEST_URI'])[1];
+} else {
+    $username = "Username";
+};
+
+$letters = range('A', 'Z');
+$letter = [$letters[array_rand($letters)]];
+
 $header_1 = '<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,26 +50,27 @@ $header_2 = '
 
 $notLoggedIn = '
 <div class="login-div">
-        <a href="/login/" class="nl-btn l-btn" >LOGIN</a>
-        <a href="/register/" class="nl-btn r-btn" >REGISTER</a>
-    </div>';
+        <a href="/login" class="nl-btn l-btn" >LOGIN</a>
+        <a href="/register" class="nl-btn r-btn" >REGISTER</a>
+    </div>
+    </header>';
 
 $loggedIn = '
     <div class="user">
         <img src="/dist/img/testpp.jpg" id="user-pp" alt="user-pp"/>
-        <div id="user-name" class="tooltip">Username<i class="down-arrow"></i>
+        <div id="user-name" class="tooltip">' . $username . '<i class="down-arrow"></i>
             <div class="tooltiptext">
-                <a class="user-dd-el" href="#">
+                <a class="user-dd-el" href="/user">
                     <div class="user-dd-icon">
                         <i class="gg-format-justify"></i>
                     </div>
                     <span class="user-dd-name">Account</span>
-                </a> <a class="user-dd-el" href="#">
+                </a> <a class="user-dd-el" href="/user/profil/' . $username . '">
                 <div class="user-dd-icon">
                     <i class="gg-user"></i>
                 </div>
                 <span class="user-dd-name">Profile</span>
-            </a> <a class="user-dd-el" href="#">
+            </a> <a class="user-dd-el" href="/user/watchlist/' . $username . '">
                 <div class="user-dd-icon">
                     <i class="gg-eye-alt"></i>
                 </div>
@@ -80,16 +90,17 @@ $loggedIn = '
             </div>
         </div>
     </div>
-    <section class="top-nav">
-        <input id="menu-toggle" type="checkbox"/>
-        <label class="menu-button-container" for="menu-toggle">
-            <div class="menu-button""></div>
-        </label>
-        <ul class="menu">
-            <li><a href="/pages/allseries/index.php"><i class="gg-play-button-o"></i>&nbsp;Series</a></li>
-            <li><a href="/pages/popular.php"><i class="gg-align-bottom"></i>&nbsp;Popular</a></li>
-            <li><a href="/pages/search/"><i class="gg-search"></i>&nbsp;Search</a></li>
-            ';
+    </header>';
+
+//    <section class="top-nav">
+//        <input id="menu-toggle" type="checkbox"/>
+//        <label class="menu-button-container" for="menu-toggle">
+//            <div class="menu-button""></div>
+//        </label>
+//        <ul class="menu">
+//            <li><a href="/pages/allseries/"><i class="gg-play-button-o"></i>&nbsp;Series</a></li>
+//            <li><a href="/pages/popular.php"><i class="gg-align-bottom"></i>&nbsp;Popular</a></li>
+//            <li><a href="/pages/search/"><i class="gg-search"></i>&nbsp;Search</a></li>
 $admin_2 = '<li class="more-dd">admin</li>
             <li class="more-dd-el"><a href="https://github.com/ydfdas1f546g1df/StreamingSite" target="_blank">
                 <div class="more-dd-icon"><i class="gg-git-fork"></i></div>
@@ -124,14 +135,18 @@ $footer = '
         <div class="footer-el">
             <span class="footer-el-title">About</span>
             <a class="footer-el-item" href="/pages/contact.php">Contact</a>
-            <a class="footer-el-item" href="/pages/about/">Contact</a>
-            <a class="footer-el-item" href="#">AGBs</a>
+            <a class="footer-el-item" href="/pages/about/agb.php">AGBs</a>
             <a class="footer-el-item" href="#">Imprint</a>
         </div>
         <div class="footer-el">
             <span class="footer-el-title">Discover</span>
-            <a class="footer-el-item">Random</a>
+            <a class="footer-el-item" href="/pages/search/?search='. implode(",",$letter) .'">Random</a>
             <a class="footer-el-item" href="/pages/search/">Search</a>
+            <a class="footer-el-item" href="/pages/popular.php">Popular</a>
+        </div>
+        <div class="footer-el">
+            <span class="footer-el-title">More</span>
+            <a class="footer-el-item" href="/register">Free Account</a>
         </div>
     </div>
     <span class="copyright">&copy; Copyright 2023. All Rights Reserved. <a href="/">StreamingSite</a></span>
@@ -145,6 +160,9 @@ $footer = '
 </body>
 </html>';
 
+$adminHeader  = $header_1 . $admin_1 . $header_2 . $loggedIn;
+$loggedInHeader = $header_1 . $header_2 . $loggedIn;
+$notLoggedInHeader = $header_1 . $header_2 . $notLoggedIn;
 //
 //$date = time() + (86400 * 30);
 //$cookie_name = "LoginUser";
@@ -156,3 +174,9 @@ $footer = '
 //    echo "Cookie '" . $cookie_name . "' is set!<br>";
 //    echo "Value is: " . $_COOKIE[$cookie_name];
 //}
+
+
+
+//$cookie = true;
+$login = true;
+$IsAdmin = true;

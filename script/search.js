@@ -11,12 +11,13 @@ Vue.createApp({
         return {
             results: [TestResult, TestResult, TestResult, TestResult, TestResult, TestResult, TestResult, TestResult, TestResult],
         };
-    }, methods: {
+    },
+    methods: {
         addToWatchlist(e) {
             e.preventDefault()
+            console.log($(e.target))
             console.log($(e.target).parent().attr("name"))
             console.log($(e.target).parent().attr("showName"))
-            // $(e).find("span").text("added")
             $(e.target).find("span").text("added")
         }
     }

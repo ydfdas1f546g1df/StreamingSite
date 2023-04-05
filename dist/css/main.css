@@ -273,7 +273,7 @@ footer .wrapper .footer-el .footer-el-title {
   margin-bottom: 20px;
 }
 footer .wrapper .footer-el .footer-el-item {
-  color: #ffffff;
+  color: #636363;
   margin-bottom: 10px;
 }
 footer .wrapper .footer-el .footer-el-item:hover {
@@ -287,16 +287,6 @@ footer .copyright a {
   color: rgb(255, 100, 16);
 }
 
-@media screen and (max-width: 1080px) {
-  footer {
-    min-height: 450px;
-  }
-  .copyright {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-}
 .down-arrow {
   box-sizing: border-box;
   position: relative;
@@ -845,6 +835,10 @@ footer .copyright a {
   flex-direction: column;
   align-items: flex-start;
   margin: 7px;
+  position: relative;
+}
+.home-cat-parent .home-cat .home-el:hover {
+  animation: zoom-in-zoom-out 0.4s ease forwards;
 }
 .home-cat-parent .home-cat .home-el .cover-title {
   color: white;
@@ -860,13 +854,14 @@ footer .copyright a {
   width: 150px;
   z-index: 1;
   border-radius: 5px;
+  overflow: hidden;
 }
 @keyframes zoom-in-zoom-out {
   0% {
     transform: scale(1, 1);
   }
   100% {
-    transform: scale(1.1, 1.1);
+    transform: scale(1.06, 1.06);
   }
 }
 
@@ -977,7 +972,7 @@ footer .copyright a {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40px;
+  height: 30px;
   border-radius: 5px;
   padding: 0 10px;
   cursor: pointer;
@@ -1068,6 +1063,342 @@ main.errorpage article .error-btns .error-btn {
 main.errorpage article .error-btns .error-btn:hover {
   transition: all 0.25s ease-in;
   background: rgb(55, 55, 55);
+}
+
+.loginRegster-main {
+  height: 70%;
+}
+.loginRegster-main .login-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+}
+.loginRegster-main .login-wrapper .Login-title {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 30px 20px;
+}
+.loginRegster-main .login-wrapper form {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  border: rgb(55, 55, 55) solid 3px;
+}
+.loginRegster-main .login-wrapper form a {
+  color: rgb(255, 100, 16);
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.loginRegster-main .login-wrapper form #error-field {
+  display: none;
+  color: #520000;
+  background: rgba(253, 87, 87, 0.51);
+  margin: 10px 20px 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.loginRegster-main .login-wrapper form .agree {
+  margin: 0 20px 20px 20px;
+  color: #636363;
+}
+.loginRegster-main .login-wrapper form .agree a {
+  margin: 0;
+  color: rgb(55, 55, 55);
+}
+.loginRegster-main .login-wrapper form .agree a:hover {
+  color: rgb(255, 100, 16);
+}
+.loginRegster-main .login-wrapper form input[type=submit] {
+  width: 360px;
+  height: 50px;
+  padding: 10px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 100, 16);
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+.loginRegster-main .login-wrapper form input[type=submit]:hover {
+  transition: all 0.25s ease-in;
+  background: rgb(28, 28, 28);
+}
+.loginRegster-main .login-wrapper form label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 20px;
+}
+.loginRegster-main .login-wrapper form label i {
+  color: white;
+  cursor: pointer;
+}
+.loginRegster-main .login-wrapper form label input[type=email], .loginRegster-main .login-wrapper form label input[type=password], .loginRegster-main .login-wrapper form label input[type=text] {
+  width: 60%;
+  height: 30px;
+  border-radius: 5px;
+  background: none;
+  box-shadow: none;
+  outline: none;
+  border-color: transparent transparent black transparent;
+  color: white;
+  border-bottom: rgb(55, 55, 55) solid 4px;
+}
+.loginRegster-main .login-wrapper form label input[type=email].touched, .loginRegster-main .login-wrapper form label input[type=password].touched, .loginRegster-main .login-wrapper form label input[type=text].touched {
+  color: #0084d0;
+  border-color: transparent transparent #0084d0 transparent;
+}
+.loginRegster-main .login-wrapper form label input[type=email].touched:invalid, .loginRegster-main .login-wrapper form label input[type=password].touched:invalid, .loginRegster-main .login-wrapper form label input[type=text].touched:invalid {
+  color: red;
+  border-color: transparent transparent red transparent;
+}
+.loginRegster-main .login-wrapper form label input[type=email]:focus-visible, .loginRegster-main .login-wrapper form label input[type=password]:focus-visible, .loginRegster-main .login-wrapper form label input[type=text]:focus-visible {
+  outline: none;
+  border-bottom: rgb(255, 100, 16) solid 4px;
+}
+.loginRegster-main .login-wrapper form label input[type=email]::-moz-placeholder, .loginRegster-main .login-wrapper form label input[type=password]::-moz-placeholder, .loginRegster-main .login-wrapper form label input[type=text]::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.51);
+}
+.loginRegster-main .login-wrapper form label input[type=email]::placeholder, .loginRegster-main .login-wrapper form label input[type=password]::placeholder, .loginRegster-main .login-wrapper form label input[type=text]::placeholder {
+  color: rgba(255, 255, 255, 0.51);
+}
+.loginRegster-main .login-wrapper form label #stay {
+  height: 15px;
+  aspect-ratio: 1/1;
+}
+.loginRegster-main .login-wrapper form label span {
+  color: white;
+}
+.loginRegster-main .login-wrapper .login-info {
+  width: 350px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.loginRegster-main .login-wrapper .login-info .login-info-title {
+  color: white;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+.loginRegster-main .login-wrapper .login-info img {
+  height: 150px;
+}
+.loginRegster-main .login-wrapper .login-info .login-info-text {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  color: #636363;
+}
+.loginRegster-main .login-wrapper .login-info a {
+  color: rgb(255, 100, 16);
+}
+.loginRegster-main .login-wrapper .login-info a:hover {
+  color: white;
+}
+.loginRegster-main .login-wrapper .register-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.loginRegster-main .login-wrapper .register-info .login-info-subtitle {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 10px 10px 0;
+}
+.loginRegster-main .login-wrapper .register-info div {
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loginRegster-main .login-wrapper .register-info div i.watchlist {
+  color: #5da3f4;
+}
+.loginRegster-main .login-wrapper .register-info div i.watched {
+  color: rgb(255, 100, 16);
+}
+.loginRegster-main .login-wrapper .register-info div i.ads {
+  color: red;
+}
+
+.checkbox-wrapper-55 input[type=checkbox] {
+  visibility: hidden;
+  display: none;
+}
+
+.checkbox-wrapper-55 *,
+.checkbox-wrapper-55 ::after,
+.checkbox-wrapper-55 ::before {
+  box-sizing: border-box;
+}
+
+.checkbox-wrapper-55 .rocker {
+  display: inline-block;
+  position: relative;
+  /*
+  SIZE OF SWITCH
+  ==============
+  All sizes are in em - therefore
+  changing the font-size here
+  will change the size of the switch.
+  See .rocker-small below as example.
+  */
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  width: 7em;
+  height: 4em;
+  overflow: hidden;
+  border-bottom: 0.5em solid rgb(28, 28, 28);
+}
+
+.checkbox-wrapper-55 .rocker-small {
+  font-size: 0.75em;
+}
+
+.checkbox-wrapper-55 .rocker::before {
+  content: "";
+  position: absolute;
+  top: 0.5em;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #999;
+  border: 0.5em solid rgb(28, 28, 28);
+  border-bottom: 0;
+}
+
+.checkbox-wrapper-55 .switch-left,
+.checkbox-wrapper-55 .switch-right {
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5em;
+  width: 3em;
+  transition: 0.2s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.checkbox-wrapper-55 .switch-left {
+  height: 2.4em;
+  width: 2.75em;
+  left: 0.85em;
+  bottom: 0.4em;
+  background-color: rgb(28, 28, 28);
+  transform: rotate(15deg) skewX(15deg);
+}
+
+.checkbox-wrapper-55 .switch-right {
+  right: 0.5em;
+  bottom: 0;
+  background-color: #bd5757;
+  color: rgb(28, 28, 28);
+}
+
+.checkbox-wrapper-55 .switch-left::before,
+.checkbox-wrapper-55 .switch-right::before {
+  content: "";
+  position: absolute;
+  width: 0.4em;
+  height: 2.45em;
+  bottom: -0.45em;
+  background-color: #ccc;
+  transform: skewY(-65deg);
+}
+
+.checkbox-wrapper-55 .switch-left::before {
+  left: -0.4em;
+}
+
+.checkbox-wrapper-55 .switch-right::before {
+  right: -0.375em;
+  background-color: transparent;
+  transform: skewY(65deg);
+}
+
+.checkbox-wrapper-55 input:checked + .switch-left {
+  background-color: #0084d0;
+  color: rgb(28, 28, 28);
+  bottom: 0px;
+  left: 0.5em;
+  height: 2.5em;
+  width: 3em;
+  transform: rotate(0deg) skewX(0deg);
+}
+
+.checkbox-wrapper-55 input:checked + .switch-left::before {
+  background-color: transparent;
+  width: 3.0833em;
+}
+
+.checkbox-wrapper-55 input:checked + .switch-left + .switch-right {
+  background-color: rgb(28, 28, 28);
+  color: #fff;
+  bottom: 0.4em;
+  right: 0.8em;
+  height: 2.4em;
+  width: 2.75em;
+  transform: rotate(-15deg) skewX(-15deg);
+}
+
+.checkbox-wrapper-55 input:checked + .switch-left + .switch-right::before {
+  background-color: #ccc;
+}
+
+/* Keyboard Users */
+.checkbox-wrapper-55 input:focus + .switch-left {
+  color: #fff;
+}
+
+.checkbox-wrapper-55 input:checked:focus + .switch-left {
+  color: rgb(28, 28, 28);
+}
+
+.checkbox-wrapper-55 input:focus + .switch-left + .switch-right {
+  color: rgb(28, 28, 28);
+}
+
+.checkbox-wrapper-55 input:checked:focus + .switch-left + .switch-right {
+  color: #333;
+}
+
+.agb-main {
+  color: white;
+  margin-top: 100px;
+  margin-bottom: 200px;
+}
+.agb-main .page-title {
+  font-size: 40px;
+}
+.agb-main .agb-el {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.agb-main .start-date {
+  margin-bottom: 10px;
+}
+.agb-main .agb-title {
+  font-size: 24px;
+  margin: 20px 0;
 }
 
 ::-webkit-scrollbar {
