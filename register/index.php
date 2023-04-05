@@ -8,26 +8,26 @@ $homeContent = '
         <span class="Login-title">Register</span>
         <label>
             <span>Name</span>
-            <input type="text" name="name" id="name" placeholder="other people will see this name" required>
+            <input type="text" name="name" id="name" placeholder="other people will see this name" required autocomplete="off">
         </label>
         <label>
             <span>Username</span>
-            <input type="text" name="username" id="username" placeholder="max_muster" required>
+            <input type="text" name="username" id="username" placeholder="max_muster" required autocomplete="off">
         </label>
         <label>
             <span>Email</span>
-            <input type="email" name="email" id="email" placeholder="example@gmail.com" required>
+            <input type="email" name="email" id="email" placeholder="example@gmail.com" required autocomplete="off">
         </label>
         <label>
             <span>Password</span>
             <i class="fa-sharp fa-solid fa-eye-slash showPw"></i>
             <input type=password class="pw" name="password" id="password" minlength="10" maxlength="128" placeholder="password"
-                   required>   
+                   required autocomplete="off">   
         </label>
         <label>
             <span>Password</span>
             <input type=password name="rpassword" class="pw" id="rpassword" minlength="10" maxlength="128" placeholder="password"
-                   required>
+                   required autocomplete="off">
         </label>
         <input type="submit" value="Register">
         <a href="/login">I already have an account</a>
@@ -45,6 +45,7 @@ $homeContent = '
 </div>
 </main>
 <script src="/script/register.js"></script>
+<script src="/script/loginregister.js"></script>
 ';
 
 include '.././template/index.php';

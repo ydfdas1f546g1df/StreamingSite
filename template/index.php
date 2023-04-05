@@ -177,7 +177,7 @@ $notLoggedInHeader = $header_1 . $header_2 . $notLoggedIn;
 
 
 
-$cookie = true;
+//$cookie = true;
 $login = true;
 //$login = false;
 $IsAdmin = true;
