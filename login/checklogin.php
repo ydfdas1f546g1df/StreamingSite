@@ -1,8 +1,9 @@
 <?php
 $error = 200;
-$email = $_POST["email"];
-$pass = $_POST["password"];
-$pass = hash('sha256', $pass);
+$email = htmlspecialchars($_POST["email"]);
+$pass = htmlspecialchars($_POST["password"]);
+//echo $pass = hash('sha256', $pass) . "<br>";
+$pass = hash('sha256', htmlspecialchars($pass));
 //echo $email . "<br>";
 //echo $pass . "<br>";
 //echo $pass;
@@ -33,7 +34,7 @@ $homeContent = '
             <img src="/dist/img/logo.png" alt="logo">
             <span class="login-info-title">' . $errorText . ' </span>
             <span class="login-info-text">' . $errorMessage . '</span>
-            <a '. $error_link .'>To your Account</a>
+            <a ' . $error_link . '>' . $error_link_text . '</a>
         </div>
     </div>
 </main>
