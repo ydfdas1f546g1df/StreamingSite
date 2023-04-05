@@ -2,7 +2,7 @@
 <?php
 $homeContent = '
 <main class="agb-main">
-<span class="page-title">Terms of service</span>
+<span class="page-title">Terms of use</span>
 <span class="start-date">last change: 04.04.2023</span>
     <span class="agb-text">Welcome to StreamingSite! Please read these terms of service carefully before using our website. By accessing or using our website, you agree to be bound by these terms of service. If you do not agree to all the terms and conditions of this agreement, then you may not access the website or use any services.</span>
     <span class="agb-text"> We reserve the right to change these Terms of Use at any time. You should therefore check this page regularly for any changes.</span>
