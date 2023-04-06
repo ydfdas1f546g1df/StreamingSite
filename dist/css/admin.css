@@ -35,7 +35,7 @@
   border-radius: 5px;
   min-width: 50px;
   cursor: pointer;
-  transition: all 0.25s ease-in;
+  transition: all 0.4s ease-in-out;
 }
 .admin-main #admin-main-div article.user-article .user .btns .user-btn:hover {
   background: rgb(55, 55, 55);
@@ -109,7 +109,7 @@
   border-radius: 5px;
   padding: 0 10px;
   cursor: pointer;
-  transition: all 0.25s ease-in;
+  transition: all 0.4s ease-in-out;
   width: 100%;
 }
 .admin-main #admin-main-div article.user-article .user .user-list .user-list-el-header span.user-list-btn-placeholder .user-list-btn.del-btn, .admin-main #admin-main-div article.user-article .user .user-list .user-list-el span.user-list-btn-placeholder .user-list-btn.del-btn {

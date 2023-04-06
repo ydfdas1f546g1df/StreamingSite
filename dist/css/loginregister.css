@@ -62,9 +62,9 @@
   color: white;
   font-size: 22px;
   cursor: pointer;
+  transition: all 0.4s ease-in-out;
 }
 .loginRegster-main .login-wrapper form input[type=submit]:hover {
-  transition: all 0.25s ease-in;
   background: rgb(28, 28, 28);
 }
 .loginRegster-main .login-wrapper form label {

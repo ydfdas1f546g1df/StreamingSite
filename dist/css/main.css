@@ -858,14 +858,10 @@ footer .copyright a:hover {
   z-index: 1;
   border-radius: 5px;
   overflow: hidden;
+  transition: all 0.4s ease-in-out;
 }
-@keyframes zoom-in-zoom-out {
-  0% {
-    transform: scale(1, 1);
-  }
-  100% {
-    transform: scale(1.06, 1.06);
-  }
+.home-cat-parent .home-cat .home-el img:hover {
+  scale: 1.06;
 }
 
 .admin-main {
@@ -905,7 +901,7 @@ footer .copyright a:hover {
   border-radius: 5px;
   min-width: 50px;
   cursor: pointer;
-  transition: all 0.25s ease-in;
+  transition: all 0.4s ease-in-out;
 }
 .admin-main #admin-main-div article.user-article .user .btns .user-btn:hover {
   background: rgb(55, 55, 55);
@@ -979,7 +975,7 @@ footer .copyright a:hover {
   border-radius: 5px;
   padding: 0 10px;
   cursor: pointer;
-  transition: all 0.25s ease-in;
+  transition: all 0.4s ease-in-out;
   width: 100%;
 }
 .admin-main #admin-main-div article.user-article .user .user-list .user-list-el-header span.user-list-btn-placeholder .user-list-btn.del-btn, .admin-main #admin-main-div article.user-article .user .user-list .user-list-el span.user-list-btn-placeholder .user-list-btn.del-btn {
@@ -1064,7 +1060,7 @@ main.errorpage article .error-btns .error-btn {
   cursor: pointer;
 }
 main.errorpage article .error-btns .error-btn:hover {
-  transition: all 0.25s ease-in;
+  transition: all 0.4s ease-in-out;
   background: rgb(55, 55, 55);
 }
 
@@ -1132,9 +1128,9 @@ main.errorpage article .error-btns .error-btn:hover {
   color: white;
   font-size: 22px;
   cursor: pointer;
+  transition: all 0.4s ease-in-out;
 }
 .loginRegster-main .login-wrapper form input[type=submit]:hover {
-  transition: all 0.25s ease-in;
   background: rgb(28, 28, 28);
 }
 .loginRegster-main .login-wrapper form label {
@@ -1436,7 +1432,7 @@ main.errorpage article .error-btns .error-btn:hover {
 
 a {
   text-decoration: none;
-  transition: all 0.25s ease-in;
+  transition: all 0.4s ease-in-out;
   cursor: pointer;
 }
 a * {
@@ -1485,7 +1481,7 @@ html body main .quick-search .quick-search-el {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.25s ease-in;
+  transition: all 0.4s ease-in-out;
   font-weight: bold;
   color: white;
 }

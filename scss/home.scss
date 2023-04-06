@@ -14,7 +14,7 @@ $hover-orange: #f8cb80;
 $user-pp-size: 40px;
 $dd-more-bg: rgb(24, 24, 24);
 $light-gray: rgb(55, 55, 55);
-$trans: all .25s ease-in;
+$trans: all .4s ease-in-out;
 $cat-title-size: 22px;
 $eye-catcher-margin: 5px;
 $eye-catcher-margin-1400: 3px;
@@ -200,6 +200,7 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
     &#home-cat-3 {
       margin-bottom: 300px;
     }
+
     .home-el {
       display: flex;
       flex-direction: column;
@@ -208,7 +209,7 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
       position: relative;
 
       &:hover {
-          animation: zoom-in-zoom-out .4s ease forwards;
+        animation: zoom-in-zoom-out .4s ease forwards;
       }
 
       .cover-title {
@@ -228,14 +229,10 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
         z-index: 1;
         border-radius: 5px;
         overflow: hidden;
+        transition: $trans;
 
-        @keyframes zoom-in-zoom-out {
-          0% {
-            transform: scale(1, 1);
-          }
-          100% {
-            transform: scale(1.06, 1.06);
-          }
+        &:hover {
+        scale: 1.06;
         }
       }
     }

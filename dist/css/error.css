@@ -31,6 +31,6 @@ main.errorpage article .error-btns .error-btn {
   cursor: pointer;
 }
 main.errorpage article .error-btns .error-btn:hover {
-  transition: all 0.25s ease-in;
+  transition: all 0.4s ease-in-out;
   background: rgb(55, 55, 55);
 }
