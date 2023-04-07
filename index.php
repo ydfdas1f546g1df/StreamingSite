@@ -73,7 +73,7 @@ $homeContent = '
             <a href="#" class="home-el" v-for="media in Media"
                :title="media.name + \', watch it now for free and in full length.\'">
                 <img :src="media.coverSrc" alt="cover" class="cover">
-                <span class="cover-title">{{ media.name }}<span class="fi fi-de"></span></span>
+                <span class="cover-title"><span>{{ media.name }}</span><i class="fi fi-de"></i></span>
             </a>
         </div>
     </div>
@@ -85,7 +85,7 @@ $homeContent = '
             <a href="#" class="home-el" v-for="media in Media"
                :title="media.name + \', watch it now for free and in full length.\'">
                 <img v-bind:src="media.coverSrc" alt="cover" class="cover">
-                <span class="cover-title">{{ media.name }}<span class="fi fi-de"></span></span>
+                <span class="cover-title"><span>{{ media.name }}</span><i class="fi fi-de"></i></span>
             </a>
         </div>
     </div>
@@ -97,7 +97,7 @@ $homeContent = '
             <a href="#" class="home-el" v-for="media in Media"
                :title="media.name + \', watch it now for free and in full length.\'">
                 <img v-bind:src="media.coverSrc" alt="cover" class="cover">
-                <span class="cover-title">{{ media.name }}<span class="fi fi-de"></span></span>
+                <span class="cover-title"><span>{{ media.name }}</span><i class="fi fi-de"></i></span>
             </a>
         </div>
     </div>
