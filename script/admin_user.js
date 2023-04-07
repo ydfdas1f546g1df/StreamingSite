@@ -6,38 +6,37 @@ $(function () {
         const getUser = async (api) => {
             const response = await fetch(base_url + '/api/' + api + '.php', {
                 method: 'POST',
-                // body: JSON.stringify({
-                //     reqId: 1,
-                //     apiToken: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-                // }),
+                body: JSON.stringify({
+                    reqId: 1,
+                }),
                 headers: {
                     'Content-Type': 'application/json'
                 },
 
             });
-            const JSON = await response.json()
+            const ResJSON = await response.json()
             // console.log(response);
             // console.log(JSON);
 
-            for (let i = 0; i < JSON.length; i++) {
-                if (JSON[i].admin == 1) {
-                    JSON[i].admin = "fa-solid fa-check IsAdmin"
+            for (let i = 0; i < ResJSON.length; i++) {
+                if (ResJSON[i].admin == 1) {
+                    ResJSON[i].admin = "fa-solid fa-check IsAdmin"
                     var isAdmin = 1;
 
                 } else {
-                    JSON[i].admin = "fa-solid fa-xmark IsNotAdmin"
+                    ResJSON[i].admin = "fa-solid fa-xmark IsNotAdmin"
                     var isAdmin = 0;
                 }
 
                 JSONData.push({
-                    id: JSON[i].id,
-                    admin: JSON[i].admin,
+                    id: ResJSON[i].id,
+                    admin: ResJSON[i].admin,
                     IsAdmin: isAdmin,
-                    name: JSON[i].name,
-                    username: JSON[i].username,
-                    email: JSON[i].email,
-                    passwordHash: JSON[i].passwordHash,
-                    bio: JSON[i].bio,
+                    name: ResJSON[i].name,
+                    username: ResJSON[i].username,
+                    email: ResJSON[i].email,
+                    passwordHash: ResJSON[i].passwordHash,
+                    bio: ResJSON[i].bio,
                     search: "",
                 })
             }
