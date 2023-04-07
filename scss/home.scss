@@ -73,7 +73,7 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
 
 .eye-el-1x1 {
   height: $eye-catcher-height;
-  width: $eye-catcher-height;
+  aspect-ratio: 1;
 }
 
 .eye-el-1x2 {
@@ -83,7 +83,7 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
 
 .eye-el-2x2 {
   width: 2 * $eye-catcher-height + 2 * $eye-catcher-margin;
-  height: 2 * $eye-catcher-height + 2 * $eye-catcher-margin;
+  aspect-ratio: 1;
 }
 
 

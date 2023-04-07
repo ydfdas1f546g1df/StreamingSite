@@ -790,7 +790,7 @@ footer .copyright a:hover {
 
 .eye-el-1x1 {
   height: 134px;
-  width: 134px;
+  aspect-ratio: 1;
 }
 
 .eye-el-1x2 {
@@ -800,7 +800,7 @@ footer .copyright a:hover {
 
 .eye-el-2x2 {
   width: 278px;
-  height: 278px;
+  aspect-ratio: 1;
 }
 
 .home-cat-parent .home-el-title {
