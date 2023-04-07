@@ -103,8 +103,6 @@ if (isset($cookie)) {
     $Page = $notLoggedInHeader;
 }
 
-
-
 if (isset($error) || filter_var($email, FILTER_VALIDATE_EMAIL)) {
     if ($error == 200) {
         $Page = $Page . $verifyContent . $footer;
