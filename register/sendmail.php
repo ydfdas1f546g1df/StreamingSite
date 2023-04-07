@@ -10,7 +10,7 @@ if (isset($_GET["email"])) {
     $admin = false;
     $token = substr(hash('sha256', $username), 1, 30);
     $expire = new DateTime();
-    $expire->add(new DateInterval('P6M')); // add 6 months
+    $expire->add(new DateInterval('P6M'));
     $expire = $expire->format('Y-m-d');
 
     include explode("StreamingSite", __DIR__)[0] . 'StreamingSite\api\register.php';
@@ -19,7 +19,7 @@ if (isset($_GET["email"])) {
         $errorText = "Mail verification";
         $errorMessage = "We have sent you a mail, please verify";
         $error_link = "href='/login'";
-        $error_link_text = "Go to Login";
+        $error_link_text = "After that, Go to Login";
     } elseif ($error == 400) {
         $errorText = "400";
         $errorMessage = "Bad Request";
@@ -34,7 +34,7 @@ if (isset($_GET["email"])) {
 
 } else {
     $errorText = "Bad Request 400";
-    $errorMessage = "Some thing went completely wrong";
+    $errorMessage = "Something went completely wrong";
     $error_link = "onclick='history.back()'";
     $error_link_text = "Back";
 }
@@ -52,19 +52,43 @@ $homeContent = '
 </main>
 ';
 
+$verifyContent = '
+<main class="loginRegster-main">
+    <div class="login-wrapper">
+        <div class="login-info">
+            <img src="/dist/img/logo.png" alt="logo">
+            <span class="login-info-title">Verify Email</span>
+            <span class="login-info-text">Enter the code we have sent to your email</span>
+            <form action="verify.php" method="post" class="verify-form">
+                <div class="verify-code">
+                    <input type="number" name="num1" maxlength="1" id="first" required>
+                    <input type="number" name="num2" maxlength="1" required>
+                    <input type="number" name="num3" maxlength="1" required>
+                    <input type="number" name="num4" maxlength="1" required>
+                    <input type="number" name="num5" maxlength="1" required>
+                    <input type="number" name="num6" maxlength="1" required>
+                </div>
+                <input type="email" value="" style="display: none">
+                <input type="submit" value="Verify">
+            </form>
+        </div>
+    </div>
+    <script src="/script/verify.js"></script>
+</main>
+';
+
 include '.././template/index.php';
 
 setcookie("token", "", time() - 1000, "/");
 setcookie("name", "", time() - 1000, "/");
 setcookie("username", "", time() - 1000, "/");
 
-$login = false;
 if (isset($cookie)) {
     if ($login) {
         if ($IsAdmin) {
             $Page = $adminHeader;
         } else {
-            $Page = $loggedInHeader;
+            header("location: /error/403.php");
         }
     } else {
         $Page = $notLoggedInHeader;
@@ -72,5 +96,14 @@ if (isset($cookie)) {
 } else {
     $Page = $notLoggedInHeader;
 }
-$Page = $Page . $homeContent . $footer;
+if (isset($error)) {
+    if ($error == 200) {
+        $Page = $Page . $verifyContent . $footer;
+    } else {
+        $Page = $Page . $homeContent . $footer;
+    }
+} else {
+    $Page = $Page . $homeContent . $footer;
+}
+
 echo $Page;

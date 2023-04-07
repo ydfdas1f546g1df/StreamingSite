@@ -55,11 +55,15 @@ include '.././template/index.php';
 
 if (isset($cookie)) {
     if ($login) {
-        header("Location: /user");
+        if ($IsAdmin) {
+            $Page = $adminHeader;
+        } else {
+            header("location: /error/403.php");
+        }
     } else {
         $Page = $notLoggedInHeader;
     }
-}  else {
+} else {
     $Page = $notLoggedInHeader;
 }
 $Page = $Page . $homeContent . $footer;
