@@ -30,7 +30,6 @@ if (isset($email)) {
 
 
 //            echo '<pre>'; print_r($resultsArray); echo '</pre>';
-
         $name = $resultsArray[0]['name'];
         $username = $resultsArray[0]['username'];
         setcookie("token", $resultsArray[0]['token'], time() + (86400 * 180), "/");

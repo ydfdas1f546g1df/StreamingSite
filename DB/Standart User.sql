@@ -22,7 +22,7 @@ INSERT INTO tbl_users (name, username, email, passwordHash, admin) VALUE ('Samy'
 
 INSERT INTO tbl_apitoken (id, user, expire) VALUE ('9ozbodiivjbaOUSZDVFOUsASHBDFOI', 6, '2023-12-12');
 
-INSERT INTO tbl_users (name, username, email, passwordHash, admin) VALUE ('Colin', 'colinheggli', 'colin.heggli@gmail.com.com', 'c775e7b757ede630cd0aa1113bd102661ab38829ca52a6422ab782862f268646', false);
+INSERT INTO tbl_users (name, username, email, passwordHash, admin) VALUE ('Nemo', 'isudbisudbssd', 'niemal@mail.com', 'c775e7b757ede630cd0aa1113bd102661ab38829ca52a6422ab782862f268646', false);
 
 INSERT INTO tbl_apitoken (id, user, expire) VALUE ('alojhbdofizuqbosarfiijbdsflkhb', 7, '2023-12-12');
 
