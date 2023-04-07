@@ -34,8 +34,8 @@ if (isset($_GET["email"])) {
     }
 
 } else {
-    $errorText = "400";
-    $errorMessage = "Something went completely wrong";
+    $errorText = "404";
+    $errorMessage = "This page does not exist";
     $error_link = "onclick='history.back()'";
     $error_link_text = "Back";
 }
