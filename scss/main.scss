@@ -121,15 +121,13 @@ html {
           transition: $trans;
           font-weight: bold;
           color: white;
+          cursor: pointer;
+          color: white;
+          font-weight: bold;
 
           &:hover {
             background: $dd-more-bg;
             color: $orange;
-          }
-
-          a {
-            color: white;
-            font-weight: bold;
           }
         }
       }

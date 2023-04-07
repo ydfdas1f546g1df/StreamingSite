@@ -140,13 +140,13 @@ $footer = '
         </div>
         <div class="footer-el">
             <span class="footer-el-title">About</span>
-            <a class="footer-el-item" href="/pages/contact.php">Contact</a>
+            <a class="footer-el-item" href="/pages/about/contact.php">Contact</a>
             <a class="footer-el-item" href="/pages/about/agb.php">AGBs</a>
             <a class="footer-el-item" href="#">Imprint</a>
         </div>
         <div class="footer-el">
             <span class="footer-el-title">Discover</span>
-            <a class="footer-el-item" href="/pages/search/?search='. implode(",",$letter) .'">Random</a>
+            <a class="footer-el-item" href="/pages/search/?search=' . implode(",",$letter) .'">Random</a>
             <a class="footer-el-item" href="/pages/search/">Search</a>
             <a class="footer-el-item" href="/pages/popular.php">Popular</a>
         </div>

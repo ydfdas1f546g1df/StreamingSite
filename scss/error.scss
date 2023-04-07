@@ -38,17 +38,30 @@ main.errorpage {
     padding: 10px 30px 30px;
     border-radius: 10px;
     background: $dd-more-bg;
+
     * {
       margin-top: 20px;
     }
+
     .error-text {
       color: $lighter-gray;
+
+      a {
+        margin: 0;
+        color: $light-gray;
+
+        &:hover {
+          color: $orange;
+        }
+      }
     }
+
     .error-num {
       color: $orange;
       font-size: 50px;
       font-weight: bold;
     }
+
     .error-btns {
       .error-btn {
         background: $orange;
@@ -57,6 +70,7 @@ main.errorpage {
         color: white;
         padding: 10px 20px;
         cursor: pointer;
+
         &:hover {
           transition: $trans;
           background: $light-gray;

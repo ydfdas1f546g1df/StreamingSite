@@ -2,7 +2,7 @@
 $homeContent = '
 <main>
     <div class="quick-search" id="quick-search">
-        <div class="quick-search-el" v-for="quick in quicks"><a :href="\'/pages/search/?search=\' + quick">{{ quick }}</a></div>
+        <a :href="\'/pages/search/?search=\' + quick"  class="quick-search-el" v-for="quick in quicks">{{ quick }}</a>
     </div>
     <div class="eye-catcher" id="eye-catcher">
         <div class="eye-wr">

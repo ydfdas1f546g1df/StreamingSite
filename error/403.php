@@ -2,7 +2,6 @@
 
 <?php
 $homeContent = '
-</header>
 <main class="errorpage">
     <article>
         <span class="error-text">Sorry! Your not alowed do go here.</span>
@@ -11,10 +10,10 @@ $homeContent = '
             <span class="error-btn" onclick="history.back()">Back</span>
             <a class="error-btn" href="/">Home</a>
         </span>
-        <span class="error-text">If you believe this to be an error, please contact an administrator</span>
+        <span class="error-text">If you believe this to be an error, please <a href="/pages/about/contact.php">contact</a>  an administrator</span>
     </article>
     <script>
-        document.title = "403  StreamingSite"
+        document.title = "401  StreamingSite"
     </script>
 </main>
 ';
