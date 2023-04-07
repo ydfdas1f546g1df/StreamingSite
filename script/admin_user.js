@@ -6,10 +6,10 @@ $(function () {
         const getUser = async (api) => {
             const response = await fetch(base_url + '/api/' + api + '.php', {
                 method: 'POST',
-                // body: JSON.stringify({
-                //     reqId: 1,
-                //     apiToken: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-                // }),
+                body: JSON.stringify({
+                    reqId: 1,
+                    apiToken: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                }),
                 headers: {
                     'Content-Type': 'application/json'
                 },

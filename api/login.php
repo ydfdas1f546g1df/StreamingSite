@@ -21,8 +21,11 @@ if (isset($email)) {
     if (isset($resultsArray[0])) {
         $login = true;
         $cookie = true;
+
         if ($resultsArray[0]['admin'] == 1) {
             $IsAdmin = true;
+        } else {
+            $IsAdmin = false;
         }
 
 
