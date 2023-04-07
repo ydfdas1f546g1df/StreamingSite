@@ -14,7 +14,7 @@ $homeContent = '
         <span class="error-text">If you believe this to be an error, please contact an administrator</span>
     </article>
     <script>
-        document.title = "404  StreamingSite"
+        document.title = "Error 404 | StreamingSite"
     </script>
 </main>
 ';

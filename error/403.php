@@ -13,7 +13,7 @@ $homeContent = '
         <span class="error-text">If you believe this to be an error, please <a href="/pages/about/contact.php">contact</a>  an administrator</span>
     </article>
     <script>
-        document.title = "401  StreamingSite"
+        document.title = "Error 401 | StreamingSite"
     </script>
 </main>
 ';
