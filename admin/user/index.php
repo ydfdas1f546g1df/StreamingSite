@@ -28,7 +28,7 @@ $admin_user = '
             </div>
             <label for="">
                 Search User
-                <input type="text" name="search-user" placeholder="username" v-model="search">
+                <input type="text" name="search-user" placeholder="name" v-model="search">
             </label>
 
             <div class="user-list">
