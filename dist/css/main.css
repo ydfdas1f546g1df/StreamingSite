@@ -1251,6 +1251,42 @@ main.errorpage article .error-btns .error-btn:hover {
 .loginRegster-main .login-wrapper .register-info div i.ads {
   color: red;
 }
+.loginRegster-main .login-wrapper .verify-form {
+  border: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.loginRegster-main .login-wrapper .verify-form .verify-code {
+  display: flex;
+  align-items: center;
+}
+.loginRegster-main .login-wrapper .verify-form .verify-code input[type=number] {
+  width: 20px;
+  height: 30px;
+  border-radius: 5px;
+  background: none;
+  box-shadow: none;
+  outline: none;
+  border-color: transparent transparent black transparent;
+  color: white;
+  border-bottom: rgb(55, 55, 55) solid 4px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  text-align: center;
+}
+.loginRegster-main .login-wrapper .verify-form .verify-code input[type=number]:focus-visible {
+  outline: none;
+  border-bottom: rgb(255, 100, 16) solid 4px;
+}
+.loginRegster-main .login-wrapper .verify-form .verify-code input[type=number].ok {
+  border-color: transparent transparent rgb(255, 100, 16) transparent;
+}
+.loginRegster-main .login-wrapper .verify-form input[type=submit] {
+  width: 80px;
+  font-size: 20px;
+  margin: 0;
+}
 
 .checkbox-wrapper-55 input[type=checkbox] {
   visibility: hidden;
@@ -1418,6 +1454,16 @@ main.errorpage article .error-btns .error-btn:hover {
 .agb-main .agb-title {
   font-size: 24px;
   margin: 20px 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 ::-webkit-scrollbar {

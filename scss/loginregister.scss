@@ -228,6 +228,48 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
         }
       }
     }
+
+    .verify-form {
+      border: none;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      .verify-code {
+        display: flex;
+        align-items: center;
+
+
+        input[type="number"] {
+          width: 20px;
+          height: 30px;
+          border-radius: 5px;
+          background: none;
+          box-shadow: none;
+          outline: none;
+          border-color: transparent transparent black transparent;
+          color: white;
+          border-bottom: $light-gray solid 4px;
+          margin-bottom: 20px;
+          font-size: 22px;
+          text-align: center;
+
+          &:focus-visible {
+            outline: none;
+            border-bottom: $orange solid 4px;
+          }
+          &.ok {
+            border-color:transparent transparent $orange transparent;
+          }
+        }
+      }
+
+      input[type="submit"] {
+        width: 80px;
+        font-size: 20px;
+        margin: 0;
+      }
+    }
   }
 }
 
