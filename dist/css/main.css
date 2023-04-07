@@ -1275,6 +1275,12 @@ main.errorpage article .error-btns .error-btn:hover {
   font-size: 22px;
   text-align: center;
 }
+.loginRegster-main .login-wrapper .verify-form .verify-code input[type=number]:nth-child(3) {
+  margin-right: 4px;
+}
+.loginRegster-main .login-wrapper .verify-form .verify-code input[type=number]:nth-child(4) {
+  margin-left: 4px;
+}
 .loginRegster-main .login-wrapper .verify-form .verify-code input[type=number]:focus-visible {
   outline: none;
   border-bottom: rgb(255, 100, 16) solid 4px;
@@ -1284,7 +1290,7 @@ main.errorpage article .error-btns .error-btn:hover {
 }
 .loginRegster-main .login-wrapper .verify-form input[type=submit] {
   width: 80px;
-  font-size: 20px;
+  font-size: 18px;
   margin: 0;
 }
 

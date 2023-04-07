@@ -254,19 +254,28 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
           font-size: 22px;
           text-align: center;
 
+          &:nth-child(3) {
+            margin-right: 4px;
+          }
+
+          &:nth-child(4) {
+            margin-left: 4px;
+          }
+
           &:focus-visible {
             outline: none;
             border-bottom: $orange solid 4px;
           }
+
           &.ok {
-            border-color:transparent transparent $orange transparent;
+            border-color: transparent transparent $orange transparent;
           }
         }
       }
 
       input[type="submit"] {
         width: 80px;
-        font-size: 20px;
+        font-size: 18px;
         margin: 0;
       }
     }

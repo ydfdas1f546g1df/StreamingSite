@@ -23,33 +23,49 @@ if (isset($_GET["email"])) {
         $error_link_text = "After that, Go to Login";
     } elseif ($error == 400) {
         $errorText = "400";
-        $errorMessage = "Bad Request";
+        $errorMessage = "Your passwords probably do not match";
         $error_link = "onclick='history.back()'";
-        $error_link_text = "Try again";
+        $error_link_text = "Back";
     } elseif ($error == 409) {
         $errorText = "409";
         $errorMessage = "User with this email, name or username already exist";
         $error_link = "onclick='history.back()'";
-        $error_link_text = "Try again";
+        $error_link_text = "Back";
     }
 
 } else {
-    $errorText = "Bad Request 400";
+    $errorText = "400";
     $errorMessage = "Something went completely wrong";
     $error_link = "onclick='history.back()'";
     $error_link_text = "Back";
 }
 
+
+
+//<main class="loginRegster-main">
+//    <div class="login-wrapper">
+//        <div class="login-info">
+//            <img src="/dist/img/logo.png" alt="logo">
+//            <span class="login-info-title">' . $errorText . ' </span>
+//            <span class="login-info-text">' . $errorMessage . '</span>
+//            <a ' . $error_link . '>' . $error_link_text . '</a>
+//        </div>
+//    </div>
+//</main>
 $homeContent = '
-<main class="loginRegster-main">
-    <div class="login-wrapper">
-        <div class="login-info">
-            <img src="/dist/img/logo.png" alt="logo">
-            <span class="login-info-title">' . $errorText . ' </span>
-            <span class="login-info-text">' . $errorMessage . '</span>
-            <a ' . $error_link . '>' . $error_link_text . '</a>
-        </div>
-    </div>
+<main class="errorpage">
+    <article>
+        <span class="error-text">' . $errorMessage . '</span>
+        <span class="error-num">' . $errorText . '</span>
+        <span class="error-btns">
+            <span class="error-btn" ' . $error_link . '>' . $error_link_text . '</span>
+            <a class="error-btn" href="/">Home</a>
+        </span>
+        <span class="error-text">If you believe this to be an error, please <a href="/pages/about/contact.php">contact</a>  an administrator</span>
+    </article>
+    <script>
+        document.title = "Error ' . $errorText . ' | StreamingSite"
+    </script>
 </main>
 ';
 
@@ -72,14 +88,17 @@ $verifyContent = '
                     <input type="number" name="num3" maxlength="1" required>
                     <input type="number" name="num4" maxlength="1" required>
                     <input type="number" name="num5" maxlength="1" required>
-                    <input type="number" name="num6" maxlength="1" required>
+                    <input type="number" name="num6" maxlength="1" required>-
                 </div>
-                <input type="email" value="'. $email .'" style="display: none">
+                <input type="email" value="' . $email . '" style="display: none">
                 <input type="submit" value="Verify">
             </form>
         </div>
     </div>
     <script src="/script/verify.js"></script>
+        <script>
+        document.title = "Verify Email | StreamingSite"
+    </script>
 </main>
 ';
 
