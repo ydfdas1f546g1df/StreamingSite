@@ -83,5 +83,5 @@ if (isset($cookie)) {
 }else {
     header("Location: /error/403.php");
 }
-$Page = $Page . $admin_user . $footer;
+$Page .=  $admin_user . $footer;
 echo $Page;

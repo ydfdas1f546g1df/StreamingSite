@@ -1,15 +1,19 @@
-$(function loadUsers() {
+$(function () {
 
         var JSONData = []
         const base_url = window.location.origin;
 
         const getUser = async (api) => {
             const response = await fetch(base_url + '/api/' + api + '.php', {
-                method: 'POST', body: {
-                    "x": 5
-                }, headers: {
+                method: 'POST',
+                // body: JSON.stringify({
+                //     reqId: 1,
+                //     apiToken: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                // }),
+                headers: {
                     'Content-Type': 'application/json'
-                }
+                },
+
             });
             const JSON = await response.json()
             // console.log(response);
@@ -71,7 +75,7 @@ $(function loadUsers() {
                             el.find(".user-list-el-username").attr("contenteditable", "false")
                             el.find(".user-list-el-name").attr("contenteditable", "false")
                             el.find(".user-list-el-email").attr("contenteditable", "false")
-                            el.find(".user-list-el-admin").find("i").css("cursor","default").attr("status", "0")
+                            el.find(".user-list-el-admin").find("i").css("cursor", "default").attr("status", "0")
                         }
 
                     }
