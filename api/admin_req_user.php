@@ -6,6 +6,7 @@
 include_once("db_connect.php");
 
 if (isset($_COOKIE["token"])) {
+
     $token = $_COOKIE["token"];
     if (strlen($token) == 30) {
 
@@ -14,13 +15,13 @@ if (isset($_COOKIE["token"])) {
         $stmt->execute();
         $result = $stmt->get_result();
 
-        $resultsArray = array();
+        $verifyResultsArray = array();
 
         while ($row = mysqli_fetch_assoc($result)) {
-            $resultsArray[] = $row;
+            $verifyResultsArray[] = $row;
         }
-        if ($resultsArray[0]["admin"] == 1) {
-            if ($_POST["regID"] == 1) {
+        if ($verifyResultsArray[0]["admin"] == 1) {
+
             $stmt = $mysqli->prepare('SELECT * FROM tbl_users');
             $stmt->execute();
             $result = $stmt->get_result();
@@ -31,9 +32,6 @@ if (isset($_COOKIE["token"])) {
                 $resultsArray[] = $row;
             }
             echo json_encode($resultsArray);
-            }
-
-
         } else {
             http_response_code(401);
         }

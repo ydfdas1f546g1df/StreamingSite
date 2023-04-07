@@ -47,7 +47,7 @@ $admin_user = '
                     <span class="user-list-el-username">{{ user.username }}</span>
                     <span class="user-list-el-name">{{ user.name }}</span>
                     <span class="user-list-el-email">{{ user.email }}</span>
-                    <span class="user-list-el-admin" status="0" :admin="user.IsAdmin"><i :class="user.admin"></i></span>
+                    <span class="user-list-el-admin" :status="0" :admin="user.IsAdmin"><i :class="user.admin"></i></span>
                     <span class="user-list-btn-placeholder">
                         <i class="fa-solid fa-pen-to-square edit-btn user-list-btn" @click="editUser"></i>
                         </span>
