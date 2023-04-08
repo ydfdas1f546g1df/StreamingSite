@@ -5,7 +5,7 @@ $homeContent = '
 <main class="errorpage">
     <article>
         <span class="error-text">Sorry! Your not alowed do go here.</span>
-        <span class="error-num">401</span>
+        <span class="error-num">403/span>
         <span class="error-btns">
             <span class="error-btn" onclick="history.back()">Back</span>
             <a class="error-btn" href="/">Home</a>
@@ -13,7 +13,7 @@ $homeContent = '
         <span class="error-text">If you believe this to be an error, please <a href="/pages/about/contact.php">contact</a>  an administrator</span>
     </article>
     <script>
-        document.title = "Error 401 | StreamingSite"
+        document.title = "Error 403 | StreamingSite"
     </script>
 </main>
 ';

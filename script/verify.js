@@ -1,6 +1,6 @@
-var numberIndex = 0
-
-$("input[type='number']").keyup(function (e) {
+// var numberIndex = 0
+var NumInput = $("input[type='number']")
+NumInput.keyup(function (e) {
     if (e.keyCode === 13 || e.keyCode !== 8 && $(e.target).val().length === Number($(e.target).attr("maxlength"))) {
         if (this.value.length == this.maxLength) {
             $(this).next("input[type='number']").focus();
@@ -15,14 +15,14 @@ $("input[type='number']").keyup(function (e) {
 
 });
 
-$("input[type='number']").keyup(function () {
+NumInput.keyup(function () {
     $(this).each(function () {
         if ($(this).val().length >= Number($(this).attr("maxlength"))) {
             $(this).attr("class", "ok")
-            numberIndex++
+            // numberIndex++
         } else {
             $(this).attr("class", "")
-            numberIndex--
+            // numberIndex--
         }
         if ($(this).val().length > Number($(this).attr("maxlength"))) {
             $(this).val($(this).val().substr(0,1))
@@ -33,8 +33,8 @@ $("input[type='number']").keyup(function () {
 })
 $("input:first").focus()
 
-$("form").on("submit", function (e){
-    if (numberIndex != 6) {
-    e.preventDefault()
-    }
-})
+// $("form").on("submit", function (e){
+//     if (numberIndex != 6) {
+//     e.preventDefault()
+//     }
+// })

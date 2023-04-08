@@ -34,7 +34,7 @@ $("input").on("blur", function (e) {
 });
 
 $("input").keyup(function (e) {
-    if (e.keyCode === 40 || e.keyCode !== 38) {
+    if (e.keyCode === 40 && e.keyCode !== 38) {
             $(this).parent().next("label").find("input").focus();
 
     } else if (e.keyCode == 38) {
