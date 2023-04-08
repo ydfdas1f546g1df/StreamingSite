@@ -33,11 +33,14 @@ $("input").on("blur", function (e) {
     $(this).attr("id")
 });
 
-// $(document).on('keydown', 'input', function(e) {
-//
-//     if (e.keyCode == 40) { // 40 is the code for the down arrow key
-//         e.preventDefault(); // prevent the default behavior of the arrow key
-//         $(this).parent().parent().next('label').find("input").focus(); // focus on the next input field
-//         console.log($(this).parent().parent().next('label').find("input").focus()); // focus on the next input field
-//     }
-// });
+$("input").keyup(function (e) {
+    if (e.keyCode === 40 || e.keyCode !== 38) {
+            $(this).parent().next("label").find("input").focus();
+
+    } else if (e.keyCode == 38) {
+        if ($(e.target).parent().prev() != null) {
+            $(this).parent().prev("label").find("input").focus();
+            e.preventDefault()
+        }
+    }
+});
