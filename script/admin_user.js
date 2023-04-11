@@ -126,6 +126,6 @@ $(function () {
 );
 
 function rmError(e) {
-    $(e).parent().fadeOut()
+    $(e).parent().remove()
 }
 
