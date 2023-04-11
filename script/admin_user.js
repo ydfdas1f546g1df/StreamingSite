@@ -56,7 +56,7 @@ $(function () {
                     computed: {
                         filteredUsers() {
                             return this.users.filter(p => {
-                                return p.username.toLowerCase().indexOf(this.search.toLowerCase()) != -1;
+                                return p.name.toLowerCase().indexOf(this.search.toLowerCase()) != -1;
                             });
                         }
                     },
