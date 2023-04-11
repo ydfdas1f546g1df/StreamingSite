@@ -35,7 +35,6 @@ RUN mkdir "data"
 RUN php -v
 RUN a2dissite 000-default.conf
 RUN a2ensite serien.conf
-RUN systemctl restart apache2
 
 
 
