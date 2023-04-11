@@ -32,3 +32,15 @@ $("input").on("blur", function (e) {
     $(this).attr("class", "touched")
     $(this).attr("id")
 });
+
+$("input").keyup(function (e) {
+    if (e.keyCode === 40 && e.keyCode !== 38) {
+            $(this).parent().next("label").find("input").focus();
+
+    } else if (e.keyCode == 38) {
+        if ($(e.target).parent().prev() != null) {
+            $(this).parent().prev("label").find("input").focus();
+            e.preventDefault()
+        }
+    }
+});

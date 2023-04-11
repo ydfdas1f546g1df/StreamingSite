@@ -62,9 +62,9 @@
   color: white;
   font-size: 22px;
   cursor: pointer;
+  transition: all 0.4s ease-in-out;
 }
 .loginRegster-main .login-wrapper form input[type=submit]:hover {
-  transition: all 0.25s ease-in;
   background: rgb(28, 28, 28);
 }
 .loginRegster-main .login-wrapper form label {
@@ -165,6 +165,48 @@
 }
 .loginRegster-main .login-wrapper .register-info div i.ads {
   color: red;
+}
+.loginRegster-main .login-wrapper .verify-form {
+  border: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.loginRegster-main .login-wrapper .verify-form .verify-code {
+  display: flex;
+  align-items: center;
+}
+.loginRegster-main .login-wrapper .verify-form .verify-code input[type=number] {
+  width: 20px;
+  height: 30px;
+  border-radius: 5px;
+  background: none;
+  box-shadow: none;
+  outline: none;
+  border-color: transparent transparent black transparent;
+  color: white;
+  border-bottom: rgb(55, 55, 55) solid 4px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  text-align: center;
+}
+.loginRegster-main .login-wrapper .verify-form .verify-code input[type=number]:nth-child(3) {
+  margin-right: 4px;
+}
+.loginRegster-main .login-wrapper .verify-form .verify-code input[type=number]:nth-child(4) {
+  margin-left: 4px;
+}
+.loginRegster-main .login-wrapper .verify-form .verify-code input[type=number]:focus-visible {
+  outline: none;
+  border-bottom: rgb(255, 100, 16) solid 4px;
+}
+.loginRegster-main .login-wrapper .verify-form .verify-code input[type=number].ok {
+  border-color: transparent transparent rgb(255, 100, 16) transparent;
+}
+.loginRegster-main .login-wrapper .verify-form input[type=submit] {
+  width: 80px;
+  font-size: 18px;
+  margin: 0;
 }
 
 .checkbox-wrapper-55 input[type=checkbox] {

@@ -14,7 +14,7 @@ $hover-orange: #f8cb80;
 $user-pp-size: 40px;
 $dd-more-bg: rgb(24, 24, 24);
 $light-gray: rgb(55, 55, 55);
-$trans: all .25s ease-in;
+$trans: all .4s ease-in-out;
 $cat-title-size: 22px;
 $eye-catcher-margin: 5px;
 $eye-catcher-margin-1400: 10px;
@@ -22,6 +22,8 @@ $eye-catcher-margin-1080: 20px;
 $eye-catcher-height: 156px;
 $eye-catcher-height-1400: 230px;
 $eye-catcher-height-1080: 410px;
+
+
 @import "search";
 @import "header";
 @import "footer";
@@ -33,6 +35,16 @@ $eye-catcher-height-1080: 410px;
 @import "loginregister";
 @import "about";
 
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -119,15 +131,13 @@ html {
           transition: $trans;
           font-weight: bold;
           color: white;
+          cursor: pointer;
+          color: white;
+          font-weight: bold;
 
           &:hover {
             background: $dd-more-bg;
             color: $orange;
-          }
-
-          a {
-            color: white;
-            font-weight: bold;
           }
         }
       }

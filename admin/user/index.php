@@ -23,12 +23,12 @@ $admin_user = '
     <article class="user-article">
         <div class="user" id="all-users">
             <div class="btns">
-                <span class="add-btn user-btn" onclick="dragElement()"><i class="gg-user-add"></i></span>
-                <span class="save-btn user-btn"><i class="fas fa-save"></i></span>
+                <span class="add-btn user-btn" ><i class="gg-user-add"></i></span>
+                <span class="save-btn user-btn" onclick="location.reload()" title="Changes are only displayed correctly after reloading"><i class="fa-solid fa-rotate"></i></span>
             </div>
             <label for="">
                 Search User
-                <input type="text" name="search-user" placeholder="username" v-model="search">
+                <input type="text" name="search-user" placeholder="name" v-model="search">
             </label>
 
             <div class="user-list">
@@ -47,9 +47,9 @@ $admin_user = '
                     <span class="user-list-el-username">{{ user.username }}</span>
                     <span class="user-list-el-name">{{ user.name }}</span>
                     <span class="user-list-el-email">{{ user.email }}</span>
-                    <span class="user-list-el-admin"><i :class="user.admin"></i></span>
+                    <span class="user-list-el-admin" :status="0" :admin="user.IsAdmin"><i :class="user.admin"></i></span>
                     <span class="user-list-btn-placeholder">
-                        <i class="fa-solid fa-pen-to-square edit-btn user-list-btn"></i>
+                        <i class="fa-solid fa-pen-to-square edit-btn user-list-btn" @click="editUser"></i>
                         </span>
                     <span class="user-list-btn-placeholder">
                         <i class="fa-solid fa-trash del-btn user-list-btn" @click="removeUser"></i>
@@ -83,5 +83,5 @@ if (isset($cookie)) {
 }else {
     header("Location: /error/403.php");
 }
-$Page = $Page . $admin_user . $footer;
+$Page .=  $admin_user . $footer;
 echo $Page;

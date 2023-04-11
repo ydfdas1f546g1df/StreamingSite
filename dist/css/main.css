@@ -284,6 +284,9 @@ footer .copyright {
   margin: 20px;
 }
 footer .copyright a {
+  color: #636363;
+}
+footer .copyright a:hover {
   color: rgb(255, 100, 16);
 }
 
@@ -787,7 +790,7 @@ footer .copyright a {
 
 .eye-el-1x1 {
   height: 134px;
-  width: 134px;
+  aspect-ratio: 1;
 }
 
 .eye-el-1x2 {
@@ -797,14 +800,14 @@ footer .copyright a {
 
 .eye-el-2x2 {
   width: 278px;
-  height: 278px;
+  aspect-ratio: 1;
 }
 
 .home-cat-parent .home-el-title {
   color: white;
   font-weight: bold;
   font-size: 22px;
-  margin: 50px 10px 0px 10px;
+  margin: 50px 10px 0 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -844,10 +847,22 @@ footer .copyright a {
   color: white;
   font-weight: bold;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   width: 100%;
   font-size: 16px;
+}
+.home-cat-parent .home-cat .home-el .cover-title span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-mask-image: linear-gradient(90deg, #000 60%, transparent);
+  width: 120px;
+  display: flex;
+}
+.home-cat-parent .home-cat .home-el .cover-title i {
+  width: 30px;
+  aspect-ratio: 16/10;
 }
 .home-cat-parent .home-cat .home-el img {
   margin: 0 0 5px 0;
@@ -855,14 +870,10 @@ footer .copyright a {
   z-index: 1;
   border-radius: 5px;
   overflow: hidden;
+  transition: all 0.4s ease-in-out;
 }
-@keyframes zoom-in-zoom-out {
-  0% {
-    transform: scale(1, 1);
-  }
-  100% {
-    transform: scale(1.06, 1.06);
-  }
+.home-cat-parent .home-cat .home-el img:hover {
+  scale: 1.06;
 }
 
 .admin-main {
@@ -902,7 +913,7 @@ footer .copyright a {
   border-radius: 5px;
   min-width: 50px;
   cursor: pointer;
-  transition: all 0.25s ease-in;
+  transition: all 0.4s ease-in-out;
 }
 .admin-main #admin-main-div article.user-article .user .btns .user-btn:hover {
   background: rgb(55, 55, 55);
@@ -976,7 +987,7 @@ footer .copyright a {
   border-radius: 5px;
   padding: 0 10px;
   cursor: pointer;
-  transition: all 0.25s ease-in;
+  transition: all 0.4s ease-in-out;
   width: 100%;
 }
 .admin-main #admin-main-div article.user-article .user .user-list .user-list-el-header span.user-list-btn-placeholder .user-list-btn.del-btn, .admin-main #admin-main-div article.user-article .user .user-list .user-list-el span.user-list-btn-placeholder .user-list-btn.del-btn {
@@ -1047,6 +1058,13 @@ main.errorpage article * {
 main.errorpage article .error-text {
   color: #636363;
 }
+main.errorpage article .error-text a {
+  margin: 0;
+  color: rgb(55, 55, 55);
+}
+main.errorpage article .error-text a:hover {
+  color: rgb(255, 100, 16);
+}
 main.errorpage article .error-num {
   color: rgb(255, 100, 16);
   font-size: 50px;
@@ -1061,7 +1079,7 @@ main.errorpage article .error-btns .error-btn {
   cursor: pointer;
 }
 main.errorpage article .error-btns .error-btn:hover {
-  transition: all 0.25s ease-in;
+  transition: all 0.4s ease-in-out;
   background: rgb(55, 55, 55);
 }
 
@@ -1129,9 +1147,9 @@ main.errorpage article .error-btns .error-btn:hover {
   color: white;
   font-size: 22px;
   cursor: pointer;
+  transition: all 0.4s ease-in-out;
 }
 .loginRegster-main .login-wrapper form input[type=submit]:hover {
-  transition: all 0.25s ease-in;
   background: rgb(28, 28, 28);
 }
 .loginRegster-main .login-wrapper form label {
@@ -1232,6 +1250,48 @@ main.errorpage article .error-btns .error-btn:hover {
 }
 .loginRegster-main .login-wrapper .register-info div i.ads {
   color: red;
+}
+.loginRegster-main .login-wrapper .verify-form {
+  border: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.loginRegster-main .login-wrapper .verify-form .verify-code {
+  display: flex;
+  align-items: center;
+}
+.loginRegster-main .login-wrapper .verify-form .verify-code input[type=number] {
+  width: 20px;
+  height: 30px;
+  border-radius: 5px;
+  background: none;
+  box-shadow: none;
+  outline: none;
+  border-color: transparent transparent black transparent;
+  color: white;
+  border-bottom: rgb(55, 55, 55) solid 4px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  text-align: center;
+}
+.loginRegster-main .login-wrapper .verify-form .verify-code input[type=number]:nth-child(3) {
+  margin-right: 4px;
+}
+.loginRegster-main .login-wrapper .verify-form .verify-code input[type=number]:nth-child(4) {
+  margin-left: 4px;
+}
+.loginRegster-main .login-wrapper .verify-form .verify-code input[type=number]:focus-visible {
+  outline: none;
+  border-bottom: rgb(255, 100, 16) solid 4px;
+}
+.loginRegster-main .login-wrapper .verify-form .verify-code input[type=number].ok {
+  border-color: transparent transparent rgb(255, 100, 16) transparent;
+}
+.loginRegster-main .login-wrapper .verify-form input[type=submit] {
+  width: 80px;
+  font-size: 18px;
+  margin: 0;
 }
 
 .checkbox-wrapper-55 input[type=checkbox] {
@@ -1402,6 +1462,16 @@ main.errorpage article .error-btns .error-btn:hover {
   margin: 20px 0;
 }
 
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -1433,7 +1503,7 @@ main.errorpage article .error-btns .error-btn:hover {
 
 a {
   text-decoration: none;
-  transition: all 0.25s ease-in;
+  transition: all 0.4s ease-in-out;
   cursor: pointer;
 }
 a * {
@@ -1482,17 +1552,16 @@ html body main .quick-search .quick-search-el {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.25s ease-in;
+  transition: all 0.4s ease-in-out;
   font-weight: bold;
   color: white;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
 }
 html body main .quick-search .quick-search-el:hover {
   background: rgb(24, 24, 24);
   color: rgb(255, 100, 16);
-}
-html body main .quick-search .quick-search-el a {
-  color: white;
-  font-weight: bold;
 }
 
 .tooltip .tooltiptext {

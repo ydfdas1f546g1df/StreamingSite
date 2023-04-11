@@ -1,10 +1,16 @@
 <?php
+$name = "Username";
+$username = "Username";
+$cookie_name = "token";
 
-if (strpos($_SERVER['REQUEST_URI'], "=")) {
-    $username = explode("=", $_SERVER['REQUEST_URI'])[1];
-} else {
-    $username = "Username";
-};
+if(isset($_COOKIE[$cookie_name])) {
+    $token = $_COOKIE[$cookie_name];
+}
+
+include explode("StreamingSite", __DIR__)[0] . 'StreamingSite\api\check.php';
+
+
+
 
 $letters = range('A', 'Z');
 $letter = [$letters[array_rand($letters)]];
@@ -58,7 +64,7 @@ $notLoggedIn = '
 $loggedIn = '
     <div class="user">
         <img src="/dist/img/testpp.jpg" id="user-pp" alt="user-pp"/>
-        <div id="user-name" class="tooltip">' . $username . '<i class="down-arrow"></i>
+        <div id="user-name" class="tooltip">' . $name . '<i class="down-arrow"></i>
             <div class="tooltiptext">
                 <a class="user-dd-el" href="/user">
                     <div class="user-dd-icon">
@@ -70,7 +76,7 @@ $loggedIn = '
                     <i class="gg-user"></i>
                 </div>
                 <span class="user-dd-name">Profile</span>
-            </a> <a class="user-dd-el" href="/user/watchlist/' . $username . '">
+            </a> <a class="user-dd-el" href="/user/watchlist?u=' . $username . '">
                 <div class="user-dd-icon">
                     <i class="gg-eye-alt"></i>
                 </div>
@@ -134,13 +140,13 @@ $footer = '
         </div>
         <div class="footer-el">
             <span class="footer-el-title">About</span>
-            <a class="footer-el-item" href="/pages/contact.php">Contact</a>
+            <a class="footer-el-item" href="/pages/about/contact.php">Contact</a>
             <a class="footer-el-item" href="/pages/about/agb.php">AGBs</a>
             <a class="footer-el-item" href="#">Imprint</a>
         </div>
         <div class="footer-el">
             <span class="footer-el-title">Discover</span>
-            <a class="footer-el-item" href="/pages/search/?search='. implode(",",$letter) .'">Random</a>
+            <a class="footer-el-item" href="/pages/search/?search=' . implode(",",$letter) .'">Random</a>
             <a class="footer-el-item" href="/pages/search/">Search</a>
             <a class="footer-el-item" href="/pages/popular.php">Popular</a>
         </div>
@@ -153,7 +159,10 @@ $footer = '
 </footer>
 <script>
     $("#logout").on("click", function () {
-        document.cookie = "LoginUser=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT";
+        document.cookie = "username=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT";
+        document.cookie = "token=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT";
+        document.cookie = "name=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT";
+        location.reload();
     })
 </script>
 <script src="/script/main.js"></script>
@@ -163,22 +172,17 @@ $footer = '
 $adminHeader  = $header_1 . $admin_1 . $header_2 . $loggedIn;
 $loggedInHeader = $header_1 . $header_2 . $loggedIn;
 $notLoggedInHeader = $header_1 . $header_2 . $notLoggedIn;
-//
-//$date = time() + (86400 * 30);
-//$cookie_name = "LoginUser";
-//$cookie_value = "wevwev@gmail.com";
-//setcookie($cookie_name, $cookie_value, $date, "/"); // 86400 = 1 day
-//if(!isset($_COOKIE[$cookie_name])) {
-//    echo "Cookie '" . $cookie_name . "' is not set!";
-//} else {
-//    echo "Cookie '" . $cookie_name . "' is set!<br>";
-//    echo "Value is: " . $_COOKIE[$cookie_name];
-//}
-
 
 
 //$cookie = true;
-$login = true;
-//$login = false;
-$IsAdmin = true;
-//$IsAdmin = false;
+//$login = true;
+////$login = false;
+//$IsAdmin = true;
+////$IsAdmin = false;
+
+
+//echo $cookie;
+//echo $login;
+////$login = false;
+//echo $IsAdmin;
+////$IsAdmin = false;
