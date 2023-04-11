@@ -7,17 +7,6 @@ Vue.createApp({
         };
     }
 }).mount("#quick-search");
-Vue.createApp({
-    data() {
-        return {
-            quicks: ["A", "B", "C"],
-        };
-    }, methods () {
-
-    }, computed () {
-
-    }
-}).mount("#quick-search");
 
 Vue.createApp({
     data() {
