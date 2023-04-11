@@ -11,7 +11,7 @@ $homeContent = '
             <span class="error-btn" onclick="history.back()">Back</span>
             <a class="error-btn" href="/">Home</a>
         </span>
-        <span class="error-text">If you believe this to be an error, please contact an administrator</span>
+        <span class="error-text">If you believe this to be an error, please <a href="/pages/about/contact.php">contact</a> an administrator</span>
     </article>
     <script>
         document.title = "Error 404 | StreamingSite"

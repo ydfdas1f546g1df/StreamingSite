@@ -12,7 +12,6 @@ $(function () {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-
             });
             const ResJSON = await response.json()
             // console.log(response);
@@ -63,18 +62,30 @@ $(function () {
                     },
                     methods: {
                         removeUser(e) {
-
+                            var id = $(e.target).parent().parent().find(".user-list-el-id").text()
                             // console.log($(e.target).parent().parent().find(".user-list-el-username").text())
 
-                            if (confirm("Are you sure you want to delete the user: " + $(e.target).parent().parent().find(".user-list-el-username").text())) {
+                            if (confirm("Are you sure you want to delete the user: " + $(e.target).parent().parent().find(".user-list-el-name").text())) {
                                 $(e.target).parent().parent().remove()
+                                var token = document.cookie.split(";")[0].split("=")[1]
+                                $.ajax({
+                                    type: "POST",
+                                    url: "/api/admin_rm_user.php",
+                                    data: {
+                                        rm_id: id,
+                                        token: token
+                                    },
+                                    success: function (res) {
+                                        console.log(res)
+                                    }
+                                });
                             }
                         },
                         editUser(e) {
 
                             var target = $(e.target)
                             var el = $(e.target).parent().parent()
-                            if (el.find(".user-list-el-username").attr("contenteditable") === "false" || el.find(".user-list-el-username").attr("contenteditable") == undefined) {
+                            if (el.find(".user-list-el-username").attr("contenteditable") === "false" || el.find(".user-list-el-username").attr("contenteditable") === undefined) {
                                 target.attr("class", "fas fa-save edit-btn user-list-btn")
                                 el.find(".user-list-el-username").attr("contenteditable", "true")
                                 el.find(".user-list-el-name").attr("contenteditable", "true")
@@ -91,7 +102,6 @@ $(function () {
                         }
                     }
                 }).mount("#all-users");
-
             }
         )
     }
