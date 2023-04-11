@@ -65,18 +65,17 @@ $(function () {
                             var id = $(e.target).parent().parent().find(".user-list-el-id").text()
                             // console.log($(e.target).parent().parent().find(".user-list-el-username").text())
 
-                            if (confirm("Are you sure you want to delete the user: " + $(e.target).parent().parent().find(".user-list-el-name").text())) {
+                            if (confirm("Are you sure you want to delete the user with the name: " + $(e.target).parent().parent().find(".user-list-el-name").text())) {
                                 $(e.target).parent().parent().remove()
                                 var token = document.cookie.split(";")[0].split("=")[1]
+
+                                var myObj = {rm_id: id, token: token};
                                 $.ajax({
                                     type: "POST",
                                     url: "/api/admin_rm_user.php",
-                                    data: {
-                                        rm_id: id,
-                                        token: token
-                                    },
-                                    success: function (res) {
-                                        console.log(res)
+                                    data: {myData: JSON.stringify(myObj)},
+                                    success: function(response){
+                                        console.log(response);
                                     }
                                 });
                             }
