@@ -41,11 +41,8 @@ $homeContent = '
     </div>
 </main>
 ';
-
+$should = true;
 include '.././template/index.php';
-
-//$content = file_get_contents("https://127.69.69.69/api/check_user");
-
 
 if (isset($cookie)) {
     if ($login) {

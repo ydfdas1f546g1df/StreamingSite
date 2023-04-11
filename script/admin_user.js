@@ -62,26 +62,38 @@ $(function () {
                     },
                     methods: {
                         removeUser(e) {
-                            var id = $(e.target).parent().parent().find(".user-list-el-id").text()
+                            let id = $(e.target).parent().parent().find(".user-list-el-id").text()
                             // console.log($(e.target).parent().parent().find(".user-list-el-username").text())
-                            var name = $(e.target).parent().parent().find(".user-list-el-name").text()
+                            let name = $(e.target).parent().parent().find(".user-list-el-name").text()
                             if (confirm("Are you sure you want to delete the user with the name: " + name)) {
-                                var token = document.cookie.split(";")[0].split("=")[1]
-
-                                var myObj = {rm_id: id, token: token};
+                                let token = document.cookie.split(";")[0].split("=")[1]
+                                let myObj = {rm_id: id, token: token};
                                 $.ajax({
                                     type: "POST",
                                     url: "/api/admin_rm_user.php",
                                     data: {myData: JSON.stringify(myObj)},
                                     success: function (response) {
+
                                         if (response == 409) {
-                                            $("#error-messages").append('<div class="error-msg-el"><div><span class="error-code">409</span><span class="error-msg">You can\'t delete your own account</span></div><i class="fa-solid fa-xmark IsNotAdmin" title="close this error message" onclick="rmError(this)"></i></div>')
+                                            $("#error-messages").append('<div class="error-msg-el"><div>' +
+                                                '<span class="error-code">409</span><span class="error-msg">You can\'t delete your own account</span>' +
+                                                '</div><i class="fa-solid fa-xmark IsNotAdmin" title="close this error message" onclick="rmError(this)"></i></div>')
+                                                .children().delay(5000).fadeOut(100)
                                         } else if (response == 400) {
-                                            $("#error-messages").append('<div class="error-msg-el"><div><span class="error-code">400</span><span class="error-msg">Bad Request</span></div><i class="fa-solid fa-xmark IsNotAdmin" title="close" onclick="rmError(this)"></i></div>')
+                                            $("#error-messages").append('<div class="error-msg-el"><div>' +
+                                                '<span class="error-code">400</span><span class="error-msg">Bad Request</span>' +
+                                                '</div><i class="fa-solid fa-xmark IsNotAdmin" title="close" onclick="rmError(this)"></i></div>')
+                                                .children().delay(5000).fadeOut(100)
                                         } else if (response == 401) {
-                                            $("#error-messages").append('<div class="error-msg-el"><div><span class="error-code">401</span><span class="error-msg">Unauthorized</span></div><i class="fa-solid fa-xmark IsNotAdmin" title="close" onclick="rmError(this)"></i></div>')
+                                            $("#error-messages").append('<div class="error-msg-el"><div>' +
+                                                '<span class="error-code">401</span><span class="error-msg">Unauthorized</span>' +
+                                                '</div><i class="fa-solid fa-xmark IsNotAdmin" title="close" onclick="rmError(this)"></i></div>')
+                                                .children().delay(5000).fadeOut(100)
                                         } else if (response == 200) {
-                                            $("#error-messages").append('<div class="error-msg-el"><div><span class="error-code">200</span><span class="error-msg">Deleted user: ' + name + '</span></div><i class="fa-solid fa-xmark IsNotAdmin" title="close" onclick="rmError(this)"></i></div>')
+                                            $("#error-messages").append('<div class="error-msg-el"><div>' +
+                                                '<span class="error-code">200</span><span class="error-msg">Deleted user: ' + name + '</span>' +
+                                                '</div><i class="fa-solid fa-xmark IsNotAdmin" title="close" onclick="rmError(this)"></i></div>')
+                                                .children().delay(5000).fadeOut(100)
                                             $(e.target).parent().parent().remove()
                                         }
                                     }

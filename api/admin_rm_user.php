@@ -28,6 +28,10 @@ if (strlen($token) == 30) {
                 $stmt->bind_param('s', $rm_id);
                 $stmt->execute();
 
+                $stmt = $mysqli->prepare('delete from tbl_verified where user = ?');
+                $stmt->bind_param('s', $rm_id);
+                $stmt->execute();
+
                 $stmt = $mysqli->prepare('delete from tbl_users where id = ?');
                 $stmt->bind_param('s', $rm_id);
                 $stmt->execute();
