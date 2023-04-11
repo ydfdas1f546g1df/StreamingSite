@@ -18,7 +18,7 @@ if ($error == 200) {
     $error_link_text = "To Your Account";
 } elseif ($error == 404) {
     $errorText = "404";
-    $errorMessage = "No user with this email or password";
+    $errorMessage = "No verified user with this email or password";
     $error_link = "onclick='history.back()'";
     $error_link_text = "Try again";
 } elseif ($error == 400) {

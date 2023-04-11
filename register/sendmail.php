@@ -1,7 +1,7 @@
 <?php
 $email = "";
 if (isset($_GET["email"])) {
-
+    $verifyNum = rand(100000, 999999);
     $error = 200;
     $email = htmlspecialchars($_GET["email"]);
     $username = strtolower(str_replace(" ", "", htmlspecialchars($_GET["username"])));
@@ -39,7 +39,6 @@ if (isset($_GET["email"])) {
     $error_link = "onclick='history.back()'";
     $error_link_text = "Back";
 }
-
 
 
 //<main class="loginRegster-main">
@@ -82,13 +81,20 @@ $num5 = "";
 $num6 = "";
 
 if (isset($_GET["num1"]) && isset($_GET["num2"]) && isset($_GET["num3"]) && isset($_GET["num4"]) && isset($_GET["num5"]) && isset($_GET["num6"])) {
-    $num1 = 'value="' .  $_GET["num1"] . '" class="ok"';
-    $num2 = 'value="' .  $_GET["num2"] . '" class="ok"';
-    $num3 = 'value="' .  $_GET["num3"] . '" class="ok"';
-    $num4 = 'value="' .  $_GET["num4"] . '" class="ok"';
-    $num5 = 'value="' .  $_GET["num5"] . '" class="ok"';
-    $num6 = 'value="' .  $_GET["num6"] . '" class="ok"';
+    $num1 = 'value="' . $_GET["num1"] . '" class="ok"';
+    $num2 = 'value="' . $_GET["num2"] . '" class="ok"';
+    $num3 = 'value="' . $_GET["num3"] . '" class="ok"';
+    $num4 = 'value="' . $_GET["num4"] . '" class="ok"';
+    $num5 = 'value="' . $_GET["num5"] . '" class="ok"';
+    $num6 = 'value="' . $_GET["num6"] . '" class="ok"';
 }
+
+$num1 = 'value="' . substr($verifyNum, 0, 1) . '" class="ok"';
+$num2 = 'value="' . substr($verifyNum, 1, 2) . '" class="ok"';
+$num3 = 'value="' . substr($verifyNum, 2, 3) . '" class="ok"';
+$num4 = 'value="' . substr($verifyNum, 3, 4) . '" class="ok"';
+$num5 = 'value="' . substr($verifyNum, 4, 5) . '" class="ok"';
+$num6 = 'value="' . substr($verifyNum, 5, 6) . '" class="ok"';
 
 $verifyContent = '
 <main class="loginRegster-main">
@@ -106,7 +112,7 @@ $verifyContent = '
                     <input type="number" name="num5" maxlength="1" required ' . $num5 . '>
                     <input type="number" name="num6" maxlength="1" required ' . $num6 . '>
                 </div>
-                <input type="email" value="' . $email . '" style="display: none">
+                <input name="email" type="email" value="' . $email . '" style="display: none">
                 <input type="submit" value="Verify">
             </form>
         </div>

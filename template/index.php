@@ -153,6 +153,7 @@ $footer = '
         <div class="footer-el">
             <span class="footer-el-title">More</span>
             <a class="footer-el-item" href="/register">Free Account</a>
+            <a class="footer-el-item" href="/pages/howitworks">how it works</a>
         </div>
     </div>
     <span class="copyright">&copy; Copyright 2023. All Rights Reserved. <a href="/">StreamingSite</a></span>
