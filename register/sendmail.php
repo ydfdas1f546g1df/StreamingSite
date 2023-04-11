@@ -114,6 +114,10 @@ $verifyContent = '
     <script src="/script/verify.js"></script>
         <script>
         document.title = "Verify Email | StreamingSite"
+        if ($("input[type=\'number\']").length == 6) {
+//            $("form").submit()
+        }
+        
     </script>
 </main>
 ';

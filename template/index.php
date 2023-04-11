@@ -76,7 +76,7 @@ $loggedIn = '
                     <i class="gg-user"></i>
                 </div>
                 <span class="user-dd-name">Profile</span>
-            </a> <a class="user-dd-el" href="/user/watchlist/' . $username . '">
+            </a> <a class="user-dd-el" href="/user/watchlist?u=' . $username . '">
                 <div class="user-dd-icon">
                     <i class="gg-eye-alt"></i>
                 </div>
