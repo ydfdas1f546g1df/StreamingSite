@@ -59,6 +59,8 @@ $admin_user = '
         </div>
 
     </article>
+    <div id="error-messages">
+    </div>
     </div>
     <script src="/script/admin_user.js"></script>
 </main>';
