@@ -1,5 +1,5 @@
 <?php
-$verifyNum = rand(100000, 999999);
+$verifyNum = rand(100000, 999998);
 $email = "";
 if (isset($_GET["email"])) {
 
