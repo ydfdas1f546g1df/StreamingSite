@@ -1,7 +1,8 @@
 <?php
+$verifyNum = rand(100000, 999999);
 $email = "";
 if (isset($_GET["email"])) {
-    $verifyNum = rand(100000, 999999);
+
     $error = 200;
     $email = htmlspecialchars($_GET["email"]);
     $username = strtolower(str_replace(" ", "", htmlspecialchars($_GET["username"])));
@@ -90,11 +91,12 @@ if (isset($_GET["num1"]) && isset($_GET["num2"]) && isset($_GET["num3"]) && isse
 }
 
 $num1 = 'value="' . substr($verifyNum, 0, 1) . '" class="ok"';
-$num2 = 'value="' . substr($verifyNum, 1, 2) . '" class="ok"';
-$num3 = 'value="' . substr($verifyNum, 2, 3) . '" class="ok"';
-$num4 = 'value="' . substr($verifyNum, 3, 4) . '" class="ok"';
-$num5 = 'value="' . substr($verifyNum, 4, 5) . '" class="ok"';
-$num6 = 'value="' . substr($verifyNum, 5, 6) . '" class="ok"';
+$num2 = 'value="' . substr($verifyNum, 1, 1) . '" class="ok"';
+$num3 = 'value="' . substr($verifyNum, 2, 1) . '" class="ok"';
+$num4 = 'value="' . substr($verifyNum, 3, 1) . '" class="ok"';
+$num5 = 'value="' . substr($verifyNum, 4, 1) . '" class="ok"';
+$num6 = 'value="' . substr($verifyNum, 5, 1) . '" class="ok"';
+
 
 $verifyContent = '
 <main class="loginRegster-main">
