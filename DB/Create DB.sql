@@ -134,3 +134,9 @@ CREATE TABLE tbl_formatsAvailable
     FOREIGN KEY tbl_formatsAvailable_episode (episode) REFERENCES tbl_episode (id),
     FOREIGN KEY tbl_formatsAvailable_resolution (resolution) REFERENCES tbl_resolutions (id)
 );
+CREATE TABLE  tbl_verified
+(
+    token int,
+    user int,
+    FOREIGN KEY tbl_verified(user) REFERENCES tbl_users(id)
+)

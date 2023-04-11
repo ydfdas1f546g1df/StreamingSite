@@ -14,7 +14,7 @@ $hover-orange: #f8cb80;
 $user-pp-size: 40px;
 $dd-more-bg: rgb(24, 24, 24);
 $light-gray: rgb(55, 55, 55);
-$trans: all .25s ease-in;
+$trans: all .4s ease-in-out;
 $cat-title-size: 22px;
 $eye-catcher-margin: 5px;
 $eye-catcher-margin-1400: 10px;
@@ -71,7 +71,10 @@ footer {
     margin: 20px;
 
     a {
-      color: $orange;
+      color: $lighter-gray;
+      &:hover {
+        color: $orange;
+      }
     }
   }
 }

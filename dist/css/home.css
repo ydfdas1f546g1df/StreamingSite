@@ -34,7 +34,7 @@
 
 .eye-el-1x1 {
   height: 134px;
-  width: 134px;
+  aspect-ratio: 1;
 }
 
 .eye-el-1x2 {
@@ -44,14 +44,14 @@
 
 .eye-el-2x2 {
   width: 278px;
-  height: 278px;
+  aspect-ratio: 1;
 }
 
 .home-cat-parent .home-el-title {
   color: white;
   font-weight: bold;
   font-size: 22px;
-  margin: 50px 10px 0px 10px;
+  margin: 50px 10px 0 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -91,10 +91,22 @@
   color: white;
   font-weight: bold;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   width: 100%;
   font-size: 16px;
+}
+.home-cat-parent .home-cat .home-el .cover-title span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-mask-image: linear-gradient(90deg, #000 60%, transparent);
+  width: 120px;
+  display: flex;
+}
+.home-cat-parent .home-cat .home-el .cover-title i {
+  width: 30px;
+  aspect-ratio: 16/10;
 }
 .home-cat-parent .home-cat .home-el img {
   margin: 0 0 5px 0;
@@ -102,12 +114,8 @@
   z-index: 1;
   border-radius: 5px;
   overflow: hidden;
+  transition: all 0.4s ease-in-out;
 }
-@keyframes zoom-in-zoom-out {
-  0% {
-    transform: scale(1, 1);
-  }
-  100% {
-    transform: scale(1.06, 1.06);
-  }
+.home-cat-parent .home-cat .home-el img:hover {
+  scale: 1.06;
 }

@@ -8,7 +8,7 @@ if (strpos($_SERVER['REQUEST_URI'], "=")) {
 $searchContent = '
 <main class="search-main">
     <div class="quick-search" id="quick-search">
-        <a v-for="quick in quicks" :href="\'/pages/search/?search=\' + quick" class="quick-search-el">
+        <a :href="\'/pages/search/?search=\' + quick"  class="quick-search-el" v-for="quick in quicks">{{ quick }}</a>
             <div>{{ quick }}</div>
         </a>
     </div>

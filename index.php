@@ -2,7 +2,7 @@
 $homeContent = '
 <main>
     <div class="quick-search" id="quick-search">
-        <div class="quick-search-el" v-for="quick in quicks"><a :href="\'/pages/search/?search=\' + quick">{{ quick }}</a></div>
+        <a :href="\'/pages/search/?search=\' + quick"  class="quick-search-el" v-for="quick in quicks">{{ quick }}</a>
     </div>
     <div class="eye-catcher" id="eye-catcher">
         <div class="eye-wr">
@@ -73,7 +73,7 @@ $homeContent = '
             <a href="#" class="home-el" v-for="media in Media"
                :title="media.name + \', watch it now for free and in full length.\'">
                 <img :src="media.coverSrc" alt="cover" class="cover">
-                <span class="cover-title">{{ media.name }}<span class="fi fi-de"></span></span>
+                <span class="cover-title"><span>{{ media.name }}</span><i class="fi fi-de"></i></span>
             </a>
         </div>
     </div>
@@ -85,7 +85,7 @@ $homeContent = '
             <a href="#" class="home-el" v-for="media in Media"
                :title="media.name + \', watch it now for free and in full length.\'">
                 <img v-bind:src="media.coverSrc" alt="cover" class="cover">
-                <span class="cover-title">{{ media.name }}<span class="fi fi-de"></span></span>
+                <span class="cover-title"><span>{{ media.name }}</span><i class="fi fi-de"></i></span>
             </a>
         </div>
     </div>
@@ -97,7 +97,7 @@ $homeContent = '
             <a href="#" class="home-el" v-for="media in Media"
                :title="media.name + \', watch it now for free and in full length.\'">
                 <img v-bind:src="media.coverSrc" alt="cover" class="cover">
-                <span class="cover-title">{{ media.name }}<span class="fi fi-de"></span></span>
+                <span class="cover-title"><span>{{ media.name }}</span><i class="fi fi-de"></i></span>
             </a>
         </div>
     </div>
@@ -106,7 +106,6 @@ $homeContent = '
 
 include './template/index.php';
 
-//$content = file_get_contents("https://127.69.69.69/api/check_user");
 
 
 if (isset($cookie)) {

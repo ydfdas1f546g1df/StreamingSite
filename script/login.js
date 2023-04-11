@@ -1,7 +1,14 @@
 var blurIndex = 0
 var submitIndex = 0
+passIndex = 0
 $("input").on("blur", function (e) {
     e.preventDefault()
+    checkPw(e)
+});
+
+$("input[type='password']").on("blur", function (e) {
+    e.preventDefault()
+    passIndex = 1
     checkPw(e)
 });
 
@@ -44,7 +51,7 @@ function checkPw(e) {
         $("#error-field").css("display", "flex")
         email.css("border-color", "transparent transparent red transparent")
         email.css("color", "red")
-    } else {
+    } else if (passIndex == 1) {
 
         $("#error-field").text("Password to short")
         $("#error-field").css("display", "flex")
