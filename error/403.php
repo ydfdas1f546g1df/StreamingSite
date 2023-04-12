@@ -5,7 +5,7 @@ $homeContent = '
 <main class="errorpage">
     <article>
         <span class="error-text">Sorry! Your not alowed do go here.</span>
-        <span class="error-num">403/span>
+        <span class="error-num">403</span>
         <span class="error-btns">
             <span class="error-btn" onclick="history.back()">Back</span>
             <a class="error-btn" href="/">Home</a>

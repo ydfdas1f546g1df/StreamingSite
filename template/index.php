@@ -1,13 +1,13 @@
 <?php
-$name = "Username";
-$username = "Username";
 $cookie_name = "token";
 
 if(isset($_COOKIE[$cookie_name])) {
     $token = $_COOKIE[$cookie_name];
 }
 
-include explode("StreamingSite", __DIR__)[0] . 'StreamingSite\api\check.php';
+if (!isset($should)) {
+include explode("StreamingSite", __DIR__)[0] . 'StreamingSite/api/check.php';
+}
 
 
 
@@ -71,12 +71,12 @@ $loggedIn = '
                         <i class="gg-format-justify"></i>
                     </div>
                     <span class="user-dd-name">Account</span>
-                </a> <a class="user-dd-el" href="/user/profil/' . $username . '">
+                </a> <a class="user-dd-el" href="/user/profil/' . $name . '">
                 <div class="user-dd-icon">
                     <i class="gg-user"></i>
                 </div>
                 <span class="user-dd-name">Profile</span>
-            </a> <a class="user-dd-el" href="/user/watchlist?u=' . $username . '">
+            </a> <a class="user-dd-el" href="/user/watchlist?u=' . $name . '">
                 <div class="user-dd-icon">
                     <i class="gg-eye-alt"></i>
                 </div>
@@ -86,11 +86,11 @@ $loggedIn = '
                     <i class="gg-list-tree"></i>
                 </div>
                 <span class="user-dd-name">Settings</span>
-            </a><a class="user-dd-el" href="/">
+            </a><a class="user-dd-el" href="/" id="logout">
                 <div class="user-dd-icon">
                     <i class="gg-log-in"></i>
                 </div>
-                <span class="user-dd-name" id="logout">Logout</span>
+                <span class="user-dd-name">Logout</span>
             </a>
 
             </div>
@@ -153,6 +153,7 @@ $footer = '
         <div class="footer-el">
             <span class="footer-el-title">More</span>
             <a class="footer-el-item" href="/register">Free Account</a>
+            <a class="footer-el-item" href="/pages/howitworks">how it works</a>
         </div>
     </div>
     <span class="copyright">&copy; Copyright 2023. All Rights Reserved. <a href="/">StreamingSite</a></span>

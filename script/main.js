@@ -1,4 +1,4 @@
-let TestMedia = {name: "Vinland Saga", coverSrc: "/dist/img/testcover.jpg"}
+let TestMedia = {name: "Vinland Saga", coverSrc: "/dist/img/testcover.jpg", medianame: "vinland-saga"}
 
 Vue.createApp({
     data() {

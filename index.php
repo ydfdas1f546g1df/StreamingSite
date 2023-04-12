@@ -65,12 +65,12 @@ $homeContent = '
 
     <div class="home-cat-parent">
         <span class="home-el-title">Popular
-            <a href="#" class="home-el-all">View all</a>
+            <a href="/pages/popular.php" class="home-el-all">View all</a>
         </span>
         <div id="home-cat-1" class="wrapper home-cat">
             <!--            <span id="hello" style="color: white; cursor: pointer">Hello</span>-->
 
-            <a href="#" class="home-el" v-for="media in Media"
+            <a v-for="media in Media" :href="\'/stream/\' + media.medianame" class="home-el"
                :title="media.name + \', watch it now for free and in full length.\'">
                 <img :src="media.coverSrc" alt="cover" class="cover">
                 <span class="cover-title"><span>{{ media.name }}</span><i class="fi fi-de"></i></span>
@@ -82,7 +82,7 @@ $homeContent = '
             <a href="#" class="home-el-all">View all</a>
         </span>
         <div id="home-cat-2" class="wrapper home-cat">
-            <a href="#" class="home-el" v-for="media in Media"
+            <a v-for="media in Media" :href="\'/stream/\' + media.medianame" class="home-el"
                :title="media.name + \', watch it now for free and in full length.\'">
                 <img v-bind:src="media.coverSrc" alt="cover" class="cover">
                 <span class="cover-title"><span>{{ media.name }}</span><i class="fi fi-de"></i></span>
@@ -94,7 +94,7 @@ $homeContent = '
             <a href="#" class="home-el-all">View all</a>
         </span>
         <div id="home-cat-3" class="wrapper home-cat">
-            <a href="#" class="home-el" v-for="media in Media"
+            <a v-for="media in Media" :href="\'/stream/\' + media.medianame" class="home-el"
                :title="media.name + \', watch it now for free and in full length.\'">
                 <img v-bind:src="media.coverSrc" alt="cover" class="cover">
                 <span class="cover-title"><span>{{ media.name }}</span><i class="fi fi-de"></i></span>

@@ -1038,6 +1038,35 @@ footer .copyright a:hover {
 .admin-main #admin-main-div aside a:hover {
   color: rgb(255, 100, 16);
 }
+.admin-main #admin-main-div #error-messages {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+.admin-main #admin-main-div #error-messages .error-msg-el {
+  margin-top: 10px;
+  border-radius: 5px;
+  background: rgb(255, 100, 16);
+  padding: 10px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  width: 180px;
+  justify-content: space-between;
+}
+.admin-main #admin-main-div #error-messages .error-msg-el i {
+  cursor: pointer;
+}
+.admin-main #admin-main-div #error-messages .error-msg-el .error-code {
+  font-weight: bold;
+}
+.admin-main #admin-main-div #error-messages .error-msg-el div {
+  display: flex;
+  flex-direction: column;
+}
 
 main.errorpage {
   display: flex;

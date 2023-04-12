@@ -3,7 +3,7 @@
  * @var mysqli $mysqli
  */
 
-include_once(explode("StreamingSite", __DIR__)[0] . 'StreamingSite\api\db_connect.php');
+include_once(explode("StreamingSite", __DIR__)[0] . 'StreamingSite/api/db_connect.php');
 if (isset($email)) {
     $stmt = $mysqli->prepare('SELECT tu.id as id, tu.username, tu.admin, tu.name, ap.id as token from tbl_apitoken as ap
         INNER JOIN tbl_users tu on ap.user = tu.id
