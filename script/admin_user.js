@@ -3,47 +3,46 @@ $(function () {
         var JSONData = []
         const base_url = window.location.origin;
 
-        const getUser = async (api) => {
-            const response = await fetch(base_url + '/api/' + api + '.php', {
-                method: 'POST',
-                body: JSON.stringify({
-                    request: 1,
-                }),
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-            });
-            const ResJSON = await response.json()
-            // console.log(response);
-            // console.log(JSON);
-            return ResJSON
-        }
-        getUser('admin_req_user').then(function (ResJSON) {
+        async function getUser() {
 
+            let token = document.cookie.split(";")[0].split("=")[1]
+            let myObj = {token: token};
+            await $.ajax({
+                type: "POST",
+                url: "/api/admin_req_user.php",
+                data: {myData: JSON.stringify(myObj)},
+                success: function (res) {
+                    let ResJSON = JSON.parse(res);
+                    // console.log(ResJSON)
+                    for (let i = 0; i < ResJSON.length; i++) {
+                        if (ResJSON[i].admin == 1) {
+                            ResJSON[i].admin = "fa-solid fa-check IsAdmin"
+                            var isAdmin = 1;
 
-                for (let i = 0; i < ResJSON.length; i++) {
-                    if (ResJSON[i].admin == 1) {
-                        ResJSON[i].admin = "fa-solid fa-check IsAdmin"
-                        var isAdmin = 1;
+                        } else {
+                            ResJSON[i].admin = "fa-solid fa-xmark IsNotAdmin"
+                            var isAdmin = 0;
+                        }
 
-                    } else {
-                        ResJSON[i].admin = "fa-solid fa-xmark IsNotAdmin"
-                        var isAdmin = 0;
+                        JSONData.push({
+                            id: ResJSON[i].id,
+                            admin: ResJSON[i].admin,
+                            IsAdmin: isAdmin,
+                            name: ResJSON[i].name,
+                            username: ResJSON[i].username,
+                            email: ResJSON[i].email,
+                            passwordHash: ResJSON[i].passwordHash,
+                            bio: ResJSON[i].bio,
+                            search: "",
+                        })
                     }
-
-                    JSONData.push({
-                        id: ResJSON[i].id,
-                        admin: ResJSON[i].admin,
-                        IsAdmin: isAdmin,
-                        name: ResJSON[i].name,
-                        username: ResJSON[i].username,
-                        email: ResJSON[i].email,
-                        passwordHash: ResJSON[i].passwordHash,
-                        bio: ResJSON[i].bio,
-                        search: "",
-                    })
+                    return JSONData
                 }
+            });
+        }
 
+        getUser().then(
+            function () {
                 // console.log(JSONData)
 
                 Vue.createApp({
@@ -72,28 +71,28 @@ $(function () {
                                     type: "POST",
                                     url: "/api/admin_rm_user.php",
                                     data: {myData: JSON.stringify(myObj)},
-                                    success: function (response) {
+                                    success: function (res) {
 
-                                        if (response == 409) {
+                                        if (res == 409) {
                                             $("#error-messages").append('<div class="error-msg-el"><div>' +
                                                 '<span class="error-code">409</span><span class="error-msg">You can\'t delete your own account</span>' +
                                                 '</div><i class="fa-solid fa-xmark IsNotAdmin" title="close this error message" onclick="rmError(this)"></i></div>')
-                                                .children().delay(5000).fadeOut(100)
-                                        } else if (response == 400) {
+                                                .children().delay(5000).fadeOut(500)
+                                        } else if (res == 400) {
                                             $("#error-messages").append('<div class="error-msg-el"><div>' +
                                                 '<span class="error-code">400</span><span class="error-msg">Bad Request</span>' +
                                                 '</div><i class="fa-solid fa-xmark IsNotAdmin" title="close" onclick="rmError(this)"></i></div>')
-                                                .children().delay(5000).fadeOut(100)
-                                        } else if (response == 401) {
+                                                .children().delay(5000).fadeOut(500)
+                                        } else if (res == 401) {
                                             $("#error-messages").append('<div class="error-msg-el"><div>' +
                                                 '<span class="error-code">401</span><span class="error-msg">Unauthorized</span>' +
                                                 '</div><i class="fa-solid fa-xmark IsNotAdmin" title="close" onclick="rmError(this)"></i></div>')
-                                                .children().delay(5000).fadeOut(100)
-                                        } else if (response == 200) {
+                                                .children().delay(5000).fadeOut(500)
+                                        } else if (res == 200) {
                                             $("#error-messages").append('<div class="error-msg-el"><div>' +
-                                                '<span class="error-code">200</span><span class="error-msg">Deleted user: ' + name + '</span>' +
+                                                '<span class="error-code">200</span><span class="error-msg">Deleted user: ' + name + ' successfully</span>' +
                                                 '</div><i class="fa-solid fa-xmark IsNotAdmin" title="close" onclick="rmError(this)"></i></div>')
-                                                .children().delay(5000).fadeOut(100)
+                                                .children().delay(5000).fadeOut(500)
                                             $(e.target).parent().parent().remove()
                                         }
                                     }
@@ -120,8 +119,7 @@ $(function () {
                         }
                     }
                 }).mount("#all-users");
-            }
-        )
+            })
     }
 );
 

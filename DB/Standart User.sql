@@ -1,7 +1,5 @@
 use test;
 
-
-
 INSERT INTO tbl_users (name, username, email, passwordHash, admin) VALUE ('Administartor', 'admin', 'test@test.com', 'c775e7b757ede630cd0aa1113bd102661ab38829ca52a6422ab782862f268646', TRUE);
 
 INSERT INTO tbl_apitoken (id, user, expire) VALUE ('12973h9ue9r7fgh934un39fuwne9rn', 1, '2023-12-12');
