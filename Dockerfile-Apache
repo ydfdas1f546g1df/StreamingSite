@@ -1,9 +1,9 @@
 FROM php:8.1-apache
 
-RUN mkdir /var/www/serien
+RUN mkdir /var/www/StreamingSite
 RUN chmod -R 755 /var/www/
 
-WORKDIR /var/www/serien
+WORKDIR /var/www/StreamingSite
 
 # Copy all Files
 COPY admin admin
@@ -31,11 +31,13 @@ COPY dev_enviroment/serien.conf /etc/apache2/sites-available/serien.conf
 
 RUN mkdir "data"
 
+RUN rm /etc/apache2/apache2.conf
+COPY dev_enviroment/apache2.conf /etc/apache2/apache2.conf
 
-RUN php -v
 RUN a2dissite 000-default.conf
 RUN a2ensite serien.conf
-
+RUN a2enmod rewrite
+RUN service apache2 restart
 
 
 EXPOSE 80
