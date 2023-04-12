@@ -5144,7 +5144,6 @@ var Vue = (function (exports) {
               injected = inject(opt);
           }
           if (isRef(injected)) {
-              // TODO remove the check in 3.3
               if (unwrapRef) {
                   Object.defineProperty(ctx, key, {
                       enumerable: true,
@@ -7074,7 +7073,7 @@ var Vue = (function (exports) {
           if (instance.asyncDep) {
               parentSuspense && parentSuspense.registerDep(instance, setupRenderEffect);
               // Give it a placeholder if this is not hydration
-              // TODO handle self-defined fallback
+
               if (!initialVNode.el) {
                   const placeholder = (instance.subTree = createVNode(Comment));
                   processCommentNode(null, placeholder, container, anchor);
@@ -9231,7 +9230,7 @@ var Vue = (function (exports) {
       // https://www.mattzeunert.com/2016/02/19/custom-chrome-devtools-object-formatters.html
       const formatter = {
           header(obj) {
-              // TODO also format ComponentPublicInstance & ctx.slots/attrs in setup
+
               if (!isObject(obj)) {
                   return null;
               }
@@ -12227,7 +12226,7 @@ var Vue = (function (exports) {
           }
           else {
               // directive
-              // v-is (TODO Deprecate)
+
               if (p.name === 'is') {
                   return true;
               }
@@ -12540,7 +12539,7 @@ var Vue = (function (exports) {
       switch (mode) {
           case 0 /* TextModes.DATA */:
               if (startsWith(s, '</')) {
-                  // TODO: probably bad performance
+
                   for (let i = ancestors.length - 1; i >= 0; --i) {
                       if (startsWithEndTagOpen(s, ancestors[i].tag)) {
                           return true;
@@ -14603,7 +14602,6 @@ var Vue = (function (exports) {
               tag = isProp.value.content.slice(4);
           }
       }
-      // 1.5 v-is (TODO: Deprecate)
       const isDir = !isExplicitDynamic && findDir(node, 'is');
       if (isDir && isDir.exp) {
           return createCallExpression(context.helper(RESOLVE_DYNAMIC_COMPONENT), [
@@ -15086,7 +15084,6 @@ var Vue = (function (exports) {
       if (arg.type === 4 /* NodeTypes.SIMPLE_EXPRESSION */) {
           if (arg.isStatic) {
               let rawName = arg.content;
-              // TODO deprecate @vnodeXXX usage
               if (rawName.startsWith('vue:')) {
                   rawName = `vnode-${rawName.slice(4)}`;
               }

@@ -71,12 +71,12 @@ $loggedIn = '
                         <i class="gg-format-justify"></i>
                     </div>
                     <span class="user-dd-name">Account</span>
-                </a> <a class="user-dd-el" href="/user/profil/' . $name . '">
+                </a> <a class="user-dd-el" href="/user/profil/?u=' . $username . '">
                 <div class="user-dd-icon">
                     <i class="gg-user"></i>
                 </div>
                 <span class="user-dd-name">Profile</span>
-            </a> <a class="user-dd-el" href="/user/watchlist?u=' . $name . '">
+            </a> <a class="user-dd-el" href="/user/watchlist/?u=' . $username . '">
                 <div class="user-dd-icon">
                     <i class="gg-eye-alt"></i>
                 </div>
@@ -92,7 +92,6 @@ $loggedIn = '
                 </div>
                 <span class="user-dd-name">Logout</span>
             </a>
-
             </div>
         </div>
     </div>
