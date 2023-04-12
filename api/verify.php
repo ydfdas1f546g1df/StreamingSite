@@ -3,7 +3,7 @@
  * @var mysqli $mysqli
  */
 
-include_once(explode("StreamingSite", __DIR__)[0] . 'StreamingSite\api\db_connect.php');
+include_once(explode("StreamingSite", __DIR__)[0] . 'StreamingSite/api/db_connect.php');
 if (strlen($VerifyToken) == 6) {
 
     if (isset($email)) {

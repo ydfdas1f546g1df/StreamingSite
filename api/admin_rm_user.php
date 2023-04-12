@@ -8,7 +8,7 @@ $data = json_decode($_POST['myData']);
 $rm_id = $data->rm_id;
 $token = $data->token;
 
-include_once(explode("StreamingSite", __DIR__)[0] . 'StreamingSite\api\db_connect.php');
+include_once(explode("StreamingSite", __DIR__)[0] . 'StreamingSite/api/db_connect.php');
 if (strlen($token) == 30) {
 
     if ($rm_id > 0) {

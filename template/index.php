@@ -6,7 +6,7 @@ if(isset($_COOKIE[$cookie_name])) {
 }
 
 if (!isset($should)) {
-include explode("StreamingSite", __DIR__)[0] . 'StreamingSite\api\check.php';
+include explode("StreamingSite", __DIR__)[0] . 'StreamingSite/api/check.php';
 }
 
 

@@ -6,7 +6,7 @@
 $data = json_decode($_POST['myData']);
 $token = $data->token;
 
-include_once(explode("StreamingSite", __DIR__)[0] . 'StreamingSite\api\db_connect.php');
+include_once(explode("StreamingSite", __DIR__)[0] . 'StreamingSite/api/db_connect.php');
 if (strlen($token) == 30) {
 
     $stmt = $mysqli->prepare('SELECT admin FROM tbl_users as tu inner join tbl_apitoken at on tu.id = at.user where at.id = ?');
