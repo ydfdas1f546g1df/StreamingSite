@@ -1,6 +1,6 @@
 {
   "username": "root",
-  "host": "db",
+  "host": "127.0.0.1",
   "password": "Bananen.123",
   "name": "video"
 }

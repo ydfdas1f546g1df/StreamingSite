@@ -1,16 +1,33 @@
-version: "3.8"
+version: "3.9"
 services:
   webserver:
-    build: Dockerfile-Apache
-    ports:
-      - "80:80"
+    image: ydfdas1f546g1df/apache-modded
+    container_name: webserver
     depends_on:
       - db
+    ports:
+      - target: 80
+        host_ip: 192.168.100.39
+        published: 80
+        protocol: tcp
+        mode: host
+    volumes:
+      - /opt/data:/var/www/StreamingSite/data
 
   db:
-    build: Dockerfile-Database
-
-  worker:
-    build: Dockerfile-Worker
-    depends_on:
-      - db
+    image: ydfdas1f546g1df/mysql-modded
+    restart: always
+    container_name: db
+    volumes:
+      - /opt/mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: Bananen.123
+      MYSQL_DATABASE: video
+      MYSQL_USER: user
+      MYSQL_PASSWORD: Bananen.123
+    ports:
+      - target: 3306
+        host_ip: 127.0.0.1
+        published: 3306
+        protocol: tcp
+        mode: host
