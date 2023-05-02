@@ -14,7 +14,7 @@ RewriteCond %{HTTP_USER_AGENT} ^autoemailspider [OR]
 RewriteCond %{HTTP_USER_AGENT} ^Xaldon\ WebSpider [OR]
 RewriteCond %{HTTP_USER_AGENT} ^Xenu [OR]
 RewriteCond %{HTTP_USER_AGENT} ^Zeus.*Webster [OR]
-RewriteCond %{HTTP_USER_AGENT} AppleWebKit [OR]
+RewriteCond %{HTTP_USER_AGENT} ^.*AppleWebKit [OR]
 RewriteCond %{HTTP_USER_AGENT} ^Zeus
 RewriteRule ^.*$ /error/scum.html [L, R=418]
 
