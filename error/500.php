@@ -5,8 +5,8 @@ $homeContent = '
 </header>
 <main class="errorpage">
     <article>
-        <span class="error-text">No one knows how it works</span>
-        <span class="error-num">501</span>
+        <span class="error-text">The Server is currently not available. Try Later...</span>
+        <span class="error-num">500</span>
         <span class="error-btns">
             <span class="error-btn" onclick="history.back()">Back</span>
             <a class="error-btn" href="/">Home</a>
@@ -14,7 +14,7 @@ $homeContent = '
         <span class="error-text">If you believe this to be an error, please <a href="/pages/about/contact.php">contact</a> an administrator</span>
     </article>
     <script>
-        document.title = "Error 501 | StreamingSite"
+        document.title = "Error 500 | StreamingSite"
     </script>
 </main>
 ';
