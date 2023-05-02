@@ -11,12 +11,12 @@ RewriteCond %{HTTP_USER_AGENT} ^Anarchie [OR]
 RewriteCond %{HTTP_USER_AGENT} ^ASPSeek [OR]
 RewriteCond %{HTTP_USER_AGENT} ^attach [OR]
 RewriteCond %{HTTP_USER_AGENT} ^autoemailspider [OR]
+RewriteCond %{HTTP_USER_AGENT} ^.*AppleWebKit [OR]
 RewriteCond %{HTTP_USER_AGENT} ^Xaldon\ WebSpider [OR]
 RewriteCond %{HTTP_USER_AGENT} ^Xenu [OR]
 RewriteCond %{HTTP_USER_AGENT} ^Zeus.*Webster [OR]
-RewriteCond %{HTTP_USER_AGENT} ^.*AppleWebKit [OR]
 RewriteCond %{HTTP_USER_AGENT} ^Zeus
-RewriteRule ^.*$ /error/scum.html [L, R=418]
+RewriteRule ^.*$ /error/scum.html [L]
 
 #RewriteRule ^.*$ http://youtube.com.com/ [L]
 
@@ -40,7 +40,7 @@ ErrorDocument 501 /error/501.php
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /error/404.php [L]
+RewriteRule . /error/404.php [R=404,L]
 
 </IfModule>
 
