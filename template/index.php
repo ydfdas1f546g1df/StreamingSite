@@ -61,7 +61,7 @@ $notLoggedIn = '
 
 $loggedIn = '
     <div class="user">
-        <img src="/dist/img/testpp.jpg" id="user-pp" alt="user-pp"/>
+    <a href="/user/profil"><img src="/dist/img/testpp.jpg" id="user-pp" alt="user-pp"/></a>
         <div id="user-name" class="tooltip">' . $name . '<i class="down-arrow"></i>
             <div class="tooltiptext">
                 <a class="user-dd-el" href="/user">

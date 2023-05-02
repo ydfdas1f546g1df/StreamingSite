@@ -72,7 +72,7 @@ $mainContent = '
             </div>
             <div class="text">
                 <span class="title">Suche</span>
-                <span class="description">Search and find series, films or anime ...</span>
+                <span class="description">Search and find series, films or animes...</span>
             </div>
         </a>
         <a href="/login" class="logout-btn">
@@ -81,7 +81,7 @@ $mainContent = '
             </div>
             <div class="text">
                 <span class="title">Logout</span>
-                <span class="description">If you would like to register with another account or if you would like to log out completely, you can do so here.</span>
+                <span class="description">If you would like to log in with another account or if you would like to log out completely, you can do so here.</span>
             </div>
         </a>
     </article>

@@ -44,13 +44,11 @@ if (strlen($username) > 1) {
         $user_wd = $ResultsArray[0]["watched"];
         $user_wl = $ResultsArray[0]["watchlist"];
         if ($user_admin == 1) {
-            $user_admin = " <i class=\"fa-solid fa-hammer\" title='This user is a Adminitrator'></i>";
+            $user_admin = " <i class=\"fa-sharp fa-solid fa-screwdriver-wrench\" title='This user is a Adminitrator'></i>";
         } else {
             $user_admin = "";
-
         }
         $user_created = explode("-", $user_created)[2] . "." . explode("-", $user_created)[1] . "." . explode("-", $user_created)[0];
-
     }
 } else {
     http_response_code(400);
