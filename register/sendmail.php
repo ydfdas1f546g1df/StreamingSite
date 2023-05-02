@@ -32,6 +32,11 @@ if (isset($_GET["email"])) {
         $errorMessage = "User with this email, name or username already exist";
         $error_link = "onclick='history.back()'";
         $error_link_text = "Back";
+    } elseif (explode("-", $error)[0] = 418) {
+        $errorText = "418";
+        $errorMessage = "Sorry! This password is already used by <strong>" . explode("-", $error)[1] . "</strong><br> with the username <strong> " . explode("-", $error)[2] . "</strong>";
+        $error_link = "onclick='history.back()'";
+        $error_link_text = "I'm a teapot";
     }
 
 } else {

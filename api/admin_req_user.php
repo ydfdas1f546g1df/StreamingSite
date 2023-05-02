@@ -35,6 +35,7 @@ if (strlen($token) == 30) {
         http_response_code(401);
     }
 } else {
+    echo $token;
     http_response_code(400);
 }
 
