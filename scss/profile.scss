@@ -26,65 +26,34 @@ $lighter-gray: #636363;
 $black-shadow: 0px 0px 10px 1px rgba(10, 10, 10, 0.36);
 $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
 
-main.account-main {
+
+.profile-main {
   color: white;
 
-
   article {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 20px 0 100px 0;
 
-    a {
+    &.banner {
       display: grid;
-      grid-template-columns: 1fr 7fr;
-      margin: 10px 20px;
-      border-radius: 5px;
-      padding: 10px;
+      grid-template-columns: 1fr 1fr 1fr;
 
-      &:hover {
-        background: $header-bg;
-      }
-
-      .icon {
-        width: 90px;
-        aspect-ratio: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 10px;
-
-        i {
-          color: $orange;
-          zoom: 3.5;
-          margin: 0;
-
-        }
-      }
-
-      .text {
+      .p-picture {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         justify-content: center;
 
-        .title {
-
-          color: white;
-          font-size: 30px;
+        img {
+          height: 150px;
+          border-radius: 10000px;
         }
 
-        .description {
-          color: $lighter-gray;
+        .watched {
+          .span {
+            color: $orange;
+          }
         }
       }
 
     }
-  }
-
-
-  .page-title {
-    margin-top: 30px;
-    font-size: 50px;
   }
 }

@@ -54,7 +54,7 @@ $mainContent = '
             </div>
             <div class="text">
                 <span class="title">Watchlist</span>
-                <span class="description">Bookmark interesting anime & watch at a later date.</span>
+                <span class="description">Bookmark interesting series & watch them later</span>
             </div>
         </a>
         <a href="/user/watched/?u=' . $username . '">
@@ -81,10 +81,13 @@ $mainContent = '
             </div>
             <div class="text">
                 <span class="title">Logout</span>
-                <span class="description">If you would like to register with another account or if you would like to register completely, you can do so here.</span>
+                <span class="description">If you would like to register with another account or if you would like to log out completely, you can do so here.</span>
             </div>
         </a>
     </article>
+    <script>
+            document.title="' . $name . '\'s Account | StreamingSite"
+          </script>
 </main>
 ';
 
