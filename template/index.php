@@ -1,15 +1,13 @@
 <?php
 $cookie_name = "token";
 
-if(isset($_COOKIE[$cookie_name])) {
+if (isset($_COOKIE[$cookie_name])) {
     $token = $_COOKIE[$cookie_name];
 }
 
 if (!isset($should)) {
-include explode("StreamingSite", __DIR__)[0] . 'StreamingSite/api/check.php';
+    include explode("StreamingSite", __DIR__)[0] . 'StreamingSite/api/check.php';
 }
-
-
 
 
 $letters = range('A', 'Z');
@@ -71,12 +69,12 @@ $loggedIn = '
                         <i class="gg-format-justify"></i>
                     </div>
                     <span class="user-dd-name">Account</span>
-                </a> <a class="user-dd-el" href="/user/profil/' . $name . '">
+                </a> <a class="user-dd-el" href="/user/profil/?u=' . $username . '">
                 <div class="user-dd-icon">
                     <i class="gg-user"></i>
                 </div>
                 <span class="user-dd-name">Profile</span>
-            </a> <a class="user-dd-el" href="/user/watchlist?u=' . $name . '">
+            </a> <a class="user-dd-el" href="/user/watchlist/?u=' . $username . '">
                 <div class="user-dd-icon">
                     <i class="gg-eye-alt"></i>
                 </div>
@@ -92,7 +90,6 @@ $loggedIn = '
                 </div>
                 <span class="user-dd-name">Logout</span>
             </a>
-
             </div>
         </div>
     </div>
@@ -146,7 +143,7 @@ $footer = '
         </div>
         <div class="footer-el">
             <span class="footer-el-title">Discover</span>
-            <a class="footer-el-item" href="/pages/search/?search=' . implode(",",$letter) .'">Random</a>
+            <a class="footer-el-item" href="/pages/search/?search=' . implode(",", $letter) . '">Random</a>
             <a class="footer-el-item" href="/pages/search/">Search</a>
             <a class="footer-el-item" href="/pages/popular.php">Popular</a>
         </div>
@@ -170,7 +167,24 @@ $footer = '
 </body>
 </html>';
 
-$adminHeader  = $header_1 . $admin_1 . $header_2 . $loggedIn;
+
+function isSafariBrowser()
+{
+    $agent = $_SERVER['HTTP_USER_AGENT'];
+    if (strpos($agent, 'Safari') !== false && strpos($agent, 'Chrome') === false) {
+        $safari = true;
+        $current_url = "http" . (($_SERVER['SERVER_PORT'] == 443) ? "s://" : "://") . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+        if (strpos($current_url, "/error/404.php")) {
+        } else {
+            header("Location: /error/418.php");
+        }
+    } else {
+        $safari = false;
+    }
+}
+
+
+$adminHeader = $header_1 . $admin_1 . $header_2 . $loggedIn;
 $loggedInHeader = $header_1 . $header_2 . $loggedIn;
 $notLoggedInHeader = $header_1 . $header_2 . $notLoggedIn;
 

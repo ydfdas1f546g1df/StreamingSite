@@ -5,7 +5,22 @@ $(function () {
 
         async function getUser() {
 
-            let token = document.cookie.split(";")[0].split("=")[1]
+            let token
+
+            const cookies = document.cookie.split(';');
+
+            function getCookie() {
+                // console.log(cookies)
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].split('=');
+                    if (cookie[0] === "token") {
+                        token = cookie[1];
+                        // console.log(token)
+                    }
+                }
+            }
+
+            getCookie()
             let myObj = {token: token};
             await $.ajax({
                 type: "POST",
@@ -13,7 +28,7 @@ $(function () {
                 data: {myData: JSON.stringify(myObj)},
                 success: function (res) {
                     let ResJSON = JSON.parse(res);
-                    // console.log(ResJSON)
+                    console.log(ResJSON)
                     for (let i = 0; i < ResJSON.length; i++) {
                         if (ResJSON[i].admin == 1) {
                             ResJSON[i].admin = "fa-solid fa-check IsAdmin"
