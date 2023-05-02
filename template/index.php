@@ -84,7 +84,7 @@ $loggedIn = '
                     <i class="fa-solid fa-gear"></i>
                 </div>
                 <span class="user-dd-name">Settings</span>
-            </a><a class="user-dd-el" href="/" id="logout">
+            </a><a class="user-dd-el logout-btn" href="/">
                 <div class="user-dd-icon">
                     <i class="gg-log-in"></i>
                 </div>
@@ -156,7 +156,7 @@ $footer = '
     <span class="copyright">&copy; Copyright 2023. All Rights Reserved. <a href="/">StreamingSite</a></span>
 </footer>
 <script>
-    $("#logout").on("click", function () {
+    $(".logout-btn").on("click", function () {
         document.cookie = "username=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT";
         document.cookie = "token=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT";
         document.cookie = "name=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT";

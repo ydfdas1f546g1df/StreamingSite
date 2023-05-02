@@ -48,7 +48,7 @@ $mainContent = '
                 <span class="description">Customise password, profile picture, privacy, data protection and other settings.</span>
             </div>
         </a>
-        <a href="/user/watchlist?u=' . $username . '">
+        <a href="/user/watchlist/?u=' . $username . '">
             <div class="icon">
                 <i class="fa-solid fa-list-ul"></i>
             </div>
@@ -57,7 +57,7 @@ $mainContent = '
                 <span class="description">Bookmark interesting anime & watch at a later date.</span>
             </div>
         </a>
-        <a href="user/watched?u=' . $username . '">
+        <a href="/user/watched/?u=' . $username . '">
             <div class="icon">
                 <i class="gg-eye-alt"></i>
             </div>
@@ -75,7 +75,7 @@ $mainContent = '
                 <span class="description">Search and find series, films or anime ...</span>
             </div>
         </a>
-        <a href="/login">
+        <a href="/login" class="logout-btn">
             <div class="icon">
                 <i class="gg-log-in"></i>
             </div>
