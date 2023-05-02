@@ -1491,6 +1491,53 @@ main.errorpage article .error-btns .error-btn:hover {
   margin: 20px 0;
 }
 
+main.account-main {
+  color: white;
+}
+main.account-main article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+main.account-main article a {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  margin: 10px 20px;
+  border-radius: 5px;
+  padding: 10px;
+}
+main.account-main article a:hover {
+  background: rgb(28, 28, 28);
+}
+main.account-main article a .icon {
+  width: 90px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+main.account-main article a .icon i {
+  color: rgb(255, 100, 16);
+  zoom: 3.5;
+  margin: 0;
+}
+main.account-main article a .text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+main.account-main article a .text .title {
+  color: white;
+  font-size: 30px;
+}
+main.account-main article a .text .description {
+  color: #636363;
+}
+main.account-main .page-title {
+  font-size: 50px;
+}
+
 input[type=number] {
   -moz-appearance: textfield;
 }

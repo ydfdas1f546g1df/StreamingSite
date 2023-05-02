@@ -81,7 +81,7 @@ $loggedIn = '
                 <span class="user-dd-name">Watchlist</span>
             </a> <a class="user-dd-el" href="#">
                 <div class="user-dd-icon">
-                    <i class="gg-list-tree"></i>
+                    <i class="fa-solid fa-gear"></i>
                 </div>
                 <span class="user-dd-name">Settings</span>
             </a><a class="user-dd-el" href="/" id="logout">
@@ -174,7 +174,7 @@ function isSafariBrowser()
     if (strpos($agent, 'Safari') !== false && strpos($agent, 'Chrome') === false) {
         $safari = true;
         $current_url = "http" . (($_SERVER['SERVER_PORT'] == 443) ? "s://" : "://") . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-        if (strpos($current_url, "/error/404.php")) {
+        if (strpos($current_url, "/error/418.php")) {
         } else {
             header("Location: /error/418.php");
         }
