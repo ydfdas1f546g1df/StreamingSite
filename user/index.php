@@ -30,7 +30,7 @@ $mainContent = '
 <main class="account-main">
     <span class="page-title">Your Account</span>
     <article>
-        <a href="/user/profil?u=' . $username . '">
+        <a href="/user/profil">
             <div class="icon">
                 <i class="gg-user"></i>
             </div>
@@ -48,7 +48,7 @@ $mainContent = '
                 <span class="description">Customise password, profile picture, privacy, data protection and other settings.</span>
             </div>
         </a>
-        <a href="/user/watchlist/?u=' . $username . '">
+        <a href="/user/watchlist/">
             <div class="icon">
                 <i class="fa-solid fa-list-ul"></i>
             </div>
@@ -57,7 +57,7 @@ $mainContent = '
                 <span class="description">Bookmark interesting series & watch them later</span>
             </div>
         </a>
-        <a href="/user/watched/?u=' . $username . '">
+        <a href="/user/watched/">
             <div class="icon">
                 <i class="gg-eye-alt"></i>
             </div>
@@ -86,7 +86,7 @@ $mainContent = '
         </a>
     </article>
     <script>
-            document.title="' . $name . '\'s Account | StreamingSite"
+            document.title="your Account | StreamingSite"
           </script>
 </main>
 ';

@@ -12,7 +12,7 @@ if (isset($_POST["u"])) {
 } elseif (isset($_COOKIE["username"])) {
     $username = $_COOKIE["username"];
 } else {
-    http_response_code(400);
+    header("Location: /login/");
 }
 
 

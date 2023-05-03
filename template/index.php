@@ -79,7 +79,7 @@ $loggedIn = '
                     <i class="gg-eye-alt"></i>
                 </div>
                 <span class="user-dd-name">Watchlist</span>
-            </a> <a class="user-dd-el" href="#">
+            </a> <a class="user-dd-el" href="/user/settings">
                 <div class="user-dd-icon">
                     <i class="fa-solid fa-gear"></i>
                 </div>

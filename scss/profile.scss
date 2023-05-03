@@ -47,12 +47,14 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
         justify-content: center;
 
         img {
+          margin: 10px;
           height: 150px;
           border-radius: 10000px;
         }
 
         .name {
           font-size: 24px;
+          margin-bottom: 5px;
         }
 
         .watched {

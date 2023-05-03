@@ -7,12 +7,12 @@
 //$username = $data->u;
 if (isset($_POST["u"])) {
     $username = $_POST["u"];
-}elseif (isset($_GET["u"])) {
+} elseif (isset($_GET["u"])) {
     $username = $_GET["u"];
 } elseif (isset($_COOKIE["username"])) {
     $username = $_COOKIE["username"];
 } else {
-    http_response_code(400);
+    header("Location: /login/");
 }
 
 include_once(explode("StreamingSite", __DIR__)[0] . 'StreamingSite/api/db_connect.php');
@@ -35,7 +35,9 @@ if (strlen($username) > 1) {
     echo "<script>
             document.title='Watchlist'
           </script>";
-    echo "<pre>"; echo print_r($ResultsArray); echo "</pre>";
+    echo "<pre>";
+    echo print_r($ResultsArray);
+    echo "</pre>";
 
 } else {
     http_response_code(400);
