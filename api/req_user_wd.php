@@ -5,7 +5,15 @@
 
 //$data = json_decode($_POST['myData']);
 //$username = $data->u;
-$username = $_GET["u"];
+if (isset($_POST["u"])) {
+    $username = $_POST["u"];
+}elseif (isset($_GET["u"])) {
+    $username = $_GET["u"];
+} elseif (isset($_COOKIE["username"])) {
+    $username = $_COOKIE["username"];
+} else {
+    http_response_code(400);
+}
 
 include_once(explode("StreamingSite", __DIR__)[0] . 'StreamingSite/api/db_connect.php');
 if (strlen($username) > 1) {

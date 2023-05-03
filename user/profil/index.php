@@ -11,14 +11,16 @@ $mainContent = '
             <span class="location"><div class="icon"><i class="fa-solid fa-location-dot"></i></div>Swasiland</span>
             <span class="link"><div class="icon"><i class="fa-solid fa-link"></i></div><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">StreamingSite</a></span>
             <span class="Created"><div class="icon"><i class="fa-solid fa-calendar-days"></i></div>Member since '. $user_created .'</span>
-            <a href="/user/watchlist/?u='. $user_username .'" class="Watchlist"><div class="icon"><i class="fa-solid fa-list-ul"></i></div><span class="watchlist-nth">'. $user_wl .'</span>&nbsp;Watchlist entries</a>
         </div>
         <div class="p-picture"><img src="/dist/img/testpp.jpg" alt="pp">
             <span class="name">'. $user_name .'</span>
-            <a href="/user/watchlist/?u='. $user_username .'" class="watched"><span class="watched-nth">'. $user_wd .'</span> Episodes</a></div>
+            <div>
+                <a href="/user/watchlist/?u='. $user_username .'" class="watched"><span class="watched-nth">'. $user_wl .'</span> Watchlist</a>
+                <a href="/user/watched/?u='. $user_username .'" class="watched"><span class="watched-nth">'. $user_wd .'</span> Episodes</a></div>
+        </div>
         <div class="bio">
-        <a href="/admin/" class="admin">'. $user_admin .'</a>
-        <span class="bio-text"> 
+            <a href="/admin/" class="admin">'. $user_admin .'</a>
+            <span class="bio-text"> 
         '. $user_bio .'
         </span>
         </div>
@@ -30,8 +32,8 @@ $mainContent = '
 
     </article>
     <script>
-            document.title="Colin Heggli\'s Profile | StreamingSite"
-          </script>
+        document.title="'. $user_name .'\'s Profile | StreamingSite"
+    </script>
 </main>
 ';
 
