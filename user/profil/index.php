@@ -11,7 +11,7 @@ $mainContent = '
             <span class="location"><div class="icon"><i class="fa-solid fa-location-dot"></i></div>Swasiland</span>
             <span class="link"><div class="icon"><i class="fa-solid fa-link"></i></div><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">StreamingSite</a></span>
             <span class="Created"><div class="icon"><i class="fa-solid fa-calendar-days"></i></div>Member since '. $user_created .'</span>
-            <span class="Watchlist"><div class="icon"><i class="fa-solid fa-list-ul"></i></div>'. $user_wl .' watchlist entries</span>
+            <a href="/user/watchlist/?u='. $user_username .'" class="Watchlist"><div class="icon"><i class="fa-solid fa-list-ul"></i></div><span class="watchlist-nth">'. $user_wl .'</span>&nbsp;Watchlist entries</a>
         </div>
         <div class="p-picture"><img src="/dist/img/testpp.jpg" alt="pp">
             <span class="name">'. $user_name .'</span>

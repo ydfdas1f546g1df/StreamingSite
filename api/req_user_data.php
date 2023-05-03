@@ -5,8 +5,9 @@
 
 //$data = json_decode($_POST['myData']);
 //$username = $data->u;
-
-if (isset($_REQUEST["u"])) {
+if (isset($_POST["u"])) {
+    $username = $_POST["u"];
+}elseif (isset($_GET["u"])) {
     $username = $_GET["u"];
 } elseif (isset($_COOKIE["username"])) {
     $username = $_COOKIE["username"];
@@ -28,13 +29,21 @@ if (strlen($username) > 1) {
 
     $ResultsArray = array();
 
+
+
+
+
     while ($row = mysqli_fetch_assoc($result)) {
         $ResultsArray[] = $row;
     }
+    echo "<pre>";
+    echo print_r($ResultsArray);
+    echo "</pre>";
     if (isset($_POST["u"])) {
-        echo "<pre>";
-        echo print_r($ResultsArray);
-        echo "</pre>";
+        echo $ResultsArray;
+//        echo "<pre>";
+//        echo print_r($ResultsArray);
+//        echo "</pre>";
     } else {
         $user_name = $ResultsArray[0]["name"];
         $user_admin = $ResultsArray[0]["admin"];

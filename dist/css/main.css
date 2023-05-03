@@ -1577,12 +1577,19 @@ main.account-main .page-title {
   align-items: flex-start;
   flex-direction: column;
 }
-.profile-main article.banner .info span {
+.profile-main article.banner .info span, .profile-main article.banner .info a {
   margin: 5px 0;
   display: flex;
   align-items: center;
 }
-.profile-main article.banner .info span .icon {
+.profile-main article.banner .info span.Watchlist, .profile-main article.banner .info a.Watchlist {
+  font-weight: bold;
+  text-decoration: none;
+}
+.profile-main article.banner .info span .watchlist-nth, .profile-main article.banner .info a .watchlist-nth {
+  color: rgb(255, 100, 16);
+}
+.profile-main article.banner .info span .icon, .profile-main article.banner .info a .icon {
   height: 30px;
   aspect-ratio: 1;
   margin-right: 10px;
@@ -1591,14 +1598,18 @@ main.account-main .page-title {
   justify-content: center;
   color: rgb(255, 100, 16);
 }
-.profile-main article.banner .info span i {
+.profile-main article.banner .info span i, .profile-main article.banner .info a i {
   zoom: 1.3;
 }
 .profile-main article.banner .info a {
   color: white;
   text-decoration: underline;
 }
-.profile-main article.banner .info a:hover {
+.profile-main article.banner .info .link a {
+  color: white;
+  text-decoration: underline;
+}
+.profile-main article.banner .info .link a:hover {
   color: rgb(255, 100, 16);
   text-decoration: none;
 }
