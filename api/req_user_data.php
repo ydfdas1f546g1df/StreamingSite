@@ -46,7 +46,7 @@ where tu.username = ?');
         $user_wd = $ResultsArray[0]["watched"];
         $user_wl = $ResultsArray[0]["watchlist"];
         if ($user_admin == 1) {
-            $user_admin = " <i class=\"fa-sharp fa-solid fa-screwdriver-wrench\" title='This user is a Administrator'></i>";
+            $user_admin = "<i class=\"fa-sharp fa-solid fa-screwdriver-wrench\" title='This user is an Administrator'></i>";
         } else {
             $user_admin = "";
         }

@@ -17,7 +17,7 @@ if (isset($_POST["u"])) {
 
 include_once(explode("StreamingSite", __DIR__)[0] . 'StreamingSite/api/db_connect.php');
 if (strlen($username) > 1) {
-// TODO: fertig machen
+
     $stmt = $mysqli->prepare('SELECT distinct t.showName, t.name
         FROM tbl_watchlist as twl
             inner join tbl_users tu on tu.id = twl.user
