@@ -821,12 +821,7 @@ footer .copyright a:hover {
   cursor: pointer;
   margin-left: 10px;
 }
-.home-cat-parent .home-el-title .home-el-all:hover {
-  background: rgb(24, 24, 24);
-  color: rgb(255, 100, 16);
-}
 .home-cat-parent .home-cat {
-  cursor: pointer;
   display: flex;
   align-content: flex-start;
 }
@@ -971,6 +966,9 @@ footer .copyright a:hover {
   padding: 0 5px;
   display: flex;
   align-items: center;
+}
+.admin-main #admin-main-div article.user-article .user .user-list .user-list-el-header span a, .admin-main #admin-main-div article.user-article .user .user-list .user-list-el span a {
+  color: white;
 }
 .admin-main #admin-main-div article.user-article .user .user-list .user-list-el-header span i, .admin-main #admin-main-div article.user-article .user .user-list .user-list-el span i {
   zoom: 1.3;

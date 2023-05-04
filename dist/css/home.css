@@ -65,12 +65,7 @@
   cursor: pointer;
   margin-left: 10px;
 }
-.home-cat-parent .home-el-title .home-el-all:hover {
-  background: rgb(24, 24, 24);
-  color: rgb(255, 100, 16);
-}
 .home-cat-parent .home-cat {
-  cursor: pointer;
   display: flex;
   align-content: flex-start;
 }

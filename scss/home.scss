@@ -183,16 +183,10 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
       font-size: $cat-title-size / 1.8;
       cursor: pointer;
       margin-left: 10px;
-
-      &:hover {
-        background: $dd-more-bg;
-        color: $orange;
-      }
     }
   }
 
   .home-cat {
-    cursor: pointer;
     display: flex;
     //justify-content: space-between;
     align-content: flex-start;
@@ -229,6 +223,7 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
           width: 120px;
           display: flex;
           flex-direction: column;
+
           .episode-nth {
             color: $lighter-gray;
             font-size: 14px;

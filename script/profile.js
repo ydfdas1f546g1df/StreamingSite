@@ -10,13 +10,17 @@ $(function () {
 
 
             function getCookie() {
-                // console.log(cookies)
-                for (let i = 0; i < cookies.length; i++) {
-                    let cookie = cookies[i].split('=');
-                    if (cookie[0].includes("username")) {
-                        username = cookie[1];
+                if (window.location.href.includes("?u=")) {
+                    username = window.location.href.split("?u=")[1]
+                } else {
+                    for (let i = 0; i < cookies.length; i++) {
+                        let cookie = cookies[i].split('=');
+                        if (cookie[0].includes("username")) {
+                            username = cookie[1];
+                        }
                     }
                 }
+                // console.log(cookies)
             }
 
             getCookie()
@@ -26,6 +30,8 @@ $(function () {
                 url: "/api/req_user_wd.php",
                 data: {myData: JSON.stringify(myObj)},
                 success: function (res) {
+                    // console.log(res)
+
                     let ResJSON = JSON.parse(res);
                     let length
                     if (ResJSON.length > 14) {
@@ -54,10 +60,14 @@ $(function () {
             function getCookie() {
                 // console.log(cookies)
 
-                for (let i = 0; i < cookies.length; i++) {
-                    let cookie = cookies[i].split('=');
-                    if (cookie[0].includes("username")) {
-                        username = cookie[1];
+                if (window.location.href.includes("?u=")) {
+                    username = window.location.href.split("?u=")[1]
+                } else {
+                    for (let i = 0; i < cookies.length; i++) {
+                        let cookie = cookies[i].split('=');
+                        if (cookie[0].includes("username")) {
+                            username = cookie[1];
+                        }
                     }
                 }
             }
@@ -69,6 +79,8 @@ $(function () {
                 url: "/api/req_user_wl.php",
                 data: {myData: JSON.stringify(myObj)},
                 success: function (res) {
+                    // console.log(res)
+
                     let ResJSON = JSON.parse(res);
                     console.log(ResJSON)
                     let length

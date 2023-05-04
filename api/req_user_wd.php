@@ -12,16 +12,16 @@ if (isset($_POST['myData'])) {
 }
 if ($username > 1) {
     $index = true;
-
-} elseif (isset($_POST["u"])) {
+}
+elseif (isset($_POST["u"])) {
     $username = $_POST["u"];
-//    echo 1;
+    echo 11;
 } elseif (isset($_GET["u"])) {
-//    echo 2;
+    echo 22;
     $username = $_GET["u"];
 } elseif (isset($_COOKIE["username"])) {
     $username = $_COOKIE["username"];
-//    echo 3;
+    echo 33;
 } else {
     header("Location: /login/");
 }
