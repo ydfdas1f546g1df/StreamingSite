@@ -225,9 +225,15 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
-          -webkit-mask-image: linear-gradient(90deg, #000 60%, transparent);
+          -webkit-mask-image: linear-gradient(90deg, #000 70%, transparent);
           width: 120px;
           display: flex;
+          flex-direction: column;
+          .episode-nth {
+            color: $lighter-gray;
+            font-size: 14px;
+
+          }
         }
 
         i {
@@ -239,6 +245,7 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
       img {
         margin: 0 0 5px 0;
         width: 150px;
+        height: 225px;
         z-index: 1;
         border-radius: 5px;
         overflow: hidden;
