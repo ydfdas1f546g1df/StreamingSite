@@ -163,7 +163,7 @@ $footer = '
         location.reload();
     })
 </script>
-<script src="/script/main.js"></script>
+    <script src="/script/main.js"></script>
 </body>
 </html>';
 

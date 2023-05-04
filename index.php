@@ -1,4 +1,5 @@
 <?php
+include './template/index.php';
 $homeContent = '
 <main>
     <div class="quick-search" id="quick-search">
@@ -79,7 +80,7 @@ $homeContent = '
     </div>
     <div class="home-cat-parent">
         <span class="home-el-title">Recent watched
-            <a href="#" class="home-el-all">View all</a>
+            <a href="/user/watched/?u='. $username .'" class="home-el-all">View all</a>
         </span>
         <div id="home-cat-2" class="wrapper home-cat">
             <a v-for="media in Media" :href="\'/stream/\' + media.medianame" class="home-el"
@@ -91,7 +92,7 @@ $homeContent = '
     </div>
     <div class="home-cat-parent">
         <span class="home-el-title" id="latest">Latest uploads
-            <a href="#" class="home-el-all">View all</a>
+            <a href="/pages/popular.php" class="home-el-all">View all</a>
         </span>
         <div id="home-cat-3" class="wrapper home-cat">
             <a v-for="media in Media" :href="\'/stream/\' + media.medianame" class="home-el"
@@ -101,10 +102,8 @@ $homeContent = '
             </a>
         </div>
     </div>
-
 </main>';
 
-include './template/index.php';
 
 
 
