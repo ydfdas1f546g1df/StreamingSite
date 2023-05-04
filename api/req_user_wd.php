@@ -15,13 +15,13 @@ if ($username > 1) {
 }
 elseif (isset($_POST["u"])) {
     $username = $_POST["u"];
-    echo 11;
+//    echo 11;
 } elseif (isset($_GET["u"])) {
-    echo 22;
+//    echo 22;
     $username = $_GET["u"];
 } elseif (isset($_COOKIE["username"])) {
     $username = $_COOKIE["username"];
-    echo 33;
+//    echo 33;
 } else {
     header("Location: /login/");
 }
