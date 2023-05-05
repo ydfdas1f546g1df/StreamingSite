@@ -27,7 +27,7 @@ $(function () {
                 data: {myData: JSON.stringify(myObj)},
                 success: function (res) {
                     let ResJSON = JSON.parse(res);
-                    console.log(ResJSON)
+                    // console.log(ResJSON)
                     for (let i = 0; i < ResJSON.length; i++) {
 
                         JSONData.push({
@@ -72,9 +72,9 @@ $(function () {
                     },
                     methods: {
                         addToWatchlist(e) {
-                            console.log($(e.target).parent().attr("showName"))
                             let name = $(e.target).parent().attr("name")
-                            console.log(name)
+                            // console.log($(e.target).parent().attr("showName"))
+                            // console.log(name)
 
                             async function sendAddToWatchlist() {
 
@@ -101,7 +101,7 @@ $(function () {
                                     data: {myData: JSON.stringify(myObj)},
                                     success: function (res) {
                                         console.log(res)
-                                        if (res == 200) {
+                                        if (res == true) {
                                             $(e.target).find("span").text("added to Watchlist")
                                         }
                                     }
