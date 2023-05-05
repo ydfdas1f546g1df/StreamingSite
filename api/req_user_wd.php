@@ -3,29 +3,39 @@
  * @var mysqli $mysqli
  */
 
-//$data = json_decode($_POST['myData']);
-//$username = $data->u;
-if (isset($_POST["u"])) {
+
+$username = "";
+
+if (isset($_POST['myData'])) {
+    $data = json_decode($_POST['myData']);
+    $username = $data->u;
+}
+if ($username > 1) {
+    $index = true;
+}
+elseif (isset($_POST["u"])) {
     $username = $_POST["u"];
+//    echo 11;
 } elseif (isset($_GET["u"])) {
+//    echo 22;
     $username = $_GET["u"];
 } elseif (isset($_COOKIE["username"])) {
     $username = $_COOKIE["username"];
-
+//    echo 33;
 } else {
     header("Location: /login/");
 }
 
 include_once(explode("StreamingSite", __DIR__)[0] . 'StreamingSite/api/db_connect.php');
 if (strlen($username) > 1) {
-// TODO: fertig machen
-    $stmt = $mysqli->prepare('SELECT t.showName, t.name, 
+
+    $stmt = $mysqli->prepare('SELECT t.showName, t.name as series, te.name,
                 (select count(te2.name) from tbl_episode as te2
                     inner join tbl_season s on te2.season = s.id
                     inner join tbl_series ts2 on s.series = ts2.id where ts2.name = t.name) as episodes, te.episode,
                 (select count(distinct s2.id) from tbl_episode as te2
                     inner join tbl_season s2 on te2.season = s2.id
-                    inner join tbl_series ts2 on s2.series = ts2.id where ts2.name = t.name) as seasons
+                    inner join tbl_series ts2 on s2.series = ts2.id where ts2.name = t.name) as seasons, ts.season
         FROM tbl_watched as twd
             inner join tbl_users tu on tu.id = twd.user
             inner join tbl_episode te on twd.episode = te.id
@@ -41,12 +51,16 @@ if (strlen($username) > 1) {
     while ($row = mysqli_fetch_assoc($result)) {
         $ResultsArray[] = $row;
     }
-    echo "<script>
+    if (isset($index)) {
+        echo json_encode($ResultsArray);
+    } else {
+        echo "<script>
             document.title='Watched'
           </script>";
-    echo "<pre>";
-    echo print_r($ResultsArray);
-    echo "</pre>";
+        echo "<pre>";
+        echo print_r($ResultsArray);
+        echo "</pre>";
+    }
 
 } else {
     http_response_code(400);

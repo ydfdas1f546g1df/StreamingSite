@@ -2,22 +2,32 @@
 /**
  * @var mysqli $mysqli
  */
+$username = "";
 
-//$data = json_decode($_POST['myData']);
-//$username = $data->u;
-if (isset($_POST["u"])) {
+if (isset($_POST['myData'])) {
+    $data = json_decode($_POST['myData']);
+    $username = $data->u;
+}
+
+if ($username > 1) {
+    $index = true;
+}
+elseif (isset($_POST["u"])) {
     $username = $_POST["u"];
+//    echo 1;
 } elseif (isset($_GET["u"])) {
+//    echo 2;
     $username = $_GET["u"];
 } elseif (isset($_COOKIE["username"])) {
     $username = $_COOKIE["username"];
+//    echo 3;
 } else {
     header("Location: /login/");
 }
 
 include_once(explode("StreamingSite", __DIR__)[0] . 'StreamingSite/api/db_connect.php');
 if (strlen($username) > 1) {
-// TODO: fertig machen
+
     $stmt = $mysqli->prepare('SELECT distinct t.showName, t.name
         FROM tbl_watchlist as twl
             inner join tbl_users tu on tu.id = twl.user
@@ -32,12 +42,17 @@ if (strlen($username) > 1) {
     while ($row = mysqli_fetch_assoc($result)) {
         $ResultsArray[] = $row;
     }
-    echo "<script>
+
+    if (isset($index)) {
+        echo json_encode($ResultsArray);
+    } else {
+        echo "<script>
             document.title='Watchlist'
           </script>";
-    echo "<pre>";
-    echo print_r($ResultsArray);
-    echo "</pre>";
+        echo "<pre>";
+        echo print_r($ResultsArray);
+        echo "</pre>";
+    }
 
 } else {
     http_response_code(400);

@@ -88,6 +88,9 @@
   display: flex;
   align-items: center;
 }
+.admin-main #admin-main-div article.user-article .user .user-list .user-list-el-header span a, .admin-main #admin-main-div article.user-article .user .user-list .user-list-el span a {
+  color: white;
+}
 .admin-main #admin-main-div article.user-article .user .user-list .user-list-el-header span i, .admin-main #admin-main-div article.user-article .user .user-list .user-list-el span i {
   zoom: 1.3;
 }

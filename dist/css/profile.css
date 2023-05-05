@@ -1,6 +1,9 @@
 .profile-main {
   color: white;
 }
+.profile-main article#watch {
+  margin-bottom: 200px;
+}
 .profile-main article.banner {
   margin: 50px 0;
   display: grid;
@@ -16,11 +19,13 @@
   justify-content: center;
 }
 .profile-main article.banner .p-picture img {
+  margin: 10px;
   height: 150px;
   border-radius: 10000px;
 }
 .profile-main article.banner .p-picture .name {
   font-size: 24px;
+  margin-bottom: 5px;
 }
 .profile-main article.banner .p-picture .watched {
   font-weight: bold;
