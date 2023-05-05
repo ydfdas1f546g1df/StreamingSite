@@ -97,9 +97,10 @@ $(function () {
                                 let myObj = {token: token, series: name};
                                 await $.ajax({
                                     type: "POST",
-                                    url: "/api/all_series.php",
+                                    url: "/api/add_watchlist.php",
                                     data: {myData: JSON.stringify(myObj)},
                                     success: function (res) {
+                                        console.log(res)
                                         if (res == 200) {
                                             $(e.target).find("span").text("added to Watchlist")
                                         }

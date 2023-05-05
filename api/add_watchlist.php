@@ -31,10 +31,21 @@ while ($row = mysqli_fetch_assoc($result)) {
     $ResultsArray[] = $row;
 }
 if (isset($ResultsArray[0]["name"]) && isset($ResultsArray[0]["user"])) {
-    $stmt = $mysqli->prepare('');
+    $stmt = $mysqli->prepare('
+    INSERT INTO tbl_watchlist ("user", "series") 
+    values 
+    (
+        (select user from tbl_apitoken where id = ? LIMIT 1)
+        ,(select id from tbl_series where name = ? LIMIT 1)
+    )
+');
     $stmt->bind_param('ss', $token, $series_name);
     $stmt->execute();
     $result = $stmt->get_result();
+    while ($row = mysqli_fetch_assoc($result)) {
+        $ResultsArray[] = $row;
+    }
+    echo json_encode($ResultsArray);
 } else {
     echo 400;
 }
