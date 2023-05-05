@@ -86,7 +86,7 @@ $loggedIn = '
                 <span class="user-dd-name">Settings</span>
             </a><a class="user-dd-el logout-btn" href="/login">
                 <div class="user-dd-icon">
-                    <i class="gg-log-in"></i>
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
                 </div>
                 <span class="user-dd-name">Logout</span>
             </a>
@@ -168,36 +168,24 @@ $footer = '
 </html>';
 
 
-function isSafariBrowser()
-{
-    $agent = $_SERVER['HTTP_USER_AGENT'];
-    if (strpos($agent, 'Safari') !== false && strpos($agent, 'Chrome') === false) {
-        $safari = true;
-        $current_url = "http" . (($_SERVER['SERVER_PORT'] == 443) ? "s://" : "://") . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-        if (strpos($current_url, "/error/418.php")) {
-        } else {
-            header("Location: /error/418.php");
-        }
+$is_safari = false;
+
+$user_agent = $_SERVER['HTTP_USER_AGENT'];
+
+if (strpos($user_agent, 'Safari') !== false && strpos($user_agent, 'Chrome') === false) {
+    $is_safari = true;
+}
+
+if ($is_safari) {
+    $current_url = "http" . (($_SERVER['SERVER_PORT'] == 443) ? "s://" : "://") . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+    if (strpos($current_url, "/error/418.php")) {
     } else {
-        $safari = false;
+        header("Location: /error/418.php");
     }
 }
+
 
 
 $adminHeader = $header_1 . $admin_1 . $header_2 . $loggedIn;
 $loggedInHeader = $header_1 . $header_2 . $loggedIn;
 $notLoggedInHeader = $header_1 . $header_2 . $notLoggedIn;
-
-
-//$cookie = true;
-//$login = true;
-////$login = false;
-//$IsAdmin = true;
-////$IsAdmin = false;
-
-
-//echo $cookie;
-//echo $login;
-////$login = false;
-//echo $IsAdmin;
-////$IsAdmin = false;

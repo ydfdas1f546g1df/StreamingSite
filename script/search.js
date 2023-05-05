@@ -45,6 +45,12 @@ $(function () {
 
         getSeries().then(
             function () {
+                if (window.location.href.includes("?search=")) {
+                    let qSearch = window.location.href.split("?search=")[1]
+                    let value = $("#search-input").val()
+                    // console.log($("#search-input"))
+                    console.log(value)
+                }
                 // console.log(JSONData)
                 Vue.createApp({
                     data() {
@@ -58,14 +64,16 @@ $(function () {
                             const filtered = this.results.filter(result => {
                                 return result.showName.toLowerCase().indexOf(this.search.toLowerCase()) !== -1;
                             });
-                            if (filtered.length === 0) {
-                                filtered.push({
-                                    name: "",
-                                    showName: "No match",
-                                    desc: "If that's all you see, we don't have what you're looking for. But if you want to see something else, we have many other great series, movies or anime.",
-                                    watchlist: "",
-                                    watched: "",
-                                });
+                            if (this.search.length == 0) {
+                                $("#search-for span").css("display", "none")
+                                return
+                            } else {
+                                $("#search-for span").css('display', 'flex')
+                            }
+                            if (filtered.length == 0) {
+                                $("#nothing").css('display', 'flex')
+                            } else {
+                                $("#nothing").css("display", "none")
                             }
                             return filtered;
                         },
@@ -109,6 +117,7 @@ $(function () {
                                     }
                                 });
                             }
+
                             sendAddToWatchlist()
                         }
                     }

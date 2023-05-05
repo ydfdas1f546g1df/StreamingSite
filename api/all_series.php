@@ -20,7 +20,7 @@ $series_name = "%" . $series_name . "%";
 $stmt = $mysqli->prepare('SELECT ts.showName, ts.name, ts.description as "desc", 
        (SELECT count(*) from tbl_watchlist as tw
            inner join tbl_series ts2 on ts2.id = tw.series where ts2.showName = ts.showName) as watchlist, 
-       (select count(distinct twd.user) from tbl_watched as twd
+       (select count(twd.user) from tbl_watched as twd
             inner join tbl_episode te on twd.episode = te.id
             inner join tbl_season t on te.season = t.id
             inner join tbl_series s on t.series = s.id where s.showName = ts.showName) as watched

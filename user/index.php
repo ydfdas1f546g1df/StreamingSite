@@ -77,7 +77,7 @@ $mainContent = '
         </a>
         <a href="/login" class="logout-btn">
             <div class="icon">
-                <i class="gg-log-in"></i>
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
             </div>
             <div class="text">
                 <span class="title">Logout</span>
@@ -86,8 +86,8 @@ $mainContent = '
         </a>
     </article>
     <script>
-            document.title="your Account | StreamingSite"
-          </script>
+        document.title="your Account | StreamingSite"
+    </script>
 </main>
 ';
 
