@@ -34,7 +34,7 @@ $mainContent = '
             <a v-for="wl in watchlist" :href="\'/stream/\' + wl.name" class="home-el"
                :title="wl.showName + \', watch it now for free and in full length.\'">
                 <img :src="\'/dist/img/\' + wl.name + \'.jpg\'" alt="cover" class="cover">
-                <span class="cover-title"><span>{{ wl.showName }}</span><i class="fi fi-de"></i></span>
+                <span class="cover-title"><span>{{ wl.showName }}</span></span>
             </a>
         </div>
     </div>
@@ -46,7 +46,7 @@ $mainContent = '
             <a v-for="wd in watched" :href="\'/stream/\' + wd.name + \'/season-\' + wd.season + \'/episode-\' + wd.episode" class="home-el"
                :title="wd.showName + \', watch it now for free and in full length.\'">
                 <img :src="\'/dist/img/\' + wd.name + \'.jpg\'" alt="cover" class="cover">
-                <span class="cover-title"><span>{{ wd.showName }} &nbsp;<span class="episode-nth">S{{ wd.season }} &nbsp;E{{ wd.episode }}</span></span><i class="fi fi-de"></i></span>
+                <span class="cover-title"><span>{{ wd.showName }} &nbsp;<span class="episode-nth">S{{ wd.season }} &nbsp;E{{ wd.episode }}</span></span></span>
             </a>
         </div>
     </div>
