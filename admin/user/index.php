@@ -26,7 +26,7 @@ $admin_user = '
                 <span class="add-btn user-btn" ><i class="gg-user-add"></i></span>
                 <span class="save-btn user-btn" onclick="location.reload()" title="Changes are only displayed correctly after reloading"><i class="fa-solid fa-rotate"></i></span>
             </div>
-            <label for="">
+            <label for="search-user">
                 Search User
                 <input type="text" name="search-user" placeholder="name" v-model="search">
             </label>

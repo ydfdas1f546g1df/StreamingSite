@@ -1,21 +1,21 @@
 <?php
 if (strpos($_SERVER['REQUEST_URI'], "=")) {
-   $quick = explode("=", $_SERVER['REQUEST_URI'])[1];
+   $quick = 'value="' . explode("=", $_SERVER['REQUEST_URI'])[1] . '"';
 } else {
     $quick = "";
 };
 
+//<div class="quick-search" id="quick-search">
+//        <a :href="\'/pages/search/?search=\' + quick"  class="quick-search-el" v-for="quick in quicks">{{ quick }}</a>
+//            <div>{{ quick }}</div>
+//        </a>
+//    </div>
 $searchContent = '
-<main class="search-main">
-    <div class="quick-search" id="quick-search">
-        <a :href="\'/pages/search/?search=\' + quick"  class="quick-search-el" v-for="quick in quicks">{{ quick }}</a>
-            <div>{{ quick }}</div>
-        </a>
-    </div>
+<main class="search-main" id="search-main">
     <label class="search">
         Search
         <div id="search-input">
-            <input type="text" value="'. $quick .'">
+            <input type="text" v-model="search">
         </div>
     </label>
     <div id="search-result">
@@ -30,14 +30,16 @@ $searchContent = '
                     </i>
                 </span>
                 <i class="fa-solid fa-folder-plus tooltip" id="add-wl-btn" @click="addToWatchlist">
-                <span class="tooltiptext">Add to Watchlist</span>
-</i>
+                <span class="tooltiptext">Add to Watchlist</span></i>
             </div>
             <span class="result-description">{{ result.desc }}</span>
         </a>
     </div>
 </main>
 <script src="/script/search.js"></script>
+    <script>
+            document.title="Serach | StreamingSite"
+          </script>
 ';
 
 include '../.././template/index.php';
