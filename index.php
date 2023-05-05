@@ -7,70 +7,54 @@ $homeContent = '
     </div>
     <div class="eye-catcher" id="eye-catcher">
         <div class="eye-wr">
-
             <div class="eye-wrapper">
                 <div class="eye-el-1x2 eye-catcher-el">
                     <span>Vinland Saga</span>
                 </div>
                 <div class="eye-el-1x2 eye-catcher-el">
                     <span>Vinland Saga</span>
-
                 </div>
             </div>
             <div class="eye-wrapper">
-
                 <div class="eye-el-2x2 eye-catcher-el">
                     <span>Vinland Saga</span>
-
                 </div>
             </div>
         </div>
         <div class="eye-wr">
-
             <div class="eye-wrapper">
-
                 <div class="eye-wrapper-wrapper">
                     <div class="eye-el-1x1 eye-catcher-el">
                         <span>Vinland Saga</span>
-
                     </div>
                     <div class="eye-el-1x1 eye-catcher-el">
                         <span>Vinland Saga</span>
-
                     </div>
                 </div>
                 <div class="eye-wrapper-wrapper">
                     <div class="eye-el-1x1 eye-catcher-el">
                         <span>Vinland Saga</span>
-
                     </div>
                     <div class="eye-el-1x1 eye-catcher-el">
                         <span>Vinland Saga</span>
-
                     </div>
                 </div>
             </div>
-
             <div class="eye-wrapper">
                 <div class="eye-el-1x2 eye-catcher-el">
                     <span>Vinland Saga</span>
-
                 </div>
                 <div class="eye-el-1x2 eye-catcher-el">
                     <span>Vinland Saga</span>
-
                 </div>
             </div>
         </div>
     </div>
-
     <div class="home-cat-parent">
         <span class="home-el-title">Popular
             <a href="/pages/popular.php" class="home-el-all">View all</a>
         </span>
         <div id="home-cat-1" class="wrapper home-cat">
-            <!--            <span id="hello" style="color: white; cursor: pointer">Hello</span>-->
-
             <a v-for="media in Media" :href="\'/stream/\' + media.medianame" class="home-el"
                :title="media.name + \', watch it now for free and in full length.\'">
                 <img :src="media.coverSrc" alt="cover" class="cover">
@@ -103,9 +87,6 @@ $homeContent = '
         </div>
     </div>
 </main>';
-
-
-
 
 if (isset($cookie)) {
     if ($login) {
