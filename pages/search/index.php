@@ -19,7 +19,7 @@ $searchContent = '
         </div>
     </label>
     <div id="search-result">
-        <a class="result-item" v-for="result in results" :href="\'/stream/\' + result.name" target="_blank">
+        <a class="result-item" v-for="result in filteredSeries" :href="\'/stream/\' + result.name" target="_blank">
             <div class="result-head" :name="result.name" :showName="result.showName">
                 <span class="result-title">{{ result.showName }}</span>
                 <span class="result-info result-watched" :title="result.watched + \' people have watched this show.\'">{{ result.watched }}
@@ -29,7 +29,7 @@ $searchContent = '
                     <i class="fa-solid fa-list-ul">
                     </i>
                 </span>
-                <i class="fa-solid fa-folder-plus tooltip" id="add-wl-btn" @click="addToWatchlist">
+                <i class="fa-solid fa-folder-plus tooltip" id="add-wl-btn" @click.prevent="addToWatchlist">
                 <span class="tooltiptext">Add to Watchlist</span></i>
             </div>
             <span class="result-description">{{ result.desc }}</span>

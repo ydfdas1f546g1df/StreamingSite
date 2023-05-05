@@ -140,10 +140,17 @@ $aside-width: 220px;
               grid-template-columns: 1fr 3fr 3fr 4fr 1fr 1fr 1fr;
               margin-top: 10px;
 
+
               span {
                 padding: 0 5px;
+
+                &.user-list-el-id {
+                  padding: 0 15px;
+                }
+
                 display: flex;
                 align-items: center;
+
                 a {
                   color: white;
                 }
@@ -263,12 +270,15 @@ $aside-width: 220px;
         flex-direction: row;
         width: $aside-width - 40px;
         justify-content: space-between;
+
         i {
           cursor: pointer;
         }
+
         .error-code {
           font-weight: bold;
         }
+
         div {
           display: flex;
           flex-direction: column;

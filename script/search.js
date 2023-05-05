@@ -46,7 +46,6 @@ $(function () {
         getSeries().then(
             function () {
                 // console.log(JSONData)
-
                 Vue.createApp({
                     data() {
                         return {
@@ -56,20 +55,58 @@ $(function () {
                     },
                     computed: {
                         filteredSeries() {
-                            return this.results.filter(result => {
-                                console.log(result.showName.toLowerCase())
-                                console.log(this.search.toLowerCase())
+                            const filtered = this.results.filter(result => {
                                 return result.showName.toLowerCase().indexOf(this.search.toLowerCase()) !== -1;
                             });
-                        }
+                            if (filtered.length === 0) {
+                                filtered.push({
+                                    name: "",
+                                    showName: "No match",
+                                    desc: "If that's all you see, we don't have what you're looking for. But if you want to see something else, we have many other great series, movies or anime.",
+                                    watchlist: "",
+                                    watched: "",
+                                });
+                            }
+                            return filtered;
+                        },
                     },
                     methods: {
                         addToWatchlist(e) {
-                            e.preventDefault()
-                            // console.log($(e.target))
-                            console.log($(e.target).parent().attr("name"))
                             console.log($(e.target).parent().attr("showName"))
-                            $(e.target).find("span").text("added to Watchlist")
+                            let name = $(e.target).parent().attr("name")
+                            console.log(name)
+
+                            async function sendAddToWatchlist() {
+
+                                let token
+
+                                const cookies = document.cookie.split(';');
+
+                                function getCookie() {
+                                    // console.log(cookies)
+                                    for (let i = 0; i < cookies.length; i++) {
+                                        const cookie = cookies[i].split('=');
+                                        if (cookie[0].includes("token")) {
+                                            token = cookie[1];
+                                            // console.log(token)
+                                        }
+                                    }
+                                }
+
+                                getCookie()
+                                let myObj = {token: token, series: name};
+                                await $.ajax({
+                                    type: "POST",
+                                    url: "/api/all_series.php",
+                                    data: {myData: JSON.stringify(myObj)},
+                                    success: function (res) {
+                                        if (res == 200) {
+                                            $(e.target).find("span").text("added to Watchlist")
+                                        }
+                                    }
+                                });
+                            }
+                            sendAddToWatchlist()
                         }
                     }
                 }).mount("#search-main");
