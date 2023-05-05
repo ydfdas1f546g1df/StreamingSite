@@ -103,6 +103,8 @@ $(function () {
                                         console.log(res)
                                         if (res == true) {
                                             $(e.target).find("span").text("added to Watchlist")
+                                        } else {
+                                            $(e.target).find("span").text("Alreay in your Watchlist")
                                         }
                                     }
                                 });

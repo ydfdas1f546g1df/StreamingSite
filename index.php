@@ -92,7 +92,7 @@ $homeContent = '
     </div>
     <div class="home-cat-parent">
         <span class="home-el-title" id="latest">Latest uploads
-            <a href="/pages/popular.php" class="home-el-all">View all</a>
+            <a href="/user/watchlist/?u='. $username .'" class="home-el-all">View all</a>
         </span>
         <div id="home-cat-3" class="wrapper home-cat">
             <a v-for="media in Media" :href="\'/stream/\' + media.medianame" class="home-el"

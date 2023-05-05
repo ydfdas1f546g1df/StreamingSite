@@ -27,15 +27,48 @@ if (strlen($token) == 30) {
                 $stmt = $mysqli->prepare('delete from tbl_apitoken where user = ?');
                 $stmt->bind_param('s', $rm_id);
                 $stmt->execute();
+                $result = $stmt->get_result();
+                if (json_encode($result) != true) {
+                    $error = true;
+                }
 
                 $stmt = $mysqli->prepare('delete from tbl_verified where user = ?');
                 $stmt->bind_param('s', $rm_id);
                 $stmt->execute();
+                $result = $stmt->get_result();
+                if (json_encode($result) != true) {
+                    $error = true;
+                }
+
+                $stmt = $mysqli->prepare('delete from tbl_watchlist where user = ?');
+                $stmt->bind_param('s', $rm_id);
+                $stmt->execute();
+                $result = $stmt->get_result();
+                if (json_encode($result) != true) {
+                    $error = true;
+                }
+
+                $stmt = $mysqli->prepare('delete from tbl_watched where user = ?');
+                $stmt->bind_param('s', $rm_id);
+                $stmt->execute();
+                $result = $stmt->get_result();
+                if (json_encode($result) != true) {
+                    $error = true;
+                }
 
                 $stmt = $mysqli->prepare('delete from tbl_users where id = ?');
                 $stmt->bind_param('s', $rm_id);
                 $stmt->execute();
-                echo 200;
+                $result = $stmt->get_result();
+                if (json_encode($result) != true) {
+                    $error = true;
+                }
+
+                if (!isset($error)) {
+                    echo 200;
+                } else {
+                    echo 400;
+                }
 //                http_response_code(200);
             } else {
                 echo 409;
