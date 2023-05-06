@@ -52,7 +52,7 @@ $homeContent = '
     </div>
     <div class="home-cat-parent">
         <span class="home-el-title">Popular
-            <a href="/pages/popular.php" class="home-el-all">View all</a>
+            <a href="/pages/popular/" class="home-el-all">View all</a>
         </span>
         <div id="home-cat-1" class="wrapper home-cat">
             <a v-for="po in pupular" :href="\'/stream/\' + po.name" class="home-el"
@@ -105,4 +105,3 @@ if (isset($cookie)) {
 }
 $Page = $Page . $homeContent . $footer;
 echo $Page;
-

@@ -30,11 +30,18 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
   color: white;
 
   #all-series-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: column;
 
-    div {
+    .letter {
+      display: flex;
+      flex-direction: column;
       margin: 0 10px;
+
+      div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
 
       h2 {
         color: $orange;
@@ -58,41 +65,46 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
     }
   }
 
-  .page-title {
-    margin-top: 30px;
+
+  div.icon {
     display: flex;
-    justify-content: space-between;
-    font-size: 50px;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
 
-    a {
-      display: flex;
-      align-items: center;
-      color: white;
-      font-size: 18px;
-      height: 20px;
-      border-radius: 5px;
-      background: $orange;
-      font-weight: bold;
-      padding: 10px;
-      &:hover {
-        background: $lighter-gray;
-      }
-    }
-
-    div.icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 35px;
-
-      i {
-        scale: 1.1;
-      }
+    i {
+      scale: 1.1;
     }
   }
+}
 
-  #search-input {
+#search-input {
+  font-size: 18px;
+  height: 30px;
+}
+
+
+
+.page-title {
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 50px;
+  color: white;
+
+  a {
+    display: flex;
+    align-items: center;
+    color: white;
     font-size: 18px;
-    height: 30px;
+    height: 20px;
+    border-radius: 5px;
+    background: $orange;
+    font-weight: bold;
+    padding: 10px;
+
+    &:hover {
+      background: $lighter-gray;
+    }
   }
 }

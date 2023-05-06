@@ -917,7 +917,6 @@ footer .copyright a:hover {
   margin: 0 0 5px 0;
   width: 150px;
   height: 225px;
-  z-index: 1;
   border-radius: 5px;
   overflow: hidden;
   transition: all 0.4s ease-in-out;
@@ -1691,13 +1690,19 @@ main.account-main .page-title {
   color: white;
 }
 #all-series-main #all-series-list {
+  display: flex;
+  flex-direction: column;
+}
+#all-series-main #all-series-list .letter {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+}
+#all-series-main #all-series-list .letter div {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-#all-series-main #all-series-list div {
-  margin: 0 10px;
-}
-#all-series-main #all-series-list div h2 {
+#all-series-main #all-series-list .letter h2 {
   color: rgb(255, 100, 16);
   display: block;
   clear: both;
@@ -1706,21 +1711,37 @@ main.account-main .page-title {
   padding: 0;
   border-bottom: 3px #636363 solid;
 }
-#all-series-main #all-series-list div .result-item {
+#all-series-main #all-series-list .letter .result-item {
   color: white;
   display: flex;
   flex-direction: column;
 }
-#all-series-main #all-series-list div .result-item:hover {
+#all-series-main #all-series-list .letter .result-item:hover {
   color: rgb(255, 100, 16);
 }
-#all-series-main .page-title {
-  margin-top: 30px;
+#all-series-main div.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+}
+#all-series-main div.icon i {
+  scale: 1.1;
+}
+
+#search-input {
+  font-size: 18px;
+  height: 30px;
+}
+
+.page-title {
+  margin: 30px 0;
   display: flex;
   justify-content: space-between;
   font-size: 50px;
+  color: white;
 }
-#all-series-main .page-title a {
+.page-title a {
   display: flex;
   align-items: center;
   color: white;
@@ -1731,21 +1752,8 @@ main.account-main .page-title {
   font-weight: bold;
   padding: 10px;
 }
-#all-series-main .page-title a:hover {
+.page-title a:hover {
   background: #636363;
-}
-#all-series-main .page-title div.icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 35px;
-}
-#all-series-main .page-title div.icon i {
-  scale: 1.1;
-}
-#all-series-main #search-input {
-  font-size: 18px;
-  height: 30px;
 }
 
 input[type=number] {

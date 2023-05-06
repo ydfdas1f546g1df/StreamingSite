@@ -31,7 +31,7 @@ $header_1 = '<!DOCTYPE html>
         <a href="/" class="logo-2" title="StreamingSite">Site</a>
         <nav>
             <a href="/pages/allseries/" title="All series and films on this website"><i class="gg-play-button-o"></i>&nbsp;Series</a>
-            <a href="/pages/popular.php" title="This is popular right now"><i class="gg-align-bottom"></i>&nbsp;Popular</a>
+            <a href="/pages/popular/index.php" title="This is popular right now"><i class="gg-align-bottom"></i>&nbsp;Popular</a>
             <a href="/pages/search/" title="Search for series and films"><i class="gg-search"></i>&nbsp;Search</a>
 ';
 $admin_1 = '
@@ -102,7 +102,7 @@ $loggedIn = '
 //        </label>
 //        <ul class="menu">
 //            <li><a href="/pages/allseries/"><i class="gg-play-button-o"></i>&nbsp;Series</a></li>
-//            <li><a href="/pages/popular.php"><i class="gg-align-bottom"></i>&nbsp;Popular</a></li>
+//            <li><a href="/pages/index.php"><i class="gg-align-bottom"></i>&nbsp;Popular</a></li>
 //            <li><a href="/pages/search/"><i class="gg-search"></i>&nbsp;Search</a></li>
 $admin_2 = '<li class="more-dd">admin</li>
             <li class="more-dd-el"><a href="https://github.com/ydfdas1f546g1df/StreamingSite" target="_blank">
@@ -133,7 +133,7 @@ $footer = '
             <span class="footer-el-title">Series</span>
             <a class="footer-el-item" href="/pages/allseries/">All</a>
             <a class="footer-el-item" href="/#latest">New</a>
-            <a class="footer-el-item" href="/pages/popular.php">Popular</a>
+            <a class="footer-el-item" href="/pages/popular/index.php">Popular</a>
         </div>
         <div class="footer-el">
             <span class="footer-el-title">About</span>
@@ -145,7 +145,7 @@ $footer = '
             <span class="footer-el-title">Discover</span>
             <a class="footer-el-item" href="/pages/search/?search=' . implode(",", $letter) . '">Random</a>
             <a class="footer-el-item" href="/pages/search/">Search</a>
-            <a class="footer-el-item" href="/pages/popular.php">Popular</a>
+            <a class="footer-el-item" href="/pages/popular/index.php">Popular</a>
         </div>
         <div class="footer-el">
             <span class="footer-el-title">More</span>

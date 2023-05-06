@@ -115,7 +115,6 @@
   margin: 0 0 5px 0;
   width: 150px;
   height: 225px;
-  z-index: 1;
   border-radius: 5px;
   overflow: hidden;
   transition: all 0.4s ease-in-out;
