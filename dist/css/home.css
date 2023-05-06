@@ -47,6 +47,9 @@
   aspect-ratio: 1;
 }
 
+.home-cat-parent:last-child {
+  margin-bottom: 200px;
+}
 .home-cat-parent .home-el-title {
   color: white;
   font-weight: bold;

@@ -30,6 +30,9 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 
 if (isset($index)) {
+    echo "<script>
+            document.title='Uploads'
+          </script>";
     echo "<pre>";
     echo print_r($ResultsArray);
     echo "</pre>";
