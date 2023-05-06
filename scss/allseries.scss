@@ -33,21 +33,27 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 
-    .result-item {
-      color: white;
-      display: flex;
-      flex-direction: column;
+    div {
+      margin: 0 10px;
 
       h2 {
+        color: $orange;
         display: block;
         clear: both;
         width: 100%;
-        margin: 0;
+        margin: 10px 0;
         padding: 0;
+        border-bottom: 3px $lighter-gray solid;
       }
 
-      &:hover {
-        color: $orange;
+      .result-item {
+        color: white;
+        display: flex;
+        flex-direction: column;
+
+        &:hover {
+          color: $orange;
+        }
       }
     }
   }
@@ -68,6 +74,9 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
       background: $orange;
       font-weight: bold;
       padding: 10px;
+      &:hover {
+        background: $lighter-gray;
+      }
     }
 
     div.icon {

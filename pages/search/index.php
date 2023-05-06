@@ -12,9 +12,7 @@ $searchContent = '
 <main class="search-main" id="search-main">
     <label class="search">
         Search
-
-        <input type="text" v-model="search" id="search-input">
-
+        <input type="text" v-model="search" id="search-input" ref="name">
     </label>
     <div id="search-result">
         <div id="search-for"><span>Search results for &bdquo;{{ search }}&rdquo;</span></div>

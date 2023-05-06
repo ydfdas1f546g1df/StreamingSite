@@ -1694,19 +1694,24 @@ main.account-main .page-title {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-#all-series-main #all-series-list .result-item {
+#all-series-main #all-series-list div {
+  margin: 0 10px;
+}
+#all-series-main #all-series-list div h2 {
+  color: rgb(255, 100, 16);
+  display: block;
+  clear: both;
+  width: 100%;
+  margin: 10px 0;
+  padding: 0;
+  border-bottom: 3px #636363 solid;
+}
+#all-series-main #all-series-list div .result-item {
   color: white;
   display: flex;
   flex-direction: column;
 }
-#all-series-main #all-series-list .result-item h2 {
-  display: block;
-  clear: both;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-#all-series-main #all-series-list .result-item:hover {
+#all-series-main #all-series-list div .result-item:hover {
   color: rgb(255, 100, 16);
 }
 #all-series-main .page-title {
@@ -1725,6 +1730,9 @@ main.account-main .page-title {
   background: rgb(255, 100, 16);
   font-weight: bold;
   padding: 10px;
+}
+#all-series-main .page-title a:hover {
+  background: #636363;
 }
 #all-series-main .page-title div.icon {
   display: flex;

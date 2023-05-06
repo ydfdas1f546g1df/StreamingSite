@@ -75,6 +75,7 @@ $(function () {
                             } else {
                                 $("#nothing").css("display", "none")
                             }
+
                             return filtered;
                         },
                     },
@@ -121,7 +122,7 @@ $(function () {
                             sendAddToWatchlist()
                         }
                     }
-                }).mount("#search-main");
+                }).mount("#search-main")
             })
     }
 );
