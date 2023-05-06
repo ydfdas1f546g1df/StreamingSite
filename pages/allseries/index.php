@@ -10,21 +10,18 @@ if (strpos($_SERVER['REQUEST_URI'], "=")) {
 
 $searchContent = '
 <main class="search-main" id="all-series-main">
-<div class="page-title">All Series <a href="/pages/search/"><div class="icon"><i class="gg-search"></i></div>Advanced Search</a></div>
-<label class="search">
-    <input type="text" v-model="search" id="search-input" placeholder="Search for series...">
-</label>
-<div id="all-series-list">
-  <template v-for="letter in letters">
-    <div v-if="seriesByLetter[letter].length > 0" :key="letter">
-      <h2>{{ letter }}</h2>
-      <a v-for="result in seriesByLetter[letter]" :key="result.name" class="result-item" :href="`/stream/${result.name}`">{{ result.showName }}</a>
-    </div>
-  </template>
-</div>
-
-
-</div>
+  <div class="page-title">All Series <a href="/pages/search/"><div class="icon"><i class="gg-search"></i></div>Advanced Search</a></div>
+  <label class="search">
+      <input type="text" v-model="search" id="search-input" placeholder="Search for series...">
+  </label>
+  <div id="all-series-list">
+    <template v-for="letter in letters">
+      <div v-if="seriesByLetter[letter].length > 0" :key="letter">
+        <h2>{{ letter }}</h2>
+        <a v-for="result in seriesByLetter[letter]" :key="result.name" class="result-item" :href="`/stream/${result.name}`">{{ result.showName }}</a>
+      </div>
+    </template>
+  </div>
 </main>
 <script src="/script/all_series.js"></script>
 <script>

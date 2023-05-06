@@ -29,13 +29,23 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
 #all-series-main {
   color: white;
 
-
   #all-series-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    width: 100%;
+
     .result-item {
       color: white;
+      display: flex;
+      flex-direction: column;
+
+      h2 {
+        display: block;
+        clear: both;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
       &:hover {
         color: $orange;
       }
@@ -71,6 +81,7 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
       }
     }
   }
+
   #search-input {
     font-size: 18px;
     height: 30px;
