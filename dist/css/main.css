@@ -1782,9 +1782,11 @@ input::-webkit-inner-spin-button {
 }
 *::-moz-selection {
   background: rgb(255, 100, 16);
+  color: white;
 }
 *::selection {
   background: rgb(255, 100, 16);
+  color: white;
 }
 
 a {

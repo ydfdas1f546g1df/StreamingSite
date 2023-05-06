@@ -74,6 +74,7 @@ input::-webkit-inner-spin-button {
 
   &::selection {
     background: $orange;
+    color: white;
   }
 }
 
@@ -191,6 +192,7 @@ html {
 .tooltiptext {
   min-width: 140px;
   border-radius: 5px;
+
   a:hover {
     background: $light-gray;
   }
