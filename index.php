@@ -58,7 +58,7 @@ $homeContent = '
             <a v-for="po in pupular" :href="\'/stream/\' + po.name" class="home-el"
                :title="po.showName + \', watch it now for free and in full length.\'">
                 <img :src="\'/dist/img/\' + po.name + \'.jpg\'" alt="cover" class="cover">
-                <span class="cover-title"><span>{{ po.showName }} &nbsp;<span class="episode-nth">Views&nbsp;{{ po.watched }}</span></span></span>
+                <span class="cover-title"><span>{{ po.showName }}&nbsp;<span class="episode-nth">Views&nbsp;{{ po.watched }}</span></span></span>
             </a>
         </div>
     </div>
@@ -86,7 +86,9 @@ $homeContent = '
             </a>
         </div>
     </div>
-</main>';
+</main>
+        <script src="/script/main.js"></script>
+';
 
 if (isset($cookie)) {
     if ($login) {

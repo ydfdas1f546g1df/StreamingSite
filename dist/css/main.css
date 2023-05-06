@@ -1687,6 +1687,51 @@ main.account-main .page-title {
   width: 100%;
 }
 
+#all-series-main {
+  color: white;
+}
+#all-series-main #all-series-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+}
+#all-series-main #all-series-list .result-item {
+  color: white;
+}
+#all-series-main #all-series-list .result-item:hover {
+  color: rgb(255, 100, 16);
+}
+#all-series-main .page-title {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 50px;
+}
+#all-series-main .page-title a {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  height: 20px;
+  border-radius: 5px;
+  background: rgb(255, 100, 16);
+  font-weight: bold;
+  padding: 10px;
+}
+#all-series-main .page-title div.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+}
+#all-series-main .page-title div.icon i {
+  scale: 1.1;
+}
+#all-series-main #search-input {
+  font-size: 18px;
+  height: 30px;
+}
+
 input[type=number] {
   -moz-appearance: textfield;
 }
