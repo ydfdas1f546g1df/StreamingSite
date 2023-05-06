@@ -58,7 +58,7 @@ $homeContent = '
             <a v-for="po in pupular" :href="\'/stream/\' + po.name" class="home-el"
                :title="po.showName + \', watch it now for free and in full length.\'">
                 <img :src="\'/dist/img/\' + po.name + \'.jpg\'" alt="cover" class="cover">
-                <span class="cover-title"><span>{{ po.showName }}</span></span>
+                <span class="cover-title"><span>{{ po.showName }} &nbsp;<span class="episode-nth">Views&nbsp;{{ po.watched }}</span></span></span>
             </a>
         </div>
     </div>
@@ -80,7 +80,7 @@ $homeContent = '
         </span>
         <div class="wrapper home-cat">
             <a v-for="up in uploads" :href="\'/stream/\' + up.name + \'/season-\' + up.season + \'/episode-\' + up.episode" class="home-el"
-               :title="wd.showName + \', watch it now for free and in full length.\'">
+               :title="up.showName + \', watch it now for free and in full length.\'">
                 <img :src="\'/dist/img/\' + up.name + \'.jpg\'" alt="cover" class="cover">
                 <span class="cover-title"><span>{{ up.showName }} &nbsp;<span class="episode-nth">S{{ up.season }} &nbsp;E{{ up.episode }}</span></span></span>
             </a>

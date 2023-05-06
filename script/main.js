@@ -78,8 +78,8 @@ $(function () {
                     let ResJSON = JSON.parse(res);
                     // console.log(ResJSON)
                     let length
-                    if (ResJSON.length > 16) {
-                        length = 16
+                    if (ResJSON.length > 14) {
+                        length = 14
                     } else {
                         length = ResJSON.length
                     }
@@ -112,17 +112,17 @@ $(function () {
                     let ResJSON = JSON.parse(res);
                     // console.log(ResJSON)
                     let length
-                    if (ResJSON.length > 16) {
-                        length = 16
+                    if (ResJSON.length > 14) {
+                        length = 14
                     } else {
+
                         length = ResJSON.length
                     }
                     for (let i = 0; i < length; i++) {
                         JSONData_po.push({
                             showName: ResJSON[i].showName,
                             name: ResJSON[i].name,
-                            episode: ResJSON[i].season,
-                            season: ResJSON[i].season,
+                            watched : ResJSON[i].watched,
                         })
                     }
                     console.log(JSONData_po)
