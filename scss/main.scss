@@ -37,6 +37,7 @@ $eye-catcher-height-1080: 410px;
 @import "account";
 @import "profile";
 @import "allseries";
+@import "stream";
 
 
 input[type=number] {
@@ -139,10 +140,6 @@ html {
           color: white;
           font-weight: bold;
 
-          &:hover {
-            background: $dd-more-bg;
-            color: $orange;
-          }
         }
       }
     }

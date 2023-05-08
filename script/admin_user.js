@@ -156,7 +156,7 @@ $(function () {
                                 let email = email_el.text()
                                 let id = id_el.text()
                                 let admin = admin_el.attr("admin")
-                                console.log(admin_el)
+                                // console.log(admin_el)
 
 
                                 function getCookie() {
@@ -179,13 +179,13 @@ $(function () {
                                     admin: admin,
                                     email: email
                                 };
-                                console.log(myObj)
+                                // console.log(myObj)
                                 $.ajax({
                                     type: "POST",
                                     url: "/api/admin_edit_user.php",
                                     data: {myData: JSON.stringify(myObj)},
                                     success: function (res) {
-                                        console.log(res)
+                                        // console.log(res)
                                         if (res == 409) {
                                             $("#error-messages").append('<div class="error-msg-el"><div>' +
                                                 '<span class="error-code">409</span><span class="error-msg">You can\'t edit your own account</span>' +

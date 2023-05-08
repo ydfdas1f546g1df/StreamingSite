@@ -1,9 +1,9 @@
 {
     "/dist/css/main.css": "/dist/css/main.css",
     "/dist/css/icons.css": "/dist/css/icons.css",
-    "/dist/css/footer.css": "/dist/css/footer.css",
     "/dist/css/error.css": "/dist/css/error.css",
     "/dist/css/dropdown.css": "/dist/css/dropdown.css",
+    "/dist/css/allseries.css": "/dist/css/allseries.css",
     "/dist/css/admin.css": "/dist/css/admin.css",
     "/dist/css/account.css": "/dist/css/account.css",
     "/dist/css/about.css": "/dist/css/about.css",
@@ -11,5 +11,6 @@
     "/dist/css/profile.css": "/dist/css/profile.css",
     "/dist/css/loginregister.css": "/dist/css/loginregister.css",
     "/dist/css/home.css": "/dist/css/home.css",
-    "/dist/css/header.css": "/dist/css/header.css"
+    "/dist/css/header.css": "/dist/css/header.css",
+    "/dist/css/footer.css": "/dist/css/footer.css"
 }
