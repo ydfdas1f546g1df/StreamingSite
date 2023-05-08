@@ -4,6 +4,9 @@
 
 include '../../api/req_user_data.php';
 
+if (!isset($user_created)) {
+    header("Location: /login/");
+}
 $mainContent = '
 <main class="profile-main">
     <article class="banner">
@@ -72,10 +75,18 @@ if (isset($cookie)) {
             $Page = $loggedInHeader;
         }
     } else {
+        if (isset($_GET["u"])){
         $Page = $notLoggedInHeader;
+        } else {
+            header("Location: /login/");
+        }
     }
 } else {
-    $Page = $notLoggedInHeader;
+    if (isset($_GET["u"])){
+        $Page = $notLoggedInHeader;
+    } else {
+        header("Location: /login/");
+    }
 }
 $Page = $Page . $mainContent . $footer;
 echo $Page;

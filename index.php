@@ -76,7 +76,7 @@ $homeContent = '
     </div>
     <div class="home-cat-parent">
         <span class="home-el-title">Latest Uploads
-            <a href="/user/watched/" class="home-el-all">View all</a>
+            <a href="/pages/uploads/" class="home-el-all">View all</a>
         </span>
         <div class="wrapper home-cat">
             <a v-for="up in uploads" :href="\'/stream/\' + up.name + \'/season-\' + up.season + \'/episode-\' + up.episode" class="home-el"

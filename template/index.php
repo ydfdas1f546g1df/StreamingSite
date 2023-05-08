@@ -31,7 +31,7 @@ $header_1 = '<!DOCTYPE html>
         <a href="/" class="logo-2" title="StreamingSite">Site</a>
         <nav>
             <a href="/pages/allseries/" title="All series and films on this website"><i class="gg-play-button-o"></i>&nbsp;Series</a>
-            <a href="/pages/popular/index.php" title="This is popular right now"><i class="gg-align-bottom"></i>&nbsp;Popular</a>
+            <a href="/pages/popular/" title="This is popular right now"><i class="gg-align-bottom"></i>&nbsp;Popular</a>
             <a href="/pages/search/" title="Search for series and films"><i class="gg-search"></i>&nbsp;Search</a>
 ';
 $admin_1 = '

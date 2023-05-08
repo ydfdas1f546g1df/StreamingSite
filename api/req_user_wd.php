@@ -35,7 +35,7 @@ if (strlen($username) > 1) {
                     inner join tbl_series ts2 on s.series = ts2.id where ts2.name = t.name) as episodes, te.episode,
                 (select count(distinct s2.id) from tbl_episode as te2
                     inner join tbl_season s2 on te2.season = s2.id
-                    inner join tbl_series ts2 on s2.series = ts2.id where ts2.name = t.name) as seasons, ts.season
+                    inner join tbl_series ts2 on s2.series = ts2.id where ts2.name = t.name) as seasons, ts.season, tu.name as uname, tu.username as usname
         FROM tbl_watched as twd
             inner join tbl_users tu on tu.id = twd.user
             inner join tbl_episode te on twd.episode = te.id

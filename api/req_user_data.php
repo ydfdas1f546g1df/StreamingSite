@@ -14,6 +14,9 @@ if (isset($_POST["u"])) {
 } else {
     header("Location: /login/");
 }
+if (!isset($username)) {
+    header("Location: /login/");
+}
 
 
 include_once(explode("StreamingSite", __DIR__)[0] . 'StreamingSite/api/db_connect.php');
@@ -53,6 +56,8 @@ where tu.username = ?');
         $user_created = explode("-", $user_created)[2] . "." . explode("-", $user_created)[1] . "." . explode("-", $user_created)[0];
     }
 } else {
+    header("Location: /login/");
+
     http_response_code(400);
 }
 

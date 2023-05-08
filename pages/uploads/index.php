@@ -11,19 +11,19 @@ if (isset($_COOKIE["name"])) {
 
 include '../.././template/index.php';
 $homeContent = '
-<main id="watchlist-main">
-  <div class="page-title">{{ uname }}\'s Watchlist<a :href="\'/user/profil/?u=\' + usname"><div class="icon"></div>Profile</a></div>
+<main id="uploads-main">
+  <div class="page-title">Latest uploads<a href="\'/pages/allseries/"><div class="icon"></div>More</a></div>
     <div class="home-cat-parent">
         <div id="home-cat-1" class="wrapper home-cat">
-            <a v-for="wl in watchlist" :href="\'/stream/\' + wl.name" class="home-el"
-               :title="wl.showName + \', watch it now for free and in full length.\'">
-                <img :src="\'/data/cover/\' + wl.name + \'.jpg\'" alt="cover" class="cover">
-                <span class="cover-title"><span>{{ wl.showName }}</span></span>
+            <a v-for="up in uploads" :href="\'/stream/\' + up.name + \'/season-\' + up.season + \'/episode-\' + up.episode" class="home-el"
+               :title="up.showName + \', watch it now for free and in full length.\'">
+                <img :src="\'/data/cover/\' + up.name + \'.jpg\'" alt="cover" class="cover">
+                <span class="cover-title"><span>{{ up.showName }} &nbsp;<span class="episode-nth">S{{ up.season }} &nbsp;E{{ up.episode }}</span></span></span>
             </a>
         </div>
     </div>
 </main>
-<script src="/script/watchlist.js"></script>
+<script src="/script/latest_uploads.js"></script>
 ';
 
 if (isset($cookie)) {

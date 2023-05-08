@@ -8,9 +8,9 @@
   font-size: 40px;
 }
 .search-main label.search input {
-  font-size: 40px;
+  font-size: 40px !important;
   width: 1150px;
-  height: 80px;
+  height: 80px !important;
   margin-bottom: 20px;
   border-radius: 5px;
   background: none;

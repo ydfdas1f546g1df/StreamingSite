@@ -90,6 +90,14 @@ a {
   }
 }
 
+.tooltip {
+  transition: none !important;
+
+  * {
+    transition: none !important;
+  }
+}
+
 .wrapper {
   display: flex;
   flex-wrap: wrap;
