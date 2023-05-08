@@ -8,8 +8,16 @@
 //$series_name = 'vinland-saga';
 if (isset($_POST['myData'])) {
     $data = json_decode($_POST['myData']);
-    $series_name = $data->s;
-    $token = $data->u;
+    if (isset($data->s)) {
+        $series_name = $data->s;
+    } else {
+        header("Location: /error/404.php");
+    }
+    if (isset($data->u)) {
+        $token = $data->u;
+    } else {
+        $token = "ewuirgvwohebpjberoizgboiebrfpsjndfpboubwepirubgpubsdfpibvbspeeurbpgieubrpgi";
+    }
 }
 //$index = true;
 if ($series_name < 1) {

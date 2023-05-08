@@ -5,7 +5,7 @@ $streamTopMain = '
 <script src="/script/stream_top.js"></script>
 <div class="stream-banner" id="stream-banner">
     <div class="cover-column">
-        <img :src="\'/dist/img/\' + series.name + \'.jpg\'" alt="cover">
+        <img :src="\'/data/cover/\' + series.name + \'.jpg\'" alt="cover">
     </div>
     <div class="info-column">
         <strong class="series-title">{{ series.showName }}</strong>
@@ -18,7 +18,7 @@ $streamTopMain = '
     <div class="watchlist-column">
         <div>
             <a href="#watch-now">Watch now</a>
-            <span :class="\'watchlist-add \' + series.OW" :title="\'Add \' + series.showName + \' to your your watchlist, now.\'" status="" id="watchlist" @click="watchlist"><i class="fa-solid fa-list-ul"></i> Watchlist</span>
+            <span :class="\'watchlist-add \' + series.OW" :title="\'Add \' + series.showName + \' to your your watchlist, now.\'" :status="onWatchlist" id="watchlist" @click="watchlist"><i class="fa-solid fa-list-ul"></i> Watchlist</span>
             <span class="share"><i class="fa-solid fa-share-from-square"></i> Share</span>
         </div>
     </div>
