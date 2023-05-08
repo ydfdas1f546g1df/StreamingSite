@@ -47,7 +47,7 @@ $admin_user = '
                     <span class="user-list-el-username">{{ user.username }}</span>
                     <span class="user-list-el-name"><a :href="\'/user/profil/?u=\' + user.username">{{ user.name }}</a></span>
                     <span class="user-list-el-email">{{ user.email }}</span>
-                    <span class="user-list-el-admin" :status="0" :admin="user.IsAdmin"><i :class="user.admin"></i></span>
+                    <span class="user-list-el-admin" ><i :class="user.admin"  status="0" @click="editAdmin" :admin="user.IsAdmin"></i></span>
                     <span class="user-list-btn-placeholder">
                         <i class="fa-solid fa-pen-to-square edit-btn user-list-btn" @click="editUser"></i>
                         </span>

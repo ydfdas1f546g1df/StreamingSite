@@ -2,7 +2,7 @@
 include '../.././template/index.php';
 $homeContent = '
 <main id="popular-main">
-  <div class="page-title">Popular Series<a href="/pages/allseries/"><div class="icon"></div>All Series</a></div>
+  <div class="page-title">Most viewed Series<a href="/pages/allseries/"><div class="icon"></div>All Series</a></div>
     <div class="home-cat-parent">
         <div id="home-cat-1" class="wrapper home-cat">
             <a v-for="po in pupular" :href="\'/stream/\' + po.name" class="home-el"

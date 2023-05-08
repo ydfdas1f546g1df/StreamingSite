@@ -140,3 +140,4 @@ CREATE TABLE  tbl_verified
     user int,
     FOREIGN KEY tbl_verified(user) REFERENCES tbl_users(id)
 )
+
