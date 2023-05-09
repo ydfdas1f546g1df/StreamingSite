@@ -1,6 +1,4 @@
 # List
-
-
 You must use the token which was created before
 
 ```GET /api/users```
@@ -14,8 +12,8 @@ You must use the token which was created before
     "name": "Jack Smith",
     "bio": "",
     "created_at": "2012-05-23T08:00:58Z",
-    "avatar_url": "http://localhost.com/dist/pic/e32131cd8.jpeg",
-    "web_url": "http://localhost/jack_smith"
+    "watched": 1,
+    "watchlist": 2
   },
   {
     "id": 2,
@@ -24,13 +22,13 @@ You must use the token which was created before
     "name": "Jack J.",
     "bio": "Im the Real Jack",
     "created_at": "2015-05-23T08:00:58Z",
-    "avatar_url": "http://localhost.com/data/pic/e32131cd8.jpeg",
-    "web_url": "http://localhost/user/jack_smith"
+    "watched": 1,
+    "watchlist": 2
   }
 ]
 ```
 
-You can also use ?search= to search for users by name, or public email. For example, /users?search=John. When
+You can also use ?u= to search for users by name, or public email. For example, /users?u=John. When
 you search for a:
 <ul>
 <li>Public email, you must use the full email address to get an exact match. A search might return a partial match. For example, if you search for the email on@example.com, the search can return both on@example.com and jon@example.com.</li>
@@ -39,7 +37,7 @@ you search for a:
 In addition, you can lookup users by username:
 
 ```
-POST /api/users?search=:@username
+POST /api/users?u=username
 ```
 
 
@@ -51,9 +49,8 @@ POST /api/users?search=:@username
 POST /api/register
 ```
 
-| Atrribute | Required |                           Description |
+| Attribute | Required |                           Description |
 |:----------|:--------:|--------------------------------------:|
-| token     |   Yes    | Is Used to Identify User is in Cookie |
 | bio       |    No    |                      User’s biography |
 | email     |   Yes    |                                 Email |
 | username  |   Yes    |                              Username |
@@ -74,11 +71,11 @@ else
 # Login
 
 ```
-POST /api/login
+POST /api/login.php
 
 ```
 
-| Atrribute | Required |        Description |
+| Attribute | Required |        Description |
 |:----------|:--------:|-------------------:|
 | Username  |   Yes    |           Username |
 | Password  |   Yes    | Password as SHA256 |
@@ -86,7 +83,7 @@ POST /api/login
 ```
 [
     {
-        "token" : ":token"
+        "token": "token"
     }
 ]
 
@@ -104,4 +101,41 @@ else
     }
 ]
 ```
+
+# Profile Data
+
+```
+POST /api/req_user_wl.php
+
+```
+
+| Attribute | Required |      Description |
+|:----------|:--------:|-----------------:|
+| username  |   yes    | username of user |
+
+```
+[
+    {
+        "name": "Hans Peter",
+        "username": "hanspeter",
+        "watched": 2,
+        "watchlist": 1,
+        "bio": "This is the Best Website",
+        "admin": 1,
+    }
+]
+
+```
+
+else
+
+```
+[
+    {
+        "error": "message",
+    }
+]
+```
+
+
 
