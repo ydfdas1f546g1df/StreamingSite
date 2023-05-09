@@ -36,7 +36,7 @@ $header_1 = '<!DOCTYPE html>
             <a href="/pages/search/" title="Search for series and films"><i class="gg-search"></i>&nbsp;Search</a>
 ';
 $admin_1 = '
-            <span class="nav-more tooltip" title="There is more here">admin
+            <span class="nav-more tooltip">admin
              <div class="tooltiptext">
                  <a href="https://github.com/ydfdas1f546g1df/StreamingSite" target="_blank">
                 <div class="more-dd-icon"><i class="gg-git-fork"></i></div>
@@ -162,6 +162,26 @@ $footer = '
         document.cookie = "token=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT";
         document.cookie = "name=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT";
         location.reload();
+    })
+    let lastTT
+$(".tooltip").on("mouseenter", function (e) {
+//  console.log(lastTT !== e.currentTarget)
+//  console.log(e.currentTarget)
+  if (lastTT !== e.currentTarget) {
+    $(".tooltiptext").attr("style", "visibility: hidden;")
+  }
+  lastTT = e.currentTarget
+//  console.log(lastTT)
+  $(e.currentTarget).find(".tooltiptext").attr("style", "visibility: visible;")
+})
+
+    $("*").on("click", function () {
+        $(".tooltiptext").each(
+            function () {
+//                console.log(this)
+                $(this).attr("style", "visibility: hidden;")
+            }
+        )
     })
 </script>
 </body>
