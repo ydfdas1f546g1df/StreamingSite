@@ -200,6 +200,11 @@ html {
 
   a:hover {
     background: $light-gray;
+
+    .user-dd-icon {
+      background: $light-gray !important;
+
+    }
   }
 }
 

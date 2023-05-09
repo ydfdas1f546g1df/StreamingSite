@@ -29,7 +29,7 @@ elseif (isset($_POST["u"])) {
 include_once(explode("StreamingSite", __DIR__)[0] . 'StreamingSite/api/db_connect.php');
 if (strlen($username) > 1) {
 
-    $stmt = $mysqli->prepare('SELECT t.showName, t.name as series, te.name,
+    $stmt = $mysqli->prepare('SELECT t.showName, t.name as series, te.name, ROW_NUMBER() OVER () as rn,
                 (select count(te2.name) from tbl_episode as te2
                     inner join tbl_season s on te2.season = s.id
                     inner join tbl_series ts2 on s.series = ts2.id where ts2.name = t.name) as episodes, te.episode,
@@ -41,7 +41,7 @@ if (strlen($username) > 1) {
             inner join tbl_episode te on twd.episode = te.id
             inner join tbl_season ts on te.season = ts.id
             inner join tbl_series t on ts.series = t.id
-        where tu.username = ?');
+        where tu.username = ? order by rn');
     $stmt->bind_param('s', $username);
     $stmt->execute();
     $result = $stmt->get_result();

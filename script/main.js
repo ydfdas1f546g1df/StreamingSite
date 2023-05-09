@@ -43,6 +43,7 @@ $(function () {
 
                     let ResJSON = JSON.parse(res);
                     let length
+                    // console.log(ResJSON)
                     if (ResJSON.length > 14) {
                         length = 14
                     } else {

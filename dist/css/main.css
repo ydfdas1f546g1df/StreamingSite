@@ -2257,3 +2257,6 @@ html body main .quick-search .quick-search-el {
 .tooltiptext a:hover {
   background: rgb(55, 55, 55);
 }
+.tooltiptext a:hover .user-dd-icon {
+  background: rgb(55, 55, 55) !important;
+}
