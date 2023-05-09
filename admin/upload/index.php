@@ -22,9 +22,11 @@ $mainContent = '
         <article class="upload-article">
             <div class="link-div">
             <div>
-            
                 <a href="/admin/upload/upload.php" class="create-btn">Upload Episode</a>
-</div>
+                </div>
+                <div>
+                    <a href="/admin/upload/createSeries.php" class="create-btn">Create Series</a>
+                </div>   
                 <div>
                     <label>
                         Series Name
@@ -32,21 +34,7 @@ $mainContent = '
                     </label>
                     <span class="create-btn">Create Series</span>
                 </div>
-                <div>
-                    <label>
-                    Series Name
-                    <input list="series-list" id="season-series-inp" placeholder="Series Name">
-                        <datalist id="series-list">
-                        <option value="vinland-saga">Vinland Saga</option>
-                        <option value="demon-slayer">Demon Slayer</option>
-                        </datalist>
-                    </label>
-                    <label>
-                        Season number
-                        <input type="number" id="season-inp" placeholder="Series number">
-                    </label>
-                    <span class="create-btn">Create Season</span>
-                </div>
+            
             </div>
         </article>
     </div>

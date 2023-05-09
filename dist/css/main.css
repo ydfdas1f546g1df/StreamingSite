@@ -946,7 +946,7 @@ footer .copyright a:hover {
   align-items: flex-start;
   margin-top: 20px;
 }
-.admin-main #admin-main-div article label input, .admin-main #admin-main-div article label select, .admin-main #admin-main-div article label option {
+.admin-main #admin-main-div article label input, .admin-main #admin-main-div article label select, .admin-main #admin-main-div article label option, .admin-main #admin-main-div article label textarea {
   height: 30px;
   width: 200px;
   border-radius: 5px;
@@ -956,14 +956,14 @@ footer .copyright a:hover {
   border-color: transparent transparent black transparent;
   color: white;
 }
-.admin-main #admin-main-div article label input:focus-visible, .admin-main #admin-main-div article label select:focus-visible, .admin-main #admin-main-div article label option:focus-visible {
+.admin-main #admin-main-div article label input:focus-visible, .admin-main #admin-main-div article label select:focus-visible, .admin-main #admin-main-div article label option:focus-visible, .admin-main #admin-main-div article label textarea:focus-visible {
   outline: none;
   border-bottom: rgb(255, 100, 16) solid 2px;
 }
-.admin-main #admin-main-div article label input::-moz-placeholder, .admin-main #admin-main-div article label select::-moz-placeholder, .admin-main #admin-main-div article label option::-moz-placeholder {
+.admin-main #admin-main-div article label input::-moz-placeholder, .admin-main #admin-main-div article label select::-moz-placeholder, .admin-main #admin-main-div article label option::-moz-placeholder, .admin-main #admin-main-div article label textarea::-moz-placeholder {
   color: rgba(255, 255, 255, 0.51);
 }
-.admin-main #admin-main-div article label input::placeholder, .admin-main #admin-main-div article label select::placeholder, .admin-main #admin-main-div article label option::placeholder {
+.admin-main #admin-main-div article label input::placeholder, .admin-main #admin-main-div article label select::placeholder, .admin-main #admin-main-div article label option::placeholder, .admin-main #admin-main-div article label textarea::placeholder {
   color: rgba(255, 255, 255, 0.51);
 }
 .admin-main #admin-main-div article.user-article .user {
@@ -1059,7 +1059,7 @@ footer .copyright a:hover {
 }
 .admin-main #admin-main-div article.upload-article .link-div {
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .admin-main #admin-main-div article.upload-article .link-div div {
   display: flex;
@@ -1172,6 +1172,25 @@ footer .copyright a:hover {
   color: rgba(255, 255, 255, 0.51);
 }
 #upload-main input[type=text]::placeholder, #upload-main input[type=number]::placeholder, #upload-main input[list]::placeholder {
+  color: rgba(255, 255, 255, 0.51);
+}
+#upload-main textarea {
+  border-radius: 5px;
+  background: none;
+  box-shadow: none;
+  outline: none;
+  border-width: 2px;
+  border-color: rgb(84, 84, 84);
+  color: white;
+}
+#upload-main textarea:focus-visible {
+  outline: none;
+  border: rgb(255, 100, 16) solid 2px;
+}
+#upload-main textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.51);
+}
+#upload-main textarea::placeholder {
   color: rgba(255, 255, 255, 0.51);
 }
 #upload-main .upload-form {

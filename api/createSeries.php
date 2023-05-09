@@ -2,54 +2,73 @@
 /**
  * @var mysqli $mysqli
  */
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $series_name = $_POST['series_name'] ?? '';
+    $token = $_POST['token'] ?? '';
+    $series_showName = $series_name;
+    $series_name = str_replace(strtolower($series_name), " ", "-");
+}
 
-
-$data = json_decode($_POST['myData']);
-$series = $data->series;
-$token = $data->token;
-$season = $data->season;
-//if (!isset($desc)) {
-//$desc
-//}
 
 include_once(explode("StreamingSite", __DIR__)[0] . 'StreamingSite/api/db_connect.php');
 if (strlen($token) == 30) {
 
-    if (strlen($token) == 30) {
-        $stmt = $mysqli->prepare('SELECT * from tbl_users as us inner join tbl_apitoken ta on us.id = ta.user WHERE ta.id = ? and us.admin = 1');
-        $stmt->bind_param('s', $token);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $resultsArray = array();
-        while ($row = mysqli_fetch_assoc($result)) {
-            $resultsArray[] = $row;
-        }
-//        echo '<pre>'; print_r($resultsArray); echo '</pre>';
-        if (isset($resultsArray[0])) {
-                $stmt = $mysqli->prepare('insert into tbl_season (series, season) value ((Select tbl_series.id from tbl_series where name = ?),?)');
-                $stmt->bind_param('ss', $name, $season);
+    $stmt = $mysqli->prepare('SELECT admin FROM tbl_users as tu inner join tbl_apitoken at on tu.id = at.user where at.id = ?');
+    $stmt->bind_param('s', $token);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    $verifyResultsArray = array();
+
+    while ($row = mysqli_fetch_assoc($result)) {
+        $verifyResultsArray[] = $row;
+    }
+    if ($verifyResultsArray[0]["admin"] == 1) {
+
+
+        $upload_destination = explode("StreamingSite", __DIR__)[0] . 'StreamingSite/data/cover/';
+        $allowedExts = array("jpg", "png");
+        $extension = pathinfo($_FILES['files']['name'], PATHINFO_EXTENSION);
+        $newFilename = $series_name . "." . $extension; // Change this line to set the new filename
+        $file = $upload_destination . $newFilename;
+
+        if ((($_FILES["files"]["type"] == "image/jpg") || ($_FILES["files"]["type"] == "image/png")) && in_array($extension, $allowedExts)) {
+
+            $stmt = $mysqli->prepare('SELECT * FROM tbl_series ts where name = ?');
+            $stmt->bind_param('s', $series_name);
+            $stmt->execute();
+            $result = $stmt->get_result();
+
+            $resultsArray = array();
+
+            while ($row = mysqli_fetch_assoc($result)) {
+                $resultsArray[] = $row;
+            }
+
+            if (isset($resultsArray[0]["name"])) {
+
+                $stmt = $mysqli->prepare('insert into tbl_series (name, showName, description) VALUE (?,?,?)');
+                $stmt->bind_param('s', $series_name, $series_showName, );
                 $stmt->execute();
-                $result = $stmt->get_result();
 
-                if (json_encode($result) != true) {
-                    $error = true;
-                }
-
-                if (!isset($error)) {
-                    echo 200;
+                if ($_FILES["files"]["error"] > 0) {
+                    echo "Return Code: " . $_FILES["files"]["error"] . "<br />";
                 } else {
-                    echo 400;
+                    echo "Upload Completed! <br> Size: " . round(($_FILES["files"]["size"] / 1024 / 1024), 2) . " MB<br />";
+                    move_uploaded_file($_FILES["files"]["tmp_name"], $file);
                 }
-//                http_response_code(200);
+            } else {
+                echo "Serverside Error 503";
+            }
+
         } else {
-            echo 401;
-//            http_response_code(401);
+            echo "Invalid file, only mp4";
         }
+
     } else {
-        echo 400;
-//        http_response_code(400);
+        http_response_code(401);
     }
 } else {
-    echo 400;
-//    http_response_code(400);
+    echo $token;
+    http_response_code(400);
 }

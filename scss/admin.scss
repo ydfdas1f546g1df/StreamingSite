@@ -46,7 +46,7 @@ $aside-width: 220px;
         align-items: flex-start;
         margin-top: 20px;
 
-        input, select, option {
+        input, select, option, textarea {
           height: 30px;
           width: 200px;
           border-radius: 5px;
@@ -55,6 +55,7 @@ $aside-width: 220px;
           outline: none;
           border-color: transparent transparent black transparent;
           color: white;
+
 
           &:focus-visible {
             outline: none;
@@ -190,7 +191,7 @@ $aside-width: 220px;
       &.upload-article {
         .link-div {
           display: grid;
-          grid-template-columns: 1fr 2fr 2fr;
+          grid-template-columns: 1fr 1fr 1fr;
 
           div {
             display: flex;
@@ -328,6 +329,25 @@ $aside-width: 220px;
     }
   }
 
+  textarea {
+    border-radius: 5px;
+    background: none;
+    box-shadow: none;
+    outline: none;
+    border-width: 2px;
+    border-color:  rgb(84, 84, 84) ;
+    color: white;
+
+    &:focus-visible {
+      outline: none;
+      border: $orange solid 2px;
+    }
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.51);
+    }
+  }
+
   .upload-form {
     display: flex;
     max-width: 350px;
@@ -336,6 +356,7 @@ $aside-width: 220px;
     margin: 100px auto 15px auto;
     background-color: rgb(28, 28, 28);
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+
     .result {
       color: white;
       font-weight: bold;
