@@ -16,5 +16,5 @@ if (isset($cookie)) {
 } else {
     $Page = $notLoggedInHeader;
 }
-$Page = $Page . $streamTopMain . $footer;
+$Page = $Page . $streamTopMain . $streamSelect . $footer;
 echo $Page;

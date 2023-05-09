@@ -5,8 +5,9 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $series_name = $_POST['series_name'] ?? '';
     $token = $_POST['token'] ?? '';
+    $desc = $_POST['desc'] ?? '';
     $series_showName = $series_name;
-    $series_name = str_replace(strtolower($series_name), " ", "-");
+    $series_name = strtolower(str_replace(" ", "-", $series_showName,));
 }
 
 
@@ -31,8 +32,7 @@ if (strlen($token) == 30) {
         $extension = pathinfo($_FILES['files']['name'], PATHINFO_EXTENSION);
         $newFilename = $series_name . "." . $extension; // Change this line to set the new filename
         $file = $upload_destination . $newFilename;
-
-        if ((($_FILES["files"]["type"] == "image/jpg") || ($_FILES["files"]["type"] == "image/png")) && in_array($extension, $allowedExts)) {
+        if ((($_FILES["files"]["type"] == "image/jpeg") || ($_FILES["files"]["type"] == "image/png")) && in_array($extension, $allowedExts)) {
 
             $stmt = $mysqli->prepare('SELECT * FROM tbl_series ts where name = ?');
             $stmt->bind_param('s', $series_name);
@@ -45,10 +45,10 @@ if (strlen($token) == 30) {
                 $resultsArray[] = $row;
             }
 
-            if (isset($resultsArray[0]["name"])) {
+            if (!isset($resultsArray[0]["name"])) {
 
                 $stmt = $mysqli->prepare('insert into tbl_series (name, showName, description) VALUE (?,?,?)');
-                $stmt->bind_param('s', $series_name, $series_showName, );
+                $stmt->bind_param('sss', $series_name, $series_showName, $desc);
                 $stmt->execute();
 
                 if ($_FILES["files"]["error"] > 0) {
@@ -62,13 +62,12 @@ if (strlen($token) == 30) {
             }
 
         } else {
-            echo "Invalid file, only mp4";
+            echo "Invalid file, only jpg/png";
         }
-
     } else {
         http_response_code(401);
     }
 } else {
-    echo $token;
+    echo "Not Authorized";
     http_response_code(400);
 }

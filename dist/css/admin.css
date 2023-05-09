@@ -369,3 +369,9 @@
 #upload-main .upload-form .result {
   padding-top: 15px;
 }
+
+#image-preview {
+  border-radius: 5px;
+  display: none;
+  align-self: center;
+}

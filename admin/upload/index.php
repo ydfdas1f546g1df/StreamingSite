@@ -27,14 +27,6 @@ $mainContent = '
                 <div>
                     <a href="/admin/upload/createSeries.php" class="create-btn">Create Series</a>
                 </div>   
-                <div>
-                    <label>
-                        Series Name
-                        <input type="text" id="series-inp" placeholder="Series Name">
-                    </label>
-                    <span class="create-btn">Create Series</span>
-                </div>
-            
             </div>
         </article>
     </div>

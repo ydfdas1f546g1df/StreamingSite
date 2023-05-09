@@ -54,8 +54,32 @@ $(function () {
                     $("#watchlit").attr("status", 1)
                     statusNth = 1
                 }
+
                 // console.log(JSONData)
+                function setLocation () {
+                    const url = window.location.href
+                    const seriesSelect = url.split("stream/")[1].split("/")[0]
+                    const seasonSelect = url.split("stream/")[1].split("/")[1]
+                    const episodeSelect = url.split("stream/")[1].split("/")[2]
+                    let seriesShowName = $("#SeriesName").text()
+                    let episodNum = episode.split("-")[1]
+                    let seasonNum = season.split("-")[1]
+                    let location = "<a href='/' class='location-el'>Home</a><strong>&nbsp;<i class=\"fa-solid fa-chevron-right\"></i>&nbsp;</strong><a href='/pages/allseries' class='location-el'>Stream</a> "
+
+                    if (seriesSelect.length > 0) {
+                        location += "<strong>&nbsp;<i class=\"fa-solid fa-chevron-right\"></i>&nbsp;</strong><a href='/stream/" + seriesSelect + "' class='location-el'>" + JSONData.showName + "</a>"
+                        if (seasonSelect.length > 0) {
+                            location += "<strong>&nbsp;<i class=\"fa-solid fa-chevron-right\"></i>&nbsp;</strong><a href='/stream/" + seriesSelect + "/" + seasonSelect + "' class='location-el'>Season " + seasonNum + "</a>"
+                            if (episodeSelect.length > 0) {
+                                location += "<strong>&nbsp;<i class=\"fa-solid fa-chevron-right\"></i>&nbsp;</strong><a href='/stream/" + seriesSelect + "/" + seasonSelect + "/" + episodeSelect + "' class='location-el'> Episode " + episodNum + "</a>"
+                            }
+                        }
+                    }
+                    $("#location").append(location)
+                }
+                setLocation()
             }
+
         });
     }
 
@@ -83,6 +107,7 @@ $(function () {
                             el.attr("class", "watchlist-add isInWatchlist").attr("status", 1)
                             // console.log("to 1")
                         }
+
                         async function toWatchlist() {
 
                             let token;
@@ -127,9 +152,10 @@ $(function () {
                                 }
                             });
                         }
+
                         toWatchlist()
                     },
-                    share () {
+                    share() {
 
                     }
                 }

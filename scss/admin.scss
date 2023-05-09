@@ -335,7 +335,7 @@ $aside-width: 220px;
     box-shadow: none;
     outline: none;
     border-width: 2px;
-    border-color:  rgb(84, 84, 84) ;
+    border-color: rgb(84, 84, 84);
     color: white;
 
     &:focus-visible {
@@ -463,6 +463,12 @@ $aside-width: 220px;
   .upload-form .result {
     padding-top: 15px;
   }
+}
+
+#image-preview {
+  border-radius: 5px;
+  display: none;
+  align-self: center
 }
 
 

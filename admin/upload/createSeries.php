@@ -40,15 +40,16 @@
 
 $mainContent = '
 <main id="upload-main">
-    <form class="upload-form" method="post" enctype="multipart/form-data" action="/api/uploadFile.php">
+    <form class="upload-form" method="post" enctype="multipart/form-data" action="/api/createSeries.php">
         <h1>Upload Form</h1>
+        <img id="image-preview" src="#" alt="Image preview" height="255px" width="150px">
         <label for="files"><i class="fa-solid fa-image fa-2x"></i>Select Cover ...</label>
         <input id="files" type="file" name="files">
         <label for="series_name"><span>Series Name</span>
         <input type="text" name="series_name" id="series_name" required autocomplete="off" autofocus ><br><br>
         </label>
         <label for="series_name"><span>Description</span>
-        <textarea name="series_name" id="series_name" style="resize:none" cols="30" rows="10"  required autocomplete="off"></textarea><br><br>
+        <textarea name="series_name" id="series_desc" style="resize:none" cols="30" rows="10" autocomplete="off"></textarea><br><br>
         </label>
         <div class="progress"></div>
         <button type="submit">Create Series</button>

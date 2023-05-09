@@ -41,7 +41,7 @@ if (isset($token)) {
         } else {
             $login = false;
 
-            http_response_code(404);
+//            http_response_code(404);
 //            echo 'user not found';
             $name = "name1";
             $username = "Username";
@@ -50,11 +50,11 @@ if (isset($token)) {
     } else {
         $name = "name2";
         $username = "Username";
-        http_response_code(418);
+//        http_response_code(418);
 //        echo "I'm a Teapot";
     }
 } else {
     $name = "name3";
     $username = "Username";
-    http_response_code(401);
+//    http_response_code(401);
 }

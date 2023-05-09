@@ -4,6 +4,7 @@ $("input[required], textarea[required]").each(function () {
 const cookies = document.cookie.split(';');
 
 let token
+
 function getCookie() {
     // console.log(cookies)
     for (let i = 0; i < cookies.length; i++) {
@@ -33,6 +34,7 @@ uploadForm.onsubmit = event => {
     event.preventDefault();
     let seriesInput = $("#series_name")
     let descInput = $("#series_desc")
+    console.log(descInput.val())
     // Make sure files are selected
     if (!filesInput.files.length) {
         uploadForm.querySelector('.result').innerHTML = 'Please select a file!';
@@ -72,9 +74,28 @@ uploadForm.onsubmit = event => {
         // Set form data values
         uploadFormData.set('series_name', seriesInput.val());
         uploadFormData.set('token', token);
+        uploadFormData.set('desc', descInput.val());
 
         // Execute request
         request.send(uploadFormData);
     }
 };
+
+
+const fileInput = document.getElementById('files');
+const imagePreview = document.getElementById('image-preview');
+
+fileInput.addEventListener('change', function () {
+    const file = fileInput.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.addEventListener('load', function () {
+            imagePreview.src = reader.result;
+            $(imagePreview).attr("style", "display: flex;")
+        });
+        reader.readAsDataURL(file);
+    } else {
+        imagePreview.src = '#';
+    }
+});
 

@@ -1297,6 +1297,12 @@ footer .copyright a:hover {
   padding-top: 15px;
 }
 
+#image-preview {
+  border-radius: 5px;
+  display: none;
+  align-self: center;
+}
+
 main.errorpage {
   display: flex;
   align-items: center;
@@ -1937,13 +1943,15 @@ main.account-main .page-title {
 #stream-main {
   color: white;
 }
-#stream-main .stream-banner {
-  margin: 50px 0;
+#stream-main > div {
   padding: 20px;
+  border-radius: 5px;
+}
+#stream-main .stream-banner {
+  margin: 50px 0 30px 0;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   background: rgb(28, 28, 28);
-  border-radius: 5px;
 }
 #stream-main .stream-banner > div {
   margin: 10px;
@@ -2021,6 +2029,37 @@ main.account-main .page-title {
 }
 #stream-main .stream-banner > div:last-child div span i {
   margin-left: 10px;
+}
+#stream-main .stream-media {
+  padding: 50px;
+  background: rgb(28, 28, 28);
+  margin-bottom: 200px;
+}
+#stream-main .stream-media #media-player {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+#stream-main .stream-select #location {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+#stream-main .stream-select #location strong {
+  color: #636363;
+  font-weight: bold !important;
+  font-size: 14px;
+}
+#stream-main .stream-select #location .location-el {
+  color: white;
+}
+#stream-main .stream-select #location .location-el:hover {
+  color: rgb(255, 100, 16);
+}
+#stream-main .stream-select #location .location-el:last-child {
+  color: rgb(255, 100, 16);
+}
+#stream-main .stream-select #location .location-el:last-child:hover {
+  color: white;
 }
 
 input[type=number] {
