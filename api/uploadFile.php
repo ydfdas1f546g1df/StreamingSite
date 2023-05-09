@@ -8,6 +8,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $episode_number = $_POST['episode_number'] ?? '';
     $episode_name = $_POST['episode_name'] ?? '';
     $token = $_POST['token'] ?? '';
+    $lang = "de";
+    $genre = 1;
 }
 
 
@@ -66,37 +68,42 @@ if (strlen($token) == 30) {
                 }
 
                 if (!isset($resultsArray[0])) {
-                    $stmt = $mysqli->prepare('insert into tbl_season (series, season) value (
-    (SELECT ts2.id from tbl_series as ts2
-                inner join tbl_season t on ts2.id = t.series
-                                           where ts2.name = ?),?
-)
-                ');
+                    $stmt = $mysqli->prepare('insert into tbl_season (series, season) 
+                        value ((SELECT ts2.id from tbl_series as ts2 where ts2.name = ?),
+                               ?)
+                               ');
                     $stmt->bind_param('si', $series_name, $season_number);
                     $stmt->execute();
                     $result = $stmt->get_result();
-
-                    $resultsArray = array();
-
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        $resultsArray[] = $row;
-                    }
-
                 }
+//                echo json_encode($result);
+//                $resultsArray = array();
 
+//                while ($row = mysqli_fetch_assoc($result)) {
+//                    $resultsArray[] = $row;
+//                }
 
-                if ($_FILES["files"]["error"] > 0) {
-                    echo "Return Code: " . $_FILES["files"]["error"] . "<br />";
+                $stmt = $mysqli->prepare('insert into tbl_episode (episode, name, language, genre, season) 
+                        value (?,?,?,?,(Select tbl_season.id from tbl_season
+                                                  inner join tbl_series ts on tbl_season.series = ts.id
+                                                             where ts.name = ? and tbl_season.season = ?))
+                               ');
+                $stmt->bind_param('issisi', $episode_number, $episode_name, $lang, $genre, $series_name, $season_number);
+                $stmt->execute();
+                $result = $stmt->get_result();
+                if (!$result) {
+                    if ($_FILES["files"]["error"] > 0) {
+                        echo "Return Code: " . $_FILES["files"]["error"] . "<br />";
+                    } else {
+                        echo "Upload Completed! <br> Size: " . round(($_FILES["files"]["size"] / 1024 / 1024), 2) . " MB<br />";
+                        move_uploaded_file($_FILES["files"]["tmp_name"], $file);
+                    }
                 } else {
-                    echo "Size: " . round(($_FILES["files"]["size"] / 1024 / 1024), 2) . " MB<br />";
-                    move_uploaded_file($_FILES["files"]["tmp_name"], $file);
-
-
+                    echo "Serverside Error 503";
                 }
             }
-
         } else {
-            echo "Invalid file";
+            echo "Invalid file, only mp4";
         }
 
     } else {

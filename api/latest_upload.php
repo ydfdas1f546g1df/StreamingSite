@@ -16,7 +16,7 @@ $stmt = $mysqli->prepare('SELECT  t.showName, t.name, te.episode, ts.season,  te
 FROM tbl_episode AS te
 inner join tbl_season ts on te.season = ts.id
 inner join tbl_series t on ts.series = t.id
-order by upload
+order by upload desc 
 ');
 //$stmt->bind_param('s', $series_name);
 
