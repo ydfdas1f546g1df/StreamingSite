@@ -2043,6 +2043,7 @@ main.account-main .page-title {
   display: flex;
   align-items: center;
   font-size: 18px;
+  margin-bottom: 10px;
 }
 #stream-main .stream-select #location strong {
   color: #636363;
@@ -2060,6 +2061,47 @@ main.account-main .page-title {
 }
 #stream-main .stream-select #location .location-el:last-child:hover {
   color: white;
+}
+#stream-main .stream-select .select {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#stream-main .stream-select .select .episode, #stream-main .stream-select .select .season {
+  display: flex;
+  justify-content: flex-start;
+  margin: 5px;
+}
+#stream-main .stream-select .select .episode .select-el, #stream-main .stream-select .select .season .select-el {
+  font-size: 20px;
+  height: 30px;
+  color: black;
+  background: white;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#stream-main .stream-select .select .episode .select-el.current, #stream-main .stream-select .select .season .select-el.current {
+  background: rgb(255, 100, 16);
+  color: white;
+}
+#stream-main .stream-select .select .episode .select-el.select-title, #stream-main .stream-select .select .season .select-el.select-title {
+  font-weight: bold;
+}
+#stream-main .stream-select .select .episode .select-el.select-select, #stream-main .stream-select .select .season .select-el.select-select {
+  aspect-ratio: 1/1;
+}
+#stream-main .stream-select .select .episode .select-el.select-select:hover, #stream-main .stream-select .select .season .select-el.select-select:hover {
+  background: rgb(255, 100, 16);
+  color: white;
+}
+#stream-main .stream-select #series-title {
+  font-size: 20px;
+  margin-top: 20px;
+}
+#stream-main .stream-select #episode-title {
+  font-size: 36px;
 }
 
 input[type=number] {

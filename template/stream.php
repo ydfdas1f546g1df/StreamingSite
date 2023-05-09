@@ -30,16 +30,18 @@ $streamSelect = '
 
 <div class="stream-select">
     <div id="location"></div>
-    <div class="Select">
+    <div class="select">
         <div class="season">
-            <span class="select-el">Season:</span>
-            <a href="/">1</a>
+            <span class="select-el select-title">Season:</span>
+            <a href="/" class="select-el select-episode select-select">1</a>
         </div>
-    </div>
     <div class="episode">
-        <span class="select-el">Episode:</span>
-        <a href="/">1</a>
+        <span class="select-el select-title">Episode:</span>
+        <a href="/" class="select-el select-season select-select">1</a>
     </div>
+    </div>
+    <div id="series-title"></div>
+    <div id="episode-title"></div>
 </div>
 </div>
 ';
