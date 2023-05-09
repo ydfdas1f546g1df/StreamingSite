@@ -336,6 +336,10 @@ $aside-width: 220px;
     margin: 100px auto 15px auto;
     background-color: rgb(28, 28, 28);
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+    .result {
+      color: white;
+      font-weight: bold;
+    }
   }
 
   .upload-form h1 {

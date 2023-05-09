@@ -44,21 +44,20 @@ $mainContent = '
         <h1>Upload Form</h1>
         <label for="files"><i class="fa-solid fa-folder-open fa-2x"></i>Select files ...</label>
         <input id="files" type="file" name="files">
-        <label for="series_name"><span>Series Name</span>
-            <input list="series-list" name="series_name" required>
+        <label for="series_name" id="series"><span>Series Name</span>
+            <input list="series-list" name="series_name" id="series_name" required>
             <datalist id="series-list">
-                <option value="vinland-saga">Vinland Saga</option>
-                <option value="demon-slayer">Demon Slayer</option>
+                <option v-for="s in series" :value="s.name">{{s.showName}}</option>
             </datalist>
         </label>
         <label for="episode_name"> <span>Episode Name</span>
-        <input type="text" name="episode_name" id="episode_name" required><br><br>
+        <input type="text" name="episode_name" id="episode_name" required autocomplete="off"><br><br>
         </label>
         <label for="season_number"> <span>Season</span>
-        <input type="number" name="season_number" id="season_number" required><br><br>
+        <input type="number" name="season_number" id="season_number" required autocomplete="off"><br><br>
         </label>
         <label for="episode_number"> <span>Episode</span>
-        <input type="number" name="episode_number" id="episode_number" required><br><br>
+        <input type="number" name="episode_number" id="episode_number" required autocomplete="off"><br><br>
         </label>
         <div class="progress"></div>
         <button type="submit">Upload</button>
