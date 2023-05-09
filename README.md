@@ -8,9 +8,9 @@ $ npm install
 ```bash
 $ npm run dev
 ```
-### Link SCSS
+### Link CSS
 ```html
-<link rel="stylesheet/less" type="text/css" href="styles.css" /> 
+<link rel="stylesheet/less" type="text/css" href="/dist/css/main.css"/>
 ```
 
 
@@ -28,7 +28,6 @@ $ npm run dev
 @import url('https://use.fontawesome.com/releases/v6.1.2/css/all.css');
 
 @import url('https://css.gg/css');
-
 ```
 ### Symbol Country Flags
 <a href="https://github.com/lipis/flag-icons/tree/29edfe0288970b77976024832f1f3cf0a8667357">Link Github</a>

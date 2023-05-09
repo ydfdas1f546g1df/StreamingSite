@@ -13,8 +13,20 @@
         <h1>Upload Form</h1>
 
         <label for="files"><i class="fa-solid fa-folder-open fa-2x"></i>Select files ...</label>
-        <input id="files" type="file" name="files[]" multiple>
-
+        <input id="files" type="file" name="files">
+        <label for="series_name"><span>Series Name</span>
+            <input list="series-list" placeholder="series" name="series_name">
+            <datalist id="series-list">
+                <option value="vinland-saga">Vinland Saga</option>
+                <option value="demon-slayer">Demon Slayer</option>
+            </datalist>
+        </label>
+        <label for="episode_name">Episode Name</label>
+        <input type="text" name="episode_name" id="episode_name" required><br><br>
+        <label for="season_number">Season</label>
+        <input type="number" name="season_number" id="season_number" required><br><br>
+        <label for="episode_number">Episode</label>
+        <input type="number" name="episode_number" id="episode_number" required><br><br>
         <div class="progress"></div>
 
         <button type="submit">Upload</button>
@@ -26,6 +38,11 @@
         // Declare global variables for easy access
         const uploadForm = document.querySelector('.upload-form');
         const filesInput = uploadForm.querySelector('#files');
+        const seriesInput = uploadForm.querySelector('[name="series_name"]');
+        const seasonInput = uploadForm.querySelector('#season_number');
+        const episodeInput = uploadForm.querySelector('#episode_number');
+        const episodeNameInput = uploadForm.querySelector('#episode_name');
+
         filesInput.onchange = () => {
             // Append all the file names to the label
             uploadForm.querySelector('label').innerHTML = '';
@@ -33,6 +50,7 @@
                 uploadForm.querySelector('label').innerHTML += '<span><i class="fa-solid fa-file"></i>' + filesInput.files[i].name + '</span>';
             }
         };
+
         uploadForm.onsubmit = event => {
             event.preventDefault();
             // Make sure files are selected
@@ -40,7 +58,7 @@
                 uploadForm.querySelector('.result').innerHTML = 'Please select a file!';
             } else {
                 // Create the form object
-                let uploadFormDate = new FormData(uploadForm);
+                let uploadFormData = new FormData(uploadForm);
                 // Initiate the AJAX request
                 let request = new XMLHttpRequest();
                 // Ensure the request method is POST
@@ -54,16 +72,30 @@
                     // Disable the submit button
                     uploadForm.querySelector('button').disabled = true;
                 });
-
                 // The following code will execute when the request is complete
                 request.onreadystatechange = () => {
                     if (request.readyState === 4 && request.status === 200) {
                         // Output the response message
                         uploadForm.querySelector('.result').innerHTML = request.responseText;
+                        // Reset the form fields
+                        uploadForm.reset();
+                        // Reset the file input label
+                        uploadForm.querySelector('label').innerHTML = '<i class="fa-solid fa-folder-open fa-2x"></i>Select files ...';
+                        // Reset the progress bar
+                        uploadForm.querySelector('.progress').style.background = '';
+                        // Reset the button
+                        uploadForm.querySelector('button').innerHTML = 'Upload';
+                        // Enable the submit button
+                        uploadForm.querySelector('button').disabled = false;
                     }
                 };
+                // Set form data values
+                uploadFormData.set('series_name', seriesInput.value);
+                uploadFormData.set('season_number', seasonInput.value);
+                uploadFormData.set('episode_number', episodeInput.value);
+                uploadFormData.set('episode_name', episodeNameInput.value);
                 // Execute request
-                request.send(uploadFormDate);
+                request.send(uploadFormData);
             }
         };
     </script>

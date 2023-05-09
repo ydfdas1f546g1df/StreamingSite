@@ -1,46 +1,36 @@
-<script src="https://unpkg.com/vue@next"></script>
-<div id="app">
-    <div class="search-wrapper panel-heading col-sm-12">
-        <input type="text" v-model="search" placeholder="Search" /> <br> <br>
-    </div>
-    <table class="table" id="myTable">
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr v-for="product in filteredProducts" :key="product.id">
-            <td>{{ product.id }}</td>
-            <td>{{ product.name }}</td>
-        </tr>
-        </tbody>
-    </table>
-</div>
-<script>
-    Vue.createApp({
-        data() {
-            return {
-                users: [
-                    {id: 1, name: "Foo"},
-                    {id: 2, name: "Bar"},
-                    {id: 3, name: "Baz"},
-                    {id: 4, name: "Foobar"}
-                ],
-                search: ""
-            };
-        },
-        computed: {
-            filteredProducts() {
-                return this.users.filter(p => {
-                    // return true if the product should be visible
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select2 with search</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0/css/select2.min.css"
+          integrity="sha512-PGz6/QPweNpAWzNx7ZCf24JGDb8nTTqUy/6fTY9Xc4v4sajmWb1axGZYZvpzlmEznS8BRDzBUpMh9P9oRH6bRg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+<h1>Select2 with search</h1>
+<select id="my-select" style="width: 300px;">
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+    <option value="3">Option 3</option>
+    <option value="4">Option 4</option>
+    <option value="5">Option 5</option>
+    <option value="6">Option 6</option>
+    <option value="7">Option 7</option>
+    <option value="8">Option 8</option>
+    <option value="9">Option 9</option>
+    <option value="10">Option 10</option>
+</select>
 
-                    // in this example we just check if the search string
-                    // is a substring of the product name (case insensitive)
-                    return p.name.toLowerCase().indexOf(this.search.toLowerCase()) != -1;
-                });
-            }
-        }
-    }).mount('#app');
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0/js/select2.min.js"
+        integrity="sha512-jPrO8FbIyz0y9+KT1FJfD0oq3LlQwtrj+BBFTULJ1VDc0CrjKNy+9acMkgvITQswFKfg8g+6Uf0CkPniKYTbJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).ready(function () {
+        $('#my-select').select2();
+    });
 </script>
+</body>
+</html>

@@ -22,7 +22,8 @@ $header_1 = '<!DOCTYPE html>
     <link href="/dist/css/main.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
     <script src="/jsLibs/vue.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/jsLibs/jquery-3.3.1.min.js"></script>
+   
 </head>
 <body>
 <header>
