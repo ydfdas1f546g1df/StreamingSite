@@ -38,21 +38,25 @@ $(function () {
                 // console.log(res)
                 let ResJSON = JSON.parse(res);
                 console.log(ResJSON)
+                if (ResJSON.length > 0) {
 
-                JSONData = {
-                    name: ResJSON[0].name,
-                    showName: ResJSON[0].showName,
-                    desc: ResJSON[0].description,
-                    watchlist: ResJSON[0].watchlist,
-                    OW: ResJSON[0].onWatchlist,
-                    watched: ResJSON[0].watched,
-                    reg: ResJSON[0].regisseur,
-                    lang: ResJSON[0].language,
-                }
-                if (JSONData.OW == 1) {
-                    JSONData.OW = "isInWatchlist"
-                    $("#watchlit").attr("status", 1)
-                    statusNth = 1
+                    JSONData = {
+                        name: ResJSON[0].name,
+                        showName: ResJSON[0].showName,
+                        desc: ResJSON[0].description,
+                        watchlist: ResJSON[0].watchlist,
+                        OW: ResJSON[0].onWatchlist,
+                        watched: ResJSON[0].watched,
+                        reg: ResJSON[0].regisseur,
+                        lang: ResJSON[0].language,
+                    }
+                    if (JSONData.OW == 1) {
+                        JSONData.OW = "isInWatchlist"
+                        $("#watchlit").attr("status", 1)
+                        statusNth = 1
+                    }
+                } else  {
+                    window.location.replace(window.location.origin + "/error/404.php")
                 }
 
                 // console.log(JSONData)
@@ -137,6 +141,8 @@ $(function () {
                                     allSeasons += "\">" + ResJSON[0][i].season + "</a>"
                                     $("#seasons").append(allSeasons)
                                 }
+                            } else {
+
                             }
                             if (ResJSON[1].length > 0) {
                                 for (let i = 0; i < ResJSON[1].length; i++) {
