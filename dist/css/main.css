@@ -2037,7 +2037,9 @@ main.account-main .page-title {
 }
 #stream-main .stream-media #media-player {
   width: 100%;
-  aspect-ratio: 16/9;
+  background: black;
+  border-radius: 5px;
+  aspect-ratio: 16/10;
 }
 #stream-main .stream-select #location {
   display: flex;

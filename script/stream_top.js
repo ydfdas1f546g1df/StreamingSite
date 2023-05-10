@@ -130,11 +130,11 @@ $(function () {
                             if (status == 1) {
                                 file = "/api/remove_watchlist.php"
                                 el.attr("class", "watchlist-add").attr("status", 0)
-                                // console.log("to 0")
+                                console.log("to 0")
                             } else {
                                 file = "/api/add_watchlist.php"
                                 el.attr("class", "watchlist-add isInWatchlist").attr("status", 1)
-                                // console.log("to 1")
+                                console.log("to 1")
                             }
 
                             async function toWatchlist() {
@@ -181,10 +181,8 @@ $(function () {
                                     }
                                 });
                             }
+                            toWatchlist()
                         },
-                        addToWatchlist() {
-
-                        }
                     }
                 }).mount("#stream-banner");
             }
@@ -369,6 +367,24 @@ $(function () {
                 }
             }).mount("#stream-season")
         })
+        // $("#watchNow").on("click", function (e) {
+        //     console.log(1)
+        //     if (this.hash !== "") {
+        //         // Prevent default anchor click behavior
+        //         e.preventDefault();
+        //
+        //         // Store hash
+        //         let hash = "watch-now";
+        //
+        //         // Using jQuery's animate() method to add smooth page scroll
+        //         // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        //         $('html, body').animate({
+        //             scrollTop: $(hash).offset().top
+        //         }, 800, function () {
+        //
+        //         });
+        //     }
+        // });
     }
 )
 

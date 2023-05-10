@@ -17,7 +17,7 @@ $streamTopMain = '
     </div>
     <div class="watchlist-column">
         <div>
-            <a href="#watch-now">Watch now</a>
+            <a id="watchNow">Watch now</a>
             <span :class="\'watchlist-add \' + series.OW" :title="\'Add \' + series.showName + \' to your your watchlist, now.\'" :status="onWatchlist" id="watchlist" @click="watchlist"><i class="fa-solid fa-list-ul"></i> Watchlist</span>
             <span class="share"><i class="fa-solid fa-share-from-square"></i> Share</span>
         </div>
@@ -36,11 +36,11 @@ $streamSelect = '
         <span class="select-el select-title">Episode:</span>
     </div>
     </div>
+<i id="watch-now"></i>
     <div id="series-title"></div>
     <div id="episode-title"></div>
 </div>
 </div>
-<i id="watch-now"></i>
 ';
 
 
