@@ -13,13 +13,7 @@ if (isset($_POST['myData'])) {
     $season_num = $data->season;
     $episode_num = $data->episode;
     $what = $data->what;
-//    $episode_id = $data->episode_id;
     $token = $data->token;
-
-//    echo $series_name;
-//    echo $season_num;
-//    echo $episode_num;
-//    echo $token;
 }
 
 include_once(explode("StreamingSite", __DIR__)[0] . 'StreamingSite/api/db_connect.php');
@@ -43,7 +37,9 @@ while ($row = mysqli_fetch_assoc($result)) {
     $ResultsArray[] = $row;
 }
 //echo json_encode($ResultsArray);
-
+//echo !isset($ResultsArray[0]["user"]);
+//echo "yes: ".$what == 1;
+//echo "what " .$what;
 if (!isset($ResultsArray[0]["user"]) && $what == 1) {
 
     $stmt = $mysqli->prepare('
@@ -66,16 +62,16 @@ if (!isset($ResultsArray[0]["user"]) && $what == 1) {
 //    }
     echo 200;
 //    echo json_encode($result);
-} else if(isset($ResultsArray[0]["user"]) && $what == 0) {
+} else if(isset($ResultsArray[0]["user"]) && $what == 2) {
     $stmt = $mysqli->prepare('
-    delete from tbl_watched where episode = (select user from tbl_apitoken where id = ?) and user = (select te.id from tbl_series as ts
+    delete from tbl_watched where user = (select user from tbl_apitoken where id = ?) and episode = (select te.id from tbl_series as ts
                   inner join tbl_season t on ts.id = t.series
                   inner join tbl_episode te on t.id = te.season
                   where te.episode = ? and t.season = ? and ts.name = ? limit 1)');
     $stmt->bind_param('siis', $token, $episode_num, $season_num, $series_name);
     $stmt->execute();
     $result = $stmt->get_result();
-//    echo $result;
+    echo $result;
 //    while ($row = mysqli_fetch_assoc($result)) {
 //        $ResultsArray[] = $row;
 //    }

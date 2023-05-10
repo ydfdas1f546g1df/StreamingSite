@@ -1,8 +1,8 @@
 
 <?php
 $streamTopMain = '
-<main id="stream-main">
 <script src="/script/stream_top.js"></script>
+<main id="stream-main">
 <div class="stream-banner" id="stream-banner">
     <div class="cover-column">
         <img :src="\'/data/cover/\' + series.name + \'.jpg\'" alt="cover">
@@ -40,6 +40,7 @@ $streamSelect = '
     <div id="episode-title"></div>
 </div>
 </div>
+<i id="watch-now"></i>
 ';
 
 

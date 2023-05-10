@@ -149,6 +149,10 @@
   background: #006096 !important;
   color: white;
 }
+#stream-main .stream-select .select .episode .select-el.watched:hover.current, #stream-main .stream-select .select .season .select-el.watched:hover.current {
+  background: rgb(255, 100, 16) !important;
+  color: white !important;
+}
 #stream-main .stream-select .select .episode .select-el.current, #stream-main .stream-select .select .season .select-el.current {
   background: rgb(255, 100, 16);
   color: white;
