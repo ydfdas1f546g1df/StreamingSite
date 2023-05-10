@@ -1,9 +1,8 @@
 $(function () {
 
-    let JSONData = [];
     let seriesName
     let statusNth = 0
-
+    let JSONData = [];
 
     async function getInfo() {
 
@@ -39,6 +38,7 @@ $(function () {
                 // console.log(res)
                 let ResJSON = JSON.parse(res);
                 console.log(ResJSON)
+
                 JSONData = {
                     name: ResJSON[0].name,
                     showName: ResJSON[0].showName,
@@ -56,28 +56,68 @@ $(function () {
                 }
 
                 // console.log(JSONData)
+                const url = window.location.href
+                const seriesSelect = url.split("stream/")[1].split("/")[0]
+                const seasonSelect = url.split("stream/")[1].split("/")[1]
+                const episodeSelect = url.split("stream/")[1].split("/")[2]
+                const seasonNum = seasonSelect.split("-")[1]
+                const episodeNum = episodeSelect.split("-")[1]
+
                 function setLocation() {
-                    const url = window.location.href
-                    const seriesSelect = url.split("stream/")[1].split("/")[0]
-                    const seasonSelect = url.split("stream/")[1].split("/")[1]
-                    const episodeSelect = url.split("stream/")[1].split("/")[2]
-                    let seriesShowName = $("#SeriesName").text()
                     let location = "<a href='/' class='location-el'>Home</a><strong>&nbsp;<i class=\"fa-solid fa-chevron-right\"></i>&nbsp;</strong><a href='/pages/allseries' class='location-el'>Stream</a> "
 
                     if (seriesSelect !== undefined) {
                         location += "<strong>&nbsp;<i class=\"fa-solid fa-chevron-right\"></i>&nbsp;</strong><a href='/stream/" + seriesSelect + "' class='location-el'>" + JSONData.showName + "</a>"
                         if (seasonSelect !== undefined) {
-                            location += "<strong>&nbsp;<i class=\"fa-solid fa-chevron-right\"></i>&nbsp;</strong><a href='/stream/" + seriesSelect + "/" + seasonSelect + "' class='location-el'>Season " + seasonSelect.split("-")[1] + "</a>"
+                            location += "<strong>&nbsp;<i class=\"fa-solid fa-chevron-right\"></i>&nbsp;</strong><a href='/stream/" + seriesSelect + "/" + seasonSelect + "' class='location-el'>Season " + seasonNum + "</a>"
                             if (episodeSelect !== undefined) {
-                                location += "<strong>&nbsp;<i class=\"fa-solid fa-chevron-right\"></i>&nbsp;</strong><a href='/stream/" + seriesSelect + "/" + seasonSelect + "/" + episodeSelect + "' class='location-el'> Episode " + episodeSelect.split("-")[1] + "</a>"
-                                    $("#series-title").text(JSONData.showName)
+                                location += "<strong>&nbsp;<i class=\"fa-solid fa-chevron-right\"></i>&nbsp;</strong><a href='/stream/" + seriesSelect + "/" + seasonSelect + "/" + episodeSelect + "' class='location-el'> Episode " + episodeNum + "</a>"
+                                $("#series-title").text(JSONData.showName)
                             }
                         }
                     }
                     $("#location").append(location)
+
                 }
 
                 setLocation()
+
+                // let JSONData = [];
+
+                async function getSelect() {
+
+
+                    let myObj = {token: token, series: seriesSelect, season: seasonNum, episode: episodeNum, index: 2};
+                    await $.ajax({
+                        type: "POST",
+                        url: "/api/episode_select.php",
+                        data: {myData: JSON.stringify(myObj)},
+                        success: function (res) {
+                            console.log(res)
+                            let ResJSON = JSON.parse(res);
+                            console.log(ResJSON)
+                            if (ResJSON[0].index == 1) {
+                                for (let i = 0; i < ResJSON.length; i++) {
+                                    JSONData.push({
+                                        season: ResJSON[i].season,
+
+                                        // showName: ResJSON[i].showName,
+                                        // desc: ResJSON[i].desc,
+                                        // watchlist: ResJSON[i].watchlist,
+                                        // watched: ResJSON[i].watched,
+                                    });
+                                    consol.log(ResJSON[i].index)
+                                }
+                            }
+                        }
+                    });
+                }
+
+                getSelect().then(
+                    function () {
+
+                    }
+                )
             }
 
         });

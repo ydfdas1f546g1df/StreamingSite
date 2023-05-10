@@ -54,10 +54,10 @@ $mainContent = '
         <input type="text" name="episode_name" id="episode_name" required autocomplete="off"><br><br>
         </label>
         <label for="season_number"> <span>Season</span>
-        <input type="number" name="season_number" id="season_number" required autocomplete="off"><br><br>
+        <input type="number" name="season_number" id="season_number" required autocomplete="off"  min="0"><br><br>
         </label>
         <label for="episode_number"> <span>Episode</span>
-        <input type="number" name="episode_number" id="episode_number" required autocomplete="off"><br><br>
+        <input type="number" name="episode_number" id="episode_number" required autocomplete="off" min="0"><br><br>
         </label>
         <div class="progress"></div>
         <button type="submit">Upload</button>
