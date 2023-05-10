@@ -73,16 +73,15 @@ if ($index == 0 || $index == 1) {
                         inner join tbl_season ts2 on te2.season = ts2.id
                         inner join tbl_series ts3 on ts2.series = ts3.id
                         inner join tbl_watched w on te2.id = w.episode
-                        where ts2.season = ? and ts3.name = ? and w.user = (select user from tbl_apitoken where id = ?)) as watched, te.name
+                        where ts2.season = ? and ts3.name = ? and w.user = (select user from tbl_apitoken where id = ?) and te.id = te2.id) as watched, te.name
 FROM tbl_episode AS te
 INNER JOIN tbl_season ts ON te.season = ts.id
 INNER JOIN tbl_series t ON ts.series = t.id
-LEFT JOIN tbl_watched tw ON te.id = tw.episode
-WHERE ts.season = ? AND t.name = ? and tw.user = (SELECT tap.user FROM tbl_apitoken AS tap WHERE tap.id = ?)
+WHERE ts.season = ? AND t.name = ?
 order by te.episode
 ');
 //    $stmt->bind_param('sis', $series_name, $season_num, $series_name);
-    $stmt->bind_param('sississ', $series_name, $season_num, $series_name, $token, $season_num, $series_name, $token);
+    $stmt->bind_param('sissis', $series_name, $season_num, $series_name, $token, $season_num, $series_name);
     $stmt->execute();
     $result = $stmt->get_result();
 

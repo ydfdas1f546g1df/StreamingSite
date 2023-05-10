@@ -110,6 +110,7 @@ $(function () {
 
 
                     let myObj = {token: token, series: seriesSelect, season: seasonNum, episode: episodeNum, index: 2};
+                    console.log(myObj)
                     await $.ajax({
                         type: "POST",
                         url: "/api/episode_select.php",
@@ -150,7 +151,7 @@ $(function () {
                                         $("#episode-title").text(episodeName)
                                     }
                                     let allEpisodes = "<a href=\"/stream/" + seriesSelect + "/season-" + ResJSON[1][i].season + "/episode-" + ResJSON[1][i].episode + "\"class=\"select-el select-episode select-select "
-                                    if (ResJSON[1][i].watched > 1) {
+                                    if (ResJSON[1][i].watched > 0) {
                                         allEpisodes += "watched "
                                     }
                                     if (episodeNum != undefined) {
@@ -165,7 +166,7 @@ $(function () {
 
                                         episodeName = ResJSON[1][i].name
                                         let SeasonAllEpisodes = "<a href='/stream/" + seriesSelect + "/season-" + seasonNum + "/episode-" + ResJSON[1][i].episode + "' class='"
-                                        if (ResJSON[1][i].watched > 1) {
+                                        if (ResJSON[1][i].watched > 0) {
                                             SeasonAllEpisodes += "watched-episode"
                                         }
                                         SeasonAllEpisodes += "'><span>Episode " + ResJSON[1][i].episode + "</span><span><i class=\"gg-eye-alt\"></i></span><span>" + ResJSON[1][i].name +

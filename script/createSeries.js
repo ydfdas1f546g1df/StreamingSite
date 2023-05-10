@@ -66,7 +66,10 @@ uploadForm.onsubmit = event => {
                 // Reset the progress bar
                 uploadForm.querySelector('.progress').style.background = '';
                 // Reset the button
-                uploadForm.querySelector('button').innerHTML = 'Upload';
+                uploadForm.querySelector('button').innerHTML = 'Create Series';
+
+                $("#imagePreview").attr("src", "#")
+                $("#imagePreview").attr("style", "display: none;")
                 // Enable the submit button
                 uploadForm.querySelector('button').disabled = false;
             }

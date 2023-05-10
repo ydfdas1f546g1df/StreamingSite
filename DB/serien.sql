@@ -13,7 +13,7 @@ VALUE
 INSERT INTO tbl_series
     (name, showName, description)
 VALUE
-    ( 'gameofthrones', 'Game of Thrones', 'Eine Geschichte über Fehen unud Drachen');
+    ('game-of-thrones', 'Game of Thrones', 'Eine Geschichte über Fehen unud Drachen');
 
 
 

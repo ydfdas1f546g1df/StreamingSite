@@ -140,16 +140,16 @@
   align-items: center;
   justify-content: center;
 }
-#stream-main .stream-select .select .episode .select-el.current, #stream-main .stream-select .select .season .select-el.current {
-  background: rgb(255, 100, 16);
-  color: white;
-}
 #stream-main .stream-select .select .episode .select-el.watched, #stream-main .stream-select .select .season .select-el.watched {
   background: #0084d0;
   color: white;
 }
 #stream-main .stream-select .select .episode .select-el.watched:hover, #stream-main .stream-select .select .season .select-el.watched:hover {
   background: #006096 !important;
+  color: white;
+}
+#stream-main .stream-select .select .episode .select-el.current, #stream-main .stream-select .select .season .select-el.current {
+  background: rgb(255, 100, 16);
   color: white;
 }
 #stream-main .stream-select .select .episode .select-el.select-title, #stream-main .stream-select .select .season .select-el.select-title {
@@ -170,6 +170,7 @@
   font-size: 36px;
 }
 #stream-main .stream-season {
+  margin-bottom: 200px;
   color: white;
 }
 #stream-main .stream-season > a {
@@ -177,6 +178,9 @@
   grid-template-columns: 1fr 1fr 4fr 4fr 1fr;
   padding: 15px;
   background: rgb(55, 55, 55);
+}
+#stream-main .stream-season > a:hover {
+  background: rgb(28, 28, 28);
 }
 #stream-main .stream-season > a span {
   display: flex;
