@@ -26,18 +26,14 @@ $streamTopMain = '
 ';
 
 $streamSelect = '
-<script src="/script/stream_select.js"></script>
-
 <div class="stream-select">
     <div id="location"></div>
     <div class="select">
-        <div class="season">
+        <div class="season" id="seasons">
             <span class="select-el select-title">Season:</span>
-            <a href="/" class="select-el select-episode select-select">1</a>
         </div>
-    <div class="episode">
+    <div class="episode" id="episodes">
         <span class="select-el select-title">Episode:</span>
-        <a href="/" class="select-el select-season select-select">1</a>
     </div>
     </div>
     <div id="series-title"></div>
