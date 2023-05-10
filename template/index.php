@@ -22,7 +22,8 @@ $header_1 = '<!DOCTYPE html>
     <link href="/dist/css/main.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
     <script src="/jsLibs/vue.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/jsLibs/jquery-3.3.1.min.js"></script>
+   
 </head>
 <body>
 <header>
@@ -31,11 +32,11 @@ $header_1 = '<!DOCTYPE html>
         <a href="/" class="logo-2" title="StreamingSite">Site</a>
         <nav>
             <a href="/pages/allseries/" title="All series and films on this website"><i class="gg-play-button-o"></i>&nbsp;Series</a>
-            <a href="/pages/popular.php" title="This is popular right now"><i class="gg-align-bottom"></i>&nbsp;Popular</a>
+            <a href="/pages/popular/" title="This is popular right now"><i class="gg-align-bottom"></i>&nbsp;Popular</a>
             <a href="/pages/search/" title="Search for series and films"><i class="gg-search"></i>&nbsp;Search</a>
 ';
 $admin_1 = '
-            <span class="nav-more tooltip" title="There is more here">admin
+            <span class="nav-more tooltip">admin
              <div class="tooltiptext">
                  <a href="https://github.com/ydfdas1f546g1df/StreamingSite" target="_blank">
                 <div class="more-dd-icon"><i class="gg-git-fork"></i></div>
@@ -61,7 +62,7 @@ $notLoggedIn = '
 
 $loggedIn = '
     <div class="user">
-        <img src="/dist/img/testpp.jpg" id="user-pp" alt="user-pp"/>
+    <a href="/user/profil"><img src="/dist/img/testpp.jpg" id="user-pp" alt="user-pp"/></a>
         <div id="user-name" class="tooltip">' . $name . '<i class="down-arrow"></i>
             <div class="tooltiptext">
                 <a class="user-dd-el" href="/user">
@@ -69,24 +70,24 @@ $loggedIn = '
                         <i class="gg-format-justify"></i>
                     </div>
                     <span class="user-dd-name">Account</span>
-                </a> <a class="user-dd-el" href="/user/profil/?u=' . $username . '">
+                </a> <a class="user-dd-el" href="/user/profil/">
                 <div class="user-dd-icon">
                     <i class="gg-user"></i>
                 </div>
                 <span class="user-dd-name">Profile</span>
-            </a> <a class="user-dd-el" href="/user/watchlist/?u=' . $username . '">
+            </a> <a class="user-dd-el" href="/user/watchlist/">
                 <div class="user-dd-icon">
                     <i class="gg-eye-alt"></i>
                 </div>
                 <span class="user-dd-name">Watchlist</span>
-            </a> <a class="user-dd-el" href="#">
+            </a> <a class="user-dd-el" href="/user/settings">
                 <div class="user-dd-icon">
                     <i class="fa-solid fa-gear"></i>
                 </div>
                 <span class="user-dd-name">Settings</span>
-            </a><a class="user-dd-el logout-btn" href="/">
+            </a><a class="user-dd-el logout-btn" href="/login">
                 <div class="user-dd-icon">
-                    <i class="gg-log-in"></i>
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
                 </div>
                 <span class="user-dd-name">Logout</span>
             </a>
@@ -102,7 +103,7 @@ $loggedIn = '
 //        </label>
 //        <ul class="menu">
 //            <li><a href="/pages/allseries/"><i class="gg-play-button-o"></i>&nbsp;Series</a></li>
-//            <li><a href="/pages/popular.php"><i class="gg-align-bottom"></i>&nbsp;Popular</a></li>
+//            <li><a href="/pages/index.php"><i class="gg-align-bottom"></i>&nbsp;Popular</a></li>
 //            <li><a href="/pages/search/"><i class="gg-search"></i>&nbsp;Search</a></li>
 $admin_2 = '<li class="more-dd">admin</li>
             <li class="more-dd-el"><a href="https://github.com/ydfdas1f546g1df/StreamingSite" target="_blank">
@@ -133,7 +134,7 @@ $footer = '
             <span class="footer-el-title">Series</span>
             <a class="footer-el-item" href="/pages/allseries/">All</a>
             <a class="footer-el-item" href="/#latest">New</a>
-            <a class="footer-el-item" href="/pages/popular.php">Popular</a>
+            <a class="footer-el-item" href="/pages/popular/index.php">Popular</a>
         </div>
         <div class="footer-el">
             <span class="footer-el-title">About</span>
@@ -145,7 +146,7 @@ $footer = '
             <span class="footer-el-title">Discover</span>
             <a class="footer-el-item" href="/pages/search/?search=' . implode(",", $letter) . '">Random</a>
             <a class="footer-el-item" href="/pages/search/">Search</a>
-            <a class="footer-el-item" href="/pages/popular.php">Popular</a>
+            <a class="footer-el-item" href="/pages/popular/index.php">Popular</a>
         </div>
         <div class="footer-el">
             <span class="footer-el-title">More</span>
@@ -162,42 +163,49 @@ $footer = '
         document.cookie = "name=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT";
         location.reload();
     })
+    let lastTT
+$(".tooltip").on("mouseenter", function (e) {
+//  console.log(lastTT !== e.currentTarget)
+//  console.log(e.currentTarget)
+  if (lastTT !== e.currentTarget) {
+    $(".tooltiptext").attr("style", "visibility: hidden;")
+  }
+  lastTT = e.currentTarget
+//  console.log(lastTT)
+  $(e.currentTarget).find(".tooltiptext").attr("style", "visibility: visible;")
+})
+
+    $("*").on("click", function () {
+        $(".tooltiptext").each(
+            function () {
+//                console.log(this)
+                $(this).attr("style", "visibility: hidden;")
+            }
+        )
+    })
 </script>
-<script src="/script/main.js"></script>
 </body>
 </html>';
 
 
-function isSafariBrowser()
-{
-    $agent = $_SERVER['HTTP_USER_AGENT'];
-    if (strpos($agent, 'Safari') !== false && strpos($agent, 'Chrome') === false) {
-        $safari = true;
-        $current_url = "http" . (($_SERVER['SERVER_PORT'] == 443) ? "s://" : "://") . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-        if (strpos($current_url, "/error/418.php")) {
-        } else {
-            header("Location: /error/418.php");
-        }
+$is_safari = false;
+
+$user_agent = $_SERVER['HTTP_USER_AGENT'];
+
+if (strpos($user_agent, 'Safari') !== false && strpos($user_agent, 'Chrome') === false) {
+    $is_safari = true;
+}
+
+if ($is_safari) {
+    $current_url = "http" . (($_SERVER['SERVER_PORT'] == 443) ? "s://" : "://") . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+    if (strpos($current_url, "/error/418.php")) {
     } else {
-        $safari = false;
+        header("Location: /error/418.php");
     }
 }
+
 
 
 $adminHeader = $header_1 . $admin_1 . $header_2 . $loggedIn;
 $loggedInHeader = $header_1 . $header_2 . $loggedIn;
 $notLoggedInHeader = $header_1 . $header_2 . $notLoggedIn;
-
-
-//$cookie = true;
-//$login = true;
-////$login = false;
-//$IsAdmin = true;
-////$IsAdmin = false;
-
-
-//echo $cookie;
-//echo $login;
-////$login = false;
-//echo $IsAdmin;
-////$IsAdmin = false;

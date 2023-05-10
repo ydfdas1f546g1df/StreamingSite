@@ -33,6 +33,7 @@ main.account-main {
   article {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin: 20px 0 100px 0;
 
     a {
       display: grid;
@@ -68,6 +69,7 @@ main.account-main {
         justify-content: center;
 
         .title {
+
           color: white;
           font-size: 30px;
         }
@@ -82,6 +84,7 @@ main.account-main {
 
 
   .page-title {
+    margin-top: 30px;
     font-size: 50px;
   }
 }

@@ -30,7 +30,7 @@ $mainContent = '
 <main class="account-main">
     <span class="page-title">Your Account</span>
     <article>
-        <a href="/user/profil?u=' . $username . '">
+        <a href="/user/profil">
             <div class="icon">
                 <i class="gg-user"></i>
             </div>
@@ -48,16 +48,16 @@ $mainContent = '
                 <span class="description">Customise password, profile picture, privacy, data protection and other settings.</span>
             </div>
         </a>
-        <a href="/user/watchlist/?u=' . $username . '">
+        <a href="/user/watchlist/">
             <div class="icon">
                 <i class="fa-solid fa-list-ul"></i>
             </div>
             <div class="text">
                 <span class="title">Watchlist</span>
-                <span class="description">Bookmark interesting anime & watch at a later date.</span>
+                <span class="description">Bookmark interesting series & watch them later</span>
             </div>
         </a>
-        <a href="/user/watched/?u=' . $username . '">
+        <a href="/user/watched/">
             <div class="icon">
                 <i class="gg-eye-alt"></i>
             </div>
@@ -72,19 +72,22 @@ $mainContent = '
             </div>
             <div class="text">
                 <span class="title">Suche</span>
-                <span class="description">Search and find series, films or anime ...</span>
+                <span class="description">Search and find series, films or animes...</span>
             </div>
         </a>
         <a href="/login" class="logout-btn">
             <div class="icon">
-                <i class="gg-log-in"></i>
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
             </div>
             <div class="text">
                 <span class="title">Logout</span>
-                <span class="description">If you would like to register with another account or if you would like to register completely, you can do so here.</span>
+                <span class="description">If you would like to log in with another account or if you would like to log out completely, you can do so here.</span>
             </div>
         </a>
     </article>
+    <script>
+        document.title="your Account | StreamingSite"
+    </script>
 </main>
 ';
 

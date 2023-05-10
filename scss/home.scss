@@ -165,6 +165,9 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
 
 
 .home-cat-parent {
+  &:last-child {
+    margin-bottom: 200px;
+  }
 
   .home-el-title {
     color: white;
@@ -183,16 +186,10 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
       font-size: $cat-title-size / 1.8;
       cursor: pointer;
       margin-left: 10px;
-
-      &:hover {
-        background: $dd-more-bg;
-        color: $orange;
-      }
     }
   }
 
   .home-cat {
-    cursor: pointer;
     display: flex;
     //justify-content: space-between;
     align-content: flex-start;
@@ -225,9 +222,16 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
-          -webkit-mask-image: linear-gradient(90deg, #000 60%, transparent);
-          width: 120px;
+          -webkit-mask-image: linear-gradient(90deg, #000 70%, transparent);
+          width: 150px;
           display: flex;
+          flex-direction: column;
+
+          .episode-nth {
+            color: $lighter-gray;
+            font-size: 14px;
+
+          }
         }
 
         i {
@@ -239,7 +243,7 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
       img {
         margin: 0 0 5px 0;
         width: 150px;
-        z-index: 1;
+        height: 225px;
         border-radius: 5px;
         overflow: hidden;
         transition: $trans;

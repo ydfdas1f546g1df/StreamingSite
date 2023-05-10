@@ -3,10 +3,10 @@
 POST /api/upload_Complete
 ```
 
-| Atrribute   | Required | Description                   |
+| Attribute   | Required | Description                   |
 |-------------|:--------:|:------------------------------|
 | token       |   Yes    | Is Used to Identify User      |
-| serie       |   Yes    |                               |
+| series      |   Yes    |                               |
 | episode     |   Yes    | Episode                       |
 | season      |   Yes    | Season                        |
 | showName    |   Yes    | Is the name shown to the user |
@@ -28,10 +28,10 @@ Response Code 200 if OK
 ```
 POST /api/uploadFile
 ```
-| Atrribute   | Required | Description                   |
+| Attribute   | Required | Description                   |
 |:------------|:--------:|:------------------------------|
 | token       |   Yes    | Is Used to Identify User      |
-| serie       |   Yes    |                               |
+| series      |   Yes    |                               |
 | episode     |   Yes    | Episode                       |
 | season      |   Yes    | Season                        |
 
@@ -53,7 +53,7 @@ else
 POST /api/update
 ```
 
-| Atrribute   | Required |                   Description |
+| Attribute   | Required |                   Description |
 |:------------|:--------:|------------------------------:|
 | token       |   Yes    |      Is Used to Identify User |
 | name        |   Yes    |                               |

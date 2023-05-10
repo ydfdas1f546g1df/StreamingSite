@@ -1,43 +1,48 @@
+
+
 <?php
 if (strpos($_SERVER['REQUEST_URI'], "=")) {
-   $quick = explode("=", $_SERVER['REQUEST_URI'])[1];
+   $quick = 'value="' . explode("=", $_SERVER['REQUEST_URI'])[1] . '"';
 } else {
     $quick = "";
 };
 
+
 $searchContent = '
-<main class="search-main">
-    <div class="quick-search" id="quick-search">
-        <a :href="\'/pages/search/?search=\' + quick"  class="quick-search-el" v-for="quick in quicks">{{ quick }}</a>
-            <div>{{ quick }}</div>
-        </a>
-    </div>
+<main class="search-main" id="search-main">
     <label class="search">
         Search
-        <div id="search-input">
-            <input type="text" value="'. $quick .'">
-        </div>
+        <input type="text" v-model="search" id="search-input" ref="name">
     </label>
     <div id="search-result">
-        <a class="result-item" v-for="result in results" :href="\'/stream/\' + result.name" target="_blank">
-            <div class="result-head" :name="result.name" :showName="result.showName">
-                <span class="result-title">{{ result.showName }}</span>
-                <span class="result-info result-watched" :title="result.watched + \' people have watched this show.\'">{{ result.watched }}
+        <div id="search-for"><span>Search results for &bdquo;{{ search }}&rdquo;</span></div>
+        <div id="nothing"><div><i class="fa-solid fa-mug-hot"></i></div>
+            Sorry, there is nothing like that.</div>
+        <a class="result-item" v-for="result in filteredSeries" :href="\'/stream/\' + result.name" target="_blank">
+            <div class="result-head">
+                <div class="result-hd">
+                    <span class="result-title">{{ result.showName }}</span>
+                    <span class="result-info result-watched" :title="result.watched + \' episodes of this series have been watched in total. \'">{{ result.watched }}
                 <i class="gg-eye-alt"></i>
                 </span>
-                <span class="result-info result-watchlist" :title="result.watched + \' people have it on there watchlist.\'">{{ result.watchlist }}
+                    <span class="result-info result-watchlist" :title="result.watched + \' people have it on there watchlist.\'">{{ result.watchlist }}
                     <i class="fa-solid fa-list-ul">
                     </i>
                 </span>
-                <i class="fa-solid fa-folder-plus tooltip" id="add-wl-btn" @click="addToWatchlist">
-                <span class="tooltiptext">Add to Watchlist</span>
-</i>
+                </div>
+
+                <i class="fa-solid fa-folder-plus tooltip" id="add-wl-btn" @click.prevent="addToWatchlist">
+                    <span class="tooltiptext">Add to Watchlist</span></i>
             </div>
-            <span class="result-description">{{ result.desc }}</span>
+            <span class="result-description">{{ result.desc }}</span><br>
+            <span class="result-link">/stream/{{ result.name }}/</span>
         </a>
     </div>
 </main>
 <script src="/script/search.js"></script>
+<script>
+    document.title="Serach | StreamingSite"
+</script>
 ';
 
 include '../.././template/index.php';

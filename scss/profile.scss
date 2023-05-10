@@ -1,0 +1,148 @@
+$main-bg: rgb(17, 17, 17);
+$dd-padding: 3vw;
+$dd-width: 100vw - (2 * $dd-padding);
+$dd-el-padding: 0.6em;
+$dd-el-width: $dd-width - (2 * $dd-padding);
+$footer-height: 300px;
+$footer-bg: rgb(28, 28, 28);
+$header-height: 70px;
+$orange: rgb(255, 100, 16);
+$logo-size: 40px;
+$width: 60%;
+$header-bg: rgb(28, 28, 28);
+$hover-orange: #f8cb80;
+$user-pp-size: 40px;
+$dd-more-bg: rgb(24, 24, 24);
+$light-gray: rgb(55, 55, 55);
+$trans: all .4s ease-in-out;
+$cat-title-size: 22px;
+$eye-catcher-margin: 5px;
+$eye-catcher-margin-1400: 10px;
+$eye-catcher-margin-1080: 20px;
+$eye-catcher-height: 156px;
+$eye-catcher-height-1400: 230px;
+$eye-catcher-height-1080: 410px;
+$lighter-gray: #636363;
+$black-shadow: 0px 0px 10px 1px rgba(10, 10, 10, 0.36);
+$orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
+
+
+.profile-main {
+  color: white;
+
+  article {
+
+    &#watch {
+      margin-bottom: 200px;
+    }
+
+    &.banner {
+      margin: 50px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 20px;
+      background: $header-bg;
+      border-radius: 5px;
+
+      .p-picture {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          margin: 10px;
+          height: 150px;
+          border-radius: 10000px;
+        }
+
+        .name {
+          font-size: 24px;
+          margin-bottom: 5px;
+        }
+
+        .watched {
+          font-weight: bold;
+          color: white;
+
+          span {
+            color: $orange;
+          }
+        }
+      }
+
+      .info {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+
+        span, a {
+          margin: 5px 0;
+          display: flex;
+          align-items: center;
+
+
+          &.Watchlist {
+            font-weight: bold;
+            text-decoration: none;
+          }
+
+
+          .watchlist-nth {
+            color: $orange;
+          }
+
+          .icon {
+            height: 30px;
+            aspect-ratio: 1;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $orange;
+          }
+
+          i {
+            zoom: 1.3;
+          }
+        }
+
+        a {
+          color: white;
+          text-decoration: underline;
+        }
+
+        .link {
+
+          a {
+            color: white;
+            text-decoration: underline;
+
+            &:hover {
+              color: $orange;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+
+      .bio {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        .admin {
+          color: $orange;
+        }
+
+        .bio-text {
+          text-align: left;
+          width: 100%;
+
+        }
+      }
+
+    }
+  }
+}

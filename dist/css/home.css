@@ -47,6 +47,9 @@
   aspect-ratio: 1;
 }
 
+.home-cat-parent:last-child {
+  margin-bottom: 200px;
+}
 .home-cat-parent .home-el-title {
   color: white;
   font-weight: bold;
@@ -65,12 +68,7 @@
   cursor: pointer;
   margin-left: 10px;
 }
-.home-cat-parent .home-el-title .home-el-all:hover {
-  background: rgb(24, 24, 24);
-  color: rgb(255, 100, 16);
-}
 .home-cat-parent .home-cat {
-  cursor: pointer;
   display: flex;
   align-content: flex-start;
 }
@@ -100,9 +98,14 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  -webkit-mask-image: linear-gradient(90deg, #000 60%, transparent);
-  width: 120px;
+  -webkit-mask-image: linear-gradient(90deg, #000 70%, transparent);
+  width: 150px;
   display: flex;
+  flex-direction: column;
+}
+.home-cat-parent .home-cat .home-el .cover-title span .episode-nth {
+  color: #636363;
+  font-size: 14px;
 }
 .home-cat-parent .home-cat .home-el .cover-title i {
   width: 30px;
@@ -111,7 +114,7 @@
 .home-cat-parent .home-cat .home-el img {
   margin: 0 0 5px 0;
   width: 150px;
-  z-index: 1;
+  height: 225px;
   border-radius: 5px;
   overflow: hidden;
   transition: all 0.4s ease-in-out;

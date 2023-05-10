@@ -1,32 +1,41 @@
+
 <?php
 
 $mainContent = '
-
 <main class="admin-main">
     <div id="admin-main-div">
-
-
-    <aside>
-        <a href="/admin">
-            <div class="icon-container"><i class="gg-terminal"></i></div>
-            Dashboard</a>
+        <aside>
+            <a href="/admin">
+                <div class="icon-container"><i class="gg-terminal"></i></div>
+                Dashboard</a>
         <a href="/admin/media">
             <div class="icon-container"><i class="fa-solid fa-photo-film"></i></div>
-            Media
+            Episode
         </a>
-        <a href="/admin/upload" class="current-admin">
-            <div class="icon-container"><i class="gg-software-upload"></i></div>
-            upload</a>
-        <a href="/admin/user">
-            <div class="icon-container"><i class="gg-user"></i></div>
-            User</a>
-    </aside>
-    <article class="dash-article">
-
-
-    </article>
+        <a href="/admin/series">
+            <div class="icon-container"><i class="fa-solid fa-server"></i></div>
+            Series
+        </a>
+            <a href="/admin/upload" class="current-admin">
+                <div class="icon-container"><i class="gg-software-upload"></i></div>
+                upload</a>
+            <a href="/admin/user">
+                <div class="icon-container"><i class="gg-user"></i></div>
+                User</a>
+        </aside>
+        <article class="upload-article">
+            <div class="link-div">
+            <div>
+                <a href="/admin/upload/upload.php" class="create-btn">Upload Episode</a>
+                </div>
+                <div>
+                    <a href="/admin/upload/createSeries.php" class="create-btn">Create Series</a>
+                </div>   
+            </div>
+        </article>
     </div>
-</main>';
+</main>
+';
 
 include '../.././template/index.php';
 

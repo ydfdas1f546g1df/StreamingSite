@@ -12,6 +12,33 @@
   height: 100%;
   margin: 30px 30px 0 30px;
 }
+.admin-main #admin-main-div article label {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+.admin-main #admin-main-div article label input, .admin-main #admin-main-div article label select, .admin-main #admin-main-div article label option, .admin-main #admin-main-div article label textarea {
+  height: 30px;
+  width: 200px;
+  border-radius: 5px;
+  background: none;
+  box-shadow: none;
+  outline: none;
+  border-color: transparent transparent black transparent;
+  color: white;
+}
+.admin-main #admin-main-div article label input:focus-visible, .admin-main #admin-main-div article label select:focus-visible, .admin-main #admin-main-div article label option:focus-visible, .admin-main #admin-main-div article label textarea:focus-visible {
+  outline: none;
+  border-bottom: rgb(255, 100, 16) solid 2px;
+}
+.admin-main #admin-main-div article label input::-moz-placeholder, .admin-main #admin-main-div article label select::-moz-placeholder, .admin-main #admin-main-div article label option::-moz-placeholder, .admin-main #admin-main-div article label textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.51);
+}
+.admin-main #admin-main-div article label input::placeholder, .admin-main #admin-main-div article label select::placeholder, .admin-main #admin-main-div article label option::placeholder, .admin-main #admin-main-div article label textarea::placeholder {
+  color: rgba(255, 255, 255, 0.51);
+}
 .admin-main #admin-main-div article.user-article .user {
   width: 100%;
   height: 100%;
@@ -40,33 +67,6 @@
 .admin-main #admin-main-div article.user-article .user .btns .user-btn:hover {
   background: rgb(55, 55, 55);
 }
-.admin-main #admin-main-div article.user-article .user label {
-  font-weight: bold;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-top: 20px;
-}
-.admin-main #admin-main-div article.user-article .user label input {
-  height: 30px;
-  width: 200px;
-  border-radius: 5px;
-  background: none;
-  box-shadow: none;
-  outline: none;
-  border-color: transparent transparent black transparent;
-  color: white;
-}
-.admin-main #admin-main-div article.user-article .user label input:focus-visible {
-  outline: none;
-  border-bottom: rgb(255, 100, 16) solid 2px;
-}
-.admin-main #admin-main-div article.user-article .user label input::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.51);
-}
-.admin-main #admin-main-div article.user-article .user label input::placeholder {
-  color: rgba(255, 255, 255, 0.51);
-}
 .admin-main #admin-main-div article.user-article .user .user-list {
   margin: 50px 0 100px 0;
   height: 100%;
@@ -87,6 +87,12 @@
   padding: 0 5px;
   display: flex;
   align-items: center;
+}
+.admin-main #admin-main-div article.user-article .user .user-list .user-list-el-header span.user-list-el-id, .admin-main #admin-main-div article.user-article .user .user-list .user-list-el span.user-list-el-id {
+  padding: 0 15px;
+}
+.admin-main #admin-main-div article.user-article .user .user-list .user-list-el-header span a, .admin-main #admin-main-div article.user-article .user .user-list .user-list-el span a {
+  color: white;
 }
 .admin-main #admin-main-div article.user-article .user .user-list .user-list-el-header span i, .admin-main #admin-main-div article.user-article .user .user-list .user-list-el span i {
   zoom: 1.3;
@@ -123,6 +129,32 @@
 }
 .admin-main #admin-main-div article.user-article .user .user-list .user-list-el {
   background: rgb(55, 55, 55);
+}
+.admin-main #admin-main-div article.upload-article .link-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.admin-main #admin-main-div article.upload-article .link-div div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.admin-main #admin-main-div article.upload-article .link-div div .create-btn {
+  display: flex;
+  background: rgb(255, 100, 16);
+  color: white;
+  margin: 10px 0;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  justify-self: flex-end;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.admin-main #admin-main-div article.upload-article .link-div div .create-btn:hover {
+  background: #636363;
 }
 .admin-main #admin-main-div aside {
   width: 220px;
@@ -188,4 +220,158 @@
 .admin-main #admin-main-div #error-messages .error-msg-el div {
   display: flex;
   flex-direction: column;
+}
+
+#upload-main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#upload-main input[type=text], #upload-main input[type=number], #upload-main input[list] {
+  height: 30px;
+  width: 200px;
+  border-radius: 5px;
+  background: none;
+  box-shadow: none;
+  outline: none;
+  border-color: transparent transparent black transparent;
+  color: white;
+}
+#upload-main input[type=text]:focus-visible, #upload-main input[type=number]:focus-visible, #upload-main input[list]:focus-visible {
+  outline: none;
+  border-bottom: rgb(255, 100, 16) solid 2px;
+}
+#upload-main input[type=text]::-moz-placeholder, #upload-main input[type=number]::-moz-placeholder, #upload-main input[list]::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.51);
+}
+#upload-main input[type=text]::placeholder, #upload-main input[type=number]::placeholder, #upload-main input[list]::placeholder {
+  color: rgba(255, 255, 255, 0.51);
+}
+#upload-main textarea {
+  border-radius: 5px;
+  background: none;
+  box-shadow: none;
+  outline: none;
+  border-width: 2px;
+  border-color: rgb(84, 84, 84);
+  color: white;
+}
+#upload-main textarea:focus-visible {
+  outline: none;
+  border: rgb(255, 100, 16) solid 2px;
+}
+#upload-main textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.51);
+}
+#upload-main textarea::placeholder {
+  color: rgba(255, 255, 255, 0.51);
+}
+#upload-main .upload-form {
+  display: flex;
+  max-width: 350px;
+  padding: 20px;
+  flex-flow: column;
+  margin: 100px auto 15px auto;
+  background-color: rgb(28, 28, 28);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+}
+#upload-main .upload-form .result {
+  color: white;
+  font-weight: bold;
+}
+#upload-main .upload-form h1 {
+  margin: 0;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #434850;
+  text-align: center;
+}
+#upload-main .upload-form label[for=files] {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(17, 17, 17);
+  border: 2px solid rgb(24, 24, 24);
+  color: #fff;
+  padding: 10px 12px;
+  font-weight: 500;
+  font-size: 14px;
+  margin: 10px 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#upload-main .upload-form label {
+  color: white;
+  display: flex;
+  justify-content: space-between !important;
+  align-items: center;
+  flex-direction: row;
+}
+#upload-main .upload-form label span {
+  font-size: 14px;
+  width: 100px;
+}
+#upload-main .upload-form label i {
+  margin-right: 10px;
+  padding: 5px 0;
+  color: #dbdce0;
+}
+#upload-main .upload-form label span {
+  word-break: break-all;
+}
+#upload-main .upload-form label[for=files]:hover {
+  background: rgb(255, 100, 16);
+  border: 2px solid rgb(24, 24, 24);
+  color: white;
+  transition: all 0.4s ease-in-out;
+}
+#upload-main .upload-form label:hover i {
+  color: #cfd1d4;
+}
+#upload-main .upload-form input[type=file] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  padding: 0;
+  margin: 0;
+}
+#upload-main .upload-form .progress {
+  height: 20px;
+  border-radius: 4px;
+  margin: 10px 0;
+  background-color: #e6e8ec;
+}
+#upload-main .upload-form button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: rgb(255, 100, 16);
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  border: 0;
+  padding: 10px 12px;
+  margin-top: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+#upload-main .upload-form button:hover {
+  background-color: rgb(255, 100, 16);
+}
+#upload-main .upload-form button:disabled {
+  background-color: #aca7a5;
+}
+#upload-main .upload-form .result {
+  padding-top: 15px;
+}
+
+#image-preview {
+  border-radius: 5px;
+  display: none;
+  align-self: center;
 }

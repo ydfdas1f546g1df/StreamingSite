@@ -11,7 +11,11 @@ $mainContent = '
             Dashboard</a>
         <a href="/admin/media">
             <div class="icon-container"><i class="fa-solid fa-photo-film"></i></div>
-            Media
+            Episode
+        </a>
+        <a href="/admin/series">
+            <div class="icon-container"><i class="fa-solid fa-server"></i></div>
+            Series
         </a>
         <a href="/admin/upload">
             <div class="icon-container"><i class="gg-software-upload"></i></div>

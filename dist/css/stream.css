@@ -1,0 +1,163 @@
+#stream-main {
+  color: white;
+}
+#stream-main > div {
+  padding: 20px;
+  border-radius: 5px;
+}
+#stream-main .stream-banner {
+  margin: 50px 0 30px 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  background: rgb(28, 28, 28);
+}
+#stream-main .stream-banner > div {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+#stream-main .stream-banner > div:first-child {
+  align-items: center;
+}
+#stream-main .stream-banner > div:first-child img {
+  height: 300px;
+  width: 200px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 1px rgba(10, 10, 10, 0.36);
+}
+#stream-main .stream-banner > div:nth-child(2) {
+  align-items: flex-start;
+}
+#stream-main .stream-banner > div:nth-child(2) .series-title {
+  font-size: 24px;
+}
+#stream-main .stream-banner > div:nth-child(2) .series-desc {
+  margin: 20px 0;
+  color: #636363;
+}
+#stream-main .stream-banner > div:nth-child(2) .series-info {
+  color: rgb(255, 100, 16);
+}
+#stream-main .stream-banner > div:nth-child(2) .series-info strong {
+  color: #636363;
+}
+#stream-main .stream-banner > div:last-child {
+  align-items: center;
+}
+#stream-main .stream-banner > div:last-child div {
+  width: 100%;
+  margin: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  background: rgb(55, 55, 55);
+  box-shadow: 0px 0px 10px 1px rgba(10, 10, 10, 0.36);
+}
+#stream-main .stream-banner > div:last-child div a {
+  width: 100%;
+  text-align: center;
+  color: white;
+  background: rgb(255, 100, 16);
+  padding: 15px 0;
+  font-weight: bold;
+  font-size: 24px;
+  border-radius: 5px 5px 0 0;
+}
+#stream-main .stream-banner > div:last-child div span, #stream-main .stream-banner > div:last-child div a {
+  cursor: pointer;
+}
+#stream-main .stream-banner > div:last-child div span {
+  padding: 10px 0;
+  width: 100%;
+  border-bottom: solid rgb(24, 24, 24) 1px;
+  font-weight: bold;
+}
+#stream-main .stream-banner > div:last-child div span.isInWatchlist {
+  color: rgb(255, 100, 16);
+}
+#stream-main .stream-banner > div:last-child div span:hover {
+  background: #636363;
+}
+#stream-main .stream-banner > div:last-child div span:last-child {
+  border-radius: 0 0 5px 5px;
+}
+#stream-main .stream-banner > div:last-child div span.share {
+  color: #0084d0;
+}
+#stream-main .stream-banner > div:last-child div span i {
+  margin-left: 10px;
+}
+#stream-main .stream-media {
+  padding: 50px;
+  background: rgb(28, 28, 28);
+  margin-bottom: 200px;
+}
+#stream-main .stream-media #media-player {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+#stream-main .stream-select #location {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+#stream-main .stream-select #location strong {
+  color: #636363;
+  font-weight: bold !important;
+  font-size: 14px;
+}
+#stream-main .stream-select #location .location-el {
+  color: white;
+}
+#stream-main .stream-select #location .location-el:hover {
+  color: rgb(255, 100, 16);
+}
+#stream-main .stream-select #location .location-el:last-child {
+  color: rgb(255, 100, 16);
+}
+#stream-main .stream-select #location .location-el:last-child:hover {
+  color: white;
+}
+#stream-main .stream-select .select {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#stream-main .stream-select .select .episode, #stream-main .stream-select .select .season {
+  display: flex;
+  justify-content: flex-start;
+  margin: 5px;
+}
+#stream-main .stream-select .select .episode .select-el, #stream-main .stream-select .select .season .select-el {
+  font-size: 20px;
+  height: 30px;
+  color: black;
+  background: white;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#stream-main .stream-select .select .episode .select-el.current, #stream-main .stream-select .select .season .select-el.current {
+  background: rgb(255, 100, 16);
+  color: white;
+}
+#stream-main .stream-select .select .episode .select-el.select-title, #stream-main .stream-select .select .season .select-el.select-title {
+  font-weight: bold;
+}
+#stream-main .stream-select .select .episode .select-el.select-select, #stream-main .stream-select .select .season .select-el.select-select {
+  aspect-ratio: 1/1;
+}
+#stream-main .stream-select .select .episode .select-el.select-select:hover, #stream-main .stream-select .select .season .select-el.select-select:hover {
+  background: rgb(255, 100, 16);
+  color: white;
+}
+#stream-main .stream-select #series-title {
+  font-size: 20px;
+  margin-top: 20px;
+}
+#stream-main .stream-select #episode-title {
+  font-size: 36px;
+}

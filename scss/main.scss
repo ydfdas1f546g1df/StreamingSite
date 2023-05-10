@@ -35,6 +35,9 @@ $eye-catcher-height-1080: 410px;
 @import "loginregister";
 @import "about";
 @import "account";
+@import "profile";
+@import "allseries";
+@import "stream";
 
 
 input[type=number] {
@@ -72,6 +75,7 @@ input::-webkit-inner-spin-button {
 
   &::selection {
     background: $orange;
+    color: white;
   }
 }
 
@@ -83,6 +87,14 @@ a {
   * {
     cursor: pointer;
 
+  }
+}
+
+.tooltip {
+  transition: none !important;
+
+  * {
+    transition: none !important;
   }
 }
 
@@ -136,10 +148,6 @@ html {
           color: white;
           font-weight: bold;
 
-          &:hover {
-            background: $dd-more-bg;
-            color: $orange;
-          }
         }
       }
     }
@@ -189,8 +197,14 @@ html {
 .tooltiptext {
   min-width: 140px;
   border-radius: 5px;
+
   a:hover {
     background: $light-gray;
+
+    .user-dd-icon {
+      background: $light-gray !important;
+
+    }
   }
 }
 
