@@ -14,7 +14,8 @@ RewriteBase /
 #RewriteCond %{HTTP_USER_AGENT} ^Xenu [OR]
 #RewriteCond %{HTTP_USER_AGENT} ^Zeus.*Webster [OR]
 #RewriteCond %{HTTP_USER_AGENT} ^Zeus
-#RewriteRule ^.*$ /error/scum.html [L]
+RewriteCond %{ENV:is_safari} ^1$
+RewriteRule ^.*$ /error/418.php [L]
 
 #RewriteRule ^.*$ http://youtube.com.com/ [L]
 
