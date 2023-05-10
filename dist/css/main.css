@@ -2070,6 +2070,7 @@ main.account-main .page-title {
 #stream-main .stream-select .select .episode, #stream-main .stream-select .select .season {
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
   margin: 5px;
 }
 #stream-main .stream-select .select .episode .select-el, #stream-main .stream-select .select .season .select-el {

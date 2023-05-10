@@ -194,6 +194,7 @@ $blue-hover: rgba(0, 132, 208, 0.62);
       .episode, .season {
         display: flex;
         justify-content: flex-start;
+        flex-wrap: wrap;
         margin: 5px;
 
         .select-el {
