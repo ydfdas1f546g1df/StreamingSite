@@ -42,10 +42,11 @@ $mainContent = '
 <main id="upload-main">
     <form class="upload-form" method="post" enctype="multipart/form-data" action="/api/uploadFile.php">
         <h1>Upload Form</h1>
-        <label for="files"><i class="fa-solid fa-folder-open fa-2x"></i>Select files ...</label>
+        <label for="files" class="drop-area"><i class="fa-solid fa-folder-open fa-2x"></i>Select files ...</label>
         <input id="files" type="file" name="files">
-        <label for="series_name" id="series"><span>Series Name</span>
-            <input list="series-list" name="series_name" id="series_name" required>
+        <label for="series_name" id="series">
+        <span>Series Name</span>
+        <input list="series-list" name="series_name" id="series_name" required>
             <datalist id="series-list">
                 <option v-for="s in series" :value="s.name">{{s.showName}}</option>
             </datalist>

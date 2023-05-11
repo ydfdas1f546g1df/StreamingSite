@@ -43,7 +43,7 @@ $mainContent = '
     <form class="upload-form" method="post" enctype="multipart/form-data" action="/api/createSeries.php">
         <h1>Upload Form</h1>
         <img id="image-preview" src="#" alt="Image preview" height="255px" width="150px">
-        <label for="files"><i class="fa-solid fa-image fa-2x"></i>Select Cover ...</label>
+        <label for="files" class="drop-area"><i class="fa-solid fa-image fa-2x"></i>Select Cover ...</label>
         <input id="files" type="file" name="files">
         <label for="series_name"><span>Series Name</span>
         <input type="text" name="series_name" id="series_name" required autocomplete="off" autofocus ><br><br>

@@ -24,6 +24,9 @@ $eye-catcher-height-1400: 230px;
 $eye-catcher-height-1080: 410px;
 $lighter-gray: #636363;
 $aside-width: 220px;
+$blue: #0084d0;
+$darker-blue: #006096;
+$blue-hover: rgba(0, 132, 208, 0.62);
 
 .admin-main {
   width: 100%;
@@ -400,6 +403,14 @@ $aside-width: 220px;
       font-size: 14px;
       width: 100px;
     }
+  }
+
+
+
+  .drop-area.dragover {
+    border-color: $blue !important;
+    background: $blue-hover !important;
+    transition: $trans;
   }
 
   .upload-form label i {
