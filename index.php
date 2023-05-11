@@ -87,7 +87,7 @@ $homeContent = '
         </div>
     </div>
 </main>
-        <script src="/script/main.js"></script>
+<script src="/script/main.js"></script>
 ';
 
 if (isset($cookie)) {

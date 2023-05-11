@@ -7,7 +7,7 @@ CREATE TABLE tbl_series
 (
     id          int AUTO_INCREMENT NOT NULL,
     name        varchar(50)        NOT NULL,
-    showName    varchar(200) DEFAULT 'Serie',
+    showName    varchar(200) DEFAULT 'Series',
     description varchar(1000) DEFAULT 'Hosted By Streaming Site',
     PRIMARY KEY tbl_series_id_primary (id)
 );

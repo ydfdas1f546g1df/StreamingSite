@@ -23,7 +23,6 @@ $eye-catcher-height: 156px;
 $eye-catcher-height-1400: 230px;
 $eye-catcher-height-1080: 410px;
 
-
 @import "search";
 @import "header";
 @import "footer";
@@ -38,7 +37,6 @@ $eye-catcher-height-1080: 410px;
 @import "profile";
 @import "allseries";
 @import "stream";
-
 
 input[type=number] {
   -moz-appearance: textfield;
@@ -86,8 +84,14 @@ a {
 
   * {
     cursor: pointer;
-
   }
+//  &:hover {
+//    box-shadow: $black-shadow;
+//
+//  }
+//img {
+//box-shadow: none;
+//  }
 }
 
 .tooltip {

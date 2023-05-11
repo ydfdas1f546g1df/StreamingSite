@@ -189,6 +189,8 @@ $(".tooltip").on("mouseenter", function (e) {
 
 
 $is_safari = false;
+$is_macos = false;
+
 
 $user_agent = $_SERVER['HTTP_USER_AGENT'];
 
@@ -196,9 +198,10 @@ if (strpos($user_agent, 'Safari') !== false && strpos($user_agent, 'Chrome') ===
     $is_safari = true;
 }
 if (PHP_OS === 'Darwin') {
-    $is_safari = true;
+$is_macos = true;
 }
-if ($is_safari) {
+
+if ($is_safari && $setting_safari["state"] == 1 || $is_macos && $setting_macos["state"] == 1) {
     $current_url = "http" . (($_SERVER['SERVER_PORT'] == 443) ? "s://" : "://") . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
     if (strpos($current_url, "/error/418.php")) {
     } else {

@@ -92,14 +92,14 @@ $(function () {
                                         }
                                     }
                                 }
-
+                                getCookie()
                                 let myObj = {rm_id: id, token: token};
                                 $.ajax({
                                     type: "POST",
                                     url: "/api/admin_rm_user.php",
                                     data: {myData: JSON.stringify(myObj)},
                                     success: function (res) {
-
+                                        console.log(res)
                                         if (res == 409) {
                                             $("#error-messages").append('<div class="error-msg-el"><div>' +
                                                 '<span class="error-code">409</span><span class="error-msg">You can\'t delete your own account</span>' +

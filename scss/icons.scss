@@ -1,6 +1,12 @@
 @import url('https://use.fontawesome.com/releases/v6.1.2/css/all.css');
 @import url('https://css.gg/css');
 //Down arrow
+$blue: #0084d0;
+$darker-blue: #006096;
+$blue-hover: rgba(0, 132, 208, 0.62);
+$black-shadow: 0px 0px 10px 1px rgba(10, 10, 10, 0.36);
+$orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
+
 .down-arrow {
   box-sizing: border-box;
   position: relative;
@@ -506,3 +512,73 @@
   left: -1px;
   top: -1px
 }
+
+
+
+ .checkbox-wrapper-64 input[type="checkbox"] {
+   visibility: hidden;
+   display: none;
+ }
+
+.checkbox-wrapper-64 *,
+.checkbox-wrapper-64 ::after,
+.checkbox-wrapper-64 ::before {
+  box-sizing: border-box;
+}
+
+/* The switch - the box around the slider */
+.checkbox-wrapper-64 .switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.checkbox-wrapper-64 .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.checkbox-wrapper-64 .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  border: 1px solid #adb5bd;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.checkbox-wrapper-64 .slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.27em;
+  bottom: 0.25em;
+  background-color: #adb5bd;
+  transition: .4s;
+}
+
+.checkbox-wrapper-64 input:checked + .slider {
+  background-color: $blue;
+  border: 1px solid $blue;
+}
+
+.checkbox-wrapper-64 input:focus + .slider {
+  box-shadow: 0 0 1px $blue;
+}
+
+.checkbox-wrapper-64 input:checked + .slider:before {
+  transform: translateX(1.4em);
+  background-color: #fff;
+}
+

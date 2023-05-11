@@ -191,4 +191,5 @@ INSERT INTO `tableName` (`639-1 code`, `ISO language name`, `Native name (endony
 
 INSERT INTO `tbl_languages` (`id`, `name`)
 SELECT `639-1 code`, `ISO language name` FROM `tablename`;
-insert into tbl_genre (`name`) value ('genre')
+insert into tbl_genre (`name`) value ('genre');
+drop table tableName

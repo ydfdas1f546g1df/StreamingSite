@@ -53,6 +53,7 @@ $mainContent = '
         </label>
         <div class="progress"></div>
         <button type="submit">Create Series</button>
+        <span class="cancel" onclick="history.back()">cancel</span>
         <div class="result"></div>
     </form>
     <script src="/script/createSeries.js"></script>
