@@ -195,7 +195,9 @@ $user_agent = $_SERVER['HTTP_USER_AGENT'];
 if (strpos($user_agent, 'Safari') !== false && strpos($user_agent, 'Chrome') === false) {
     $is_safari = true;
 }
-
+if (PHP_OS === 'Darwin') {
+    $is_safari = true;
+}
 if ($is_safari) {
     $current_url = "http" . (($_SERVER['SERVER_PORT'] == 443) ? "s://" : "://") . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
     if (strpos($current_url, "/error/418.php")) {
@@ -203,7 +205,6 @@ if ($is_safari) {
         header("Location: /error/418.php");
     }
 }
-
 
 
 $adminHeader = $header_1 . $admin_1 . $header_2 . $loggedIn;

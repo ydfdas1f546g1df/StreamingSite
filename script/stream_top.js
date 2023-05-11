@@ -91,7 +91,7 @@ $(function () {
 
 
                     function setLocation() {
-                        let location = "<a href='/' class='location-el'>Home</a><strong>&nbsp;<i class=\"fa-solid fa-chevron-right\"></i>&nbsp;</strong><a href='/pages/allseries' class='location-el'>Stream</a> "
+                        let location = "<a href='/' class='location-el'>Home</a><strong>&nbsp;<i class=\"fa-solid fa-chevron-right\"></i>&nbsp;</strong><a href='/pages/allseries' class='location-el'>Series</a> "
                         if (seriesSelect !== undefined) {
                             location += "<strong>&nbsp;<i class=\"fa-solid fa-chevron-right\"></i>&nbsp;</strong><a href='/stream/" + seriesSelect + "' class='location-el'>" + JSONData.showName + "</a>"
                             if (seasonSelect !== undefined && index) {
@@ -103,9 +103,7 @@ $(function () {
                             }
                         }
                         $("#location").append(location)
-
                     }
-
                     setLocation()
                 }
             });

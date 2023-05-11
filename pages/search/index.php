@@ -6,13 +6,17 @@ if (strpos($_SERVER['REQUEST_URI'], "=")) {
 } else {
     $quick = "";
 };
+$search = "";
+if (isset($_GET["search"])) {
+    $search = "value='".$_GET["search"] . "'";
+}
 
 
 $searchContent = '
 <main class="search-main" id="search-main">
     <label class="search">
         Search
-        <input type="text" v-model="search" id="search-input" ref="name">
+        <input type="text" v-model="search" id="search-input" ref="name" ' . $search . '>
     </label>
     <div id="search-result">
         <div id="search-for"><span>Search results for &bdquo;{{ search }}&rdquo;</span></div>
