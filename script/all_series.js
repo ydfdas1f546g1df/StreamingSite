@@ -53,14 +53,14 @@ $(function () {
                 computed: {
                     filteredSeries() {
                         const filtered = this.results.filter(result => {
-                            return result.showName.toLowerCase().indexOf(this.search.toLowerCase()) !== -1;
+                            return result.showName.toLowerCase().includes(this.search.toLowerCase());
                         });
                         return filtered;
                     },
                     seriesByLetter() {
                         const series = {};
                         this.letters.forEach(letter => {
-                            series[letter] = this.filteredSeries.filter(result => result.showName[0] === letter);
+                            series[letter] = this.filteredSeries.filter(result => result.showName[0].toUpperCase() === letter);
                         });
                         return series;
                     },
