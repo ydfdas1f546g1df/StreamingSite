@@ -7,7 +7,29 @@ const media = "/data/media/" + series + "_" + season + "_" + episode + ".mp4"
 const seasonNum = url.split("stream/")[1].split("/")[1].split("-")[1]
 const episodeNum = url.split("stream/")[1].split("/")[2].split("-")[1]
 // console.log(media)
+
+let token = ""
+const cookies = document.cookie.split(';');
+let tokenIndex = true
+
+function getCookie() {
+    for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].split('=');
+        if (cookie[0].includes("token")) {
+            token = cookie[1];
+        }
+    }
+}
+
+getCookie()
+
+if (token.length < 1) {
+    tokenIndex = false
+}
+
 $("#media-player").append("<source src=" + media + " type=\"video/mp4\">")
+
+if (tokenIndex) {
 
 setTimeout(function() {
 
@@ -57,3 +79,4 @@ setTimeout(function() {
     }
     addToWatched()
 }, 3 * 60 * 1000);
+}

@@ -35,7 +35,7 @@ $searchContent = '
                 </span>
                 </div>
 
-                <i class="fa-solid fa-folder-plus tooltip" id="add-wl-btn" @click.prevent="addToWatchlist">
+                <i class="fa-solid fa-folder-plus tooltip" id="add-wl-btn" @click.prevent="addToWatchlist(result, $event)">
                     <span class="tooltiptext">Add to Watchlist</span></i>
             </div>
             <span class="result-description">{{ result.desc }}</span><br>

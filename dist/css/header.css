@@ -62,6 +62,7 @@ header nav .nav-more {
   border-radius: 30px;
   background-color: black;
   color: white;
+  z-index: 2;
 }
 header nav .nav-more a {
   width: 160px !important;

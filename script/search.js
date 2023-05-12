@@ -80,8 +80,9 @@ $(function () {
                         },
                     },
                     methods: {
-                        addToWatchlist(e) {
-                            let name = $(e.target).parent().attr("name")
+                        addToWatchlist(data, e) {
+                            let name = data.name
+                            console.log(name)
                             // console.log($(e.target).parent().attr("showName"))
                             // console.log(name)
 
@@ -104,15 +105,16 @@ $(function () {
 
                                 getCookie()
                                 let myObj = {token: token, series: name};
+                                // console.log(myObj)
                                 await $.ajax({
                                     type: "POST",
                                     url: "/api/add_watchlist.php",
                                     data: {myData: JSON.stringify(myObj)},
                                     success: function (res) {
                                         console.log(res)
-                                        if (res == true) {
+                                        if (res == false) {
                                             $(e.target).find("span").text("added to Watchlist")
-                                        } else {
+                                        } else if (res == 400) {
                                             $(e.target).find("span").text("Alreay in your Watchlist")
                                         }
                                     }

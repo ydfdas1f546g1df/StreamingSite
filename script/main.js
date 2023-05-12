@@ -40,7 +40,6 @@ $(function () {
                 url: "/api/req_user_wd.php",
                 data: {myData: JSON.stringify(myObj)},
                 success: function (res) {
-                    // console.log(res)
 
                     let ResJSON = JSON.parse(res);
                     let length

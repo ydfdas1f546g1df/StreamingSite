@@ -1,3 +1,22 @@
+let token = ""
+const cookies = document.cookie.split(';');
+let tokenIndex = true
+
+function getCookie() {
+    for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].split('=');
+        if (cookie[0].includes("token")) {
+            token = cookie[1];
+        }
+    }
+}
+
+getCookie()
+
+if (token.length < 1) {
+    tokenIndex = false
+}
+
 $(function () {
 
         let seriesName
@@ -104,6 +123,7 @@ $(function () {
                         }
                         $("#location").append(location)
                     }
+
                     setLocation()
                 }
             });
@@ -179,6 +199,7 @@ $(function () {
                                     }
                                 });
                             }
+
                             toWatchlist()
                         },
                     }
@@ -216,6 +237,7 @@ $(function () {
 
 
         async function getSelect() {
+            let token
 
             function getCookie() {
                 for (let i = 0; i < cookies.length; i++) {
@@ -313,127 +335,64 @@ $(function () {
                 },
                 methods: {
                     addToWatched(e) {
-                        let parent = $(e.target).parent().parent()
-                        let toWDStatus = parent.attr("status")
-                        let toWDEpisode = parent.find(".episode").attr("episode")
-                        let toWDSeason = parent.find(".season").attr("season")
-                        let toWDSeries = parent.find(".series").attr("series")
-                        if (toWDStatus == 1) {
-                            toWDStatus = 2
-                            parent.toggleClass("watched-episode")
-                            parent.attr("status", 2)
-                        } else {
-                            toWDStatus = 1
-                            parent.toggleClass("watched-episode")
-                            parent.attr("status", 1)
-                        }
-                        $(".select-episode").each(
-                            function (e) {
-                                let el = $(this)
-                                // console.log(el)
-                                if (el.text() == toWDEpisode) {
-                                    el.toggleClass("watched")
-                                }
+                        if (tokenIndex) {
+
+                            let parent = $(e.target).parent().parent()
+                            let toWDStatus = parent.attr("status")
+                            let toWDEpisode = parent.find(".episode").attr("episode")
+                            let toWDSeason = parent.find(".season").attr("season")
+                            let toWDSeries = parent.find(".series").attr("series")
+                            if (toWDStatus == 1) {
+                                toWDStatus = 2
+                                parent.toggleClass("watched-episode")
+                                parent.attr("status", 2)
+                            } else {
+                                toWDStatus = 1
+                                parent.toggleClass("watched-episode")
+                                parent.attr("status", 1)
                             }
-                        )
-
-                        async function sendToWatched() {
-                            let myObj = {
-                                series: toWDSeries,
-                                token: token,
-                                season: toWDSeason,
-                                what: toWDStatus,
-                                episode: toWDEpisode
-                            };
-                            // console.log(myObj)
-                            await $.ajax({
-                                type: "POST",
-                                url: "/api/add_watched.php",
-                                data: {myData: JSON.stringify(myObj)},
-                                success: function (res) {
-                                    console.log(res)
-                                    // let ResJSON = JSON.parse(res);
-                                    // console.log(ResJSON)
-
-                                    // console.log(JSONData)
+                            $(".select-episode").each(
+                                function (e) {
+                                    let el = $(this)
+                                    // console.log(el)
+                                    if (el.text() == toWDEpisode) {
+                                        el.toggleClass("watched")
+                                    }
                                 }
-                            });
+                            )
+
+                            async function sendToWatched() {
+                                let myObj = {
+                                    series: toWDSeries,
+                                    token: token,
+                                    season: toWDSeason,
+                                    what: toWDStatus,
+                                    episode: toWDEpisode
+                                };
+                                // console.log(myObj)
+                                await $.ajax({
+                                    type: "POST",
+                                    url: "/api/add_watched.php",
+                                    data: {myData: JSON.stringify(myObj)},
+                                    success: function (res) {
+                                        console.log(res)
+                                        // let ResJSON = JSON.parse(res);
+                                        // console.log(ResJSON)
+
+                                        // console.log(JSONData)
+                                    }
+                                });
+                            }
+
+                            sendToWatched()
+                        } else {
+                            window.location.replace(window.location.origin + "/login");
                         }
 
-                        sendToWatched()
                     }
                 }
             }).mount("#stream-season")
         })
-        // $("#watchNow").on("click", function (e) {
-        //     console.log(1)
-        //     if (this.hash !== "") {
-        //         // Prevent default anchor click behavior
-        //         e.preventDefault();
-        //
-        //         // Store hash
-        //         let hash = "watch-now";
-        //
-        //         // Using jQuery's animate() method to add smooth page scroll
-        //         // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-        //         $('html, body').animate({
-        //             scrollTop: $(hash).offset().top
-        //         }, 800, function () {
-        //
-        //         });
-        //     }
-        // });
+
     }
 )
-
-
-// function addToWatched(e) {
-//     e.preventDefault()
-//     console.log(1)
-//     let Base_url = window.location.href
-//     let parent = $(e.target).parent().parent()
-//     let toWatchedSeries = Base_url.split("stream/")[1].split("/")[0]
-//     let toWatchedSeason = parent.find(".season").text()
-//     let toWatchedEpisode = parent.find(".episode").attr("episode")
-//     console.log(toWatchedEpisode)
-//     console.log(toWatchedSeason)
-//     console.log(toWatchedSeason)
-// }
-// $("*").on("click", function (e) {
-//     e.preventDefault()
-//
-// })
-//
-// $(".add-to-watched").on("click", function (e) {
-//     console.log(1)
-//     if (e) {
-//         e.preventDefault()
-//
-//     }
-//     e.preventDefault()
-//     console.log($(e).target())
-//     console.log($(e.target)[0])
-//     console.log($(e.target).parent().parent().find(".episode").attr("episode"))
-//     let Base_url = window.location.href
-//     let parent = $(e.target).parent().parent()
-//     let toWatchedSeries = Base_url.split("stream/")[1].split("/")[0]
-//     let toWatchedSeason = parent.find(".season").text()
-//     let toWatchedEpisode = parent.find(".episode").attr("episode")
-//     console.log(toWatchedEpisode)
-//     console.log(toWatchedSeason)
-//     console.log(toWatchedSeason)
-// })
-// $(function () {
-//     setTimeout(addToWatched, 1000)
-// })
-// $('.add-to-watched').on("click", function (e) {
-//     e.preventDefault()
-//     let Base_url = window.location.href
-//     let parent = $(e.target).parent().parent()
-//     let toWatchedSeries = Base_url.split("stream/")[1].split("/")[0]
-//     let toWatchedSeason = parent.find(".season").text()
-//     let toWatchedEpisode = parent.find(".episode").attr("episode")
-//     console.log(toWatchedEpisode)
-//     console.log(toWatchedSeason)
-//     console.log(toWatchedSeason)
-// })

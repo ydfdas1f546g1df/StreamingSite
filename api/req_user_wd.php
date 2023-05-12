@@ -63,7 +63,8 @@ if (strlen($username) > 1) {
     }
 
 } else {
-    http_response_code(400);
+//    http_response_code(400);
+    echo 400;
 }
 
 

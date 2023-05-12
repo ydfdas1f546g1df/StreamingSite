@@ -36,12 +36,12 @@ $header_1 = '<!DOCTYPE html>
             <a href="/pages/search/" title="Search for series and films"><i class="gg-search"></i>&nbsp;Search</a>
 ';
 $admin_1 = '
-            <span class="nav-more tooltip">admin
-             <div class="tooltiptext">
+            <span class="nav-more tooltip tooltip-header">admin
+             <div class="tooltiptext tooltiptext-header">
                  <a href="https://github.com/ydfdas1f546g1df/StreamingSite" target="_blank">
                 <div class="more-dd-icon"><i class="gg-git-fork"></i></div>
                 GitHub</a>
-                 <a href="/admin/Upload/">
+                 <a href="/admin/upload/">
                 <div class="more-dd-icon"><i class="gg-software-upload"></i></div>
                 Upload</a>
                <a href="/admin/">
@@ -62,15 +62,15 @@ $notLoggedIn = '
 
 $loggedIn = '
     <div class="user">
-    <a href="/user/profil"><img src="/dist/img/testpp.jpg" id="user-pp" alt="user-pp"/></a>
-        <div id="user-name" class="tooltip">' . $name . '<i class="down-arrow"></i>
-            <div class="tooltiptext">
+    <a href="/user/profile"><img src="/dist/img/testpp.jpg" id="user-pp" alt="user-pp"/></a>
+        <div id="user-name" class="tooltip tooltip-header">' . $name . '<i class="down-arrow"></i>
+            <div class="tooltiptext tooltiptext-header">
                 <a class="user-dd-el" href="/user">
                     <div class="user-dd-icon">
                         <i class="gg-format-justify"></i>
                     </div>
                     <span class="user-dd-name">Account</span>
-                </a> <a class="user-dd-el" href="/user/profil/">
+                </a> <a class="user-dd-el" href="/user/profile/">
                 <div class="user-dd-icon">
                     <i class="gg-user"></i>
                 </div>
@@ -164,19 +164,19 @@ $footer = '
         location.reload();
     })
     let lastTT
-$(".tooltip").on("mouseenter", function (e) {
+$(".tooltip-header").on("mouseenter", function (e) {
 //  console.log(lastTT !== e.currentTarget)
 //  console.log(e.currentTarget)
   if (lastTT !== e.currentTarget) {
-    $(".tooltiptext").attr("style", "visibility: hidden;")
+    $(".tooltiptext-header").attr("style", "visibility: hidden;")
   }
   lastTT = e.currentTarget
 //  console.log(lastTT)
-  $(e.currentTarget).find(".tooltiptext").attr("style", "visibility: visible;")
+  $(e.currentTarget).find(".tooltiptext-header").attr("style", "visibility: visible;")
 })
 
     $("*").on("click", function () {
-        $(".tooltiptext").each(
+        $(".tooltiptext-header").each(
             function () {
 //                console.log(this)
                 $(this).attr("style", "visibility: hidden;")

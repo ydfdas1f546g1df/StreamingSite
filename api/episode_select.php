@@ -11,7 +11,11 @@ if (isset($_POST['myData'])) {
     $series_name = $data->series;
     $season_num = $data->season;
     $index = $data->index;
-    $token = $data->token;
+    if (isset($data->token)) {
+        $token = $data->token;
+    } else {
+        $token = "";
+    }
 }
 //$index = true;
 if (strlen($series_name) < 1) {
@@ -47,7 +51,7 @@ $stmt = $mysqli->prepare('Select tse.season, 1 as "index" ,
 inner join tbl_series t on tse.series = t.id
 where t.name = ?
 order by tse.season');
-$stmt->bind_param('ssss',  $series_name, $token, $series_name, $series_name);
+$stmt->bind_param('ssss', $series_name, $token, $series_name, $series_name);
 
 $stmt->execute();
 $result = $stmt->get_result();

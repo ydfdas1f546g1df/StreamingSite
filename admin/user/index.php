@@ -52,7 +52,7 @@ $admin_user = '
                 <div class="user-list-el" v-for="user in filteredUsers" id="{{ user.id }}" :key="user.id">
                     <span class="user-list-el-id">{{ user.id }}</span>
                     <span class="user-list-el-username">{{ user.username }}</span>
-                    <span class="user-list-el-name"><a :href="\'/user/profil/?u=\' + user.username">{{ user.name }}</a></span>
+                    <span class="user-list-el-name"><a :href="\'/user/profile/?u=\' + user.username">{{ user.name }}</a></span>
                     <span class="user-list-el-email">{{ user.email }}</span>
                     <span class="user-list-el-admin" ><i :class="user.admin"  status="0" @click="editAdmin" :admin="user.IsAdmin"></i></span>
                     <span class="user-list-btn-placeholder">

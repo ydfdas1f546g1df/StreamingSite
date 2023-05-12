@@ -3,6 +3,8 @@ Admin Sides
 - Episodes
 - Series
 
-Pages
-- Series Page
-- Episode Page
+
+calculate views
+    viewCount / usersWatched / maxEpisodes = index
+
+    60 / 7 / 12 = 0.7143
