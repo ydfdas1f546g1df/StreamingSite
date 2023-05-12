@@ -106,11 +106,11 @@ uploadForm.onsubmit = event => {
                 // Reset the button
                 uploadForm.querySelector('button').innerHTML = 'Create Series';
 
-                $("#imagePreview").attr("src", "#")
-                $("#imagePreview").attr("style", "display: none;")
                 // Enable the submit button
                 uploadForm.querySelector('button').disabled = false;
             }
+            $("#imagePreview").attr("src", "#")
+            $("#imagePreview").attr("style", "display: none;")
         };
         // Set form data values
         uploadFormData.set('series_name', seriesInput.val());

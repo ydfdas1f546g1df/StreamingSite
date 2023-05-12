@@ -5,50 +5,12 @@ $homeContent = '
     <div class="quick-search" id="quick-search">
         <a :href="\'/pages/search/?search=\' + quick"  class="quick-search-el" v-for="quick in quicks">{{ quick }}</a>
     </div>
-    <div class="eye-catcher" id="eye-catcher">
-        <div class="eye-wr">
-            <div class="eye-wrapper">
-                <div class="eye-el-1x2 eye-catcher-el">
-                    <span>Vinland Saga</span>
-                </div>
-                <div class="eye-el-1x2 eye-catcher-el">
-                    <span>Vinland Saga</span>
-                </div>
-            </div>
-            <div class="eye-wrapper">
-                <div class="eye-el-2x2 eye-catcher-el">
-                    <span>Vinland Saga</span>
-                </div>
-            </div>
-        </div>
-        <div class="eye-wr">
-            <div class="eye-wrapper">
-                <div class="eye-wrapper-wrapper">
-                    <div class="eye-el-1x1 eye-catcher-el">
-                        <span>Vinland Saga</span>
-                    </div>
-                    <div class="eye-el-1x1 eye-catcher-el">
-                        <span>Vinland Saga</span>
-                    </div>
-                </div>
-                <div class="eye-wrapper-wrapper">
-                    <div class="eye-el-1x1 eye-catcher-el">
-                        <span>Vinland Saga</span>
-                    </div>
-                    <div class="eye-el-1x1 eye-catcher-el">
-                        <span>Vinland Saga</span>
-                    </div>
-                </div>
-            </div>
-            <div class="eye-wrapper">
-                <div class="eye-el-1x2 eye-catcher-el">
-                    <span>Vinland Saga</span>
-                </div>
-                <div class="eye-el-1x2 eye-catcher-el">
-                    <span>Vinland Saga</span>
-                </div>
-            </div>
-        </div>
+    <div>
+        <div class="parent">
+        <a v-for="cat in catcher" :href="\'/stream/\' + cat.name">
+        <div :style="\'background-image: url(/data/cover/\' + cat.name + \'.jpg);\'"></div>
+        <span>{{ cat.showName }}</span></a>
+</div>
     </div>
     <div class="home-cat-parent">
         <span class="home-el-title">Popular
