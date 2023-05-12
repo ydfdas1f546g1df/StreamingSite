@@ -1,3 +1,4 @@
+drop table tbl_admin_settings;
 CREATE TABLE tbl_admin_settings
 (
     id           int         NOT NULL AUTO_INCREMENT,
