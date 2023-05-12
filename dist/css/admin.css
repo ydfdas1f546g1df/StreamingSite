@@ -21,8 +21,8 @@
   margin-top: 5px;
 }
 .admin-main #admin-main-div article#settings-article .setting-el {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 1fr 3fr 1fr;
   color: white;
   margin: 5px;
   border-radius: 5px;
@@ -227,7 +227,7 @@
 .admin-main #admin-main-div #error-messages .error-msg-el {
   margin-top: 10px;
   border-radius: 5px;
-  background: rgb(255, 100, 16);
+  background: rgba(255, 100, 16, 0.71);
   padding: 10px;
   color: white;
   display: flex;

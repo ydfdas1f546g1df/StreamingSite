@@ -7,6 +7,7 @@ $footer-height: 300px;
 $footer-bg: rgb(28, 28, 28);
 $header-height: 70px;
 $orange: rgb(255, 100, 16);
+$error-orange: rgba(255, 100, 16, 0.71);
 $logo-size: 40px;
 $width: 60%;
 $header-bg: rgb(28, 28, 28);
@@ -54,8 +55,8 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
         }
 
         .setting-el {
-          display: flex;
-          flex-direction: column;
+          display: grid;
+          grid-template-rows: 1fr 3fr 1fr;
           color: white;
           margin: 5px;
           border-radius: 5px;
@@ -311,7 +312,7 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
       .error-msg-el {
         margin-top: 10px;
         border-radius: 5px;
-        background: $orange;
+        background: $error-orange;
         padding: 10px;
         color: white;
         display: flex;

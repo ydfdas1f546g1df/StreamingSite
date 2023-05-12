@@ -198,16 +198,32 @@ if (strpos($user_agent, 'Safari') !== false && strpos($user_agent, 'Chrome') ===
     $is_safari = true;
 }
 if (PHP_OS === 'Darwin') {
-$is_macos = true;
+    $is_macos = true;
 }
-
+$current_url = "http" . (($_SERVER['SERVER_PORT'] == 443) ? "s://" : "://") . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+//echo $current_url;
 if ($is_safari && $setting_safari["state"] == 1 || $is_macos && $setting_macos["state"] == 1) {
-    $current_url = "http" . (($_SERVER['SERVER_PORT'] == 443) ? "s://" : "://") . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
     if (strpos($current_url, "/error/418.php")) {
     } else {
         header("Location: /error/418.php");
     }
 }
+
+//if (strpos($current_url, "/error/maintenance.php")) {
+//
+//} elseif (strpos($current_url, "/login/")) {
+//
+//}else {
+//    if (isset($IsAdmin)) {
+//        if (!$IsAdmin && $setting_main["state"]) {
+//
+//            header("Location: /error/maintenance.php");
+//        }
+//    } else {
+//        header("Location: /error/maintenance.php");
+//    }
+//}
 
 
 $adminHeader = $header_1 . $admin_1 . $header_2 . $loggedIn;

@@ -28,6 +28,7 @@ if ($index) {
 $setting_macos = 'macos';
 $setting_safari = 'safari';
 $setting_verify = 'verify';
+$setting_main = 'maintenance';
 
 $filteredObjects = array_filter($SettingsArray, function ($obj) use ($setting_macos) {
     return $obj['name'] === $setting_macos;
@@ -60,6 +61,14 @@ if (!empty($filteredObjects)) {
 //    echo "<pre>";
 //    echo print_r($foundObject["state"]);
 //    echo "</pre>";
+}
+
+$filteredObjects = array_filter($SettingsArray, function ($obj) use ($setting_main) {
+    return $obj['name'] === $setting_main;
+});
+
+if (!empty($filteredObjects)) {
+    $setting_main = reset($filteredObjects);
 }
 
 //echo $SettingsArray[1]["name"];

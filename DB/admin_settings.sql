@@ -12,7 +12,8 @@ insert into tbl_admin_settings (name, showName, description, state)
 values
     ('safari', 'Prohibit Safari', 'Do not allow Safari users to use this website page.', false),
     ('macos','Prohibit MacOS', 'Do not allow MacOS users to use the website.', false),
-    ('verify','Verification', 'Allow users to verify their email address.', true);
+    ('verify','Verification', 'Allow users to verify their email address.', true),
+    ('maintenance', 'Maintenance mode', 'During maintenance or implementation of new features, only admins can enter the site.', true);
 
 # CREATE TABLE tbl_users
 # (
