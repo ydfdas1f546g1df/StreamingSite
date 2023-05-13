@@ -1,11 +1,39 @@
 @import url('https://use.fontawesome.com/releases/v6.1.2/css/all.css');
 @import url('https://css.gg/css');
 //Down arrow
+$main-bg: rgb(17, 17, 17);
+$dd-padding: 3vw;
+$dd-width: 100vw - (2 * $dd-padding);
+$dd-el-padding: 0.6em;
+$dd-el-width: $dd-width - (2 * $dd-padding);
+$footer-height: 300px;
+$footer-bg: rgb(28, 28, 28);
+$header-height: 70px;
+$orange: rgb(255, 100, 16);
+$error-orange: rgba(255, 100, 16, 0.71);
+$logo-size: 40px;
+$width: 60%;
+$header-bg: rgb(28, 28, 28);
+$hover-orange: #f8cb80;
+$user-pp-size: 40px;
+$dd-more-bg: rgb(24, 24, 24);
+$light-gray: rgb(55, 55, 55);
+$trans: all .4s ease-in-out;
+$cat-title-size: 22px;
+$eye-catcher-margin: 5px;
+$eye-catcher-margin-1400: 10px;
+$eye-catcher-margin-1080: 20px;
+$eye-catcher-height: 156px;
+$eye-catcher-height-1400: 230px;
+$eye-catcher-height-1080: 410px;
+$lighter-gray: #636363;
+$aside-width: 220px;
 $blue: #0084d0;
 $darker-blue: #006096;
 $blue-hover: rgba(0, 132, 208, 0.62);
 $black-shadow: 0px 0px 10px 1px rgba(10, 10, 10, 0.36);
 $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
+
 
 .down-arrow {
   box-sizing: border-box;
@@ -519,7 +547,10 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
    visibility: hidden;
    display: none;
  }
-
+.checkbox-wrapper-64 {
+  display: flex;
+  align-items: center;
+}
 .checkbox-wrapper-64 *,
 .checkbox-wrapper-64 ::after,
 .checkbox-wrapper-64 ::before {
@@ -569,12 +600,12 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
 }
 
 .checkbox-wrapper-64 input:checked + .slider {
-  background-color: $blue;
-  border: 1px solid $blue;
+  background-color: $orange;
+  border: 1px solid $orange;
 }
 
 .checkbox-wrapper-64 input:focus + .slider {
-  box-shadow: 0 0 1px $blue;
+  box-shadow: 0 0 1px $orange;
 }
 
 .checkbox-wrapper-64 input:checked + .slider:before {

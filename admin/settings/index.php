@@ -32,10 +32,12 @@ $admin_user = '
         <span class="setting-title">{{ set.showName }}</span>
         <span class="setting-desc">{{ set.desc }}</span>
             <div class="checkbox-wrapper-64">
+            <span class="sel sel1 selected">{{ set.sel1 }}</span>
                 <label class="switch">
-                    <input type="checkbox" value="true" v-model="set.state" @click="changeSetting(set)">
+                    <input type="checkbox" v-model="set.state" @click="changeSetting(set, $event)">
                     <span class="slider"></span>
                 </label>
+                <span class="sel sel2 selected">{{ set.sel2 }}</span>
             </div>
         </div>
     </article>

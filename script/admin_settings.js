@@ -25,7 +25,7 @@ $(function () {
             await $.ajax({
                 type: "POST",
                 url: "/api/get_admin_settings.php",
-                data: {myData: JSON.stringify(myObj)},
+                data: {mySettings: JSON.stringify(myObj)},
                 success: function (res) {
                     let ResJSON = JSON.parse(res);
                     console.log(ResJSON)
@@ -43,6 +43,8 @@ $(function () {
                             name: ResJSON[i].name,
                             showName: ResJSON[i].showName,
                             desc: ResJSON[i].description,
+                            sel1: ResJSON[i].sel1,
+                            sel2: ResJSON[i].sel2,
                         })
                         // JSONData.push({
                         //     id: ResJSON[i].id,
@@ -68,9 +70,13 @@ $(function () {
                         };
                     },
                     methods: {
-                        changeSetting(e) {
+                        changeSetting(e, event) {
                             // console.log(e.state)
                             let token
+                            // event = $(event.target).parent().parent()
+                            // if (!e.state) {
+                            //     event.find(".sel1")
+                            // }
 
 
                             function getCookie() {

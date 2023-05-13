@@ -125,6 +125,7 @@ $(function () {
                             showName: ResJSON[i].showName,
                             name: ResJSON[i].name,
                             watched: ResJSON[i].watched,
+                            viewIndex: ResJSON[i].view,
                         })
                     }
                     if (length > 9) {

@@ -3,8 +3,8 @@
  * @var mysqli $mysqli
  */
 $index = false;
-if (isset($_POST['myData'])) {
-    $data = json_decode($_POST['myData']);
+if (isset($_POST['mySettings'])) {
+    $data = json_decode($_POST['mySettings']);
     $index = true;
 }
 
@@ -29,6 +29,7 @@ $setting_macos = 'macos';
 $setting_safari = 'safari';
 $setting_verify = 'verify';
 $setting_main = 'maintenance';
+$setting_popular = 'popular';
 
 $filteredObjects = array_filter($SettingsArray, function ($obj) use ($setting_macos) {
     return $obj['name'] === $setting_macos;
@@ -69,6 +70,14 @@ $filteredObjects = array_filter($SettingsArray, function ($obj) use ($setting_ma
 
 if (!empty($filteredObjects)) {
     $setting_main = reset($filteredObjects);
+}
+
+$filteredObjects = array_filter($SettingsArray, function ($obj) use ($setting_popular) {
+    return $obj['name'] === $setting_popular;
+});
+
+if (!empty($filteredObjects)) {
+    $setting_popular = reset($filteredObjects);
 }
 
 //echo $SettingsArray[1]["name"];
