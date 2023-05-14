@@ -145,11 +145,17 @@ $(function () {
                             let el = $("#watchlist")
                             let status = el.attr("status")
                             let file
+                            let toWatchlistInfo = $("#top-watchlist")
+                            let toWatchlistInfoVal = parseFloat(toWatchlistInfo.text())
                             if (status == 1) {
+                                toWatchlistInfoVal--
+                                toWatchlistInfo.text(toWatchlistInfoVal)
                                 file = "/api/remove_watchlist.php"
                                 el.attr("class", "watchlist-add").attr("status", 0)
                                 console.log("to 0")
                             } else {
+                                toWatchlistInfoVal++
+                                toWatchlistInfo.text(toWatchlistInfoVal)
                                 file = "/api/add_watchlist.php"
                                 el.attr("class", "watchlist-add isInWatchlist").attr("status", 1)
                                 console.log("to 1")
@@ -342,12 +348,24 @@ $(function () {
                             let toWDStatus = parent.attr("status")
                             let toWDEpisode = parent.find(".episode").attr("episode")
                             let toWDSeason = parent.find(".season").attr("season")
+                            let toWDViews = parent.find(".views")
+                            let topStreamWatched = $("#top-watched")
+                            let topStreamWatchedVal = parseFloat(topStreamWatched.text())
+                            let toWDViewsVal = parseFloat(parent.find(".views").attr("views"))
                             let toWDSeries = parent.find(".series").attr("series")
                             if (toWDStatus == 1) {
+                                toWDViewsVal--
+                                topStreamWatchedVal--
+                                topStreamWatched.text(topStreamWatchedVal)
+                                toWDViews.attr("views", toWDViewsVal).text(toWDViewsVal)
                                 toWDStatus = 2
                                 parent.toggleClass("watched-episode")
                                 parent.attr("status", 2)
                             } else {
+                                toWDViewsVal++
+                                topStreamWatchedVal++
+                                topStreamWatched.text(topStreamWatchedVal)
+                                toWDViews.attr("views", toWDViewsVal).text(toWDViewsVal)
                                 toWDStatus = 1
                                 parent.toggleClass("watched-episode")
                                 parent.attr("status", 1)

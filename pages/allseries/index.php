@@ -12,7 +12,7 @@ $searchContent = '
 <main class="search-main" id="all-series-main">
   <div class="page-title">All Series <a href="/pages/search/"><div class="icon"><i class="gg-search"></i></div>Search</a></div>
   <label class="search">
-      <input type="text" v-model="search" id="search-input" placeholder="Search for series...">
+      <input type="text" v-model="search" id="all-search-input" placeholder="Search for series...">
   </label>
   <div id="all-series-list">
     <template v-for="letter in letters">

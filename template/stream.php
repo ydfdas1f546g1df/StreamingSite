@@ -10,10 +10,10 @@ $streamTopMain = '
     <div class="info-column">
         <strong class="series-title" id="SeriesName">{{ series.showName }}</strong>
         <span class="series-desc">{{ series.desc }}</span>
-        <span class="series-info"><strong>Regisseur: </strong>{{ series.reg }}</span> 
-        <span class="series-info"><strong>Language: </strong>{{ series.lang }}</span>
-        <span class="series-info"><strong>Watchlist: </strong>{{ series.watchlist }}</span>
-        <span class="series-info"><strong>Watched: </strong>{{ series.watched }}</span>
+        <span class="series-info"><strong>Regisseur: </strong><span>{{ series.reg }}</span></span> 
+        <span class="series-info"><strong>Language: </strong><span>{{ series.lang }}</span></span>
+        <span class="series-info"><strong>Watchlist: </strong><span id="top-watchlist">{{ series.watchlist }}</span></span>
+        <span class="series-info"><strong>Watched: </strong><span id="top-watched">{{ series.watched }}</span></span>
     </div>
     <div class="watchlist-column">
         <div>
