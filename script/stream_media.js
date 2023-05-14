@@ -8,18 +8,18 @@ const seasonNum = url.split("stream/")[1].split("/")[1].split("-")[1]
 const episodeNum = url.split("stream/")[1].split("/")[2].split("-")[1]
 // console.log(media)
 
-let token = ""
-const cookies = document.cookie.split(';');
-let tokenIndex = true
+// let token = ""
+// const cookies = document.cookie.split(';');
+// let tokenIndex = true
 
-function getCookie() {
-    for (let i = 0; i < cookies.length; i++) {
-        const cookie = cookies[i].split('=');
-        if (cookie[0].includes("token")) {
-            token = cookie[1];
-        }
-    }
-}
+// function getCookie() {
+//     for (let i = 0; i < cookies.length; i++) {
+//         const cookie = cookies[i].split('=');
+//         if (cookie[0].includes("token")) {
+//             token = cookie[1];
+//         }
+//     }
+// }
 
 getCookie()
 
@@ -65,7 +65,7 @@ setTimeout(function() {
             url: "/api/add_watched.php",
             data: {myData: JSON.stringify(myObj)},
             success: function (res) {
-                console.log(res)
+                // console.log(res)
                 if (res == 200) {
                     console.log("added")
                 } else if (res == 400) {

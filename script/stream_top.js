@@ -256,7 +256,7 @@ $(function () {
                 url: "/api/episode_select.php",
                 data: {myData: JSON.stringify(myObj)},
                 success: function (res) {
-                    // console.log(res)
+                    console.log(res)
                     let ResJSON = JSON.parse(res);
                     console.log(ResJSON)
                     if (ResJSON[0][0].index == 1) {
@@ -309,6 +309,7 @@ $(function () {
 
                             JSONData3.push({
                                 season: ResJSON[1][i].season,
+                                views: ResJSON[1][i].views,
                                 name: ResJSON[1][i].name,
                                 episode: ResJSON[1][i].episode,
                                 watched: watched,

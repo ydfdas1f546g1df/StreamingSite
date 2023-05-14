@@ -149,12 +149,27 @@ $blue-hover: rgba(0, 132, 208, 0.62);
     padding: 50px;
     background: $header-bg;
     margin-bottom: 200px;
+    display: flex;
+    flex-direction: column;
 
     #media-player {
       width: 100%;
       background: black;
-      border-radius: 5px;
+      border-radius: 5px 5px 0 0;
       aspect-ratio: 16/10;
+    }
+
+    div {
+      width: 100%;
+      display: flex;
+
+      span {
+        background: $blue;
+        width: 100%;
+        font-size: 14px;
+        padding: 2px 4px;
+        border-radius: 0 0 5px 5px;
+      }
     }
   }
 
@@ -219,7 +234,7 @@ $blue-hover: rgba(0, 132, 208, 0.62);
 
               &.current {
                 background: $orange !important;
-              color: white !important;
+                color: white !important;
               }
             }
 

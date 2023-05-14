@@ -6,6 +6,7 @@ $streamMediaMain = '
 <div class="stream-media">
     <video id="media-player" controls>
     </video>
+    <div><span>The episode is marked as watched after 3 min</span></div>
 </div>
 </main>
 <script src="/script/stream_media.js"></script>
