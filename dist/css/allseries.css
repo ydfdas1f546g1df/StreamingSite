@@ -1,14 +1,22 @@
 #all-series-main {
   color: white;
 }
+#all-series-main #all-search-input {
+  height: 24px;
+  font-size: 18px;
+  width: 1150px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background: none;
+  box-shadow: none;
+  outline: none;
+  border-color: transparent transparent black transparent;
+  color: white;
+  border-bottom: rgb(55, 55, 55) solid 4px;
+}
 #all-series-main #all-series-list {
   display: flex;
   flex-direction: column;
-}
-#all-series-main #all-series-list #search-input {
-  height: 20px;
-  font-size: 18px;
-  color: #520000;
 }
 #all-series-main #all-series-list .letter {
   display: flex;
