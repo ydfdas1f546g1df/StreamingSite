@@ -5,6 +5,11 @@
   display: flex;
   flex-direction: column;
 }
+#all-series-main #all-series-list #search-input {
+  height: 20px;
+  font-size: 18px;
+  color: #520000;
+}
 #all-series-main #all-series-list .letter {
   display: flex;
   flex-direction: column;

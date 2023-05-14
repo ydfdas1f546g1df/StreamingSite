@@ -7,10 +7,10 @@
   color: white;
   font-size: 40px;
 }
-.search-main label.search input {
-  font-size: 40px !important;
+.search-main label.search input#search-input {
+  font-size: 40px;
   width: 1150px;
-  height: 80px !important;
+  height: 80px;
   margin-bottom: 20px;
   border-radius: 5px;
   background: none;
@@ -20,14 +20,14 @@
   color: white;
   border-bottom: rgb(55, 55, 55) solid 4px;
 }
-.search-main label.search input:focus-visible {
+.search-main label.search input#search-input:focus-visible {
   outline: none;
   border-bottom: rgb(255, 100, 16) solid 4px;
 }
-.search-main label.search input::-moz-placeholder {
+.search-main label.search input#search-input::-moz-placeholder {
   color: rgba(255, 255, 255, 0.51);
 }
-.search-main label.search input::placeholder {
+.search-main label.search input#search-input::placeholder {
   color: rgba(255, 255, 255, 0.51);
 }
 .search-main #search-result {
