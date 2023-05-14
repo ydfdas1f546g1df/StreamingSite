@@ -64,7 +64,7 @@ $loggedIn = '
     <div class="user">
     <a href="/user/profile"><img src="/dist/img/testpp.jpg" id="user-pp" alt="user-pp"/></a>
         <div id="user-name" class="tooltip tooltip-header">' . $name . '<i class="down-arrow"></i>
-            <div class="tooltiptext tooltiptext-header">
+            <div class="tooltiptext tooltiptext-header user-dropdown">
                 <a class="user-dd-el" href="/user">
                     <div class="user-dd-icon">
                         <i class="gg-format-justify"></i>

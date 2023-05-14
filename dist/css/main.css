@@ -115,6 +115,9 @@ header .user #user-name {
   align-items: center;
   color: white;
 }
+header .user #user-name .user-dropdown {
+  overflow: hidden;
+}
 header .user #user-name:hover {
   color: rgb(255, 100, 16);
 }
@@ -123,6 +126,12 @@ header .user #user-name .user-dd-el {
   align-items: center;
   font-size: 14px;
   color: white;
+}
+header .user #user-name .user-dd-el:first-child {
+  border-radius: 5px 5px 0 0;
+}
+header .user #user-name .user-dd-el:last-child {
+  border-radius: 0 0 5px 5px;
 }
 header .user #user-name .user-dd-el:hover {
   color: rgb(255, 100, 16);
@@ -2283,6 +2292,7 @@ main.account-main .page-title {
 }
 #stream-main .stream-select #episode-title {
   font-size: 36px;
+  color: #636363;
 }
 #stream-main .stream-season {
   margin-bottom: 200px;
@@ -2329,12 +2339,6 @@ main.account-main .page-title {
 
 input[type=number] {
   -moz-appearance: textfield;
-}
-
-* {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }
 
 input::-webkit-outer-spin-button,
