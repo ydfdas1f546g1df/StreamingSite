@@ -2174,12 +2174,25 @@ main.account-main .page-title {
   padding: 50px;
   background: rgb(28, 28, 28);
   margin-bottom: 200px;
+  display: flex;
+  flex-direction: column;
 }
 #stream-main .stream-media #media-player {
   width: 100%;
   background: black;
-  border-radius: 5px;
+  border-radius: 5px 5px 0 0;
   aspect-ratio: 16/10;
+}
+#stream-main .stream-media div {
+  width: 100%;
+  display: flex;
+}
+#stream-main .stream-media div span {
+  background: #0084d0;
+  width: 100%;
+  font-size: 14px;
+  padding: 2px 4px;
+  border-radius: 0 0 5px 5px;
 }
 #stream-main .stream-select #location {
   display: flex;
@@ -2305,6 +2318,12 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+* {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -2312,7 +2331,7 @@ input::-webkit-inner-spin-button {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 /* Track */
@@ -2323,6 +2342,7 @@ input::-webkit-inner-spin-button {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: rgb(55, 55, 55);
+  border-radius: 10px;
 }
 
 /* Handle on hover */

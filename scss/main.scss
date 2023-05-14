@@ -42,6 +42,10 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+* {
+  user-select: none;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -49,7 +53,7 @@ input::-webkit-inner-spin-button {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 /* Track */
@@ -60,6 +64,7 @@ input::-webkit-inner-spin-button {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: $light-gray;
+  border-radius: 10px;
 }
 
 /* Handle on hover */
@@ -85,13 +90,14 @@ a {
   * {
     cursor: pointer;
   }
-//  &:hover {
-//    box-shadow: $black-shadow;
-//
-//  }
-//img {
-//box-shadow: none;
-//  }
+
+  //  &:hover {
+  //    box-shadow: $black-shadow;
+  //
+  //  }
+  //img {
+  //box-shadow: none;
+  //  }
 }
 
 .tooltip {

@@ -92,12 +92,25 @@
   padding: 50px;
   background: rgb(28, 28, 28);
   margin-bottom: 200px;
+  display: flex;
+  flex-direction: column;
 }
 #stream-main .stream-media #media-player {
   width: 100%;
   background: black;
-  border-radius: 5px;
+  border-radius: 5px 5px 0 0;
   aspect-ratio: 16/10;
+}
+#stream-main .stream-media div {
+  width: 100%;
+  display: flex;
+}
+#stream-main .stream-media div span {
+  background: #0084d0;
+  width: 100%;
+  font-size: 14px;
+  padding: 2px 4px;
+  border-radius: 0 0 5px 5px;
 }
 #stream-main .stream-select #location {
   display: flex;
