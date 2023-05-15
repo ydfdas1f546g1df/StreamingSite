@@ -415,19 +415,17 @@ CREATE TABLE tbl_admin_settings
     name        varchar(100) DEFAULT 'setting',
     showName    varchar(100) DEFAULT 'setting',
     description varchar(500) DEFAULT 'setting',
-    'select1'   varchar(500) DEFAULT 'OFF',
-    'select2'   varchar(500) DEFAULT 'ON',
+    sel1        varchar(500) DEFAULT 'OFF',
+    sel2        varchar(500) DEFAULT 'ON',
     state       boolean      DEFAULT FALSE,
     PRIMARY KEY tbl_admin_settings_id_primary (id)
 );
 
-insert into tbl_admin_settings (name, showName, description, 'select1', 'select2', state)
+insert into tbl_admin_settings (name, showName, description, sel1, sel2, state)
 values ('safari', 'Prohibit Safari', 'Do not allow Safari users to use this website page.', 'OFF', 'ON', false),
        ('macos', 'Prohibit MacOS', 'Do not allow MacOS users to use the website.', 'OFF', 'ON', false),
        ('verify', 'Verification', 'Allow users to verify their email address.', 'OFF', 'ON', true),
        ('maintenance', 'Maintenance mode',
         'During maintenance or implementation of new features, only admins can enter the site.', 'OFF', 'ON', true),
        ('popular', 'Popular Series', 'Sort series by index or views.', 'Index', 'Views', true);
-
-
 
