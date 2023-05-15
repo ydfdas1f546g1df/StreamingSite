@@ -10,7 +10,7 @@ $streamTopMain = '
     <div class="info-column">
         <strong class="series-title" id="SeriesName">{{ series.showName }}</strong>
         <span class="series-desc">{{ series.desc }}</span>
-        <span class="series-info"><strong>Regisseur: </strong><span>{{ series.reg }}</span></span> 
+        <span class="series-info"><strong>Regisseur: </strong><span>{{ series.reg }}</span></span>
         <span class="series-info"><strong>Language: </strong><span>{{ series.lang }}</span></span>
         <span class="series-info"><strong>Watchlist: </strong><span id="top-watchlist">{{ series.watchlist }}</span></span>
         <span class="series-info"><strong>Watched: </strong><span id="top-watched">{{ series.watched }}</span></span>
@@ -22,6 +22,7 @@ $streamTopMain = '
             <span class="share"><i class="fa-solid fa-share-from-square"></i> Share</span>
         </div>
     </div>
+    <div class="background"  :style="\'background: url(/data/\' + series.name + \'/\' + series.name + \'.jpg); background-size: cover; background-position: center; filter: blur(8px);\'"></div>
 </div>
 ';
 

@@ -8,19 +8,51 @@ console.log(media)
 const seasonNum = url.split("stream/")[1].split("/")[1].split("-")[1]
 const episodeNum = url.split("stream/")[1].split("/")[2].split("-")[1]
 // console.log(media)
-
-// let token = ""
-// const cookies = document.cookie.split(';');
-// let tokenIndex = true
-
-// function getCookie() {
-//     for (let i = 0; i < cookies.length; i++) {
-//         const cookie = cookies[i].split('=');
-//         if (cookie[0].includes("token")) {
-//             token = cookie[1];
+// mediaPlayer = $("#media-player")[0]
+// // console.log($(mediaPlayer))
+//
+// // let token = ""
+// // const cookies = document.cookie.split(';');
+// // let tokenIndex = true*-
+//
+// // function getCookie() {
+// //     for (let i = 0; i < cookies.length; i++) {
+// //         const cookie = cookies[i].split('=');
+// //         if (cookie[0].includes("token")) {
+// //             token = cookie[1];
+// //         }
+// //     }
+// // }
+//
+// $(document).keydown(function (e) {
+//
+//     // console.log(e.keyCode)
+//     // console.log(e.key)
+//     // let mediaPlayerTime = mediaPlayer.currentTime
+//     // console.log(mediaPlayer)
+//     let volume = mediaPlayer.prop("volume");
+//     if (e.keyCode === 32) {
+//         if (mediaPlayer.paused) {
+//             mediaPlayer.play()
+//         } else {
+//             mediaPlayer.pause()
 //         }
 //     }
-// }
+//     if (e.keyCode === 37) {
+//         mediaPlayer.currentTime -= 5
+//     }
+//     if (e.keyCode === 39) {
+//         mediaPlayer.currentTime += 5
+//     }
+//     if (e.keyCode === 38) {
+//         volume += 0.1
+//         mediaPlayer.prop("volume", volume)
+//     }
+//     if (e.keyCode === 40) {
+//         volume -= 0.1
+//         mediaPlayer.prop("volume", volume)
+//     }
+// })
 
 getCookie()
 
@@ -79,3 +111,4 @@ if (tokenIndex) {
         addToWatched()
     }, 3 * 60 * 1000);
 }
+
