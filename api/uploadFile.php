@@ -28,8 +28,10 @@ if (strlen($token) == 30) {
     }
     if ($verifyResultsArray[0]["admin"] == 1) {
 
-
-        $upload_destination = explode("StreamingSite", __DIR__)[0] . 'StreamingSite/data/media/';
+        if (!file_exists(explode("StreamingSite", __DIR__)[0] . 'StreamingSite/data/' . $series_name.'/season-'. $season_number . '/')) {
+            mkdir(explode("StreamingSite", __DIR__)[0] . 'StreamingSite/data/' . $series_name.'/season-'. $season_number . '/' . $series_name, 0777, true);
+        }
+        $upload_destination = explode("StreamingSite", __DIR__)[0] . 'StreamingSite/data/' . $series_name.'/season-'. $season_number . '/';
         $allowedExts = array("mp4");
         $extension = pathinfo($_FILES['files']['name'], PATHINFO_EXTENSION);
         $newFilename = $series_name . "_season-" . $season_number . "_episode-" . $episode_number . "." . $extension; // Change this line to set the new filename

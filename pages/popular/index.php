@@ -7,7 +7,7 @@ $homeContent = '
         <div id="home-cat-1" class="wrapper home-cat">
             <a v-for="po in pupular" :href="\'/stream/\' + po.name" class="home-el"
                :title="po.showName + \', watch it now for free and in full length.\'">
-                <img :src="\'/data/cover/\' + po.name + \'.jpg\'" alt="cover" class="cover">
+                <img :src="\'/data/\' + po.name + \'/\' + po.name + \'.jpg\'" alt="cover" class="cover">
                 <span class="cover-title"><span>{{ po.showName }}&nbsp;<span class="episode-nth">Views&nbsp;{{ po.watched }}</span><span class="episode-nth">Index&nbsp;{{ po.viewIndex }}</span></span></span>
             </a>
         </div>

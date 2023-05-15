@@ -17,7 +17,7 @@ $homeContent = '
         <div id="home-cat-1" class="wrapper home-cat">
             <a v-for="wd in watched" :href="\'/stream/\' + wd.name + \'/season-\' + wd.season + \'/episode-\' + wd.episode" class="home-el"
                :title="wd.showName + \', watch it now for free and in full length.\'">
-                <img :src="\'/data/cover/\' + wd.name + \'.jpg\'" alt="cover" class="cover">
+                <img :src="\'/data/\' + wd.name + \'/\' + wd.name + \'.jpg\'" alt="cover" class="cover">
                 <span class="cover-title"><span>{{ wd.showName }} &nbsp;<span class="episode-nth">S{{ wd.season }} &nbsp;E{{ wd.episode }}</span></span></span>
             </a>
         </div>

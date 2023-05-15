@@ -17,7 +17,7 @@ $homeContent = '
         <div id="home-cat-1" class="wrapper home-cat">
             <a v-for="wl in watchlist" :href="\'/stream/\' + wl.name" class="home-el"
                :title="wl.showName + \', watch it now for free and in full length.\'">
-                <img :src="\'/data/cover/\' + wl.name + \'.jpg\'" alt="cover" class="cover">
+                <img :src="\'/data/\' + wl.name + \'/\' + wl.name + \'.jpg\'" alt="cover" class="cover">
                 <span class="cover-title"><span>{{ wl.showName }}</span></span>
             </a>
         </div>

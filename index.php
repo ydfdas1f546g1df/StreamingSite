@@ -8,7 +8,7 @@ $homeContent = '
     <div>
         <div class="parent">
         <a v-for="cat in catcher" :href="\'/stream/\' + cat.name">
-        <div :style="\'background-image: url(/data/cover/\' + cat.name + \'.jpg);\'"></div>
+        <div :style="\'background-image: url(/data/\' + cat.name + \'/\' + cat.name + \'.jpg);\'"></div>
         <span>{{ cat.showName }}</span></a>
 </div>
     </div>
@@ -19,7 +19,7 @@ $homeContent = '
         <div id="home-cat-1" class="wrapper home-cat">
             <a v-for="po in pupular" :href="\'/stream/\' + po.name" class="home-el"
                :title="po.showName + \', watch it now for free and in full length.\'">
-                <img :src="\'/data/cover/\' + po.name + \'.jpg\'" alt="cover" class="cover">
+                <img :src="\'/data/\' + po.name + \'/\' + po.name + \'.jpg\'" alt="cover" class="cover">
                 <span class="cover-title"><span>{{ po.showName }}&nbsp;<span class="episode-nth">Views&nbsp;{{ po.watched }}</span><span class="episode-nth">Index&nbsp;{{ po.viewIndex }}</span></span></span>
             </a>
         </div>
@@ -31,7 +31,7 @@ $homeContent = '
         <div class="wrapper home-cat">
             <a v-for="wd in watched" :href="\'/stream/\' + wd.name + \'/season-\' + wd.season + \'/episode-\' + wd.episode" class="home-el"
                :title="wd.showName + \', watch it now for free and in full length.\'">
-                <img :src="\'/data/cover/\' + wd.name + \'.jpg\'" alt="cover" class="cover">
+                <img :src="\'/data/\' + wd.name + \'/\' + wd.name + \'.jpg\'" alt="cover" class="cover">
                 <span class="cover-title"><span>{{ wd.showName }} &nbsp;<span class="episode-nth">S{{ wd.season }} &nbsp;E{{ wd.episode }}</span></span></span>
             </a>
         </div>
@@ -43,7 +43,7 @@ $homeContent = '
         <div class="wrapper home-cat">
             <a v-for="up in uploads" :href="\'/stream/\' + up.name + \'/season-\' + up.season + \'/episode-\' + up.episode" class="home-el"
                :title="up.showName + \', watch it now for free and in full length.\'">
-                <img :src="\'/data/cover/\' + up.name + \'.jpg\'" alt="cover" class="cover">
+                <img :src="\'/data/\' + up.name + \'/\' + up.name + \'.jpg\'" alt="cover" class="cover">
                 <span class="cover-title"><span>{{ up.showName }} &nbsp;<span class="episode-nth">S{{ up.season }} &nbsp;E{{ up.episode }}</span></span></span>
             </a>
         </div>

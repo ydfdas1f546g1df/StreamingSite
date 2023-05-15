@@ -5,7 +5,7 @@ $streamTopMain = '
 <main id="stream-main">
 <div class="stream-banner" id="stream-banner">
     <div class="cover-column">
-        <img :src="\'/data/cover/\' + series.name + \'.jpg\'" alt="cover">
+        <img :src="\'/data/\' + series.name + \'/\' + series.name + \'.jpg\'" alt="cover">
     </div>
     <div class="info-column">
         <strong class="series-title" id="SeriesName">{{ series.showName }}</strong>
