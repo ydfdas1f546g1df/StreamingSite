@@ -1,6 +1,6 @@
 .idea
 .vscode
 node_modules
-data/media/*.mp4
-data/cover/*.png
-data/cover/*.jpg
+data/*/*/*.mp4
+data/*/*.png
+data/*/*.jpg
