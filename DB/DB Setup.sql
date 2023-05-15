@@ -429,3 +429,5 @@ values ('safari', 'Prohibit Safari', 'Do not allow Safari users to use this webs
         'During maintenance or implementation of new features, only admins can enter the site.', 'OFF', 'ON', true),
        ('popular', 'Popular Series', 'Sort series by index or views.', 'Index', 'Views', true);
 
+
+

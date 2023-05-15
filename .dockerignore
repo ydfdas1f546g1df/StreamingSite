@@ -6,3 +6,6 @@ mix-manifest.json
 package.json
 webpack.mix.js
 README.md
+data/*/*/*.mp4
+data/*/*.png
+data/*/*.jpg

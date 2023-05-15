@@ -29,7 +29,7 @@ if (strlen($token) == 30) {
     if ($verifyResultsArray[0]["admin"] == 1) {
 
         if (!file_exists(explode("StreamingSite", __DIR__)[0] . 'StreamingSite/data/' . $series_name.'/season-'. $season_number . '/')) {
-            mkdir(explode("StreamingSite", __DIR__)[0] . 'StreamingSite/data/' . $series_name.'/season-'. $season_number . '/' . $series_name, 0777, true);
+            mkdir(explode("StreamingSite", __DIR__)[0] . 'StreamingSite/data/' . $series_name.'/season-'. $season_number , 0777, true);
         }
         $upload_destination = explode("StreamingSite", __DIR__)[0] . 'StreamingSite/data/' . $series_name.'/season-'. $season_number . '/';
         $allowedExts = array("mp4");
