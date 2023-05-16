@@ -1,0 +1,86 @@
+#all-series-main {
+  color: white;
+}
+#all-series-main #all-search-input {
+  height: 24px;
+  font-size: 18px;
+  width: 1150px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background: none;
+  box-shadow: none;
+  outline: none;
+  border-color: transparent transparent black transparent;
+  color: white;
+  border-bottom: rgb(55, 55, 55) solid 4px;
+}
+#all-series-main #all-series-list {
+  display: flex;
+  flex-direction: column;
+}
+#all-series-main #all-series-list .letter {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+}
+#all-series-main #all-series-list .letter:last-child {
+  margin-bottom: 200px;
+}
+#all-series-main #all-series-list .letter div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#all-series-main #all-series-list .letter h2 {
+  color: rgb(68, 16, 255);
+  display: block;
+  clear: both;
+  width: 100%;
+  margin: 10px 0;
+  padding: 0;
+  border-bottom: 3px #636363 solid;
+}
+#all-series-main #all-series-list .letter .result-item {
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+#all-series-main #all-series-list .letter .result-item:hover {
+  color: rgb(68, 16, 255);
+}
+#all-series-main diicon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+}
+#all-series-main diicon i {
+  scale: 1.1;
+}
+
+#search-input {
+  font-size: 18px;
+  height: 30px;
+}
+
+.page-title {
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 50px;
+  color: white;
+}
+.page-title a {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  height: 20px;
+  border-radius: 5px;
+  background: rgb(68, 16, 255);
+  font-weight: bold;
+  padding: 10px;
+}
+.page-title a:hover {
+  background: #636363;
+}

@@ -1,0 +1,522 @@
+@import url(https://use.fontawesome.com/releases/v6.1.2/css/all.css);
+@import url(https://css.gg/css);
+.down-arrow {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 22px;
+  height: 22px;
+  border: 2px solid transparent;
+  border-radius: 100px;
+}
+
+.down-arrow::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  transform: rotate(45deg);
+  left: 4px;
+  top: 2px;
+}
+
+.gg-play-button-o {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 22px;
+  height: 22px;
+  border: 2px solid;
+  border-radius: 20px;
+}
+
+.gg-play-button-o::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 0;
+  height: 10px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 6px solid;
+  top: 4px;
+  left: 7px;
+}
+
+.gg-align-bottom {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  height: 12px;
+  width: 12px;
+  border-bottom: 2px solid;
+  transform: scale(var(--ggs, 1));
+  margin-top: 4px;
+}
+
+.gg-align-bottom::after,
+.gg-align-bottom::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 4px;
+  background: currentColor;
+  bottom: 2px;
+}
+
+.gg-align-bottom::before {
+  left: 1px;
+  height: 12px;
+}
+
+.gg-align-bottom::after {
+  height: 6px;
+  right: 1px;
+  opacity: 0.5;
+}
+
+.gg-search {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 16px;
+  height: 16px;
+  border: 2px solid;
+  border-radius: 100%;
+  margin-left: -4px;
+  margin-top: -4px;
+}
+
+.gg-search::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  border-radius: 3px;
+  width: 2px;
+  height: 8px;
+  background: currentColor;
+  transform: rotate(-45deg);
+  top: 10px;
+  left: 12px;
+}
+
+.gg-terminal {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 24px;
+  height: 20px;
+  border: 2px solid;
+  border-radius: 2px;
+}
+
+.gg-terminal::after,
+.gg-terminal::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.gg-terminal::before {
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+  transform: rotate(-45deg);
+  width: 6px;
+  height: 6px;
+  top: 5px;
+  left: 3px;
+}
+
+.gg-terminal::after {
+  width: 4px;
+  height: 2px;
+  background: currentColor;
+  top: 10px;
+  left: 11px;
+}
+
+.gg-eye-alt {
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 24px;
+  height: 18px;
+  border-bottom-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.gg-eye-alt::after,
+.gg-eye-alt::before {
+  content: "";
+  display: block;
+  border-radius: 100px;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.gg-eye-alt::after {
+  top: 2px;
+  box-shadow: inset 0 -8px 0 2px, inset 0 0 0 2px;
+  width: 24px;
+  height: 24px;
+}
+
+.gg-eye-alt::before {
+  width: 8px;
+  height: 8px;
+  border: 2px solid transparent;
+  box-shadow: inset 0 0 0 6px, 0 0 0 4px, 6px 0 0 0, -6px 0 0 0;
+  bottom: 4px;
+  left: 8px;
+}
+
+.gg-data {
+  transform: scale(var(--ggs, 1));
+}
+
+.gg-data,
+.gg-data::after,
+.gg-data::before {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  border: 2px solid;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+}
+
+.gg-data::after,
+.gg-data::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  top: 2px;
+  left: 2px;
+}
+
+.gg-data::after {
+  background: linear-gradient(to left, currentColor 8px, transparent 0) no-repeat bottom center/2px 8px;
+  width: 22px;
+  height: 22px;
+  top: -6px;
+  left: -6px;
+}
+
+.gg-data,
+.gg-data::after {
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.gg-user {
+  display: block;
+  transform: scale(var(--ggs, 1));
+  box-sizing: border-box;
+  width: 12px;
+  height: 18px;
+}
+
+.gg-user::after,
+.gg-user::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  border: 2px solid;
+}
+
+.gg-user::before {
+  width: 8px;
+  height: 8px;
+  border-radius: 30px;
+  top: 0;
+  left: 2px;
+}
+
+.gg-user::after {
+  width: 12px;
+  height: 9px;
+  border-bottom: 0;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  top: 9px;
+}
+
+.gg-menu-grid-o {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 16px;
+  height: 16px;
+}
+
+.gg-menu-grid-o::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: currentColor;
+  box-shadow: 0 6px 0, 6px 6px 0, 12px 6px 0, 6px 12px 0, 12px 12px 0, 6px 0 0, 12px 0 0, 0 12px 0;
+  border-radius: 22px;
+}
+
+.gg-log-in {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 6px;
+  height: 16px;
+  border: 2px solid;
+  border-left: 0;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  margin-right: -10px;
+}
+
+.gg-log-in::after,
+.gg-log-in::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.gg-log-in::after {
+  border-top: 2px solid;
+  border-right: 2px solid;
+  transform: rotate(45deg);
+  width: 8px;
+  height: 8px;
+  left: -8px;
+  bottom: 2px;
+}
+
+.gg-log-in::before {
+  border-radius: 3px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+  left: -11px;
+  bottom: 5px;
+}
+
+.gg-format-justify,
+.gg-format-justify::before {
+  display: block;
+  box-sizing: border-box;
+  width: 16px;
+  height: 2px;
+  border-radius: 3px;
+  background: currentColor;
+  box-shadow: 0 8px 0;
+}
+
+.gg-format-justify {
+  margin-top: -11px;
+  transform: scale(var(--ggs, 1));
+  position: relative;
+}
+
+.gg-format-justify::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 0;
+}
+
+.gg-list-tree {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 22px;
+  height: 22px;
+  transform: scale(var(--ggs, 1));
+  background: linear-gradient(to left, currentcolor 8px, transparent 0) no-repeat left top/8px 8px, linear-gradient(to left, currentcolor 8px, transparent 0) no-repeat center 3px/8px 2px, linear-gradient(to left, currentcolor 8px, transparent 0) no-repeat 10px 17px/6px 2px, linear-gradient(to left, currentcolor 8px, transparent 0) no-repeat 10px 3px/2px 16px;
+}
+
+.gg-list-tree::after,
+.gg-list-tree::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 2px solid;
+  right: 0;
+}
+
+.gg-list-tree::after {
+  bottom: 0;
+}
+
+.gg-software-upload {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 16px;
+  height: 6px;
+  border: 2px solid;
+  border-top: 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  margin-top: 8px;
+}
+
+.gg-software-upload::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-left: 2px solid;
+  border-top: 2px solid;
+  transform: rotate(45deg);
+  left: 2px;
+  bottom: 4px;
+}
+
+.gg-software-upload::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  border-radius: 3px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+  left: 5px;
+  bottom: 3px;
+}
+
+.gg-git-fork {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 2px;
+  height: 14px;
+  background: currentColor;
+}
+
+.gg-git-fork::after,
+.gg-git-fork::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.gg-git-fork::before {
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+  border-bottom-right-radius: 4px;
+  bottom: 4px;
+  width: 8px;
+  height: 6px;
+  left: 0;
+}
+
+.gg-git-fork::after {
+  width: 4px;
+  height: 4px;
+  background: currentColor;
+  box-shadow: 0 12px 0 0, 6px 2px 0 0;
+  border-radius: 100%;
+  left: -1px;
+  top: -1px;
+}
+
+.checkbox-wrapper-64 input[type=checkbox] {
+  visibility: hidden;
+  display: none;
+}
+
+.checkbox-wrapper-64 {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-wrapper-64 *,
+.checkbox-wrapper-64 ::after,
+.checkbox-wrapper-64 ::before {
+  box-sizing: border-box;
+}
+
+/* The switch - the box around the slider */
+.checkbox-wrapper-64 .switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.checkbox-wrapper-64 .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.checkbox-wrapper-64 .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  border: 1px solid #adb5bd;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.checkbox-wrapper-64 .slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.27em;
+  bottom: 0.25em;
+  background-color: #adb5bd;
+  transition: 0.4s;
+}
+
+.checkbox-wrapper-64 input:checked + .slider {
+  background-color: rgb(68, 16, 255);
+  border: 1px solid rgb(68, 16, 255);
+}
+
+.checkbox-wrapper-64 input:focus + .slider {
+  box-shadow: 0 0 1px rgb(68, 16, 255);
+}
+
+.checkbox-wrapper-64 input:checked + .slider:before {
+  transform: translateX(1.4em);
+  background-color: #fff;
+}

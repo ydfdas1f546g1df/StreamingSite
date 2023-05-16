@@ -1,0 +1,264 @@
+#stream-main {
+  color: white;
+}
+#stream-main > div, #stream-main .stream-season, #stream-main .stream-banner {
+  padding: 20px;
+  border-radius: 5px;
+}
+#stream-main .stream-banner {
+  border-radius: 5px;
+  position: relative;
+  margin: 50px 0 30px 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  background: rgba(28, 28, 28, 0.5);
+  box-shadow: 0 0 60px 0 rgb(30, 30, 30);
+}
+#stream-main .stream-banner > div {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+#stream-main .stream-banner > div.background {
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+  margin: 0;
+}
+#stream-main .stream-banner > div.background.first {
+  left: 10px;
+  top: 10px;
+  bottom: 10px;
+  right: 10px;
+  filter: blur(8px) saturate(200%);
+}
+#stream-main .stream-banner > div.background:last-child {
+  background: #520000;
+  filter: blur(300px) saturate(200%);
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+#stream-main .stream-banner > div:first-child {
+  align-items: center;
+}
+#stream-main .stream-banner > div:first-child img {
+  height: 300px;
+  width: 200px;
+  border-radius: 5px;
+}
+#stream-main .stream-banner > div:nth-child(2) {
+  align-items: flex-start;
+}
+#stream-main .stream-banner > div:nth-child(2) .series-title {
+  font-size: 24px;
+}
+#stream-main .stream-banner > div:nth-child(2) .series-desc {
+  margin: 20px 0;
+  color: white;
+}
+#stream-main .stream-banner > div:nth-child(2) .series-info {
+  color: rgb(68, 16, 255);
+}
+#stream-main .stream-banner > div:nth-child(2) .series-info strong {
+  color: white;
+}
+#stream-main .stream-banner > div:nth-child(3) {
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+}
+#stream-main .stream-banner > div:nth-child(3) div {
+  width: 100%;
+  margin: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+#stream-main .stream-banner > div:nth-child(3) div a {
+  width: 100%;
+  text-align: center;
+  color: white;
+  background: rgb(68, 16, 255);
+  padding: 15px 0;
+  font-weight: bold;
+  font-size: 24px;
+  border-radius: 5px 5px 0 0;
+}
+#stream-main .stream-banner > div:nth-child(3) div a:hover {
+  background: rgba(68, 16, 255, 0.63);
+}
+#stream-main .stream-banner > div:nth-child(3) div span, #stream-main .stream-banner > div:nth-child(3) div a {
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+#stream-main .stream-banner > div:nth-child(3) div span {
+  background: rgba(234, 234, 234, 0.1);
+  padding: 10px 0;
+  width: 100%;
+  font-weight: bold;
+}
+#stream-main .stream-banner > div:nth-child(3) div span.isInWatchlist {
+  color: rgb(68, 16, 255);
+}
+#stream-main .stream-banner > div:nth-child(3) div span:hover {
+  background: rgba(28, 28, 28, 0.5);
+}
+#stream-main .stream-banner > div:nth-child(3) div span:nth-child(2) {
+  border-bottom: solid rgba(234, 234, 234, 0.1) 1px;
+}
+#stream-main .stream-banner > div:nth-child(3) div span:last-child {
+  border-radius: 0 0 5px 5px;
+}
+#stream-main .stream-banner > div:nth-child(3) div span.share {
+  color: #0084d0;
+}
+#stream-main .stream-banner > div:nth-child(3) div span i {
+  margin-left: 10px;
+}
+#stream-main .stream-media {
+  padding: 50px;
+  background: rgb(28, 28, 28);
+  margin-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+}
+#stream-main .stream-media #media-player {
+  width: 100%;
+  background: black;
+  border-radius: 5px 5px 0 0;
+  aspect-ratio: 16/10;
+}
+#stream-main .stream-media div {
+  width: 100%;
+  display: flex;
+}
+#stream-main .stream-media div span {
+  background: #0084d0;
+  width: 100%;
+  font-size: 14px;
+  padding: 2px 4px;
+  border-radius: 0 0 5px 5px;
+}
+#stream-main .stream-select #location {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+#stream-main .stream-select #location strong {
+  color: #636363;
+  font-weight: bold !important;
+  font-size: 14px;
+}
+#stream-main .stream-select #location .location-el {
+  color: white;
+}
+#stream-main .stream-select #location .location-el:hover {
+  color: rgb(68, 16, 255);
+}
+#stream-main .stream-select #location .location-el:last-child {
+  color: rgb(68, 16, 255);
+}
+#stream-main .stream-select #location .location-el:last-child:hover {
+  color: white;
+}
+#stream-main .stream-select .select {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#stream-main .stream-select .select .episode, #stream-main .stream-select .select .season {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 5px;
+}
+#stream-main .stream-select .select .episode .select-el, #stream-main .stream-select .select .season .select-el {
+  font-size: 20px;
+  height: 30px;
+  color: black;
+  background: white;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#stream-main .stream-select .select .episode .select-el.watched, #stream-main .stream-select .select .season .select-el.watched {
+  background: #0084d0;
+  color: white;
+}
+#stream-main .stream-select .select .episode .select-el.watched:hover, #stream-main .stream-select .select .season .select-el.watched:hover {
+  background: #006096 !important;
+  color: white;
+}
+#stream-main .stream-select .select .episode .select-el.watched:hover.current, #stream-main .stream-select .select .season .select-el.watched:hover.current {
+  background: rgb(68, 16, 255) !important;
+  color: white !important;
+}
+#stream-main .stream-select .select .episode .select-el.current, #stream-main .stream-select .select .season .select-el.current {
+  background: rgb(68, 16, 255);
+  color: white;
+}
+#stream-main .stream-select .select .episode .select-el.select-title, #stream-main .stream-select .select .season .select-el.select-title {
+  font-weight: bold;
+}
+#stream-main .stream-select .select .episode .select-el.select-select, #stream-main .stream-select .select .season .select-el.select-select {
+  aspect-ratio: 1/1;
+}
+#stream-main .stream-select .select .episode .select-el.select-select:hover, #stream-main .stream-select .select .season .select-el.select-select:hover {
+  background: rgb(68, 16, 255);
+  color: white;
+}
+#stream-main .stream-select #series-title {
+  font-size: 20px;
+  margin-top: 20px;
+}
+#stream-main .stream-select #episode-title {
+  font-size: 36px;
+  color: #636363;
+}
+#stream-main .stream-season {
+  margin-bottom: 200px;
+  color: white;
+}
+#stream-main .stream-season > a {
+  display: grid;
+  grid-template-columns: 1fr 1fr 4fr 4fr 1fr 1fr;
+  padding: 15px;
+  background: rgba(28, 28, 28, 0.2);
+}
+#stream-main .stream-season > a:hover {
+  background: rgba(234, 234, 234, 0.1);
+}
+#stream-main .stream-season > a span {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+#stream-main .stream-season > a i {
+  scale: 1.3;
+  text-align: center;
+}
+#stream-main .stream-season > a i:hover {
+  cursor: pointer;
+}
+#stream-main .stream-season > a:first-child {
+  border-radius: 5px 5px 0 0;
+  font-weight: bold;
+  background: rgba(28, 28, 28, 0.6);
+}
+#stream-main .stream-season > a:last-child {
+  border-radius: 0 0 5px 5px;
+}
+#stream-main .stream-season > a.watched-episode {
+  background: rgba(0, 132, 208, 0.4);
+}
+#stream-main .stream-season > a.watched-episode i {
+  color: #0084d0;
+}
+#stream-main .stream-season > a.watched-episode:hover {
+  background: rgba(0, 96, 150, 0.8) !important;
+}
