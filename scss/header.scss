@@ -28,7 +28,7 @@ header {
       height: 100%;
       display: flex;
       justify-content: flex-end;
-      background-color: $orange;
+      background-color: $color;
       font-size: $logo-size;
       align-items: center;
       padding-right: 10px;
@@ -42,7 +42,7 @@ header {
       justify-content: flex-start;
       align-items: center;
       font-size: $logo-size;
-      color: $orange;
+      color: $color;
     }
   }
 
@@ -65,7 +65,7 @@ header {
       }
 
       &:hover {
-        color: $orange;
+        color: $color;
 
       }
     }
@@ -99,7 +99,7 @@ header {
     }
 
     .r-btn {
-      background: $orange;
+      background: $color;
 
     }
 
@@ -115,7 +115,7 @@ header {
       height: 50px;
 
       &:hover {
-        background: $orange-hover;
+        background: $color-hover;
       }
     }
   }
@@ -148,7 +148,7 @@ header {
       }
 
       &:hover {
-        color: $orange;
+        color: $color;
       }
 
       .user-dd-el {
@@ -166,7 +166,7 @@ header {
         }
 
         &:hover {
-          color: $orange;
+          color: $color;
         }
 
         .user-dd-name {
@@ -175,7 +175,7 @@ header {
 
         .user-dd-icon {
           transition: $trans;
-          color: $orange;
+          color: $color;
           height: 45px;
           width: 45px;
           background-color: $header-bg;

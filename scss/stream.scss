@@ -19,6 +19,7 @@
     box-shadow: 0 0 60px 0 rgba(30, 30, 30, 1);
 
     & > div {
+
       &.background {
         background-position: center;
         background-size: cover;
@@ -56,13 +57,21 @@
           height: 300px;
           width: 200px;
           border-radius: 5px;
-          //box-shadow: $black-shadow;
+          box-shadow: $black-shadow-2;
+
         }
 
       }
 
       &:nth-child(2) {
+        display: grid;
+        grid-template-rows: 1fr 3fr 2fr;
+        box-shadow: $black-shadow-2;
+        border-radius: 5px;
+        padding: 20px;
+        background: $stream-banner-bg;
         align-items: flex-start;
+
 
         .series-title {
           font-size: 24px;
@@ -70,14 +79,22 @@
 
         .series-desc {
           margin: 20px 0;
-          color: white;
+          color: $lightest-gray;
         }
 
-        .series-info {
-          color: $orange;
+        .series-info-parent {
+          display: flex;
+          flex-direction: column;
+          align-self: flex-end;
 
-          strong {
-            color: white;
+          .series-info {
+            color: $color;
+            //font-weight: bold;
+
+            strong {
+              //font-weight: normal;
+              color: $lightest-gray;
+            }
           }
         }
       }
@@ -87,28 +104,28 @@
         transition: $trans;
 
         div {
+          box-shadow: $black-shadow-2;
+
           width: 100%;
-          margin: 10px;
+          margin: 0 10px 10px;
           border-radius: 5px;
           display: flex;
           align-items: flex-start;
           flex-direction: column;
-          //padding-bottom: 10px;
-          //box-shadow: $black-shadow;
 
 
-          a {
+          a:first-child {
             width: 100%;
             text-align: center;
             color: white;
-            background: $orange;
+            background: $color;
             padding: 15px 0;
             font-weight: bold;
             font-size: 24px;
             border-radius: 5px 5px 0 0;
 
             &:hover {
-              background: $orange-blur;
+              background: $color-blur;
             }
           }
 
@@ -117,15 +134,23 @@
             transition: $trans;
           }
 
-          span {
-            &.isInWatchlist {
-              color: $orange;
+          span, a {
+            color: white;
+            i {
+              margin: 0 5px;
             }
 
-            background: $white-blur;
+            &.isInWatchlist {
+              i {
+                color: $color;
+              }
+            }
+
+            background: $stream-banner-bg;
 
             &:hover {
-              background: $stream-banner-bg;
+              background: $white-blur;
+              //box-shadow: $black-shadow-inset;
             }
 
             padding: 10px 0;
@@ -141,7 +166,9 @@
             }
 
             &.share {
-              color: $blue;
+              i {
+                color: $blue;
+              }
             }
 
             i {
@@ -155,7 +182,7 @@
 
   .stream-media {
     padding: 50px;
-    background: $header-bg;
+    background: $stream-banner-bg;
     margin-bottom: 200px;
     display: flex;
     flex-direction: column;
@@ -164,7 +191,7 @@
       width: 100%;
       background: black;
       border-radius: 5px 5px 0 0;
-      aspect-ratio: 16/10;
+      aspect-ratio: 16/9;
     }
 
     div {
@@ -198,11 +225,11 @@
         color: white;
 
         &:hover {
-          color: $orange;
+          color: $color;
         }
 
         &:last-child {
-          color: $orange;
+          color: $color;
 
           &:hover {
             color: white;
@@ -241,7 +268,7 @@
               color: white;
 
               &.current {
-                background: $orange !important;
+                background: $color !important;
                 color: white !important;
               }
             }
@@ -249,7 +276,7 @@
           }
 
           &.current {
-            background: $orange;
+            background: $color;
             color: white;
           }
 
@@ -262,7 +289,7 @@
             aspect-ratio: 1/1;
 
             &:hover {
-              background: $orange;
+              background: $color;
               color: white;
             }
           }

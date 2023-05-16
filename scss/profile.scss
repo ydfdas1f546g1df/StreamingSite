@@ -41,7 +41,7 @@
           color: white;
 
           span {
-            color: $orange;
+            color: $color;
           }
         }
       }
@@ -65,7 +65,7 @@
 
 
           .watchlist-nth {
-            color: $orange;
+            color: $color;
           }
 
           .icon {
@@ -75,7 +75,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: $orange;
+            color: $color;
           }
 
           i {
@@ -95,7 +95,7 @@
             text-decoration: underline;
 
             &:hover {
-              color: $orange;
+              color: $color;
               text-decoration: none;
             }
           }
@@ -108,7 +108,7 @@
         align-items: flex-end;
 
         .admin {
-          color: $orange;
+          color: $color;
         }
 
         .bio-text {

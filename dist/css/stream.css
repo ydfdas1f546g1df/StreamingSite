@@ -48,8 +48,15 @@
   height: 300px;
   width: 200px;
   border-radius: 5px;
+  box-shadow: 0px 0px 43px -9px rgba(28, 28, 28, 0.5);
 }
 #stream-main .stream-banner > div:nth-child(2) {
+  display: grid;
+  grid-template-rows: 1fr 3fr 2fr;
+  box-shadow: 0px 0px 43px -9px rgba(28, 28, 28, 0.5);
+  border-radius: 5px;
+  padding: 20px;
+  background: rgba(28, 28, 28, 0.5);
   align-items: flex-start;
 }
 #stream-main .stream-banner > div:nth-child(2) .series-title {
@@ -57,27 +64,33 @@
 }
 #stream-main .stream-banner > div:nth-child(2) .series-desc {
   margin: 20px 0;
-  color: white;
+  color: #b4b4b4;
 }
-#stream-main .stream-banner > div:nth-child(2) .series-info {
+#stream-main .stream-banner > div:nth-child(2) .series-info-parent {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+}
+#stream-main .stream-banner > div:nth-child(2) .series-info-parent .series-info {
   color: rgb(68, 16, 255);
 }
-#stream-main .stream-banner > div:nth-child(2) .series-info strong {
-  color: white;
+#stream-main .stream-banner > div:nth-child(2) .series-info-parent .series-info strong {
+  color: #b4b4b4;
 }
 #stream-main .stream-banner > div:nth-child(3) {
   align-items: center;
   transition: all 0.4s ease-in-out;
 }
 #stream-main .stream-banner > div:nth-child(3) div {
+  box-shadow: 0px 0px 43px -9px rgba(28, 28, 28, 0.5);
   width: 100%;
-  margin: 10px;
+  margin: 0 10px 10px;
   border-radius: 5px;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
 }
-#stream-main .stream-banner > div:nth-child(3) div a {
+#stream-main .stream-banner > div:nth-child(3) div a:first-child {
   width: 100%;
   text-align: center;
   color: white;
@@ -87,40 +100,44 @@
   font-size: 24px;
   border-radius: 5px 5px 0 0;
 }
-#stream-main .stream-banner > div:nth-child(3) div a:hover {
+#stream-main .stream-banner > div:nth-child(3) div a:first-child:hover {
   background: rgba(68, 16, 255, 0.63);
 }
 #stream-main .stream-banner > div:nth-child(3) div span, #stream-main .stream-banner > div:nth-child(3) div a {
   cursor: pointer;
   transition: all 0.4s ease-in-out;
 }
-#stream-main .stream-banner > div:nth-child(3) div span {
-  background: rgba(234, 234, 234, 0.1);
+#stream-main .stream-banner > div:nth-child(3) div span, #stream-main .stream-banner > div:nth-child(3) div a {
+  color: white;
+  background: rgba(28, 28, 28, 0.5);
   padding: 10px 0;
   width: 100%;
   font-weight: bold;
 }
-#stream-main .stream-banner > div:nth-child(3) div span.isInWatchlist {
+#stream-main .stream-banner > div:nth-child(3) div span i, #stream-main .stream-banner > div:nth-child(3) div a i {
+  margin: 0 5px;
+}
+#stream-main .stream-banner > div:nth-child(3) div span.isInWatchlist i, #stream-main .stream-banner > div:nth-child(3) div a.isInWatchlist i {
   color: rgb(68, 16, 255);
 }
-#stream-main .stream-banner > div:nth-child(3) div span:hover {
-  background: rgba(28, 28, 28, 0.5);
+#stream-main .stream-banner > div:nth-child(3) div span:hover, #stream-main .stream-banner > div:nth-child(3) div a:hover {
+  background: rgba(234, 234, 234, 0.1);
 }
-#stream-main .stream-banner > div:nth-child(3) div span:nth-child(2) {
+#stream-main .stream-banner > div:nth-child(3) div span:nth-child(2), #stream-main .stream-banner > div:nth-child(3) div a:nth-child(2) {
   border-bottom: solid rgba(234, 234, 234, 0.1) 1px;
 }
-#stream-main .stream-banner > div:nth-child(3) div span:last-child {
+#stream-main .stream-banner > div:nth-child(3) div span:last-child, #stream-main .stream-banner > div:nth-child(3) div a:last-child {
   border-radius: 0 0 5px 5px;
 }
-#stream-main .stream-banner > div:nth-child(3) div span.share {
+#stream-main .stream-banner > div:nth-child(3) div span.share i, #stream-main .stream-banner > div:nth-child(3) div a.share i {
   color: #0084d0;
 }
-#stream-main .stream-banner > div:nth-child(3) div span i {
+#stream-main .stream-banner > div:nth-child(3) div span i, #stream-main .stream-banner > div:nth-child(3) div a i {
   margin-left: 10px;
 }
 #stream-main .stream-media {
   padding: 50px;
-  background: rgb(28, 28, 28);
+  background: rgba(28, 28, 28, 0.5);
   margin-bottom: 200px;
   display: flex;
   flex-direction: column;
@@ -129,7 +146,7 @@
   width: 100%;
   background: black;
   border-radius: 5px 5px 0 0;
-  aspect-ratio: 16/10;
+  aspect-ratio: 16/9;
 }
 #stream-main .stream-media div {
   width: 100%;

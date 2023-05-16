@@ -74,7 +74,7 @@
 
           &:focus-visible {
             outline: none;
-            border-bottom: $orange solid 2px;
+            border-bottom: $color solid 2px;
           }
 
           &::placeholder {
@@ -105,7 +105,7 @@
               display: flex;
               align-items: center;
               justify-content: center;
-              background: $orange;
+              background: $color;
               border-radius: 5px;
               min-width: 50px;
               cursor: pointer;
@@ -180,7 +180,7 @@
                     width: 100%;
 
                     &.del-btn {
-                      background: $orange;
+                      background: $color;
                     }
 
                     &.edit-btn {
@@ -216,7 +216,7 @@
 
             .create-btn {
               display: flex;
-              background: $orange;
+              background: $color;
               color: white;
               margin: 10px 0;
               border-radius: 5px;
@@ -270,12 +270,12 @@
 
 
         &.current-admin {
-          color: $orange;
+          color: $color;
           background: $light-gray;
         }
 
         &:hover {
-          color: $orange;
+          color: $color;
         }
       }
 
@@ -292,7 +292,7 @@
       .error-msg-el {
         margin-top: 10px;
         border-radius: 5px;
-        background: $orange-blur;
+        background: $color-blur;
         padding: 10px;
         color: white;
         display: flex;
@@ -336,7 +336,7 @@
 
     &:focus-visible {
       outline: none;
-      border-bottom: $orange solid 2px;
+      border-bottom: $color solid 2px;
     }
 
     &::placeholder {
@@ -355,7 +355,7 @@
 
     &:focus-visible {
       outline: none;
-      border: $orange solid 2px;
+      border: $color solid 2px;
     }
 
     &::placeholder {
@@ -435,7 +435,7 @@
   }
 
   .upload-form label[for="files"]:hover {
-    background: $orange;
+    background: $color;
     border: 2px solid $dd-more-bg;
     color: white;
     transition: $trans;

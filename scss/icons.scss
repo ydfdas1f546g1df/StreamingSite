@@ -569,12 +569,12 @@
 }
 
 .checkbox-wrapper-64 input:checked + .slider {
-  background-color: $orange;
-  border: 1px solid $orange;
+  background-color: $color;
+  border: 1px solid $color;
 }
 
 .checkbox-wrapper-64 input:focus + .slider {
-  box-shadow: 0 0 1px $orange;
+  box-shadow: 0 0 1px $color;
 }
 
 .checkbox-wrapper-64 input:checked + .slider:before {

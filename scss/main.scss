@@ -53,7 +53,7 @@ input::-webkit-inner-spin-button {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
   &::selection {
-    background: $orange;
+    background: $color;
     color: white;
   }
 }
@@ -116,7 +116,7 @@ html {
         flex-wrap: wrap;
 
         .quick-search-el {
-          background-color: $orange;
+          background-color: $color;
           margin: 3px;
           min-height: 26px;
           min-width: 27px;

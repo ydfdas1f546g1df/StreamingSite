@@ -26,20 +26,20 @@ main.errorpage {
         color: $light-gray;
 
         &:hover {
-          color: $orange;
+          color: $color;
         }
       }
     }
 
     .error-num {
-      color: $orange;
+      color: $color;
       font-size: 50px;
       font-weight: bold;
     }
 
     .error-btns {
       .error-btn {
-        background: $orange;
+        background: $color;
         border-radius: 5px;
         height: 20px;
         color: white;

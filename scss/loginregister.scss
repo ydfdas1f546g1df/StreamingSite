@@ -29,7 +29,7 @@
       border: $light-gray solid 3px;
 
       a {
-        color: $orange;
+        color: $color;
         margin-left: 20px;
         margin-bottom: 20px;
       }
@@ -52,7 +52,7 @@
           color: $light-gray;
 
           &:hover {
-            color: $orange;
+            color: $color;
           }
         }
       }
@@ -65,7 +65,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: $orange;
+        background: $color;
         border: none;
         border-radius: 5px;
         font-weight: bold;
@@ -114,7 +114,7 @@
 
           &:focus-visible {
             outline: none;
-            border-bottom: $orange solid 4px;
+            border-bottom: $color solid 4px;
           }
 
           &::placeholder {
@@ -161,7 +161,7 @@
       }
 
       a {
-        color: $orange;
+        color: $color;
 
         &:hover {
           color: white;
@@ -194,7 +194,7 @@
           }
 
           &.watched {
-            color: $orange;
+            color: $color;
           }
 
           &.ads {
@@ -239,11 +239,11 @@
 
           &:focus-visible {
             outline: none;
-            border-bottom: $orange solid 4px;
+            border-bottom: $color solid 4px;
           }
 
           &.ok {
-            border-color: transparent transparent $orange transparent;
+            border-color: transparent transparent $color transparent;
           }
         }
       }
