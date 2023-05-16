@@ -29,14 +29,30 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
 #all-series-main {
   color: white;
 
+  #all-search-input {
+    height: 24px;
+    font-size: 18px;
+    width: 1150px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background: none;
+    box-shadow: none;
+    outline: none;
+    border-color: transparent transparent black transparent;
+    color: white;
+    border-bottom: $light-gray solid 4px;
+  }
+
   #all-series-list {
     display: flex;
     flex-direction: column;
+
 
     .letter {
       display: flex;
       flex-direction: column;
       margin: 0 10px;
+
       &:last-child {
         margin-bottom: 200px;
       }
@@ -85,7 +101,6 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
   font-size: 18px;
   height: 30px;
 }
-
 
 
 .page-title {

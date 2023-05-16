@@ -58,3 +58,4 @@ if (isset($token)) {
     $username = "Username";
 //    http_response_code(401);
 }
+include_once(explode("StreamingSite", __DIR__)[0] . 'StreamingSite/api/get_admin_settings.php');

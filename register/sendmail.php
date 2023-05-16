@@ -96,13 +96,16 @@ if (isset($_GET["num1"]) && isset($_GET["num2"]) && isset($_GET["num3"]) && isse
 }
 
 //For testing --
+include '.././api/get_admin_settings.php';
 
-$num1 = 'value="' . substr($verifyNum, 0, 1) . '" class="ok"';
-$num2 = 'value="' . substr($verifyNum, 1, 1) . '" class="ok"';
-$num3 = 'value="' . substr($verifyNum, 2, 1) . '" class="ok"';
-$num4 = 'value="' . substr($verifyNum, 3, 1) . '" class="ok"';
-$num5 = 'value="' . substr($verifyNum, 4, 1) . '" class="ok"';
-$num6 = 'value="' . substr($verifyNum, 5, 1) . '" class="ok"';
+if ($setting_verify["state"] == 1) {
+    $num1 = 'value="' . substr($verifyNum, 0, 1) . '" class="ok"';
+    $num2 = 'value="' . substr($verifyNum, 1, 1) . '" class="ok"';
+    $num3 = 'value="' . substr($verifyNum, 2, 1) . '" class="ok"';
+    $num4 = 'value="' . substr($verifyNum, 3, 1) . '" class="ok"';
+    $num5 = 'value="' . substr($verifyNum, 4, 1) . '" class="ok"';
+    $num6 = 'value="' . substr($verifyNum, 5, 1) . '" class="ok"';
+}
 
 //--
 
@@ -138,11 +141,11 @@ $verifyContent = '
 </main>
 ';
 
-include '.././template/index.php';
 
 //setcookie("token", "", time() - 1000, "/");
 //setcookie("name", "", time() - 1000, "/");
 //setcookie("username", "", time() - 1000, "/");
+include '.././template/index.php';
 
 if (isset($cookie)) {
     if ($login) {

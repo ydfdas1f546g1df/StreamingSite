@@ -1,4 +1,6 @@
 .idea
 .vscode
 node_modules
-data/*
+data/*/*/*.mp4
+data/*/*.png
+data/*/*.jpg

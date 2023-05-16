@@ -25,6 +25,7 @@ $(function () {
             data: {myData: JSON.stringify(myObj)},
             success: function (res) {
                 let ResJSON = JSON.parse(res);
+                // console.log(ResJSON)
                 for (let i = 0; i < ResJSON.length; i++) {
                     JSONData.push({
                         name: ResJSON[i].name,
@@ -35,13 +36,15 @@ $(function () {
                     });
                 }
                 JSONData.sort((a, b) => a.showName.localeCompare(b.showName)); // Sort alphabetically
+                // console.log(JSONData)
             }
         });
     }
 
     getSeries().then(
         function () {
-            const letters = new Set(JSONData.map(item => item.showName[0])); // Get the first letter of each showName and remove duplicates
+            const letters = new Set(JSONData.map(item => item.showName[0].toUpperCase())); // Get the first letter of each showName and remove duplicates
+            console.log(letters)
             Vue.createApp({
                 data() {
                     return {
@@ -53,14 +56,14 @@ $(function () {
                 computed: {
                     filteredSeries() {
                         const filtered = this.results.filter(result => {
-                            return result.showName.toLowerCase().indexOf(this.search.toLowerCase()) !== -1;
+                            return result.showName.toLowerCase().includes(this.search.toLowerCase());
                         });
                         return filtered;
                     },
                     seriesByLetter() {
                         const series = {};
                         this.letters.forEach(letter => {
-                            series[letter] = this.filteredSeries.filter(result => result.showName[0] === letter);
+                            series[letter] = this.filteredSeries.filter(result => result.showName[0].toUpperCase() === letter);
                         });
                         return series;
                     },

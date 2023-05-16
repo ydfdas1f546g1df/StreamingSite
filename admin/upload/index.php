@@ -8,6 +8,9 @@ $mainContent = '
             <a href="/admin">
                 <div class="icon-container"><i class="gg-terminal"></i></div>
                 Dashboard</a>
+                            <a href="/admin/settings/" >
+            <div class="icon-container"><i class="fa-solid fa-sliders"></i></div>
+            Settings</a>
         <a href="/admin/media">
             <div class="icon-container"><i class="fa-solid fa-photo-film"></i></div>
             Episode

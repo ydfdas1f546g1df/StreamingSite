@@ -23,8 +23,6 @@ $eye-catcher-height: 156px;
 $eye-catcher-height-1400: 230px;
 $eye-catcher-height-1080: 410px;
 
-
-@import "search";
 @import "header";
 @import "footer";
 @import "icons";
@@ -37,12 +35,16 @@ $eye-catcher-height-1080: 410px;
 @import "account";
 @import "profile";
 @import "allseries";
+@import "search";
 @import "stream";
-
 
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+//* {
+//  user-select: none;
+//}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -51,7 +53,7 @@ input::-webkit-inner-spin-button {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 /* Track */
@@ -62,6 +64,7 @@ input::-webkit-inner-spin-button {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: $light-gray;
+  border-radius: 10px;
 }
 
 /* Handle on hover */
@@ -86,8 +89,15 @@ a {
 
   * {
     cursor: pointer;
-
   }
+
+  //  &:hover {
+  //    box-shadow: $black-shadow;
+  //
+  //  }
+  //img {
+  //box-shadow: none;
+  //  }
 }
 
 .tooltip {

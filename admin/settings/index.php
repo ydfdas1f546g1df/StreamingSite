@@ -1,15 +1,15 @@
 <?php
 
-$mainContent = '
+$admin_user = '
+
 <main class="admin-main">
     <div id="admin-main-div">
 
-
     <aside>
-        <a href="/admin" class="current-admin">
+        <a href="/admin/" >
             <div class="icon-container"><i class="gg-terminal"></i></div>
             Dashboard</a>
-                        <a href="/admin/settings/" >
+            <a href="/admin/settings/"  class="current-admin">
             <div class="icon-container"><i class="fa-solid fa-sliders"></i></div>
             Settings</a>
         <a href="/admin/media">
@@ -20,21 +20,35 @@ $mainContent = '
             <div class="icon-container"><i class="fa-solid fa-server"></i></div>
             Series
         </a>
-        <a href="/admin/upload">
+        <a href="/admin/upload/">
             <div class="icon-container"><i class="gg-software-upload"></i></div>
             upload</a>
         <a href="/admin/user">
             <div class="icon-container"><i class="gg-user"></i></div>
             User</a>
     </aside>
-    <article class="dash-article">
-
-
+    <article class="settings-article" id="settings-article">
+        <div class="setting-el" v-for="set in settings">
+        <span class="setting-title">{{ set.showName }}</span>
+        <span class="setting-desc">{{ set.desc }}</span>
+            <div class="checkbox-wrapper-64">
+            <span class="sel sel1 selected">{{ set.sel1 }}</span>
+                <label class="switch">
+                    <input type="checkbox" v-model="set.state" @click="changeSetting(set, $event)">
+                    <span class="slider"></span>
+                </label>
+                <span class="sel sel2 selected">{{ set.sel2 }}</span>
+            </div>
+        </div>
     </article>
+    <div id="error-messages">
     </div>
+    </div>
+    <script src="/script/admin_settings.js"></script>
 </main>';
 
-include '.././template/index.php';
+
+include '../.././template/index.php';
 
 //$content = file_get_contents("https://127.69.69.69/api/check_user");
 
@@ -53,5 +67,5 @@ if (isset($cookie)) {
 }else {
     header("Location: /error/403.php");
 }
-$Page = $Page . $mainContent . $footer;
+$Page .=  $admin_user . $footer;
 echo $Page;

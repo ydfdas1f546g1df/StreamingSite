@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $token = $_POST['token'] ?? '';
     $desc = $_POST['desc'] ?? '';
     $series_showName = $series_name;
-    $series_name = strtolower(str_replace(" ", "-", $series_showName,));
+    $series_name = strtolower(preg_replace('/[^a-zA-Z0-9\s]+/', '-', str_replace(' ', '-', $series_showName)));
 }
 
 
@@ -26,11 +26,13 @@ if (strlen($token) == 30) {
     }
     if ($verifyResultsArray[0]["admin"] == 1) {
 
-
-        $upload_destination = explode("StreamingSite", __DIR__)[0] . 'StreamingSite/data/cover/';
+        if (!file_exists(explode("StreamingSite", __DIR__)[0] . 'StreamingSite/data/' . $series_name)) {
+            mkdir(explode("StreamingSite", __DIR__)[0] . 'StreamingSite/data/' . $series_name, 0777, true);
+        }
+        $upload_destination = explode("StreamingSite", __DIR__)[0] . 'StreamingSite/data/' . $series_name . "/";
         $allowedExts = array("jpg", "png");
         $extension = pathinfo($_FILES['files']['name'], PATHINFO_EXTENSION);
-        $newFilename = $series_name . "." . $extension; // Change this line to set the new filename
+        $newFilename = $series_name . "." . "jpg"; // Change this line to set the new filename
         $file = $upload_destination . $newFilename;
         if ((($_FILES["files"]["type"] == "image/jpeg") || ($_FILES["files"]["type"] == "image/png")) && in_array($extension, $allowedExts)) {
 

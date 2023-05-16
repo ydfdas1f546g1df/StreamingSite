@@ -36,12 +36,12 @@ $header_1 = '<!DOCTYPE html>
             <a href="/pages/search/" title="Search for series and films"><i class="gg-search"></i>&nbsp;Search</a>
 ';
 $admin_1 = '
-            <span class="nav-more tooltip">admin
-             <div class="tooltiptext">
+            <span class="nav-more tooltip tooltip-header">admin
+             <div class="tooltiptext tooltiptext-header">
                  <a href="https://github.com/ydfdas1f546g1df/StreamingSite" target="_blank">
                 <div class="more-dd-icon"><i class="gg-git-fork"></i></div>
                 GitHub</a>
-                 <a href="/admin/Upload/">
+                 <a href="/admin/upload/">
                 <div class="more-dd-icon"><i class="gg-software-upload"></i></div>
                 Upload</a>
                <a href="/admin/">
@@ -62,15 +62,15 @@ $notLoggedIn = '
 
 $loggedIn = '
     <div class="user">
-    <a href="/user/profil"><img src="/dist/img/testpp.jpg" id="user-pp" alt="user-pp"/></a>
-        <div id="user-name" class="tooltip">' . $name . '<i class="down-arrow"></i>
-            <div class="tooltiptext">
+    <a href="/user/profile"><img src="/dist/img/testpp.jpg" id="user-pp" alt="user-pp"/></a>
+        <div id="user-name" class="tooltip tooltip-header">' . $name . '<i class="down-arrow"></i>
+            <div class="tooltiptext tooltiptext-header user-dropdown">
                 <a class="user-dd-el" href="/user">
                     <div class="user-dd-icon">
                         <i class="gg-format-justify"></i>
                     </div>
                     <span class="user-dd-name">Account</span>
-                </a> <a class="user-dd-el" href="/user/profil/">
+                </a> <a class="user-dd-el" href="/user/profile/">
                 <div class="user-dd-icon">
                     <i class="gg-user"></i>
                 </div>
@@ -164,19 +164,19 @@ $footer = '
         location.reload();
     })
     let lastTT
-$(".tooltip").on("mouseenter", function (e) {
+$(".tooltip-header").on("mouseenter", function (e) {
 //  console.log(lastTT !== e.currentTarget)
 //  console.log(e.currentTarget)
   if (lastTT !== e.currentTarget) {
-    $(".tooltiptext").attr("style", "visibility: hidden;")
+    $(".tooltiptext-header").attr("style", "visibility: hidden;")
   }
   lastTT = e.currentTarget
 //  console.log(lastTT)
-  $(e.currentTarget).find(".tooltiptext").attr("style", "visibility: visible;")
+  $(e.currentTarget).find(".tooltiptext-header").attr("style", "visibility: visible;")
 })
 
     $("*").on("click", function () {
-        $(".tooltiptext").each(
+        $(".tooltiptext-header").each(
             function () {
 //                console.log(this)
                 $(this).attr("style", "visibility: hidden;")
@@ -189,21 +189,41 @@ $(".tooltip").on("mouseenter", function (e) {
 
 
 $is_safari = false;
+$is_macos = false;
+
 
 $user_agent = $_SERVER['HTTP_USER_AGENT'];
 
 if (strpos($user_agent, 'Safari') !== false && strpos($user_agent, 'Chrome') === false) {
     $is_safari = true;
 }
+if (PHP_OS === 'Darwin') {
+    $is_macos = true;
+}
+$current_url = "http" . (($_SERVER['SERVER_PORT'] == 443) ? "s://" : "://") . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+//echo $current_url;
+if ($is_safari && $setting_safari["state"] == 1 || $is_macos && $setting_macos["state"] == 1) {
 
-if ($is_safari) {
-    $current_url = "http" . (($_SERVER['SERVER_PORT'] == 443) ? "s://" : "://") . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
     if (strpos($current_url, "/error/418.php")) {
     } else {
         header("Location: /error/418.php");
     }
 }
 
+//if (strpos($current_url, "/error/maintenance.php")) {
+//
+//} elseif (strpos($current_url, "/login/")) {
+//
+//}else {
+//    if (isset($IsAdmin)) {
+//        if (!$IsAdmin && $setting_main["state"]) {
+//
+//            header("Location: /error/maintenance.php");
+//        }
+//    } else {
+//        header("Location: /error/maintenance.php");
+//    }
+//}
 
 
 $adminHeader = $header_1 . $admin_1 . $header_2 . $loggedIn;

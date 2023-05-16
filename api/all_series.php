@@ -17,7 +17,7 @@ if (isset($_GET["s"])) {
 include_once(explode("StreamingSite", __DIR__)[0] . 'StreamingSite/api/db_connect.php');
 
 $series_name = "%" . $series_name . "%";
-$stmt = $mysqli->prepare('SELECT ts.showName, ts.name, ts.description as "desc", 
+$stmt = $mysqli->prepare('SELECT ts.showName, ts.name, ts.description as "desc",
        (SELECT count(*) from tbl_watchlist as tw
            inner join tbl_series ts2 on ts2.id = tw.series where ts2.showName = ts.showName) as watchlist, 
        (select count(twd.user) from tbl_watched as twd

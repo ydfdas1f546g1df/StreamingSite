@@ -62,6 +62,7 @@ header nav .nav-more {
   border-radius: 30px;
   background-color: black;
   color: white;
+  z-index: 2;
 }
 header nav .nav-more a {
   width: 160px !important;
@@ -112,6 +113,9 @@ header .user #user-name {
   align-items: center;
   color: white;
 }
+header .user #user-name .user-dropdown {
+  overflow: hidden;
+}
 header .user #user-name:hover {
   color: rgb(255, 100, 16);
 }
@@ -120,6 +124,12 @@ header .user #user-name .user-dd-el {
   align-items: center;
   font-size: 14px;
   color: white;
+}
+header .user #user-name .user-dd-el:first-child {
+  border-radius: 5px 5px 0 0;
+}
+header .user #user-name .user-dd-el:last-child {
+  border-radius: 0 0 5px 5px;
 }
 header .user #user-name .user-dd-el:hover {
   color: rgb(255, 100, 16);

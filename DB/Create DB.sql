@@ -1,3 +1,4 @@
+drop database test;
 CREATE DATABASE test;
 
 USE test;
@@ -6,8 +7,8 @@ CREATE TABLE tbl_series
 (
     id          int AUTO_INCREMENT NOT NULL,
     name        varchar(50)        NOT NULL,
-    showName    varchar(100) DEFAULT 'Serie',
-    description varchar(100) DEFAULT 'Hosted By Streaming Site',
+    showName    varchar(200) DEFAULT 'Serie',
+    description varchar(1000) DEFAULT 'Hosted By Streaming Site',
     PRIMARY KEY tbl_series_id_primary (id)
 );
 

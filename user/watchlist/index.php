@@ -12,12 +12,12 @@ if (isset($_COOKIE["name"])) {
 include '../.././template/index.php';
 $homeContent = '
 <main id="watchlist-main">
-  <div class="page-title">{{ uname }}\'s Watchlist<a :href="\'/user/profil/?u=\' + usname"><div class="icon"></div>Profile</a></div>
+  <div class="page-title">{{ uname }}\'s Watchlist<a :href="\'/user/profile/?u=\' + usname"><div class="icon"></div>Profile</a></div>
     <div class="home-cat-parent">
         <div id="home-cat-1" class="wrapper home-cat">
             <a v-for="wl in watchlist" :href="\'/stream/\' + wl.name" class="home-el"
                :title="wl.showName + \', watch it now for free and in full length.\'">
-                <img :src="\'/data/cover/\' + wl.name + \'.jpg\'" alt="cover" class="cover">
+                <img :src="\'/data/\' + wl.name + \'/\' + wl.name + \'.jpg\'" alt="cover" class="cover">
                 <span class="cover-title"><span>{{ wl.showName }}</span></span>
             </a>
         </div>
@@ -34,10 +34,19 @@ if (isset($cookie)) {
             $Page = $loggedInHeader;
         }
     } else {
-        $Page = $notLoggedInHeader;
+        if (isset($_GET["u"])){
+            $Page = $notLoggedInHeader;
+        } else {
+            header("Location: /login/");
+        }
     }
 } else {
-    $Page = $notLoggedInHeader;
+    echo 1;
+    if (isset($_GET["u"])){
+        $Page = $notLoggedInHeader;
+    } else {
+        header("Location: /login/");
+    }
 }
 $Page = $Page . $homeContent . $footer;
 echo $Page;

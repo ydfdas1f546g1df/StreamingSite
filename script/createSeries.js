@@ -30,6 +30,44 @@ filesInput.onchange = () => {
     }
 };
 
+$(document).ready(function() {
+    const dropArea = $('.drop-area');
+
+    // Prevent default drag behaviors
+    $(document).on('dragenter dragover dragleave drop', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        // console.log(1)
+    });
+
+    // Highlight the drop area when a file is dragged over it
+    dropArea.on('dragenter dragover', function() {
+        dropArea.addClass('dragover');
+        // console.log(2)
+
+    });
+
+    // Remove the highlight when a file is dragged out of the drop area
+    dropArea.on('dragleave drop', function() {
+        dropArea.removeClass('dragover');
+
+    });
+
+    // Handle dropped files
+    dropArea.on('drop', function(event) {
+        event.preventDefault();
+        const files = event.originalEvent.dataTransfer.files;
+        // Handle the dropped files as needed
+        console.log(files);
+        // Update the file input value with the dropped file(s)
+        $('#files').prop('files', files);
+        uploadForm.querySelector('label').innerHTML = '';
+        for (let i = 0; i < filesInput.files.length; i++) {
+            uploadForm.querySelector('label').innerHTML += '<span><i class="fa-solid fa-image fa-2x"></i>' + filesInput.files[i].name + '</span>';
+        }
+    });
+});
+
 uploadForm.onsubmit = event => {
     event.preventDefault();
     let seriesInput = $("#series_name")
@@ -66,10 +104,13 @@ uploadForm.onsubmit = event => {
                 // Reset the progress bar
                 uploadForm.querySelector('.progress').style.background = '';
                 // Reset the button
-                uploadForm.querySelector('button').innerHTML = 'Upload';
+                uploadForm.querySelector('button').innerHTML = 'Create Series';
+
                 // Enable the submit button
                 uploadForm.querySelector('button').disabled = false;
             }
+            $("#imagePreview").attr("src", "#")
+            $("#imagePreview").attr("style", "display: none;")
         };
         // Set form data values
         uploadFormData.set('series_name', seriesInput.val());

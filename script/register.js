@@ -62,7 +62,7 @@ function checkPw(e) {
                 $("form").submit()
             }
         } else {
-            $("#error-field").text("Password to short")
+            $("#error-field").text("Password to short, min 10 character")
             $("#error-field").css("display", "flex")
             pw1.css("border-color", "transparent transparent red transparent")
             pw1.css("color", "red")

@@ -42,10 +42,11 @@ $mainContent = '
 <main id="upload-main">
     <form class="upload-form" method="post" enctype="multipart/form-data" action="/api/uploadFile.php">
         <h1>Upload Form</h1>
-        <label for="files"><i class="fa-solid fa-folder-open fa-2x"></i>Select files ...</label>
+        <label for="files" class="drop-area"><i class="fa-solid fa-folder-open fa-2x"></i>Select files ...</label>
         <input id="files" type="file" name="files">
-        <label for="series_name" id="series"><span>Series Name</span>
-            <input list="series-list" name="series_name" id="series_name" required>
+        <label for="series_name" id="series">
+        <span>Series Name</span>
+        <input list="series-list" name="series_name" id="series_name" required>
             <datalist id="series-list">
                 <option v-for="s in series" :value="s.name">{{s.showName}}</option>
             </datalist>
@@ -54,13 +55,14 @@ $mainContent = '
         <input type="text" name="episode_name" id="episode_name" required autocomplete="off"><br><br>
         </label>
         <label for="season_number"> <span>Season</span>
-        <input type="number" name="season_number" id="season_number" required autocomplete="off"><br><br>
+        <input type="number" name="season_number" id="season_number" required autocomplete="off"  min="0"><br><br>
         </label>
         <label for="episode_number"> <span>Episode</span>
-        <input type="number" name="episode_number" id="episode_number" required autocomplete="off"><br><br>
+        <input type="number" name="episode_number" id="episode_number" required autocomplete="off" min="0"><br><br>
         </label>
         <div class="progress"></div>
         <button type="submit">Upload</button>
+        <span class="cancel" onclick="history.back()">cancel</span>
         <div class="result"></div>
     </form>
     <script src="/script/upload.js"></script>

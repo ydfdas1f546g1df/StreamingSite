@@ -17,7 +17,7 @@ $homeContent = '
         <div id="home-cat-1" class="wrapper home-cat">
             <a v-for="up in uploads" :href="\'/stream/\' + up.name + \'/season-\' + up.season + \'/episode-\' + up.episode" class="home-el"
                :title="up.showName + \', watch it now for free and in full length.\'">
-                <img :src="\'/data/cover/\' + up.name + \'.jpg\'" alt="cover" class="cover">
+                <img :src="\'/data/\' + up.name + \'/\' + up.name + \'.jpg\'" alt="cover" class="cover">
                 <span class="cover-title"><span>{{ up.showName }} &nbsp;<span class="episode-nth">S{{ up.season }} &nbsp;E{{ up.episode }}</span></span></span>
             </a>
         </div>

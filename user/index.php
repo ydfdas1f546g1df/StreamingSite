@@ -30,7 +30,7 @@ $mainContent = '
 <main class="account-main">
     <span class="page-title">Your Account</span>
     <article>
-        <a href="/user/profil">
+        <a href="/user/profile">
             <div class="icon">
                 <i class="gg-user"></i>
             </div>

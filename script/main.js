@@ -14,6 +14,7 @@ $(function () {
         let JSONData_po = [];
         let JSONData_wd = [];
         let JSONData_up = [];
+        let JSONData_ca = [];
         let username
 
         function getCookie() {
@@ -39,7 +40,6 @@ $(function () {
                 url: "/api/req_user_wd.php",
                 data: {myData: JSON.stringify(myObj)},
                 success: function (res) {
-                    // console.log(res)
 
                     let ResJSON = JSON.parse(res);
                     let length
@@ -98,6 +98,7 @@ $(function () {
                 }
             });
         }
+
         async function getWatchPopular() {
 
 
@@ -123,10 +124,22 @@ $(function () {
                         JSONData_po.push({
                             showName: ResJSON[i].showName,
                             name: ResJSON[i].name,
-                            watched : ResJSON[i].watched,
+                            watched: ResJSON[i].watched,
+                            viewIndex: ResJSON[i].view,
+                        })
+                    }
+                    if (length > 9) {
+                        length = 9
+                    }
+
+                    for (let i = 0; i < length; i++) {
+                        JSONData_ca.push({
+                            showName: ResJSON[i].showName,
+                            name: ResJSON[i].name
                         })
                     }
                     console.log(JSONData_po)
+                    // console.log(JSONData_ca)
                     return JSONData_po
                 }
             });
@@ -142,6 +155,7 @@ $(function () {
                             uploads: JSONData_up,
                             watched: JSONData_wd,
                             pupular: JSONData_po,
+                            catcher: JSONData_ca,
                         };
                     },
                 }).mount("#home-main");

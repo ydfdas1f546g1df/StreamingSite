@@ -36,10 +36,10 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
     color: white;
     font-size: 40px;
 
-    input {
-      font-size: 40px !important;
+    input#search-input {
+      font-size: 40px;
       width: 1150px;
-      height: 80px !important;
+      height: 80px;
       margin-bottom: 20px;
       border-radius: 5px;
       background: none;
