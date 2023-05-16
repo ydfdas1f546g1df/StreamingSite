@@ -17,7 +17,7 @@ $streamTopMain = '
     </div>
     <div class="watchlist-column">
         <div>
-            <a id="watchNow">Watch now</a>
+            <a id="watchNow" :href="\'/stream/\' + series.name + \'/season-1/episode-1\'">Watch now</a>
             <span :class="\'watchlist-add \' + series.OW" :title="\'Add \' + series.showName + \' to your your watchlist, now.\'" :status="onWatchlist" id="watchlist" @click="watchlist"><i class="fa-solid fa-list-ul"></i> Watchlist</span>
             <span class="share"><i class="fa-solid fa-share-from-square"></i> Share</span>
         </div>
