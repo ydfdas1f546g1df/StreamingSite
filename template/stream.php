@@ -23,6 +23,7 @@ $streamTopMain = '
         </div>
     </div>
     <div class="background"  :style="\'background: url(/data/\' + series.name + \'/\' + series.name + \'.jpg); background-size: cover; background-position: center; filter: blur(8px);\'"></div>
+    <div class="background"  :style="\'background: url(/data/\' + series.name + \'/\' + series.name + \'.jpg); background-size: cover; background-position: center; filter: blur(300px);\'"></div>
 </div>
 ';
 
