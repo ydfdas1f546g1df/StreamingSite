@@ -40,6 +40,11 @@ $footer-bg: rgb(28, 28, 28);
 $header-bg: rgb(28, 28, 28);
 $header-height: 70px;
 
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .parent {
   display: grid;
   grid-template-columns: repeat(2, 2fr) repeat(2, 1fr) 2fr;
@@ -152,7 +157,8 @@ $header-height: 70px;
   }
 
   .home-cat {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
     //justify-content: space-between;
     align-content: flex-start;
 
@@ -208,13 +214,11 @@ $header-height: 70px;
       }
       .cover {
         margin: 0 0 5px 0;
-        width: 150px;
-        height: 225px;
+        width: 100%;
+        aspect-ratio: 2/3;
         border-radius: 5px;
         transition: $trans;
         box-shadow: $black-shadow;
-
-
       }
     }
   }

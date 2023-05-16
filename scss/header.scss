@@ -110,12 +110,18 @@ header {
 
     .nav-more {
       padding: 5px 10px;
-      border-radius: 30px;
+      border-radius: 5px;
+      //overflow: hidden;
       background-color: black;
       color: white;
       z-index: 2;
+      .tooltiptext-header {
+        border-radius: 5px;
+        overflow: hidden;
+      }
 
       a {
+        transition: $trans;
         width: 160px !important;
       }
     }
@@ -156,6 +162,7 @@ header {
     display: flex;
     align-items: center;
     margin-right: 40px;
+    transition: $trans;
 
     #user-pp {
       height: $user-pp-size;
@@ -187,9 +194,11 @@ header {
         align-items: center;
         font-size: 14px;
         color: white;
+
         &:first-child {
           border-radius: 5px 5px 0 0;
         }
+
         &:last-child {
           border-radius: 0 0 5px 5px;
         }
@@ -203,6 +212,7 @@ header {
         }
 
         .user-dd-icon {
+          transition: $trans;
           color: $orange;
           height: 45px;
           width: 45px;

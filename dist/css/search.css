@@ -22,7 +22,7 @@
 }
 .search-main label.search input#search-input:focus-visible {
   outline: none;
-  border-bottom: rgb(255, 100, 16) solid 4px;
+  border-bottom: rgb(68, 16, 255) solid 4px;
 }
 .search-main label.search input#search-input::-moz-placeholder {
   color: rgba(255, 255, 255, 0.51);
@@ -96,14 +96,14 @@
   color: #636363;
 }
 .search-main #search-result .result-item .result-head #add-wl-btn:hover {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }
 .search-main #search-result .result-item .result-head #add-wl-btn .tooltiptext {
   top: -300%;
   left: -50%;
   color: white;
   font-weight: normal;
-  background: rgb(255, 100, 16);
+  background: rgb(68, 16, 255);
   padding: 10px;
   border-radius: 5px;
 }
@@ -132,13 +132,13 @@
   margin-top: 5px;
 }
 .search-main #search-result .result-item .result-head .result-watched {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }
 .search-main #search-result .result-item .result-description {
   color: #636363;
 }
 .search-main #search-result .result-item .result-link {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
   font-size: 14px;
   padding-top: 10px;
 }

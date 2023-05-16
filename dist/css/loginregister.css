@@ -24,7 +24,7 @@
   border: rgb(55, 55, 55) solid 3px;
 }
 .loginRegster-main .login-wrapper form a {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
   margin-left: 20px;
   margin-bottom: 20px;
 }
@@ -45,7 +45,7 @@
   color: rgb(55, 55, 55);
 }
 .loginRegster-main .login-wrapper form .agree a:hover {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }
 .loginRegster-main .login-wrapper form input[type=submit] {
   width: 360px;
@@ -55,7 +55,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(255, 100, 16);
+  background: rgb(68, 16, 255);
   border: none;
   border-radius: 5px;
   font-weight: bold;
@@ -98,7 +98,7 @@
 }
 .loginRegster-main .login-wrapper form label input[type=email]:focus-visible, .loginRegster-main .login-wrapper form label input[type=password]:focus-visible, .loginRegster-main .login-wrapper form label input[type=text]:focus-visible {
   outline: none;
-  border-bottom: rgb(255, 100, 16) solid 4px;
+  border-bottom: rgb(68, 16, 255) solid 4px;
 }
 .loginRegster-main .login-wrapper form label input[type=email]::-moz-placeholder, .loginRegster-main .login-wrapper form label input[type=password]::-moz-placeholder, .loginRegster-main .login-wrapper form label input[type=text]::-moz-placeholder {
   color: rgba(255, 255, 255, 0.51);
@@ -135,7 +135,7 @@
   color: #636363;
 }
 .loginRegster-main .login-wrapper .login-info a {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }
 .loginRegster-main .login-wrapper .login-info a:hover {
   color: white;
@@ -161,7 +161,7 @@
   color: #5da3f4;
 }
 .loginRegster-main .login-wrapper .register-info div i.watched {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }
 .loginRegster-main .login-wrapper .register-info div i.ads {
   color: red;
@@ -198,10 +198,10 @@
 }
 .loginRegster-main .login-wrapper .verify-form .verify-code input[type=number]:focus-visible {
   outline: none;
-  border-bottom: rgb(255, 100, 16) solid 4px;
+  border-bottom: rgb(68, 16, 255) solid 4px;
 }
 .loginRegster-main .login-wrapper .verify-form .verify-code input[type=number].ok {
-  border-color: transparent transparent rgb(255, 100, 16) transparent;
+  border-color: transparent transparent rgb(68, 16, 255) transparent;
 }
 .loginRegster-main .login-wrapper .verify-form input[type=submit] {
   width: 80px;

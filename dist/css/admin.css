@@ -62,7 +62,7 @@
 }
 .admin-main #admin-main-div article label input:focus-visible, .admin-main #admin-main-div article label select:focus-visible, .admin-main #admin-main-div article label option:focus-visible, .admin-main #admin-main-div article label textarea:focus-visible {
   outline: none;
-  border-bottom: rgb(255, 100, 16) solid 2px;
+  border-bottom: rgb(68, 16, 255) solid 2px;
 }
 .admin-main #admin-main-div article label input::-moz-placeholder, .admin-main #admin-main-div article label select::-moz-placeholder, .admin-main #admin-main-div article label option::-moz-placeholder, .admin-main #admin-main-div article label textarea::-moz-placeholder {
   color: rgba(255, 255, 255, 0.51);
@@ -89,7 +89,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(255, 100, 16);
+  background: rgb(68, 16, 255);
   border-radius: 5px;
   min-width: 50px;
   cursor: pointer;
@@ -150,7 +150,7 @@
   width: 100%;
 }
 .admin-main #admin-main-div article.user-article .user .user-list .user-list-el-header span.user-list-btn-placeholder .user-list-btn.del-btn, .admin-main #admin-main-div article.user-article .user .user-list .user-list-el span.user-list-btn-placeholder .user-list-btn.del-btn {
-  background: rgb(255, 100, 16);
+  background: rgb(68, 16, 255);
 }
 .admin-main #admin-main-div article.user-article .user .user-list .user-list-el-header span.user-list-btn-placeholder .user-list-btn.edit-btn, .admin-main #admin-main-div article.user-article .user .user-list .user-list-el span.user-list-btn-placeholder .user-list-btn.edit-btn {
   background: rgb(17, 17, 17);
@@ -173,7 +173,7 @@
 }
 .admin-main #admin-main-div article.upload-article .link-div div .create-btn {
   display: flex;
-  background: rgb(255, 100, 16);
+  background: rgb(68, 16, 255);
   color: white;
   margin: 10px 0;
   border-radius: 5px;
@@ -217,11 +217,11 @@
   align-items: center;
 }
 .admin-main #admin-main-div aside a.current-admin {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
   background: rgb(55, 55, 55);
 }
 .admin-main #admin-main-div aside a:hover {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }
 .admin-main #admin-main-div #error-messages {
   position: fixed;
@@ -234,7 +234,7 @@
 .admin-main #admin-main-div #error-messages .error-msg-el {
   margin-top: 10px;
   border-radius: 5px;
-  background: rgba(255, 100, 16, 0.71);
+  background: rgba(68, 16, 255, 0.63);
   padding: 10px;
   color: white;
   display: flex;
@@ -270,7 +270,7 @@
 }
 #upload-main input[type=text]:focus-visible, #upload-main input[type=number]:focus-visible, #upload-main input[list]:focus-visible {
   outline: none;
-  border-bottom: rgb(255, 100, 16) solid 2px;
+  border-bottom: rgb(68, 16, 255) solid 2px;
 }
 #upload-main input[type=text]::-moz-placeholder, #upload-main input[type=number]::-moz-placeholder, #upload-main input[list]::-moz-placeholder {
   color: rgba(255, 255, 255, 0.51);
@@ -289,7 +289,7 @@
 }
 #upload-main textarea:focus-visible {
   outline: none;
-  border: rgb(255, 100, 16) solid 2px;
+  border: rgb(68, 16, 255) solid 2px;
 }
 #upload-main textarea::-moz-placeholder {
   color: rgba(255, 255, 255, 0.51);
@@ -346,7 +346,7 @@
 }
 #upload-main .drop-area.dragover {
   border-color: #0084d0 !important;
-  background: rgba(0, 132, 208, 0.62) !important;
+  background: rgba(0, 132, 208, 0.4) !important;
   transition: all 0.4s ease-in-out;
 }
 #upload-main .upload-form label i {
@@ -358,7 +358,7 @@
   word-break: break-all;
 }
 #upload-main .upload-form label[for=files]:hover {
-  background: rgb(255, 100, 16);
+  background: rgb(68, 16, 255);
   border: 2px solid rgb(24, 24, 24);
   color: white;
   transition: all 0.4s ease-in-out;
