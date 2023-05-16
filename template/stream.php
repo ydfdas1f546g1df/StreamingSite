@@ -22,8 +22,8 @@ $streamTopMain = '
             <span class="share"><i class="fa-solid fa-share-from-square"></i> Share</span>
         </div>
     </div>
-    <div class="background"  :style="\'background: url(/data/\' + series.name + \'/\' + series.name + \'.jpg); background-size: cover; background-position: center; filter: blur(8px);\'"></div>
-    <div class="background"  :style="\'background: url(/data/\' + series.name + \'/\' + series.name + \'.jpg); background-size: cover; background-position: center; filter: blur(300px);\'"></div>
+    <div class="background first"   :style="\'background-image: url(/data/\' + series.name + \'/\' + series.name + \'.jpg);\'"></div>
+    <div class="background"  :style="\'background-image: url(/data/\' + series.name + \'/\' + series.name + \'.jpg);\'"></div>
 </div>
 ';
 
