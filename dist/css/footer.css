@@ -30,7 +30,7 @@ footer .wrapper .footer-el .footer-el-item {
   margin-bottom: 10px;
 }
 footer .wrapper .footer-el .footer-el-item:hover {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }
 footer .copyright {
   color: rgb(55, 55, 55);
@@ -40,5 +40,5 @@ footer .copyright a {
   color: #636363;
 }
 footer .copyright a:hover {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }

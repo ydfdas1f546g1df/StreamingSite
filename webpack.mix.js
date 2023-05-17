@@ -6,3 +6,8 @@ const fs = require("fs");
 
 fs.readdirSync("scss/").forEach(fileName =>
     mix.sass(`scss/${fileName}`, "dist/css"));
+
+// fs.readdirSync("scss/").forEach(function () {
+//     }
+// );
+// mix.sass(`scss/main.scss`, "dist/css")

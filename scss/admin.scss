@@ -1,35 +1,6 @@
-$main-bg: rgb(17, 17, 17);
-$dd-padding: 3vw;
-$dd-width: 100vw - (2 * $dd-padding);
-$dd-el-padding: 0.6em;
-$dd-el-width: $dd-width - (2 * $dd-padding);
-$footer-height: 300px;
-$footer-bg: rgb(28, 28, 28);
-$header-height: 70px;
-$orange: rgb(255, 100, 16);
-$error-orange: rgba(255, 100, 16, 0.71);
-$logo-size: 40px;
-$width: 60%;
-$header-bg: rgb(28, 28, 28);
-$hover-orange: #f8cb80;
-$user-pp-size: 40px;
-$dd-more-bg: rgb(24, 24, 24);
-$light-gray: rgb(55, 55, 55);
-$trans: all .4s ease-in-out;
-$cat-title-size: 22px;
-$eye-catcher-margin: 5px;
-$eye-catcher-margin-1400: 10px;
-$eye-catcher-margin-1080: 20px;
-$eye-catcher-height: 156px;
-$eye-catcher-height-1400: 230px;
-$eye-catcher-height-1080: 410px;
-$lighter-gray: #636363;
-$aside-width: 220px;
-$blue: #0084d0;
-$darker-blue: #006096;
-$blue-hover: rgba(0, 132, 208, 0.62);
-$black-shadow: 0px 0px 10px 1px rgba(10, 10, 10, 0.36);
-$orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
+@use "variables" as *;
+
+
 
 .admin-main {
   width: 100%;
@@ -103,7 +74,7 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
 
           &:focus-visible {
             outline: none;
-            border-bottom: $orange solid 2px;
+            border-bottom: $color solid 2px;
           }
 
           &::placeholder {
@@ -134,7 +105,7 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
               display: flex;
               align-items: center;
               justify-content: center;
-              background: $orange;
+              background: $color;
               border-radius: 5px;
               min-width: 50px;
               cursor: pointer;
@@ -209,7 +180,7 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
                     width: 100%;
 
                     &.del-btn {
-                      background: $orange;
+                      background: $color;
                     }
 
                     &.edit-btn {
@@ -245,7 +216,7 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
 
             .create-btn {
               display: flex;
-              background: $orange;
+              background: $color;
               color: white;
               margin: 10px 0;
               border-radius: 5px;
@@ -299,12 +270,12 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
 
 
         &.current-admin {
-          color: $orange;
+          color: $color;
           background: $light-gray;
         }
 
         &:hover {
-          color: $orange;
+          color: $color;
         }
       }
 
@@ -321,7 +292,7 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
       .error-msg-el {
         margin-top: 10px;
         border-radius: 5px;
-        background: $error-orange;
+        background: $color-blur;
         padding: 10px;
         color: white;
         display: flex;
@@ -365,7 +336,7 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
 
     &:focus-visible {
       outline: none;
-      border-bottom: $orange solid 2px;
+      border-bottom: $color solid 2px;
     }
 
     &::placeholder {
@@ -384,7 +355,7 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
 
     &:focus-visible {
       outline: none;
-      border: $orange solid 2px;
+      border: $color solid 2px;
     }
 
     &::placeholder {
@@ -464,7 +435,7 @@ $orange-shadow: 0px 0px 10px 1px rgba(255, 100, 16, 0.25);
   }
 
   .upload-form label[for="files"]:hover {
-    background: $orange;
+    background: $color;
     border: 2px solid $dd-more-bg;
     color: white;
     transition: $trans;

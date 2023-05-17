@@ -1,28 +1,6 @@
-$main-bg: rgb(17, 17, 17);
-$dd-padding: 3vw;
-$dd-width: 100vw - (2 * $dd-padding);
-$dd-el-padding: 0.6em;
-$dd-el-width: $dd-width - (2 * $dd-padding);
-$footer-height: 300px;
-$footer-bg: rgb(28, 28, 28);
-$header-height: 70px;
-$orange: rgb(255, 100, 16);
-$orange-hover: rgb(21, 21, 21);
-$logo-size: 40px;
-$width: 60%;
-$header-bg: rgb(28, 28, 28);
-$hover-orange: #f8cb80;
-$user-pp-size: 40px;
-$dd-more-bg: rgb(24, 24, 24);
-$light-gray: rgb(55, 55, 55);
-$trans: all .4s ease-in-out;
-$cat-title-size: 22px;
-$eye-catcher-margin: 5px;
-$eye-catcher-margin-1400: 10px;
-$eye-catcher-margin-1080: 20px;
-$eye-catcher-height: 156px;
-$eye-catcher-height-1400: 230px;
-$eye-catcher-height-1080: 410px;
+
+
+@use "variables" as *;
 
 header {
   width: 100%;
@@ -50,7 +28,7 @@ header {
       height: 100%;
       display: flex;
       justify-content: flex-end;
-      background-color: $orange;
+      background-color: $color;
       font-size: $logo-size;
       align-items: center;
       padding-right: 10px;
@@ -64,7 +42,7 @@ header {
       justify-content: flex-start;
       align-items: center;
       font-size: $logo-size;
-      color: $orange;
+      color: $color;
     }
   }
 
@@ -87,19 +65,25 @@ header {
       }
 
       &:hover {
-        color: $orange;
+        color: $color;
 
       }
     }
 
     .nav-more {
       padding: 5px 10px;
-      border-radius: 30px;
+      border-radius: 5px;
+      //overflow: hidden;
       background-color: black;
       color: white;
       z-index: 2;
+      .tooltiptext-header {
+        border-radius: 5px;
+        overflow: hidden;
+      }
 
       a {
+        transition: $trans;
         width: 160px !important;
       }
     }
@@ -115,7 +99,7 @@ header {
     }
 
     .r-btn {
-      background: $orange;
+      background: $color;
 
     }
 
@@ -131,7 +115,7 @@ header {
       height: 50px;
 
       &:hover {
-        background: $orange-hover;
+        background: $color-hover;
       }
     }
   }
@@ -140,6 +124,7 @@ header {
     display: flex;
     align-items: center;
     margin-right: 40px;
+    transition: $trans;
 
     #user-pp {
       height: $user-pp-size;
@@ -163,7 +148,7 @@ header {
       }
 
       &:hover {
-        color: $orange;
+        color: $color;
       }
 
       .user-dd-el {
@@ -171,15 +156,17 @@ header {
         align-items: center;
         font-size: 14px;
         color: white;
+
         &:first-child {
           border-radius: 5px 5px 0 0;
         }
+
         &:last-child {
           border-radius: 0 0 5px 5px;
         }
 
         &:hover {
-          color: $orange;
+          color: $color;
         }
 
         .user-dd-name {
@@ -187,7 +174,8 @@ header {
         }
 
         .user-dd-icon {
-          color: $orange;
+          transition: $trans;
+          color: $color;
           height: 45px;
           width: 45px;
           background-color: $header-bg;

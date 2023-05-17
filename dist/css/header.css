@@ -22,7 +22,7 @@ header .logo .logo-1 {
   height: 100%;
   display: flex;
   justify-content: flex-end;
-  background-color: rgb(255, 100, 16);
+  background-color: rgb(68, 16, 255);
   font-size: 40px;
   align-items: center;
   padding-right: 10px;
@@ -35,7 +35,7 @@ header .logo .logo-2 {
   justify-content: flex-start;
   align-items: center;
   font-size: 40px;
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }
 header nav {
   display: flex;
@@ -55,16 +55,21 @@ header nav a i {
   margin: 3px;
 }
 header nav a:hover {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }
 header nav .nav-more {
   padding: 5px 10px;
-  border-radius: 30px;
+  border-radius: 5px;
   background-color: black;
   color: white;
   z-index: 2;
 }
+header nav .nav-more .tooltiptext-header {
+  border-radius: 5px;
+  overflow: hidden;
+}
 header nav .nav-more a {
+  transition: all 0.4s ease-in-out;
   width: 160px !important;
 }
 header .login-div {
@@ -76,7 +81,7 @@ header .login-div .l-btn {
   background: black;
 }
 header .login-div .r-btn {
-  background: rgb(255, 100, 16);
+  background: rgb(68, 16, 255);
 }
 header .login-div .nl-btn {
   color: white;
@@ -96,6 +101,7 @@ header .user {
   display: flex;
   align-items: center;
   margin-right: 40px;
+  transition: all 0.4s ease-in-out;
 }
 header .user #user-pp {
   height: 40px;
@@ -117,7 +123,7 @@ header .user #user-name .user-dropdown {
   overflow: hidden;
 }
 header .user #user-name:hover {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }
 header .user #user-name .user-dd-el {
   display: flex;
@@ -132,13 +138,14 @@ header .user #user-name .user-dd-el:last-child {
   border-radius: 0 0 5px 5px;
 }
 header .user #user-name .user-dd-el:hover {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }
 header .user #user-name .user-dd-el .user-dd-name {
   margin-left: 8px;
 }
 header .user #user-name .user-dd-el .user-dd-icon {
-  color: rgb(255, 100, 16);
+  transition: all 0.4s ease-in-out;
+  color: rgb(68, 16, 255);
   height: 45px;
   width: 45px;
   background-color: rgb(28, 28, 28);

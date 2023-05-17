@@ -22,15 +22,15 @@ main.errorpage article .error-text a {
   color: rgb(55, 55, 55);
 }
 main.errorpage article .error-text a:hover {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }
 main.errorpage article .error-num {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
   font-size: 50px;
   font-weight: bold;
 }
 main.errorpage article .error-btns .error-btn {
-  background: rgb(255, 100, 16);
+  background: rgb(68, 16, 255);
   border-radius: 5px;
   height: 20px;
   color: white;

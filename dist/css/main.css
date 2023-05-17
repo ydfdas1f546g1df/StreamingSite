@@ -24,7 +24,7 @@ header .logo .logo-1 {
   height: 100%;
   display: flex;
   justify-content: flex-end;
-  background-color: rgb(255, 100, 16);
+  background-color: rgb(68, 16, 255);
   font-size: 40px;
   align-items: center;
   padding-right: 10px;
@@ -37,7 +37,7 @@ header .logo .logo-2 {
   justify-content: flex-start;
   align-items: center;
   font-size: 40px;
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }
 header nav {
   display: flex;
@@ -57,16 +57,21 @@ header nav a i {
   margin: 3px;
 }
 header nav a:hover {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }
 header nav .nav-more {
   padding: 5px 10px;
-  border-radius: 30px;
+  border-radius: 5px;
   background-color: black;
   color: white;
   z-index: 2;
 }
+header nav .nav-more .tooltiptext-header {
+  border-radius: 5px;
+  overflow: hidden;
+}
 header nav .nav-more a {
+  transition: all 0.4s ease-in-out;
   width: 160px !important;
 }
 header .login-div {
@@ -78,7 +83,7 @@ header .login-div .l-btn {
   background: black;
 }
 header .login-div .r-btn {
-  background: rgb(255, 100, 16);
+  background: rgb(68, 16, 255);
 }
 header .login-div .nl-btn {
   color: white;
@@ -98,6 +103,7 @@ header .user {
   display: flex;
   align-items: center;
   margin-right: 40px;
+  transition: all 0.4s ease-in-out;
 }
 header .user #user-pp {
   height: 40px;
@@ -119,7 +125,7 @@ header .user #user-name .user-dropdown {
   overflow: hidden;
 }
 header .user #user-name:hover {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }
 header .user #user-name .user-dd-el {
   display: flex;
@@ -134,13 +140,14 @@ header .user #user-name .user-dd-el:last-child {
   border-radius: 0 0 5px 5px;
 }
 header .user #user-name .user-dd-el:hover {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }
 header .user #user-name .user-dd-el .user-dd-name {
   margin-left: 8px;
 }
 header .user #user-name .user-dd-el .user-dd-icon {
-  color: rgb(255, 100, 16);
+  transition: all 0.4s ease-in-out;
+  color: rgb(68, 16, 255);
   height: 45px;
   width: 45px;
   background-color: rgb(28, 28, 28);
@@ -188,7 +195,7 @@ footer .wrapper .footer-el .footer-el-item {
   margin-bottom: 10px;
 }
 footer .wrapper .footer-el .footer-el-item:hover {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }
 footer .copyright {
   color: rgb(55, 55, 55);
@@ -198,7 +205,7 @@ footer .copyright a {
   color: #636363;
 }
 footer .copyright a:hover {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }
 
 .down-arrow {
@@ -709,12 +716,12 @@ footer .copyright a:hover {
 }
 
 .checkbox-wrapper-64 input:checked + .slider {
-  background-color: rgb(255, 100, 16);
-  border: 1px solid rgb(255, 100, 16);
+  background-color: rgb(68, 16, 255);
+  border: 1px solid rgb(68, 16, 255);
 }
 
 .checkbox-wrapper-64 input:focus + .slider {
-  box-shadow: 0 0 1px rgb(255, 100, 16);
+  box-shadow: 0 0 1px rgb(68, 16, 255);
 }
 
 .checkbox-wrapper-64 input:checked + .slider:before {
@@ -734,15 +741,20 @@ footer .copyright a:hover {
   justify-content: center;
 }
 .more-dd-icon i {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .parent {
   display: grid;
   grid-template-columns: repeat(2, 2fr) repeat(2, 1fr) 2fr;
   grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
 }
 .parent a {
   position: relative;
@@ -821,13 +833,14 @@ footer .copyright a:hover {
   color: white;
   padding: 5px;
   border-radius: 5px;
-  background: rgb(255, 100, 16);
+  background: rgb(68, 16, 255);
   font-size: 12.2222222222px;
   cursor: pointer;
   margin-left: 10px;
 }
 .home-cat-parent .home-cat {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
   align-content: flex-start;
 }
 .home-cat-parent .home-cat#home-cat-3 {
@@ -874,8 +887,8 @@ footer .copyright a:hover {
 }
 .home-cat-parent .home-cat .home-el .cover {
   margin: 0 0 5px 0;
-  width: 150px;
-  height: 225px;
+  width: 100%;
+  aspect-ratio: 2/3;
   border-radius: 5px;
   transition: all 0.4s ease-in-out;
   box-shadow: 0px 0px 10px 1px rgba(10, 10, 10, 0.36);
@@ -945,7 +958,7 @@ footer .copyright a:hover {
 }
 .admin-main #admin-main-div article label input:focus-visible, .admin-main #admin-main-div article label select:focus-visible, .admin-main #admin-main-div article label option:focus-visible, .admin-main #admin-main-div article label textarea:focus-visible {
   outline: none;
-  border-bottom: rgb(255, 100, 16) solid 2px;
+  border-bottom: rgb(68, 16, 255) solid 2px;
 }
 .admin-main #admin-main-div article label input::-moz-placeholder, .admin-main #admin-main-div article label select::-moz-placeholder, .admin-main #admin-main-div article label option::-moz-placeholder, .admin-main #admin-main-div article label textarea::-moz-placeholder {
   color: rgba(255, 255, 255, 0.51);
@@ -972,7 +985,7 @@ footer .copyright a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(255, 100, 16);
+  background: rgb(68, 16, 255);
   border-radius: 5px;
   min-width: 50px;
   cursor: pointer;
@@ -1033,7 +1046,7 @@ footer .copyright a:hover {
   width: 100%;
 }
 .admin-main #admin-main-div article.user-article .user .user-list .user-list-el-header span.user-list-btn-placeholder .user-list-btn.del-btn, .admin-main #admin-main-div article.user-article .user .user-list .user-list-el span.user-list-btn-placeholder .user-list-btn.del-btn {
-  background: rgb(255, 100, 16);
+  background: rgb(68, 16, 255);
 }
 .admin-main #admin-main-div article.user-article .user .user-list .user-list-el-header span.user-list-btn-placeholder .user-list-btn.edit-btn, .admin-main #admin-main-div article.user-article .user .user-list .user-list-el span.user-list-btn-placeholder .user-list-btn.edit-btn {
   background: rgb(17, 17, 17);
@@ -1056,7 +1069,7 @@ footer .copyright a:hover {
 }
 .admin-main #admin-main-div article.upload-article .link-div div .create-btn {
   display: flex;
-  background: rgb(255, 100, 16);
+  background: rgb(68, 16, 255);
   color: white;
   margin: 10px 0;
   border-radius: 5px;
@@ -1100,11 +1113,11 @@ footer .copyright a:hover {
   align-items: center;
 }
 .admin-main #admin-main-div aside a.current-admin {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
   background: rgb(55, 55, 55);
 }
 .admin-main #admin-main-div aside a:hover {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }
 .admin-main #admin-main-div #error-messages {
   position: fixed;
@@ -1117,7 +1130,7 @@ footer .copyright a:hover {
 .admin-main #admin-main-div #error-messages .error-msg-el {
   margin-top: 10px;
   border-radius: 5px;
-  background: rgba(255, 100, 16, 0.71);
+  background: rgba(68, 16, 255, 0.63);
   padding: 10px;
   color: white;
   display: flex;
@@ -1153,7 +1166,7 @@ footer .copyright a:hover {
 }
 #upload-main input[type=text]:focus-visible, #upload-main input[type=number]:focus-visible, #upload-main input[list]:focus-visible {
   outline: none;
-  border-bottom: rgb(255, 100, 16) solid 2px;
+  border-bottom: rgb(68, 16, 255) solid 2px;
 }
 #upload-main input[type=text]::-moz-placeholder, #upload-main input[type=number]::-moz-placeholder, #upload-main input[list]::-moz-placeholder {
   color: rgba(255, 255, 255, 0.51);
@@ -1172,7 +1185,7 @@ footer .copyright a:hover {
 }
 #upload-main textarea:focus-visible {
   outline: none;
-  border: rgb(255, 100, 16) solid 2px;
+  border: rgb(68, 16, 255) solid 2px;
 }
 #upload-main textarea::-moz-placeholder {
   color: rgba(255, 255, 255, 0.51);
@@ -1229,7 +1242,7 @@ footer .copyright a:hover {
 }
 #upload-main .drop-area.dragover {
   border-color: #0084d0 !important;
-  background: rgba(0, 132, 208, 0.62) !important;
+  background: rgba(0, 132, 208, 0.4) !important;
   transition: all 0.4s ease-in-out;
 }
 #upload-main .upload-form label i {
@@ -1241,7 +1254,7 @@ footer .copyright a:hover {
   word-break: break-all;
 }
 #upload-main .upload-form label[for=files]:hover {
-  background: rgb(255, 100, 16);
+  background: rgb(68, 16, 255);
   border: 2px solid rgb(24, 24, 24);
   color: white;
   transition: all 0.4s ease-in-out;
@@ -1330,15 +1343,15 @@ main.errorpage article .error-text a {
   color: rgb(55, 55, 55);
 }
 main.errorpage article .error-text a:hover {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }
 main.errorpage article .error-num {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
   font-size: 50px;
   font-weight: bold;
 }
 main.errorpage article .error-btns .error-btn {
-  background: rgb(255, 100, 16);
+  background: rgb(68, 16, 255);
   border-radius: 5px;
   height: 20px;
   color: white;
@@ -1376,7 +1389,7 @@ main.errorpage article .error-btns .error-btn:hover {
   border: rgb(55, 55, 55) solid 3px;
 }
 .loginRegster-main .login-wrapper form a {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
   margin-left: 20px;
   margin-bottom: 20px;
 }
@@ -1397,7 +1410,7 @@ main.errorpage article .error-btns .error-btn:hover {
   color: rgb(55, 55, 55);
 }
 .loginRegster-main .login-wrapper form .agree a:hover {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }
 .loginRegster-main .login-wrapper form input[type=submit] {
   width: 360px;
@@ -1407,7 +1420,7 @@ main.errorpage article .error-btns .error-btn:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(255, 100, 16);
+  background: rgb(68, 16, 255);
   border: none;
   border-radius: 5px;
   font-weight: bold;
@@ -1450,7 +1463,7 @@ main.errorpage article .error-btns .error-btn:hover {
 }
 .loginRegster-main .login-wrapper form label input[type=email]:focus-visible, .loginRegster-main .login-wrapper form label input[type=password]:focus-visible, .loginRegster-main .login-wrapper form label input[type=text]:focus-visible {
   outline: none;
-  border-bottom: rgb(255, 100, 16) solid 4px;
+  border-bottom: rgb(68, 16, 255) solid 4px;
 }
 .loginRegster-main .login-wrapper form label input[type=email]::-moz-placeholder, .loginRegster-main .login-wrapper form label input[type=password]::-moz-placeholder, .loginRegster-main .login-wrapper form label input[type=text]::-moz-placeholder {
   color: rgba(255, 255, 255, 0.51);
@@ -1487,7 +1500,7 @@ main.errorpage article .error-btns .error-btn:hover {
   color: #636363;
 }
 .loginRegster-main .login-wrapper .login-info a {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }
 .loginRegster-main .login-wrapper .login-info a:hover {
   color: white;
@@ -1513,7 +1526,7 @@ main.errorpage article .error-btns .error-btn:hover {
   color: #5da3f4;
 }
 .loginRegster-main .login-wrapper .register-info div i.watched {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }
 .loginRegster-main .login-wrapper .register-info div i.ads {
   color: red;
@@ -1550,10 +1563,10 @@ main.errorpage article .error-btns .error-btn:hover {
 }
 .loginRegster-main .login-wrapper .verify-form .verify-code input[type=number]:focus-visible {
   outline: none;
-  border-bottom: rgb(255, 100, 16) solid 4px;
+  border-bottom: rgb(68, 16, 255) solid 4px;
 }
 .loginRegster-main .login-wrapper .verify-form .verify-code input[type=number].ok {
-  border-color: transparent transparent rgb(255, 100, 16) transparent;
+  border-color: transparent transparent rgb(68, 16, 255) transparent;
 }
 .loginRegster-main .login-wrapper .verify-form input[type=submit] {
   width: 80px;
@@ -1756,7 +1769,7 @@ main.account-main article a .icon {
   margin-right: 10px;
 }
 main.account-main article a .icon i {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
   zoom: 3.5;
   margin: 0;
 }
@@ -1812,7 +1825,7 @@ main.account-main .page-title {
   color: white;
 }
 .profile-main article.banner .p-picture .watched span {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }
 .profile-main article.banner .info {
   display: flex;
@@ -1830,7 +1843,7 @@ main.account-main .page-title {
   text-decoration: none;
 }
 .profile-main article.banner .info span .watchlist-nth, .profile-main article.banner .info a .watchlist-nth {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }
 .profile-main article.banner .info span .icon, .profile-main article.banner .info a .icon {
   height: 30px;
@@ -1839,7 +1852,7 @@ main.account-main .page-title {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }
 .profile-main article.banner .info span i, .profile-main article.banner .info a i {
   zoom: 1.3;
@@ -1853,7 +1866,7 @@ main.account-main .page-title {
   text-decoration: underline;
 }
 .profile-main article.banner .info .link a:hover {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
   text-decoration: none;
 }
 .profile-main article.banner .bio {
@@ -1862,7 +1875,7 @@ main.account-main .page-title {
   align-items: flex-end;
 }
 .profile-main article.banner .bio .admin {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }
 .profile-main article.banner .bio .bio-text {
   text-align: left;
@@ -1902,7 +1915,7 @@ main.account-main .page-title {
   grid-template-columns: 1fr 1fr 1fr;
 }
 #all-series-main #all-series-list .letter h2 {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
   display: block;
   clear: both;
   width: 100%;
@@ -1916,15 +1929,15 @@ main.account-main .page-title {
   flex-direction: column;
 }
 #all-series-main #all-series-list .letter .result-item:hover {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }
-#all-series-main div.icon {
+#all-series-main diicon {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 35px;
 }
-#all-series-main div.icon i {
+#all-series-main diicon i {
   scale: 1.1;
 }
 
@@ -1948,7 +1961,7 @@ main.account-main .page-title {
   font-size: 18px;
   height: 20px;
   border-radius: 5px;
-  background: rgb(255, 100, 16);
+  background: rgb(68, 16, 255);
   font-weight: bold;
   padding: 10px;
 }
@@ -1980,7 +1993,7 @@ main.account-main .page-title {
 }
 .search-main label.search input#search-input:focus-visible {
   outline: none;
-  border-bottom: rgb(255, 100, 16) solid 4px;
+  border-bottom: rgb(68, 16, 255) solid 4px;
 }
 .search-main label.search input#search-input::-moz-placeholder {
   color: rgba(255, 255, 255, 0.51);
@@ -2054,14 +2067,14 @@ main.account-main .page-title {
   color: #636363;
 }
 .search-main #search-result .result-item .result-head #add-wl-btn:hover {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }
 .search-main #search-result .result-item .result-head #add-wl-btn .tooltiptext {
   top: -300%;
   left: -50%;
   color: white;
   font-weight: normal;
-  background: rgb(255, 100, 16);
+  background: rgb(68, 16, 255);
   padding: 10px;
   border-radius: 5px;
 }
@@ -2090,13 +2103,13 @@ main.account-main .page-title {
   margin-top: 5px;
 }
 .search-main #search-result .result-item .result-head .result-watched {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }
 .search-main #search-result .result-item .result-description {
   color: #636363;
 }
 .search-main #search-result .result-item .result-link {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
   font-size: 14px;
   padding-top: 10px;
 }
@@ -2114,7 +2127,7 @@ main.account-main .page-title {
   margin: 50px 0 30px 0;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  background: rgba(28, 28, 28, 0.6);
+  background: rgba(28, 28, 28, 0.5);
   box-shadow: 0 0 60px 0 rgb(30, 30, 30);
 }
 #stream-main .stream-banner > div {
@@ -2123,13 +2136,26 @@ main.account-main .page-title {
   flex-direction: column;
 }
 #stream-main .stream-banner > div.background {
+  background-position: center;
+  background-size: cover;
   position: absolute;
-  left: 12px;
-  top: 12px;
-  bottom: 12px;
-  right: 12px;
   z-index: -1;
   margin: 0;
+}
+#stream-main .stream-banner > div.background.first {
+  left: 10px;
+  top: 10px;
+  bottom: 10px;
+  right: 10px;
+  filter: blur(8px) saturate(200%);
+}
+#stream-main .stream-banner > div.background:last-child {
+  background: #520000;
+  filter: blur(300px) saturate(200%);
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
 }
 #stream-main .stream-banner > div:first-child {
   align-items: center;
@@ -2138,8 +2164,15 @@ main.account-main .page-title {
   height: 300px;
   width: 200px;
   border-radius: 5px;
+  box-shadow: 0px 0px 43px -9px rgba(28, 28, 28, 0.5);
 }
 #stream-main .stream-banner > div:nth-child(2) {
+  display: grid;
+  grid-template-rows: 1fr 3fr 2fr;
+  box-shadow: 0px 0px 43px -9px rgba(28, 28, 28, 0.5);
+  border-radius: 5px;
+  padding: 20px;
+  background: rgba(28, 28, 28, 0.5);
   align-items: flex-start;
 }
 #stream-main .stream-banner > div:nth-child(2) .series-title {
@@ -2147,65 +2180,80 @@ main.account-main .page-title {
 }
 #stream-main .stream-banner > div:nth-child(2) .series-desc {
   margin: 20px 0;
-  color: white;
+  color: #b4b4b4;
 }
-#stream-main .stream-banner > div:nth-child(2) .series-info {
-  color: rgb(255, 100, 16);
+#stream-main .stream-banner > div:nth-child(2) .series-info-parent {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
 }
-#stream-main .stream-banner > div:nth-child(2) .series-info strong {
-  color: white;
+#stream-main .stream-banner > div:nth-child(2) .series-info-parent .series-info {
+  color: rgb(68, 16, 255);
+}
+#stream-main .stream-banner > div:nth-child(2) .series-info-parent .series-info strong {
+  color: #b4b4b4;
 }
 #stream-main .stream-banner > div:nth-child(3) {
   align-items: center;
+  transition: all 0.4s ease-in-out;
 }
 #stream-main .stream-banner > div:nth-child(3) div {
+  box-shadow: 0px 0px 43px -9px rgba(28, 28, 28, 0.5);
   width: 100%;
-  margin: 10px;
+  margin: 0 10px 10px;
   border-radius: 5px;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  background: rgb(55, 55, 55);
 }
-#stream-main .stream-banner > div:nth-child(3) div a {
+#stream-main .stream-banner > div:nth-child(3) div a:first-child {
   width: 100%;
   text-align: center;
   color: white;
-  background: rgb(255, 100, 16);
+  background: rgb(68, 16, 255);
   padding: 15px 0;
   font-weight: bold;
   font-size: 24px;
   border-radius: 5px 5px 0 0;
 }
+#stream-main .stream-banner > div:nth-child(3) div a:first-child:hover {
+  background: rgba(68, 16, 255, 0.63);
+}
 #stream-main .stream-banner > div:nth-child(3) div span, #stream-main .stream-banner > div:nth-child(3) div a {
   cursor: pointer;
+  transition: all 0.4s ease-in-out;
 }
-#stream-main .stream-banner > div:nth-child(3) div span {
+#stream-main .stream-banner > div:nth-child(3) div span, #stream-main .stream-banner > div:nth-child(3) div a {
+  color: white;
+  background: rgba(28, 28, 28, 0.5);
   padding: 10px 0;
   width: 100%;
   font-weight: bold;
 }
-#stream-main .stream-banner > div:nth-child(3) div span.isInWatchlist {
-  color: rgb(255, 100, 16);
+#stream-main .stream-banner > div:nth-child(3) div span i, #stream-main .stream-banner > div:nth-child(3) div a i {
+  margin: 0 5px;
 }
-#stream-main .stream-banner > div:nth-child(3) div span:hover {
-  background: #636363;
+#stream-main .stream-banner > div:nth-child(3) div span.isInWatchlist i, #stream-main .stream-banner > div:nth-child(3) div a.isInWatchlist i {
+  color: rgb(68, 16, 255);
 }
-#stream-main .stream-banner > div:nth-child(3) div span:nth-child(2) {
-  border-bottom: solid rgb(24, 24, 24) 1px;
+#stream-main .stream-banner > div:nth-child(3) div span:hover, #stream-main .stream-banner > div:nth-child(3) div a:hover {
+  background: rgba(234, 234, 234, 0.1);
 }
-#stream-main .stream-banner > div:nth-child(3) div span:last-child {
+#stream-main .stream-banner > div:nth-child(3) div span:nth-child(2), #stream-main .stream-banner > div:nth-child(3) div a:nth-child(2) {
+  border-bottom: solid rgba(234, 234, 234, 0.1) 1px;
+}
+#stream-main .stream-banner > div:nth-child(3) div span:last-child, #stream-main .stream-banner > div:nth-child(3) div a:last-child {
   border-radius: 0 0 5px 5px;
 }
-#stream-main .stream-banner > div:nth-child(3) div span.share {
+#stream-main .stream-banner > div:nth-child(3) div span.share i, #stream-main .stream-banner > div:nth-child(3) div a.share i {
   color: #0084d0;
 }
-#stream-main .stream-banner > div:nth-child(3) div span i {
+#stream-main .stream-banner > div:nth-child(3) div span i, #stream-main .stream-banner > div:nth-child(3) div a i {
   margin-left: 10px;
 }
 #stream-main .stream-media {
   padding: 50px;
-  background: rgb(28, 28, 28);
+  background: rgba(28, 28, 28, 0.5);
   margin-bottom: 200px;
   display: flex;
   flex-direction: column;
@@ -2214,7 +2262,7 @@ main.account-main .page-title {
   width: 100%;
   background: black;
   border-radius: 5px 5px 0 0;
-  aspect-ratio: 16/10;
+  aspect-ratio: 16/9;
 }
 #stream-main .stream-media div {
   width: 100%;
@@ -2242,10 +2290,10 @@ main.account-main .page-title {
   color: white;
 }
 #stream-main .stream-select #location .location-el:hover {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }
 #stream-main .stream-select #location .location-el:last-child {
-  color: rgb(255, 100, 16);
+  color: rgb(68, 16, 255);
 }
 #stream-main .stream-select #location .location-el:last-child:hover {
   color: white;
@@ -2280,11 +2328,11 @@ main.account-main .page-title {
   color: white;
 }
 #stream-main .stream-select .select .episode .select-el.watched:hover.current, #stream-main .stream-select .select .season .select-el.watched:hover.current {
-  background: rgb(255, 100, 16) !important;
+  background: rgb(68, 16, 255) !important;
   color: white !important;
 }
 #stream-main .stream-select .select .episode .select-el.current, #stream-main .stream-select .select .season .select-el.current {
-  background: rgb(255, 100, 16);
+  background: rgb(68, 16, 255);
   color: white;
 }
 #stream-main .stream-select .select .episode .select-el.select-title, #stream-main .stream-select .select .season .select-el.select-title {
@@ -2294,7 +2342,7 @@ main.account-main .page-title {
   aspect-ratio: 1/1;
 }
 #stream-main .stream-select .select .episode .select-el.select-select:hover, #stream-main .stream-select .select .season .select-el.select-select:hover {
-  background: rgb(255, 100, 16);
+  background: rgb(68, 16, 255);
   color: white;
 }
 #stream-main .stream-select #series-title {
@@ -2313,10 +2361,10 @@ main.account-main .page-title {
   display: grid;
   grid-template-columns: 1fr 1fr 4fr 4fr 1fr 1fr;
   padding: 15px;
-  background: rgb(55, 55, 55);
+  background: rgba(28, 28, 28, 0.2);
 }
 #stream-main .stream-season > a:hover {
-  background: rgb(28, 28, 28);
+  background: rgba(234, 234, 234, 0.1);
 }
 #stream-main .stream-season > a span {
   display: flex;
@@ -2333,19 +2381,19 @@ main.account-main .page-title {
 #stream-main .stream-season > a:first-child {
   border-radius: 5px 5px 0 0;
   font-weight: bold;
-  background: rgb(28, 28, 28);
+  background: rgba(28, 28, 28, 0.6);
 }
 #stream-main .stream-season > a:last-child {
   border-radius: 0 0 5px 5px;
 }
 #stream-main .stream-season > a.watched-episode {
-  background: rgba(0, 132, 208, 0.62);
+  background: rgba(0, 132, 208, 0.4);
 }
 #stream-main .stream-season > a.watched-episode i {
   color: #0084d0;
 }
 #stream-main .stream-season > a.watched-episode:hover {
-  background: #006096 !important;
+  background: rgba(0, 96, 150, 0.8) !important;
 }
 
 input[type=number] {
@@ -2382,11 +2430,11 @@ input::-webkit-inner-spin-button {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 *::-moz-selection {
-  background: rgb(255, 100, 16);
+  background: rgb(68, 16, 255);
   color: white;
 }
 *::selection {
-  background: rgb(255, 100, 16);
+  background: rgb(68, 16, 255);
   color: white;
 }
 
@@ -2404,11 +2452,6 @@ a * {
 }
 .tooltip * {
   transition: none !important;
-}
-
-.wrapper {
-  display: flex;
-  flex-wrap: wrap;
 }
 
 html {
@@ -2440,7 +2483,7 @@ html body main .quick-search {
   flex-wrap: wrap;
 }
 html body main .quick-search .quick-search-el {
-  background-color: rgb(255, 100, 16);
+  background-color: rgb(68, 16, 255);
   margin: 3px;
   min-height: 26px;
   min-width: 27px;
@@ -2452,8 +2495,6 @@ html body main .quick-search .quick-search-el {
   font-weight: bold;
   color: white;
   cursor: pointer;
-  color: white;
-  font-weight: bold;
 }
 
 .tooltip .tooltiptext {

@@ -44,8 +44,8 @@ $(function () {
                     let ResJSON = JSON.parse(res);
                     let length
                     // console.log(ResJSON)
-                    if (ResJSON.length > 14) {
-                        length = 14
+                    if (ResJSON.length > 12) {
+                        length = 12
                     } else {
                         length = ResJSON.length
                     }
@@ -79,8 +79,8 @@ $(function () {
                     let ResJSON = JSON.parse(res);
                     // console.log(ResJSON)
                     let length
-                    if (ResJSON.length > 14) {
-                        length = 14
+                    if (ResJSON.length > 12) {
+                        length = 12
                     } else {
                         length = ResJSON.length
                     }
@@ -114,8 +114,8 @@ $(function () {
                     let ResJSON = JSON.parse(res);
                     // console.log(ResJSON)
                     let length
-                    if (ResJSON.length > 14) {
-                        length = 14
+                    if (ResJSON.length > 12) {
+                        length = 12
                     } else {
 
                         length = ResJSON.length

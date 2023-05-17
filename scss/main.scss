@@ -1,42 +1,18 @@
-$main-bg: rgb(17, 17, 17);
-$dd-padding: 3vw;
-$dd-width: 100vw - (2 * $dd-padding);
-$dd-el-padding: 0.6em;
-$dd-el-width: $dd-width - (2 * $dd-padding);
-$footer-height: 300px;
-$footer-bg: rgb(28, 28, 28);
-$header-height: 70px;
-$orange: rgb(255, 100, 16);
-$logo-size: 40px;
-$width: 60%;
-$header-bg: rgb(28, 28, 28);
-$hover-orange: #f8cb80;
-$user-pp-size: 40px;
-$dd-more-bg: rgb(24, 24, 24);
-$light-gray: rgb(55, 55, 55);
-$trans: all .4s ease-in-out;
-$cat-title-size: 22px;
-$eye-catcher-margin: 5px;
-$eye-catcher-margin-1400: 10px;
-$eye-catcher-margin-1080: 20px;
-$eye-catcher-height: 156px;
-$eye-catcher-height-1400: 230px;
-$eye-catcher-height-1080: 410px;
-
-@import "header";
-@import "footer";
-@import "icons";
-@import "dropdown";
-@import "home";
-@import "admin";
-@import "error";
-@import "loginregister";
-@import "about";
-@import "account";
-@import "profile";
-@import "allseries";
-@import "search";
-@import "stream";
+@use "variables" as *;
+@use "header";
+@use "footer";
+@use "icons";
+@use "dropdown";
+@use "home";
+@use "admin";
+@use "error";
+@use "loginregister";
+@use "about";
+@use "account";
+@use "profile";
+@use "allseries";
+@use "search";
+@use "stream";
 
 input[type=number] {
   -moz-appearance: textfield;
@@ -77,7 +53,7 @@ input::-webkit-inner-spin-button {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
   &::selection {
-    background: $orange;
+    background: $color;
     color: white;
   }
 }
@@ -108,10 +84,7 @@ a {
   }
 }
 
-.wrapper {
-  display: flex;
-  flex-wrap: wrap;
-}
+
 
 html {
   margin: 0;
@@ -143,7 +116,7 @@ html {
         flex-wrap: wrap;
 
         .quick-search-el {
-          background-color: $orange;
+          background-color: $color;
           margin: 3px;
           min-height: 26px;
           min-width: 27px;
@@ -155,9 +128,6 @@ html {
           font-weight: bold;
           color: white;
           cursor: pointer;
-          color: white;
-          font-weight: bold;
-
         }
       }
     }
