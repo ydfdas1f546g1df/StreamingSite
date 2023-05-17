@@ -140,7 +140,7 @@ CREATE TABLE tbl_verified
     token int,
     user  int,
     FOREIGN KEY tbl_verified (user) REFERENCES tbl_users (id)
-)
+);
 
 
 CREATE TABLE `tableName`
@@ -337,7 +337,7 @@ VALUES ('aa', 'Afar', 'Afaraf'),
 INSERT INTO `tbl_languages` (`id`, `name`)
 SELECT `639-1 code`, `ISO language name`
 FROM `tablename`;
-insert into tbl_genre (`name`) value ('genre')
+insert into tbl_genre (`name`) value ('genre');
 
 use test;
 
