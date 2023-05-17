@@ -89,6 +89,7 @@ $(function () {
                     let seasonNum
                     let index = true
                     let episodeIndex = true
+                    let title = ""
                     if (url.includes("episode-")) {
                         const regex = /episode-(\d+)/;
                         const match = url.match(regex);
@@ -109,20 +110,24 @@ $(function () {
                     }
 
 
-                    function setLocation() {
-                        let location = "<a href='/' class='location-el'>Home</a><strong>&nbsp;<i class=\"fa-solid fa-chevron-right\"></i>&nbsp;</strong><a href='/pages/allseries' class='location-el'>Series</a> "
-                        if (seriesSelect !== undefined) {
-                            location += "<strong>&nbsp;<i class=\"fa-solid fa-chevron-right\"></i>&nbsp;</strong><a href='/stream/" + seriesSelect + "' class='location-el'>" + JSONData.showName + "</a>"
-                            if (seasonSelect !== undefined && index) {
-                                location += "<strong>&nbsp;<i class=\"fa-solid fa-chevron-right\"></i>&nbsp;</strong><a href='/stream/" + seriesSelect + "/" + seasonSelect + "' class='location-el'>Season " + seasonNum + "</a>"
-                                if (episodeSelect !== undefined) {
-                                    location += "<strong>&nbsp;<i class=\"fa-solid fa-chevron-right\"></i>&nbsp;</strong><a href='/stream/" + seriesSelect + "/" + seasonSelect + "/" + episodeSelect + "' class='location-el'> Episode " + episodeNum + "</a>"
-                                    $("#series-title").text(JSONData.showName)
+                        function setLocation() {
+                            let location = "<a href='/' class='location-el'>Home</a><strong>&nbsp;<i class=\"fa-solid fa-chevron-right\"></i>&nbsp;</strong><a href='/pages/allseries' class='location-el'>Series</a> "
+                            if (seriesSelect !== undefined) {
+                                title += "Season " + seasonNum
+                                    location += "<strong>&nbsp;<i class=\"fa-solid fa-chevron-right\"></i>&nbsp;</strong><a href='/stream/" + seriesSelect + "' class='location-el'>" + JSONData.showName + "</a>"
+                                if (seasonSelect !== undefined && index) {
+                                    location += "<strong>&nbsp;<i class=\"fa-solid fa-chevron-right\"></i>&nbsp;</strong><a href='/stream/" + seriesSelect + "/" + seasonSelect + "' class='location-el'>Season " + seasonNum + "</a>"
+                                    if (episodeSelect !== undefined) {
+                                        title += " Episode " + episodeNum
+                                        location += "<strong>&nbsp;<i class=\"fa-solid fa-chevron-right\"></i>&nbsp;</strong><a href='/stream/" + seriesSelect + "/" + seasonSelect + "/" + episodeSelect + "' class='location-el'> Episode " + episodeNum + "</a>"
+                                        $("#series-title").text(JSONData.showName)
+                                    }
                                 }
                             }
+                            title += " of " + JSONData.showName + " | StreamingSite - Watch it now"
+                            document.title = title
+                            $("#location").append(location)
                         }
-                        $("#location").append(location)
-                    }
 
                     setLocation()
                 }
