@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $token = $_POST['token'] ?? '';
     $desc = $_POST['desc'] ?? '';
     $series_showName = $series_name;
-    $series_name = strtolower(preg_replace('/[^a-zA-Z0-9\s]+/', '-', str_replace(' ', '-', $series_showName)));
+    $series_name = strtolower(preg_replace('/[^a-zA-Z0-9\s]+/', '', str_replace(' ', '-', $series_showName)));
 }
 
 
