@@ -26,22 +26,35 @@ if (strlen($token) == 30) {
         }
 //        echo '<pre>'; print_r($resultsArray); echo '</pre>';
         if (isset($resultsArray[0])) {
-                $stmt = $mysqli->prepare('update tbl_episode set name = ?, episode = ?, season = ?, email = ? where id = ?');
-                $stmt->bind_param('isssi', $name, $episode, $username, $season, $series);
+            $stmt = $mysqli->prepare('select * from tbl_season as tse 
+inner join tbl_series ts on tse.series = ts.id where season = ? and showName = ?');
+            $stmt->bind_param('is', $season, $series);
+            $stmt->execute();
+            $result = $stmt->get_result();
+
+            $resultsArray = array();
+            while ($row = mysqli_fetch_assoc($result)) {
+                $resultsArray[] = $row;
+            }
+            if (!isset($resultsArray[0])) {
+                $stmt = $mysqli->prepare('insert into tbl_season (season, series) values (?,(select id from tbl_series where showName = ?)');
+                $stmt->bind_param('is', $season, $series);
                 $stmt->execute();
                 $result = $stmt->get_result();
+            }
+            $stmt = $mysqli->prepare('update tbl_episode as te set name = ?, te.episode = ?, te.season = (select ts.id from tbl_season as ts 
+                                                                  inner join tbl_series t on ts.series = t.id
+                                                                  where t.showName = ? and ts.season = ?) where id = ?');
+            $stmt->bind_param('sisii', $name, $episode, $series, $season, $id);
+            $stmt->execute();
+            $result = $stmt->get_result();
 
-                if (json_encode($result) != true) {
-                    $error = true;
-                }
-
-                if (!isset($error)) {
-                    echo 200;
-                } else {
-                    echo 400;
-                }
+            if (json_encode($result) != true) {
+                echo 400;
+            } else {
+                echo 200;
+            }
 //                http_response_code(200);
-
         } else {
             echo 401;
 //            http_response_code(401);

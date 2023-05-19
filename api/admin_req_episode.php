@@ -21,9 +21,9 @@ if (strlen($token) == 30) {
     }
     if ($verifyResultsArray[0]["admin"] == 1) {
 
-        $stmt = $mysqli->prepare('SELECT ep.id, ep.episode, ep.name, ts.season, t.showName FROM tbl_episode as ep
+        $stmt = $mysqli->prepare('SELECT ep.id, ep.episode, ep.name, ts.season, t.showName, t.name as seriesname FROM tbl_episode as ep
         inner join tbl_season ts on ep.season = ts.id
-        inner join tbl_series t on ts.series = t.id');
+        inner join tbl_series t on ts.series = t.id order by t.showName, ts.season, ep.episode');
         $stmt->execute();
         $result = $stmt->get_result();
 

@@ -51,10 +51,10 @@ $admin_user = '
 
                 <div class="user-list-el" v-for="episode in filteredEpisodes" :id="episode.id" :key="episode.id">
                     <span class="user-list-el-id">{{ episode.id }}</span>
-                    <span class="user-list-el-username">{{ episode.showName }}</span>
-                    <span class="user-list-el-name"><a :href="\'/stream/\'+ episode.showName +\'/season-\' + episode.season + \'/episode-\' + episode.episode">{{ episode.season }}</a></span>
-                    <span class="user-list-el-email">{{ episode.name }}</span>
-                    <span class="user-list-el-admin" >{{ episode.episode }}</span>
+                    <span class="user-list-el-username" :name="episode.series"><a :href="\'/stream/\'+ episode.series">{{ episode.showName }}</a></span>
+                    <span class="user-list-el-name"><a :href="\'/stream/\'+ episode.series +\'/season-\' + episode.season">{{ episode.season }}</a></span>
+                    <span class="user-list-el-email"><a :href="\'/stream/\'+ episode.series +\'/season-\' + episode.season + \'/episode-\' + episode.episode">{{ episode.name }}</a></span>
+                    <span class="user-list-el-admin" ><a :href="\'/stream/\'+ episode.series +\'/season-\' + episode.season + \'/episode-\' + episode.episode">{{ episode.episode }}</a></span>
                     <span class="user-list-btn-placeholder">
                         <i class="fa-solid fa-pen-to-square edit-btn user-list-btn" @click="editEpisode"></i>
                         </span>

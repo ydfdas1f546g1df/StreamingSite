@@ -33,9 +33,10 @@ $(function () {
                         JSONData.push({
                             id: ResJSON[i].id,
                             showName: ResJSON[i].showName,
-                            season: ResJSON[1].season,
+                            season: ResJSON[i].season,
                             name: ResJSON[i].name,
                             episode: ResJSON[i].episode,
+                            series: ResJSON[i].seriesname,
                             search: "",
                         })
                     }
@@ -69,6 +70,13 @@ $(function () {
                             let name = $(e.target).parent().parent().find(".user-list-el-username").text()
                             if (confirm("Are you sure you want to delete the episode with the name: " + name)) {
                                 let token;
+                                let target = $(e.target);
+                                let el = target.parent().parent();
+                                // console.log(el.find(".user-list-el-admin").find("i").attr("admin"))
+                                let series = el.find(".user-list-el-username").attr("name")
+                                let season = el.find(".user-list-el-name").text()
+                                let name = el.find(".user-list-el-email").text()
+                                let episode = el.find(".user-list-el-admin").text()
 
                                 function getCookie() {
                                     // console.log(cookies)
@@ -81,10 +89,17 @@ $(function () {
                                     }
                                 }
                                 getCookie()
-                                let myObj = {rm_id: id, token: token};
+                                let myObj = {
+                                    token: token,
+                                    series: series,
+                                    name: name,
+                                    episode: episode,
+                                    season: season,
+                                    rm_id: id
+                                };
                                 $.ajax({
                                     type: "POST",
-                                    url: "/api/admin_rm_user.php",
+                                    url: "/api/admin_rm_episode.php",
                                     data: {myData: JSON.stringify(myObj)},
                                     success: function (res) {
                                         console.log(res)
@@ -105,7 +120,7 @@ $(function () {
                                                 .children().delay(5000).fadeOut(500)
                                         } else if (res == 200) {
                                             $("#error-messages").append('<div class="error-msg-el"><div>' +
-                                                '<span class="error-code">200</span><span class="error-msg">Deleted user: ' + name + ' successfully</span>' +
+                                                '<span class="error-code">200</span><span class="error-msg">Deleted Episode: ' + name + ' successfully</span>' +
                                                 '</div><i class="fa-solid fa-xmark IsNotAdmin" title="close" onclick="rmError(this)"></i></div>')
                                                 .children().delay(5000).fadeOut(500)
                                             $(e.target).parent().parent().remove()
@@ -122,28 +137,28 @@ $(function () {
                             let username_el = el.find(".user-list-el-username")
                             let name_el = el.find(".user-list-el-name")
                             let email_el = el.find(".user-list-el-email")
-                            let admin_el = el.find(".user-list-el-admin").find("i")
+                            let admin_el = el.find(".user-list-el-admin")
                             let id_el = el.find(".user-list-el-id")
-                            if (el.find(".user-list-el-username").attr("contenteditable") === "false" || el.find(".user-list-el-username").attr("contenteditable") === undefined) {
+                            if (el.find(".user-list-el-email").attr("contenteditable") === "false" || el.find(".user-list-el-email").attr("contenteditable") === undefined) {
                                 target.attr("class", "fas fa-save edit-btn user-list-btn")
-                                username_el.attr("contenteditable", "true")
+                                admin_el.attr("contenteditable", "true")
                                 name_el.attr("contenteditable", "true")
                                 email_el.attr("contenteditable", "true")
-                                admin_el.css("cursor", "pointer").attr("status", "1")
+                                // admin_el.css("cursor", "pointer").attr("status", "1")
                                 // console.log(1)
                             } else {
                                 // console.log(2)
                                 target.attr("class", "fa-solid fa-pen-to-square edit-btn user-list-btn")
-                                username_el.attr("contenteditable", "false")
+                                admin_el.attr("contenteditable", "false")
                                 name_el.attr("contenteditable", "false")
                                 email_el.attr("contenteditable", "false")
-                                admin_el.css("cursor", "default").attr("status", "0")
+                                // admin_el.css("cursor", "default").attr("status", "0")
                                 let token;
                                 let series = username_el.text()
                                 let season = name_el.text()
                                 let name = email_el.text()
                                 let id = id_el.text()
-                                let episode = admin_el.attr("admin")
+                                let episode = admin_el.text()
                                 // console.log(admin_el)
 
 
@@ -165,14 +180,15 @@ $(function () {
                                     series: series,
                                     name: name,
                                     episode: episode,
+                                    season: season,
                                 };
                                 // console.log(myObj)
                                 $.ajax({
                                     type: "POST",
-                                    url: "/api/admin_edit_user.php",
+                                    url: "/api/admin_edit_episode.php",
                                     data: {myData: JSON.stringify(myObj)},
                                     success: function (res) {
-                                        // console.log(res)
+                                        console.log(res)
                                         if (res == 409) {
                                             $("#error-messages").append('<div class="error-msg-el"><div>' +
                                                 '<span class="error-code">409</span><span class="error-msg">You can\'t edit your own account</span>' +
@@ -190,34 +206,13 @@ $(function () {
                                                 .children().delay(5000).fadeOut(500)
                                         } else if (res == 200) {
                                             $("#error-messages").append('<div class="error-msg-el"><div>' +
-                                                '<span class="error-code">200</span><span class="error-msg">User: ' + name + ' was successfully edited</span>' +
+                                                '<span class="error-code">200</span><span class="error-msg">Episode: ' + name + ' was successfully edited</span>' +
                                                 '</div><i class="fa-solid fa-xmark IsNotAdmin" title="close" onclick="rmError(this)"></i></div>')
                                                 .children().delay(5000).fadeOut(500)
 
                                         }
                                     }
                                 });
-                            }
-                        },
-                        editAdmin(e) {
-                            // console.log(e)
-                            let target = $(e.target);
-                            let el = target.parent();
-                            let status = target.attr("status")
-                            // console.log("status: " + status)
-                            let admin = target.attr("admin")
-                            if (status == 1) {
-                                // console.log("admin: " + admin)
-                                if (admin == 1) {
-                                    console.log("to " + 0)
-                                    target.attr("admin", "0")
-                                    target.attr("class", "fa-solid fa-xmark IsNotAdmin")
-                                } else {
-                                    console.log("to " + 1)
-                                    target.attr("admin", "1")
-                                    target.attr("class", "fa-solid fa-check IsAdmin")
-                                }
-
                             }
                         }
                     }
