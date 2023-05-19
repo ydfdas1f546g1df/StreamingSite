@@ -43,23 +43,23 @@ $admin_user = '
                     <span class="user-list-el-id">ID</span>
                     <span class="user-list-el-username">Series</span>
                     <span class="user-list-el-name">Season</span>
-                    <span class="user-list-el-email">Episode</span>
-                    <span class="user-list-el-admin">Name</span>
+                    <span class="user-list-el-email">Name</span>
+                    <span class="user-list-el-admin">Episode</span>
                     <span class="user-list-btn-placeholder"></span>
                     <span class="user-list-btn-placeholder"></span>
                 </div>
 
-                <div class="user-list-el" v-for="user in filteredUsers" id="{{ user.id }}" :key="user.id">
-                    <span class="user-list-el-id">{{ user.id }}</span>
-                    <span class="user-list-el-username">{{ user.username }}</span>
-                    <span class="user-list-el-name"><a :href="\'/user/profile/?u=\' + user.username">{{ user.name }}</a></span>
-                    <span class="user-list-el-email">{{ user.email }}</span>
-                    <span class="user-list-el-admin" ><i :class="user.admin"  status="0" @click="editAdmin" :admin="user.IsAdmin"></i></span>
+                <div class="user-list-el" v-for="episode in filteredEpisodes" :id="episode.id" :key="episode.id">
+                    <span class="user-list-el-id">{{ episode.id }}</span>
+                    <span class="user-list-el-username">{{ episode.showName }}</span>
+                    <span class="user-list-el-name"><a :href="\'/stream/\'+ episode.showName +\'/season-\' + episode.season + \'/episode-\' + episode.episode">{{ episode.season }}</a></span>
+                    <span class="user-list-el-email">{{ episode.name }}</span>
+                    <span class="user-list-el-admin" >{{ episode.episode }}</span>
                     <span class="user-list-btn-placeholder">
-                        <i class="fa-solid fa-pen-to-square edit-btn user-list-btn" @click="editUser"></i>
+                        <i class="fa-solid fa-pen-to-square edit-btn user-list-btn" @click="editEpisode"></i>
                         </span>
                     <span class="user-list-btn-placeholder">
-                        <i class="fa-solid fa-trash del-btn user-list-btn" @click="removeUser"></i>
+                        <i class="fa-solid fa-trash del-btn user-list-btn" @click="removeEpisode"></i>
                         </span>
                 </div>
             </div>
@@ -69,7 +69,7 @@ $admin_user = '
     <div id="error-messages">
     </div>
     </div>
-    <script src="/script/admin_user.js"></script>
+    <script src="/script/admin_episode.js"></script>
 </main>';
 
 
