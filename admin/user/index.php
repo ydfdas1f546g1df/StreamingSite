@@ -30,7 +30,7 @@ $admin_user = '
     <article class="user-article">
         <div class="user" id="all-users">
             <div class="btns">
-                <span class="add-btn user-btn" ><i class="gg-user-add"></i></span>
+                <a class="add-btn user-btn" href="/register"><i class="gg-user-add"></i></a>
                 <span class="save-btn user-btn" onclick="location.reload()" title="Changes are only displayed correctly after reloading"><i class="fa-solid fa-rotate"></i></span>
             </div>
             <label for="search-user">

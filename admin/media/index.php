@@ -30,31 +30,31 @@ $admin_user = '
     <article class="user-article">
         <div class="user" id="all-users">
             <div class="btns">
-                <span class="add-btn user-btn" ><i class="gg-software-upload"></i></span>
+                <a class="add-btn user-btn" href="/admin/upload"><i class="gg-software-upload"></i></a>
                 <span class="save-btn user-btn" onclick="location.reload()" title="Changes are only displayed correctly after reloading"><i class="fa-solid fa-rotate"></i></span>
             </div>
             <label for="search-user">
                 Search Episode
-                <input type="text" name="search-user" placeholder="name" v-model="search">
+                <input type="text" name="search-user" placeholder="Episode Name" v-model="search">
             </label>
 
             <div class="user-list">
-                <div class="user-list-el-header">
+                <div class="user-list-el-header episode-list-el-header">
                     <span class="user-list-el-id">ID</span>
-                    <span class="user-list-el-username">Series</span>
                     <span class="user-list-el-name">Season</span>
-                    <span class="user-list-el-email">Name</span>
                     <span class="user-list-el-admin">Episode</span>
+                    <span class="user-list-el-username">Series</span>
+                    <span class="user-list-el-email">Episode Name</span>
                     <span class="user-list-btn-placeholder"></span>
                     <span class="user-list-btn-placeholder"></span>
                 </div>
 
-                <div class="user-list-el" v-for="episode in filteredEpisodes" :id="episode.id" :key="episode.id">
+                <div class="user-list-el episode-list-el" v-for="episode in filteredEpisodes" :id="episode.id" :key="episode.id">
                     <span class="user-list-el-id">{{ episode.id }}</span>
-                    <span class="user-list-el-username" :name="episode.series"><a :href="\'/stream/\'+ episode.series">{{ episode.showName }}</a></span>
                     <span class="user-list-el-name"><a :href="\'/stream/\'+ episode.series +\'/season-\' + episode.season">{{ episode.season }}</a></span>
-                    <span class="user-list-el-email"><a :href="\'/stream/\'+ episode.series +\'/season-\' + episode.season + \'/episode-\' + episode.episode">{{ episode.name }}</a></span>
                     <span class="user-list-el-admin" ><a :href="\'/stream/\'+ episode.series +\'/season-\' + episode.season + \'/episode-\' + episode.episode">{{ episode.episode }}</a></span>
+                    <span class="user-list-el-username" :name="episode.series"><a :href="\'/stream/\'+ episode.series">{{ episode.showName }}</a></span>
+                    <span class="user-list-el-email"><a :href="\'/stream/\'+ episode.series +\'/season-\' + episode.season + \'/episode-\' + episode.episode">{{ episode.name }}</a></span>
                     <span class="user-list-btn-placeholder">
                         <i class="fa-solid fa-pen-to-square edit-btn user-list-btn" @click="editEpisode"></i>
                         </span>

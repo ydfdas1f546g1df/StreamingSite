@@ -1,7 +1,6 @@
 @use "variables" as *;
 
 
-
 .admin-main {
   width: 100%;
 
@@ -20,7 +19,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         //grid-auto-rows: auto;
-        grid-template-rows: 1fr 1fr 1fr 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
 
         .switch {
           margin-top: 5px;
@@ -46,6 +45,7 @@
 
           .checkbox-wrapper-64 {
             justify-content: center;
+
             span.sel {
               font-weight: bold;
               margin: 5px;
@@ -100,6 +100,7 @@
             justify-content: space-between;
 
             .user-btn {
+              color: white;
               font-weight: bold;
               height: 50px;
               display: flex;
@@ -136,6 +137,10 @@
               display: grid;
               grid-template-columns: 1fr 3fr 3fr 4fr 1fr 1fr 1fr;
               margin-top: 10px;
+
+              &.episode-list-el-header, &.episode-list-el {
+                grid-template-columns: 1fr 1fr 1fr 4fr 4fr 1fr 1fr;
+              }
 
 
               span {
