@@ -110,24 +110,24 @@ $(function () {
                     }
 
 
-                        function setLocation() {
-                            let location = "<a href='/' class='location-el'>Home</a><strong>&nbsp;<i class=\"fa-solid fa-chevron-right\"></i>&nbsp;</strong><a href='/pages/allseries' class='location-el'>Series</a> "
-                            if (seriesSelect !== undefined) {
-                                title += "Season " + seasonNum
-                                    location += "<strong>&nbsp;<i class=\"fa-solid fa-chevron-right\"></i>&nbsp;</strong><a href='/stream/" + seriesSelect + "' class='location-el'>" + JSONData.showName + "</a>"
-                                if (seasonSelect !== undefined && index) {
-                                    location += "<strong>&nbsp;<i class=\"fa-solid fa-chevron-right\"></i>&nbsp;</strong><a href='/stream/" + seriesSelect + "/" + seasonSelect + "' class='location-el'>Season " + seasonNum + "</a>"
-                                    if (episodeSelect !== undefined) {
-                                        title += " Episode " + episodeNum
-                                        location += "<strong>&nbsp;<i class=\"fa-solid fa-chevron-right\"></i>&nbsp;</strong><a href='/stream/" + seriesSelect + "/" + seasonSelect + "/" + episodeSelect + "' class='location-el'> Episode " + episodeNum + "</a>"
-                                        $("#series-title").text(JSONData.showName)
-                                    }
+                    function setLocation() {
+                        let location = "<a href='/' class='location-el'>Home</a><strong>&nbsp;<i class=\"fa-solid fa-chevron-right\"></i>&nbsp;</strong><a href='/pages/allseries' class='location-el'>Series</a> "
+                        if (seriesSelect !== undefined) {
+                            title += "Season " + seasonNum
+                            location += "<strong>&nbsp;<i class=\"fa-solid fa-chevron-right\"></i>&nbsp;</strong><a href='/stream/" + seriesSelect + "' class='location-el'>" + JSONData.showName + "</a>"
+                            if (seasonSelect !== undefined && index) {
+                                location += "<strong>&nbsp;<i class=\"fa-solid fa-chevron-right\"></i>&nbsp;</strong><a href='/stream/" + seriesSelect + "/" + seasonSelect + "' class='location-el'>Season " + seasonNum + "</a>"
+                                if (episodeSelect !== undefined) {
+                                    title += " Episode " + episodeNum
+                                    location += "<strong>&nbsp;<i class=\"fa-solid fa-chevron-right\"></i>&nbsp;</strong><a href='/stream/" + seriesSelect + "/" + seasonSelect + "/" + episodeSelect + "' class='location-el'> Episode " + episodeNum + "</a>"
+                                    $("#series-title").text(JSONData.showName)
                                 }
                             }
-                            title += " of " + JSONData.showName + " | StreamingSite - Watch it now"
-                            document.title = title
-                            $("#location").append(location)
                         }
+                        title += " of " + JSONData.showName + " | StreamingSite - Watch it now"
+                        document.title = title
+                        $("#location").append(location)
+                    }
 
                     setLocation()
                 }
@@ -267,7 +267,7 @@ $(function () {
                 url: "/api/episode_select.php",
                 data: {myData: JSON.stringify(myObj)},
                 success: function (res) {
-                    console.log(res)
+                    // console.log(res)
                     let ResJSON = JSON.parse(res);
                     console.log(ResJSON)
                     if (ResJSON[0][0].index == 1) {
@@ -278,16 +278,20 @@ $(function () {
                                 possible: ResJSON[0][i].possible,
                             });
                             // console.log(ResJSON[0][i].index)
-                            let allSeasons = "<a href=\"/stream/" + seriesSelect + "/season-" + ResJSON[0][i].season + "\"class=\"select-el select-season select-select "
-                            if ((ResJSON[0][i].possible - ResJSON[0][i].watched) === 0) {
-                                allSeasons += "watched "
+                            if (ResJSON[0][i].possible != 0) {
+
+                                let allSeasons = "<a href=\"/stream/" + seriesSelect + "/season-" + ResJSON[0][i].season + "\"class=\"select-el select-season select-select "
+                                if ((ResJSON[0][i].possible - ResJSON[0][i].watched) === 0) {
+                                    allSeasons += "watched "
+                                }
+                                if (ResJSON[0][i].season == seasonNum) {
+                                    allSeasons += "current"
+                                }
+                                allSeasons += "\">" + ResJSON[0][i].season + "</a>"
+                                $("#seasons").append(allSeasons)
                             }
-                            if (ResJSON[0][i].season == seasonNum) {
-                                allSeasons += "current"
-                            }
-                            allSeasons += "\">" + ResJSON[0][i].season + "</a>"
-                            $("#seasons").append(allSeasons)
                         }
+                        // console.log(JSONData2)
                     } else {
 
                     }

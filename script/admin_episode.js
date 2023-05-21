@@ -88,6 +88,7 @@ $(function () {
                                         }
                                     }
                                 }
+
                                 getCookie()
                                 let myObj = {
                                     token: token,
@@ -95,8 +96,10 @@ $(function () {
                                     name: name,
                                     episode: episode,
                                     season: season,
-                                    rm_id: id
+                                    rm_id: id,
+
                                 };
+                                // console.log(myObj)
                                 $.ajax({
                                     type: "POST",
                                     url: "/api/admin_rm_episode.php",
@@ -159,6 +162,11 @@ $(function () {
                                 let name = email_el.text()
                                 let id = id_el.text()
                                 let episode = admin_el.text()
+                                let oldSeason = el.find(".user-list-el-name").attr("oldSeason")
+                                let oldEpisode = el.find(".user-list-el-admin").attr("oldEpisode")
+                                let showName = el.find(".user-list-el-username").attr("name")
+
+
                                 // console.log(admin_el)
 
 
@@ -181,8 +189,11 @@ $(function () {
                                     name: name,
                                     episode: episode,
                                     season: season,
+                                    oldSeason: oldSeason,
+                                    oldEpisode: oldEpisode,
+                                    showName: showName,
                                 };
-                                // console.log(myObj)
+                                console.log(myObj)
                                 $.ajax({
                                     type: "POST",
                                     url: "/api/admin_edit_episode.php",
@@ -209,7 +220,8 @@ $(function () {
                                                 '<span class="error-code">200</span><span class="error-msg">Episode: ' + name + ' was successfully edited</span>' +
                                                 '</div><i class="fa-solid fa-xmark IsNotAdmin" title="close" onclick="rmError(this)"></i></div>')
                                                 .children().delay(5000).fadeOut(500)
-
+                                            el.find(".user-list-el-name").attr("oldSeason", season)
+                                            el.find(".user-list-el-admin").attr("oldEpisode", episode)
                                         }
                                     }
                                 });
