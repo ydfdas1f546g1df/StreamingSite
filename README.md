@@ -1,9 +1,10 @@
 # StreamingSite
-
+![img.png](dist/img/img.png)
 ## TODO after clone
 ```bash
 $ npm install
 ```
+# CSS
 ### start laravel-mix
 ```bash
 $ npm run dev
@@ -36,14 +37,45 @@ $ npm run dev
 <span class="fi fi-xx"></span>
 ```
 
-### SQL
+# SQL
 <a href="https://drawsql.app/teams/fdagadsgdsfg/diagrams/copy-of-copy-of-connect-information">Data Model: drawsql.app</a>
 
-## Documentation
+# Config with XAMPP
+## Max Upload
+The following lines have to be updated in the **php.ini** file.
+````
+upload_max_filesize=5000000M
+
+post_max_size=5000000M
+````
+## Work Directory
+The following lines has to be the Directory where your local copy of the Git repo is 
+````
+DocumentRoot "C:/xampp/htdocs"
+
+<Directory "C:/xampp/htdocs">
+````
+## Mod rewrite 
+This Line is a comment, remove the `#` so that it locks like this:
+```
+LoadModule rewrite_module modules/mod_rewrite.so
+```
+and Chang this:
+
+```
+AllowOverride None
+```
+to this:
+```
+AllowOverride All
+```
+# Documentation
 Here are the inputs and outputs of the API documented <br>
 <a href="docu/">/docu/*.md</a>
 
-
+Copyright <br>
+Colin Heggli and Niklaus Kuelling <br>
+2023
 <style>
 body{
     background-color: rgb(17, 17, 17);
@@ -52,6 +84,6 @@ body{
 /*    color: #fff;*/
 /*}*/
 a {
-    color: #FF6410FF;
+    color: #4410FFFF;
 }
 </style>
